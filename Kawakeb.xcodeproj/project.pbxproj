@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		535ADE40294A8A1C00723F53 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE3F294A8A1C00723F53 /* CameraView.swift */; };
+		535ADE42294A8A6000723F53 /* MobileNetV2FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */; };
+		535ADE44294A8A6800723F53 /* RoadAppObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
 		F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC896294A111300152C07 /* SceneDelegate.swift */; };
 		F02AC899294A111300152C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC898294A111300152C07 /* ViewController.swift */; };
@@ -64,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		535ADE3F294A8A1C00723F53 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2FP16.mlmodel; sourceTree = "<group>"; };
+		535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RoadAppObjectDetector.mlmodel; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02AC894294A111300152C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02AC896294A111300152C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,9 +161,12 @@
 		F02AC893294A111300152C07 /* Kawakeb */ = {
 			isa = PBXGroup;
 			children = (
+				535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */,
+				535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */,
 				F02AC894294A111300152C07 /* AppDelegate.swift */,
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
+				535ADE3F294A8A1C00723F53 /* CameraView.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
 				F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */,
@@ -349,7 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
+				535ADE40294A8A1C00723F53 /* CameraView.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
+				535ADE44294A8A6800723F53 /* RoadAppObjectDetector.mlmodel in Sources */,
+				535ADE42294A8A6000723F53 /* MobileNetV2FP16.mlmodel in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +539,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K9TPRSV2Z7;
+				DEVELOPMENT_TEAM = TRZFVT4Q63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kawakeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

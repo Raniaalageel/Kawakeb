@@ -52,7 +52,6 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     
     
     @IBAction func startCamera(_ sender: Any) {
-        
             //search for camera
             let avliableDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
             
@@ -77,10 +76,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             previewLayer.frame = view.frame
             //previewLayer.frame = CGRect(x: 0, y: 0, width: 30, height: 40)
 //previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Fill screen
-
-
             view.layer.addSublayer(previewLayer)
-            
             captureSession.startRunning()
             
             view.addSubview(shuterButton)
@@ -96,7 +92,6 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
       //  print("here",model)  //RoadAppObjectDetector  //MobileNetV2FP16
         //objMB_1()
         let request = VNCoreMLRequest(model: model) { (finishedRequest , err) in
-           // print("request",request)
            // request.imageCropAndScaleOption = .scaleFit
             guard let results = finishedRequest.results as? [VNClassificationObservation] else {     print("notdefined",err);   return}
           let detections = results as! [VNRecognizedObjectObservation]
@@ -104,8 +99,6 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             //    print("detection")
               //  print(detection.confidence)
              //   print(detection.labels.map.identifier)
-           // }
-            // print("results",results)
            guard let observation = results.first else {return}
          //   print("observation",observation)
             DispatchQueue.main.async {
@@ -118,9 +111,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                 self.confidentlabel.text = "\(observation.confidence) MMM"
                 }
         }    // print("request",request)
-                
                 guard let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
-            
             try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer , options: [:]).perform([request])
         }
     
