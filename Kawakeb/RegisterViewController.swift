@@ -7,8 +7,17 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+
+
 
 class RegisterViewController: UIViewController {
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
