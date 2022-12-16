@@ -143,7 +143,6 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
-				A243CBC5294B7DF700ABC146 /* Login.swift */,
 				F02AC893294A111300152C07 /* Kawakeb */,
 				F02AC8AA294A111700152C07 /* KawakebTests */,
 				F02AC8B4294A111700152C07 /* KawakebUITests */,
@@ -164,6 +163,7 @@
 		F02AC893294A111300152C07 /* Kawakeb */ = {
 			isa = PBXGroup;
 			children = (
+				A243CBC5294B7DF700ABC146 /* Login.swift */,
 				F02AC894294A111300152C07 /* AppDelegate.swift */,
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,

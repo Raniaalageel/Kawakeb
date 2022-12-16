@@ -15,28 +15,24 @@ import CoreMedia
 
 
 
-class loginController: UIViewController, UITextFieldDelegate {
+class Login: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var emailTextfiled1: UITextField!
+    @IBOutlet weak var passwordTextfiled1: UITextField!
+    @IBOutlet weak var validationMassege1: UILabel!
+    @IBOutlet weak var validationMessegepass1: UILabel!
+        @IBOutlet weak var buttonlogin1: UIButton!
+    
+    //
 
-    @IBOutlet weak var emailTextfiled: UITextField!
-    
-    @IBOutlet weak var passwordTextfiled: UITextField!
- 
-    
-    @IBOutlet weak var validationMassege: UILabel!
-    
-    
-    @IBOutlet weak var validationMessegepass: UILabel!
 
-    @IBOutlet weak var buttonlogin: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        validationMassege.isHidden = true
-        validationMessegepass.isHidden = true
-        self.emailTextfiled.delegate = self
+        validationMassege1.isHidden = true
+        validationMessegepass1.isHidden = true
+        self.emailTextfiled1.delegate = self
       
-        self.passwordTextfiled.delegate = self
+        self.passwordTextfiled1.delegate = self
         self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
         
@@ -63,23 +59,23 @@ class loginController: UIViewController, UITextFieldDelegate {
  
     
     func isValid() -> (Bool, String, String) {
-        validationMassege.isHidden = true   // not show
-        validationMessegepass.isHidden = true
+        validationMassege1.isHidden = true   // not show
+        validationMessegepass1.isHidden = true
         
-        guard let email = emailTextfiled.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
+        guard let email = emailTextfiled1.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
         else {
-            validationMassege.isHidden = false
-            validationMassege.text = "please enter your email"
+            validationMassege1.isHidden = false
+            validationMassege1.text = "please enter your email"
             return (false, "", "")
         }
-        guard let password = passwordTextfiled.text, !password.isEmpty else {
-            validationMessegepass.isHidden = false
-            validationMessegepass.text = "please enter your password"
+        guard let password = passwordTextfiled1.text, !password.isEmpty else {
+            validationMessegepass1.isHidden = false
+            validationMessegepass1.text = "please enter your password"
             return (false, "", "")
         }
         if !isValidEmail(emailID: email) {
-            validationMassege.isHidden = false
-            validationMassege.text = "Please enter a valid email address"
+            validationMassege1.isHidden = false
+            validationMassege1.text = "Please enter a valid email address"
             return (false, "", "")
         }
       /*  if password.count != 8 {
@@ -93,23 +89,19 @@ class loginController: UIViewController, UITextFieldDelegate {
     }
         
         
+@IBAction func loginpressed(_ sender: Any) {
         
-        
-  
-    @IBAction func loginpressed(_ sender: Any) {
-    
-    
             let validationResult = isValid()
-            if validationResult.0 == false {
-                return
+    if validationResult.0 == false { return
             }
-            
+    
+    //
             let email = validationResult.1
             let password = validationResult.2
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 if let e=error{   //if no connect with firebase
                     print("failed")
-                    let alert = UIAlertController(title: "Error", message: "No exist user ,try agin", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error", message: "User doesn't exist, try again", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                    // print(e)
@@ -118,32 +110,50 @@ class loginController: UIViewController, UITextFieldDelegate {
                     
                     Task {
                         let db = Firestore.firestore()
-                        if await self.checkEmailExist(email: email, collection: "Unistudent", field: "StudentEmail") {
-                        
-                            if await !self.checkEmailExist(email: email, collection: "Appstudent", field: "StudentEmail") {
-                                await self.storeUserInformation(collection: "Appstudent", data: ["StudentEmail": email])
-                            }
-            
-                            print("student exists")
+                        if await self.checkEmailExist(email: email, collection: "Child", field: "email") {
+                            print("child exists")
                        //     Global.shared.useremailshare = email
+                            guard let child = try await db.collection("Child").whereField("email", isEqualTo:  email).getDocuments().documents.first?.documentID else {return}
                             
-                            guard let stidentis = try await db.collection("Unistudent").whereField("StudentEmail", isEqualTo:  Global.shared.useremailshare ).getDocuments().documents.first?.documentID else {return}
+                            db.collection("Child").whereField("email", isEqualTo: email).getDocuments{
+                                (snapshot, error) in
+                                if let error = error {
+                                    print("FAIL2 ")
+                                }
+                                else{
+                                    print("SUCCESS2")
+                                    let pw = snapshot!.documents.first!.get("password") as! String
+                                    print(pw)
+                                    
+                                    if(pw == password){
+                                        self.performSegue(withIdentifier: "go", sender: self)}
+                                    else
+                                    {
+                                        print("does not exist")
+                                        let alert = UIAlertController(title: "Error", message: "Email or Password is  incorrect", preferredStyle: .alert)
+                                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                                        self.present(alert, animated: true, completion: nil)
+                                    }
+                                }
+                            }
+                        }
+                        
                                                        
-                                                       try await db.collection("Unistudent").document(stidentis).setData([
-                                                           "token": Global.shared.Token
-                                                       ],merge: true) { err in
-                                                           if let err = err {
-                                                               print("not Add token  : \(err)")
-                                                           } else {
-                                                               print(" Add token sucsseful ")
-                                                           } }
+//                                                       try await db.collection("Unistudent").document(stidentis).setData([
+//                                                           "token": Global.shared.Token
+//                                                       ],merge: true) { err in
+//                                                           if let err = err {
+//                                                               print("not Add token  : \(err)")
+//                                                           } else {
+//                                                               print(" Add token sucsseful ")
+//                                                           } }
 
-                            self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                         
 
                       //      print("this is the email amani: " + email)
                          //   print("this is the global amani: " + Global.shared.useremailshare)
                             // students view
-                        }
+                        
 //                            if await !self.checkEmailExist(email: email, collection: "Lecturer", field: "EmailLecture") {
 //                                await self.storeUserInformation(collection: "Lecturer", data: ["EmailLecture": email])
 //                            }
@@ -156,7 +166,7 @@ class loginController: UIViewController, UITextFieldDelegate {
                         
                         else {
                             print("does not exist")
-                            let alert = UIAlertController(title: "Error", message: "User  is not  registered.", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Error", message: "Email or Password is  incorrect", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             //  self.storeUserInformation()
@@ -181,17 +191,17 @@ class loginController: UIViewController, UITextFieldDelegate {
         return emailTest.evaluate(with: emailID)
     }
     
-    func isValidEmailSttudent(emailID:String) -> Bool {
-        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{3,}+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: emailID)
-    }
-    
-    func isValidEmailLectures(emailID:String) -> Bool {
-        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: emailID)
-    }
+//    func isValidEmailSttudent(emailID:String) -> Bool {
+//        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{3,}+\\.[A-Za-z]{2,}"
+//        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//        return emailTest.evaluate(with: emailID)
+//    }
+//
+//    func isValidEmailLectures(emailID:String) -> Bool {
+//        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{2,}"
+//        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//        return emailTest.evaluate(with: emailID)
+//    }
     
     
     
@@ -214,15 +224,15 @@ class loginController: UIViewController, UITextFieldDelegate {
         //return false
     }
     
-    func storeUserInformation(collection: String, data: [String: Any]) async {
-        //  var ref: DocumentReference? = nil
-        // guard let uid=Auth.auth().currentUser?.uid else {return }
-        let db = Firestore.firestore()
-        do {
-            try await db.collection(collection).document().setData(data)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }  //end func
+//    func storeUserInformation(collection: String, data: [String: Any]) async {
+//        //  var ref: DocumentReference? = nil
+//        // guard let uid=Auth.auth().currentUser?.uid else {return }
+//        let db = Firestore.firestore()
+//        do {
+//            try await db.collection(collection).document().setData(data)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }  //end func
        
 }
