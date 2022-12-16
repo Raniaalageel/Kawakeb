@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34D1863C294C83D600857F31 /* MyObjectDetectorsh.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 34D1863B294C83D600857F31 /* MyObjectDetectorsh.mlmodel */; };
 		535ADE40294A8A1C00723F53 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE3F294A8A1C00723F53 /* CameraView.swift */; };
 		535ADE42294A8A6000723F53 /* MobileNetV2FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */; };
 		535ADE44294A8A6800723F53 /* RoadAppObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34D1863B294C83D600857F31 /* MyObjectDetectorsh.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetectorsh.mlmodel; sourceTree = "<group>"; };
 		535ADE3F294A8A1C00723F53 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2FP16.mlmodel; sourceTree = "<group>"; };
 		535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RoadAppObjectDetector.mlmodel; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				535ADE41294A8A6000723F53 /* MobileNetV2FP16.mlmodel */,
 				535ADE43294A8A6800723F53 /* RoadAppObjectDetector.mlmodel */,
+				34D1863B294C83D600857F31 /* MyObjectDetectorsh.mlmodel */,
 				F02AC894294A111300152C07 /* AppDelegate.swift */,
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
+				34D1863C294C83D600857F31 /* MyObjectDetectorsh.mlmodel in Sources */,
 				535ADE40294A8A1C00723F53 /* CameraView.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				535ADE44294A8A6800723F53 /* RoadAppObjectDetector.mlmodel in Sources */,

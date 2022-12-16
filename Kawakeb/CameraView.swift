@@ -88,7 +88,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         print("captureOutput")
-        guard let model = try? VNCoreMLModel(for: RoadAppObjectDetector().model)else{return}
+        guard let model = try? VNCoreMLModel(for: MyObjectDetectorsh().model)else{return}
       //  print("here",model)  //RoadAppObjectDetector  //MobileNetV2FP16
         //objMB_1()
         let request = VNCoreMLRequest(model: model) { (finishedRequest , err) in
