@@ -177,7 +177,16 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             print(topLabelObservation.identifier)
             let shapeLayer = self.createRoundedRectWithBounds(objectBounds)
             print(shapeLayer.bounds)
+          
+            let textLayer = self.createTextSubLayerInBounds(objectBounds,identifier: topLabelObservation.identifier,confidence: topLabelObservation.confidence)
+            
+            shapeLayer.addSublayer(textLayer)
+            
+            
             detectionOverlay.addSublayer(shapeLayer)
+            
+            
+            
         }
         
         self.updateLayerGeometry()
@@ -253,6 +262,28 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
         confidentlabel.topAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
     }
+    
+    func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence) -> CATextLayer {
+           let textLayer = CATextLayer()
+           textLayer.name = "Object Label"
+        
+           let formattedString = NSMutableAttributedString(string: String(format: "\(identifier)\nConfi:  %.2f", confidence))
+        
+           let largeFont = UIFont(name: "Helvetica", size: 18.0)!
+        
+           formattedString.addAttributes([NSAttributedString.Key.font: largeFont], range: NSRange(location: 0, length: identifier.count))
+        
+           textLayer.string = formattedString
+           textLayer.bounds = CGRect(x: 0, y: 0, width: bounds.size.height - 10, height: bounds.size.width - 10)
+           textLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+           textLayer.shadowOpacity = 0.7
+           textLayer.shadowOffset = CGSize(width: 2, height: 2)
+           textLayer.foregroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.0, 0.0, 0.0, 1.0])
+           textLayer.contentsScale = 2.0 // retina rendering
+           // rotate the layer into screen orientation and scale and mirror
+           textLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: 1.0, y: -1.0))
+           return textLayer
+       }
     
     
 }
