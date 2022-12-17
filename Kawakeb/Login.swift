@@ -65,17 +65,17 @@ class Login: UIViewController, UITextFieldDelegate {
         guard let email = emailTextfiled1.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
         else {
             validationMassege1.isHidden = false
-            validationMassege1.text = "please enter your email"
+            validationMassege1.text = "الرجاء ادخال البريد  الالكتروني"
             return (false, "", "")
         }
         guard let password = passwordTextfiled1.text, !password.isEmpty else {
             validationMessegepass1.isHidden = false
-            validationMessegepass1.text = "please enter your password"
+            validationMessegepass1.text = "الرجاء ادخال كلمة  المرور"
             return (false, "", "")
         }
         if !isValidEmail(emailID: email) {
             validationMassege1.isHidden = false
-            validationMassege1.text = "Please enter a valid email address"
+            validationMassege1.text = "الرجاء ادخال بريد صحيح"
             return (false, "", "")
         }
       /*  if password.count != 8 {
@@ -101,7 +101,7 @@ class Login: UIViewController, UITextFieldDelegate {
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 if let e=error{   //if no connect with firebase
                     print("failed")
-                    let alert = UIAlertController(title: "Error", message: "User doesn't exist, try again", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                    // print(e)
@@ -130,7 +130,7 @@ class Login: UIViewController, UITextFieldDelegate {
                                     else
                                     {
                                         print("does not exist")
-                                        let alert = UIAlertController(title: "Error", message: "Email or Password is  incorrect", preferredStyle: .alert)
+                                        let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                                         self.present(alert, animated: true, completion: nil)
                                     }
@@ -166,7 +166,7 @@ class Login: UIViewController, UITextFieldDelegate {
                         
                         else {
                             print("does not exist")
-                            let alert = UIAlertController(title: "Error", message: "Email or Password is  incorrect", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             //  self.storeUserInformation()
@@ -184,8 +184,7 @@ class Login: UIViewController, UITextFieldDelegate {
         }   //end loginpressed
     
     func isValidEmail(emailID:String) -> Bool {
-        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{3,}+\\.[A-Za-z]{2,}"
-        
+        let emailRegEx = "[0-9A-Za-z]{1,30}+@[A-Za-z]{1,10}+\\.[A-Za-z]{1,5}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
