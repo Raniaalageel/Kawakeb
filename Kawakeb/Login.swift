@@ -100,43 +100,49 @@ class Login: UIViewController, UITextFieldDelegate {
             let password = validationResult.2
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 if let e=error{   //if no connect with firebase
-                    print("failed")
+                    print(email)
+                    print(password)
+                    print("failed 11111")
                     let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                    // print(e)
                 }else{   //user Auth in firebase
-                    print("sucsses")
+                    print("sucssesYES")
                     
                     Task {
                         let db = Firestore.firestore()
                         if await self.checkEmailExist(email: email, collection: "Child", field: "email") {
-                            print("child exists")
-                       //     Global.shared.useremailshare = email
-                            guard let child = try await db.collection("Child").whereField("email", isEqualTo:  email).getDocuments().documents.first?.documentID else {return}
+//                            if await !self.checkEmailExist(email: email, collection: "Appstudent", field: "email") {
+//                                await self.storeUserInformation(collection: "Appstudent", data: ["email": email])}
                             
-                            db.collection("Child").whereField("email", isEqualTo: email).getDocuments{
-                                (snapshot, error) in
-                                if let error = error {
-                                    print("FAIL2 ")
-                                }
-                                else{
-                                    print("SUCCESS2")
-                                    let pw = snapshot!.documents.first!.get("password") as! String
-                                    print(pw)
-                                    
-                                    if(pw == password){
-                                        self.performSegue(withIdentifier: "go", sender: self)}
-                                    else
-                                    {
-                                        print("does not exist")
-                                        let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
-                                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                        self.present(alert, animated: true, completion: nil)
-                                    }
-                                }
-                            }
-                        }
+                            print("child exists")
+                       //    Global.shared.useremailshare = email
+//                            guard let child = try await db.collection("Child").whereField("email", isEqualTo:  email).getDocuments().documents.first?.documentID else {return}
+                            
+//                            db.collection("Child").whereField("email", isEqualTo: email).getDocuments{
+//                                (snapshot, error) in
+//                                if let error = error {
+//                                    print("FAIL2 ")
+//                                }
+//                                else{
+//                                    print("SUCCESS2")
+                            self.performSegue(withIdentifier: "go", sender: self)}
+//                                    let pw = snapshot!.documents.first!.get("password") as! String
+//                                    print(pw)
+//
+//                                    if(pw == password){
+//                                        self.performSegue(withIdentifier: "go", sender: self)}
+//                                    else
+//                                    {
+//                                        print("does not exist")
+//                                        let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
+//                                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                                        self.present(alert, animated: true, completion: nil)
+//                                    }
+                                                      
+               
+                        
                         
                                                        
 //                                                       try await db.collection("Unistudent").document(stidentis).setData([
@@ -184,7 +190,7 @@ class Login: UIViewController, UITextFieldDelegate {
         }   //end loginpressed
     
     func isValidEmail(emailID:String) -> Bool {
-        let emailRegEx = "[0-9A-Za-z]{1,30}+@[A-Za-z]{1,10}+\\.[A-Za-z]{1,5}"
+        let emailRegEx = "[0-9A-Za-z.]{1,30}+@[A-Za-z]{1,10}+\\.[A-Za-z]{1,5}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
@@ -223,15 +229,15 @@ class Login: UIViewController, UITextFieldDelegate {
         //return false
     }
     
-//    func storeUserInformation(collection: String, data: [String: Any]) async {
-//        //  var ref: DocumentReference? = nil
-//        // guard let uid=Auth.auth().currentUser?.uid else {return }
-//        let db = Firestore.firestore()
-//        do {
-//            try await db.collection(collection).document().setData(data)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }  //end func
+    func storeUserInformation(collection: String, data: [String: Any]) async {
+        //  var ref: DocumentReference? = nil
+        // guard let uid=Auth.auth().currentUser?.uid else {return }
+        let db = Firestore.firestore()
+        do {
+            try await db.collection(collection).document().setData(data)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }  //end func
        
 }
