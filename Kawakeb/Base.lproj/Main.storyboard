@@ -62,9 +62,6 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYv-do-2P6" kind="show" id="rqb-ge-P8v"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwZ-H9-mLX">
                                 <rect key="frame" x="212" y="826" width="413" height="83"/>
@@ -83,7 +80,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NYv-do-2P6" kind="show" id="keq-Xp-v20"/>
+                                    <segue destination="Mzz-Q8-msB" kind="show" id="zz1-Qa-K8u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,9 +132,6 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Mzz-Q8-msB" kind="show" id="LhA-C2-JKo"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCs-35-A2e">
                                 <rect key="frame" x="173" y="826" width="216" height="83"/>
@@ -196,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxq-9r-BEw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.7769784172663" y="17.587939698492463"/>
+            <point key="canvasLocation" x="812" y="691"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gEn-xi-gGE">
@@ -356,17 +350,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  أدخل البريد الالكتروني" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-bT-MbO" userLabel="أدخل البريد الالكتروني">
-                                <rect key="frame" x="144" y="592" width="546" height="58"/>
+                                <rect key="frame" x="144" y="570" width="546" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  أدخل كلمة المرور" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="3oC-QN-bYt">
-                                <rect key="frame" x="144" y="783" width="546" height="56"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  أدخل كلمة المرور" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Yht-gQ-3Kf" userLabel="أدخل البريد الالكتروني">
+                                <rect key="frame" x="149" y="758" width="546" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsv-Dw-yEh">
+                                <rect key="frame" x="152" y="824" width="541" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="البريد الالكتروني" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01Y-9X-BjD">
                                 <rect key="frame" x="429" y="496" width="261" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -374,7 +376,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FX-ZR-nyf">
-                                <rect key="frame" x="502" y="696" width="188" height="54"/>
+                                <rect key="frame" x="502" y="686" width="188" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -399,7 +401,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hWd-M9-MlB" kind="show" id="5WA-OK-sf5"/>
+                                    <action selector="FirstButton:" destination="Mzz-Q8-msB" eventType="touchUpInside" id="LST-n6-Iba"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-sZ-Qwd">
@@ -423,19 +425,23 @@
                                     </attributedString>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrL-s4-EKd">
+                                <rect key="frame" x="152" y="628" width="541" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vL1-6K-hcJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="01Y-9X-BjD" firstAttribute="top" secondItem="vL1-6K-hcJ" secondAttribute="top" constant="422" id="1ld-UB-Z3y"/>
-                            <constraint firstItem="3oC-QN-bYt" firstAttribute="top" secondItem="2FX-ZR-nyf" secondAttribute="bottom" constant="33" id="3CO-bz-79w"/>
                             <constraint firstItem="rKx-bT-MbO" firstAttribute="leading" secondItem="vL1-6K-hcJ" secondAttribute="leading" constant="144" id="3Ma-rV-IMZ"/>
-                            <constraint firstItem="vL1-6K-hcJ" firstAttribute="trailing" secondItem="3oC-QN-bYt" secondAttribute="trailing" constant="144" id="5rZ-Hv-uus"/>
                             <constraint firstItem="vL1-6K-hcJ" firstAttribute="trailing" secondItem="rKx-bT-MbO" secondAttribute="trailing" constant="144" id="69X-T1-bpu"/>
-                            <constraint firstItem="3oC-QN-bYt" firstAttribute="leading" secondItem="vL1-6K-hcJ" secondAttribute="leading" constant="144" id="HyQ-r5-Y4a"/>
-                            <constraint firstItem="2FX-ZR-nyf" firstAttribute="top" secondItem="rKx-bT-MbO" secondAttribute="bottom" constant="46" id="aiZ-eF-0Pd"/>
+                            <constraint firstItem="2FX-ZR-nyf" firstAttribute="top" secondItem="rKx-bT-MbO" secondAttribute="bottom" constant="58" id="aiZ-eF-0Pd"/>
                             <constraint firstItem="vL1-6K-hcJ" firstAttribute="trailing" secondItem="01Y-9X-BjD" secondAttribute="trailing" constant="144" id="ciA-Cz-QEF"/>
-                            <constraint firstItem="rKx-bT-MbO" firstAttribute="top" secondItem="01Y-9X-BjD" secondAttribute="bottom" constant="42" id="fiL-ul-Mbc"/>
+                            <constraint firstItem="rKx-bT-MbO" firstAttribute="top" secondItem="01Y-9X-BjD" secondAttribute="bottom" constant="20" id="fiL-ul-Mbc"/>
                             <constraint firstItem="01Y-9X-BjD" firstAttribute="leading" secondItem="vL1-6K-hcJ" secondAttribute="leading" constant="429" id="ld7-cn-Kqq"/>
                             <constraint firstItem="2FX-ZR-nyf" firstAttribute="leading" secondItem="vL1-6K-hcJ" secondAttribute="leading" constant="502" id="mw8-BN-ND5"/>
                             <constraint firstItem="vL1-6K-hcJ" firstAttribute="trailing" secondItem="2FX-ZR-nyf" secondAttribute="trailing" constant="144" id="pEu-Cm-LdL"/>
@@ -443,8 +449,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Mr-7Q-EuH"/>
                     <connections>
+                        <outlet property="Emailvalidation" destination="TrL-s4-EKd" id="sz7-9H-Yjm"/>
+                        <outlet property="FirstButton" destination="mO0-iw-uHY" id="JMf-kG-KxZ"/>
+                        <outlet property="Passwordvalidation" destination="Wsv-Dw-yEh" id="AsD-BX-SXV"/>
                         <outlet property="emailTextField" destination="rKx-bT-MbO" id="H8X-FJ-4Cc"/>
-                        <outlet property="passwordTextField" destination="3oC-QN-bYt" id="LM2-DR-vzk"/>
+                        <outlet property="passwordTextField" destination="Yht-gQ-3Kf" id="x71-OP-k0g"/>
+                        <segue destination="hWd-M9-MlB" kind="show" identifier="goToBirthday" id="XqC-m8-nRN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdh-Xe-e8y" sceneMemberID="firstResponder"/>
@@ -521,7 +531,6 @@
                                 <connections>
                                     <action selector="CreateAccountPressed:" destination="CeF-fr-0V3" eventType="touchUpInside" id="1PB-Gl-G5g"/>
                                     <action selector="CreateButton:" destination="zP2-Qe-HyJ" eventType="touchUpInside" id="dlE-4v-T0H"/>
-                                    <segue destination="1de-NW-Je0" kind="show" id="eFy-Te-Ctn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="أدخل اسم الشخصية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="523-GL-cjW">
@@ -617,9 +626,6 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Cne-mb-dgE" kind="show" id="f11-9g-4QJ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-kL-dbY">
                                 <rect key="frame" x="167" y="946" width="216" height="83"/>
@@ -667,7 +673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ys-yb-a5G" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902.8776978417268" y="454.77386934673365"/>
+            <point key="canvasLocation" x="2917" y="455"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HMQ-g4-pyK">
@@ -708,9 +714,6 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="CeF-fr-0V3" kind="show" id="dPL-d0-Fcg"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFH-84-hMR">
                                 <rect key="frame" x="167" y="946" width="216" height="83"/>
@@ -809,9 +812,6 @@
             <point key="canvasLocation" x="57.553956834532379" y="17.587939698492463"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="keq-Xp-v20"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="bgwthlogo" width="1414" height="2000"/>

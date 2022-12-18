@@ -12,6 +12,7 @@
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
 		F00ED9B7294B379200517CD1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00ED9B6294B379200517CD1 /* RegisterViewController.swift */; };
 		F00ED9B9294D06ED00517CD1 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00ED9B8294D06ED00517CD1 /* HomeScreenViewController.swift */; };
+		F00ED9BB294F0D7100517CD1 /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00ED9BA294F0D7100517CD1 /* Globel.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
 		F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC896294A111300152C07 /* SceneDelegate.swift */; };
 		F02AC899294A111300152C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC898294A111300152C07 /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
 		F00ED9B6294B379200517CD1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Kawakeb/RegisterViewController.swift; sourceTree = "<group>"; };
 		F00ED9B8294D06ED00517CD1 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = Kawakeb/HomeScreenViewController.swift; sourceTree = "<group>"; };
+		F00ED9BA294F0D7100517CD1 /* Globel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02AC894294A111300152C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02AC896294A111300152C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				F00ED9BA294F0D7100517CD1 /* Globel.swift */,
 				F00ED9B8294D06ED00517CD1 /* HomeScreenViewController.swift */,
 				F00ED9B6294B379200517CD1 /* RegisterViewController.swift */,
 				F02AC893294A111300152C07 /* Kawakeb */,
@@ -370,6 +373,7 @@
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				F00ED9B7294B379200517CD1 /* RegisterViewController.swift in Sources */,
+				F00ED9BB294F0D7100517CD1 /* Globel.swift in Sources */,
 				F00ED9B9294D06ED00517CD1 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
