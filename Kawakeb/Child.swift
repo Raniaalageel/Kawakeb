@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct child : Codable {
+struct Child : Codable {
     let email : String?
     let name : String?
-    let passowrd : String?
+//    let passowrd : String?
     let dob : String?
+    let childID: String?
 }

@@ -13,6 +13,7 @@
 		5610D88F294CAD0C00E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D88E294CAD0C00E046FC /* Profile.swift */; };
 		5610D893294CAF2D00E046FC /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 5610D892294CAF2D00E046FC /* girl.png */; };
 		5610D897294E4C2200E046FC /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D896294E4C2200E046FC /* UserObject.swift */; };
+		5610D899294F8D3F00E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D898294F8D3F00E046FC /* Editprofile.swift */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
@@ -78,6 +79,7 @@
 		5610D88E294CAD0C00E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D892294CAF2D00E046FC /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = girl.png; path = ../../../Downloads/girl.png; sourceTree = "<group>"; };
 		5610D896294E4C2200E046FC /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		5610D898294F8D3F00E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				5610D888294CAB9C00E046FC /* CodableFirebaseSupport.swift */,
 				5610D88A294CAC0500E046FC /* Child.swift */,
 				5610D88E294CAD0C00E046FC /* Profile.swift */,
+				5610D898294F8D3F00E046FC /* Editprofile.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
 				A243CBB7294B2CFE00ABC146 /* white.png */,
@@ -383,6 +386,7 @@
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
 				5610D88F294CAD0C00E046FC /* Profile.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
+				5610D899294F8D3F00E046FC /* Editprofile.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				5610D88B294CAC0500E046FC /* Child.swift in Sources */,
 				5610D889294CAB9C00E046FC /* CodableFirebaseSupport.swift in Sources */,
