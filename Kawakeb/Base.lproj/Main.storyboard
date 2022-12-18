@@ -368,7 +368,7 @@
                                         <fragment content="نسيت كلمة المرور؟">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="44" name=".SFArabic-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="44"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
