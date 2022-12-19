@@ -529,8 +529,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="CreateAccountPressed:" destination="CeF-fr-0V3" eventType="touchUpInside" id="1PB-Gl-G5g"/>
-                                    <action selector="CreateButton:" destination="zP2-Qe-HyJ" eventType="touchUpInside" id="dlE-4v-T0H"/>
+                                    <action selector="CreateAccountButton:" destination="CeF-fr-0V3" eventType="touchUpInside" id="08X-9r-Kl4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="أدخل اسم الشخصية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="523-GL-cjW">
@@ -541,7 +540,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOA-1p-xW7">
-                                <rect key="frame" x="313" y="668" width="246" height="240"/>
+                                <rect key="frame" x="313" y="685" width="246" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -552,19 +551,27 @@
                                 <rect key="frame" x="313" y="685" width="246" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-KH-K5m">
+                                <rect key="frame" x="149" y="637" width="541" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uiW-a7-jxh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="o7h-UW-shx"/>
                     <connections>
+                        <outlet property="CharacterNamevalidation" destination="Q9z-KH-K5m" id="DiS-LJ-zqA"/>
                         <outlet property="CreateAccountButton" destination="4ng-Wh-zqJ" id="e79-mk-rYy"/>
                         <outlet property="nameTextField" destination="ozE-2L-vlj" id="G4y-GL-8eb"/>
                         <outlet property="selectedImage" destination="7DM-ar-SyR" id="7Ik-ZV-I2v"/>
+                        <segue destination="1de-NW-Je0" kind="show" identifier="goToHomePage" id="oXm-UJ-th2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTN-ic-dwy" sceneMemberID="firstResponder"/>
-                <exit id="zP2-Qe-HyJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4315.8273381294966" y="454.77386934673365"/>
         </scene>
@@ -626,6 +633,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SecondButton:" destination="hWd-M9-MlB" eventType="touchUpInside" id="Pim-db-O0g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-kL-dbY">
                                 <rect key="frame" x="167" y="946" width="216" height="83"/>
@@ -655,7 +665,14 @@
                                 <color key="textColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اليوم/الشهر/السنة" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-sz-6Sb" userLabel="أدخل البريد الالكتروني">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeY-3T-HvC">
+                                <rect key="frame" x="167" y="665" width="546" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اليوم-الشهر-السنة" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-sz-6Sb" userLabel="أدخل البريد الالكتروني">
                                 <rect key="frame" x="167" y="592" width="546" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -668,12 +685,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="SGO-d7-prk"/>
                     <connections>
+                        <outlet property="Birthdayvalidation" destination="FeY-3T-HvC" id="vfi-mm-Iec"/>
+                        <outlet property="SecondButton" destination="94y-15-4Ms" id="nuQ-Hr-W9t"/>
                         <outlet property="bithdayTextField" destination="Ja2-sz-6Sb" id="qRb-jG-qwx"/>
+                        <segue destination="Cne-mb-dgE" kind="show" identifier="goToCharacter" id="CPw-UC-NER"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ys-yb-a5G" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917" y="455"/>
+            <point key="canvasLocation" x="2916.5467625899282" y="454.77386934673365"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HMQ-g4-pyK">
@@ -714,6 +734,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ThirdButton:" destination="Cne-mb-dgE" eventType="touchUpInside" id="Ab8-uZ-Bz6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFH-84-hMR">
                                 <rect key="frame" x="167" y="946" width="216" height="83"/>
@@ -764,29 +787,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="GirlPressed:" destination="Cne-mb-dgE" eventType="touchUpInside" id="CLj-Ai-xEk"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-IA-Qbg">
-                                <rect key="frame" x="451" y="631" width="240" height="197"/>
+                                <rect key="frame" x="451" y="606" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTT-X9-5mo">
-                                <rect key="frame" x="152" y="631" width="240" height="197"/>
+                                <rect key="frame" x="152" y="606" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="BoyPressed:" destination="Cne-mb-dgE" eventType="touchUpInside" id="pB3-AO-cDL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boy" translatesAutoresizingMaskIntoConstraints="NO" id="Btq-Gw-YRy">
-                                <rect key="frame" x="152" y="631" width="240" height="197"/>
+                                <rect key="frame" x="152" y="606" width="246" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbM-nE-EtE">
+                                <rect key="frame" x="167" y="867" width="527" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RDd-FL-L1c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="h4e-uO-0Fz"/>
                     <connections>
+                        <outlet property="Charactervalidation" destination="DbM-nE-EtE" id="VtZ-rv-DAD"/>
+                        <outlet property="ThirdButton" destination="GPu-gK-iGJ" id="VSe-at-wX0"/>
                         <outlet property="boy" destination="iTT-X9-5mo" id="J6h-Z8-NFL"/>
                         <outlet property="girl" destination="o1y-1D-lau" id="WV1-ag-DTz"/>
+                        <segue destination="CeF-fr-0V3" kind="show" identifier="goToCharacterName" id="NiF-cu-wVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTe-Qy-YfE" sceneMemberID="firstResponder"/>

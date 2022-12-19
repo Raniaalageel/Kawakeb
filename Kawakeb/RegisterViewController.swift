@@ -24,16 +24,26 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var bithdayTextField: UITextField!
+    @IBOutlet weak var SecondButton: UIButton!
+    @IBOutlet weak var Birthdayvalidation: UILabel!
+    
+    
     
     @IBOutlet weak var girl: UIButton!
     @IBOutlet weak var boy: UIButton!
+    @IBOutlet weak var Charactervalidation: UILabel!
+    @IBOutlet weak var ThirdButton: UIButton!
+    
+    
     
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
-
+    @IBOutlet weak var CharacterNamevalidation: UILabel!
     @IBOutlet weak var CreateAccountButton: UIButton!
     
-    var Lemail: String = ""
+    
+    
+    var Lemail = ""
     var Lpassword = ""
     var bod = ""
     var Character = ""
@@ -43,14 +53,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-//        Emailvalidation.isHidden = true
-//        Passwordvalidation.isHidden = true
-//        self.emailTextField.delegate = self
-//        self.passwordTextField.delegate = self
-//        self.tabBarController?.tabBar.isHidden = true
-////        self.emailTextField.text = "rania@gmail.com"
-////        self.passwordTextField.text = "12345678"
+
         
     }
     
@@ -113,9 +116,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.tabBarController?.tabBar.isHidden = true
-//        self.emailTextField.text = "rania@gmail.com"
-//        self.passwordTextField.text = "12345678"
-        
+
      
         let validationResult = isValid()
         if validationResult.0 == false {return}
@@ -130,7 +131,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         Lemail = email
         Lpassword = password
+        
+        print("Lemail : " , Lemail)
+        print("Lpassword : " , Lpassword)
+        
         Global.shared.useremailshare = email
+        Global.shared.userpasswordshare = password
         
         Auth.auth().signIn(withEmail: email, password: password) { authResult , error in
                       if let e = error {
@@ -140,45 +146,154 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                              print("email exists")
                              self.Emailvalidation.isHidden = false
                              self.Emailvalidation.text = "الرجاء تغيير البريد الاكتروني"
-                             
                             
-                      }
-                  }
-
-       
-
-
-//        Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
-//            if let e=error{   //if no connect with firebase
-//                print("not exist child")
-//                self.performSegue(withIdentifier: "goToBirthday", sender: self)
-//
-//               }else{   //user Auth in firebase
-//                print("failed")
-//                let alert = UIAlertController(title: "Error", message: "الرجاء تغيير البريد الالكتروني", preferredStyle: .alert)
-//               }// end else
-//        }//Auth
-//                  //                           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                  //                           self.present(alert, animated: true, completion: nil)
-//                Task {
-//                    let db = Firestore.firestore()
-//                    if await self.checkEmailExist(email: email, collection: "Child", field: "email") {
-//
-//                        print("child exists")
-//                           print("failed")
-//                           let alert = UIAlertController(title: "Error", message: "الرجاء تغيير البريد الالكتروني", preferredStyle: .alert)
-//                           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                           self.present(alert, animated: true, completion: nil)
-//                    }else {
-//                        print("not exists")
-//                        self.performSegue(withIdentifier: "goToBirthday", sender: self)
-//                        }
-//
-//            } //Task
+                }
+        }
 }// func
     
 
+    @IBAction func SecondButton(_ sender: UIButton) {
+        
+        Birthdayvalidation.isHidden = true
+        
+        let validationResult = isValidbod()
+        if validationResult.0 == false {return}
+        
+        let Birthday = validationResult.1
+       
+        Global.shared.userbirthday = Birthday
+        
+        bod = Birthday
+        print("bod : " , Birthday)
+        self.performSegue(withIdentifier: "goToCharacter", sender: self)
+
+    }
     
+    var whatCharacterPressed = ""
+    
+    @IBAction func ThirdButton(_ sender: UIButton) {
+        
+        Charactervalidation.isHidden = true
+        Charactervalidation.text = "الرجاء اختيار الشخصية"
+        if isPressed {
+        self.performSegue(withIdentifier: "goToCharacterName", sender: self)
+        }else{
+        Charactervalidation.isHidden = false
+        }
+        Character = whatCharacterPressed
+        Global.shared.usercharacter = Character
+        print(" Character : " , Character)
+    }
+    
+    var isPressed = false
+    @IBAction func GirlPressed(_ sender: UIButton) {
+        
+    Charactervalidation.isHidden = true
+    isPressed = true
+    girl.isHidden = true
+    print("Girl pressed")
+    whatCharacterPressed = "girl"
+    }
+    
+    @IBAction func BoyPressed(_ sender: UIButton) {
+    
+      Charactervalidation.isHidden = true
+      isPressed = true
+      boy.isHidden = true
+      print("Boy pressed")
+      whatCharacterPressed = "boy"
+    }
+    
+    
+    @IBAction func CreateAccountButton(_ sender: UIButton) {
+        
+        CharacterNamevalidation.isHidden = true
+       
+               let validationResult = isValidName()
+               if validationResult.0 == false {return}
+       
+               let name = validationResult.1
+       
+               CharacterName = name
+               Global.shared.usercharacterName = name
+               print("CharacterName : " , CharacterName)
+        
+        
+               
+               print("Global email : " , Global.shared.useremailshare )
+               print("Global password : ", Global.shared.userpasswordshare )
+               print("Global birthday : ", Global.shared.userbirthday )
+               print(" Global character : " , Global.shared.usercharacter)
+               print("Global character name : " , Global.shared.usercharacterName)
+              
+
+
+         
+        Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
+        if let e = error {
+        print(e.localizedDescription)
+        }else {
+        // Go to our home screen
+        self.performSegue(withIdentifier: "goToHomePage", sender: self)
+           }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    func isValidName() -> (Bool, String, String) {
+        
+        guard let Name = nameTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
+        else {
+            CharacterNamevalidation.isHidden = false
+            CharacterNamevalidation.text = "الرجاء إدخال اسم الشخصية"
+            return (false, "", "")
+           }
+        if !isValidCharacterName(nameText: Name) {
+            CharacterNamevalidation.isHidden = false
+            CharacterNamevalidation.text = "الرجاء إدخال اسم شخصية صحيح"
+            return (false, "", "")
+        }
+        return (true, Name , "")
+    }
+    
+    
+    func isValidCharacterName(nameText:String) -> Bool {
+        
+        let NameRegEx = "\\w{3,18}"
+        let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
+        return NameTest.evaluate(with: nameText)
+    }
+    
+    
+    
+    
+    func isValidbod() -> (Bool, String, String) {
+        
+        guard let birthday = bithdayTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
+        else {
+            Birthdayvalidation.isHidden = false
+            Birthdayvalidation.text = "الرجاءإدخال تاريخ الميلاد"
+            return (false, "", "")
+           }
+        if !isValidBirthday(BirthdayText: birthday) {
+            Birthdayvalidation.isHidden = false
+            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
+            return (false, "", "")
+        }
+        return (true, birthday , "")
+    }
+    
+    
+    func isValidBirthday(BirthdayText:String) -> Bool {
+        
+        let BoDRegEx = "^(0[1-9]|[12][0-9]|3[01])[- \\.](0[1-9]|1[012])[- \\.](19|20)\\d\\d$"
+        let BoDTest = NSPredicate(format:"SELF MATCHES %@", BoDRegEx)
+        return BoDTest.evaluate(with: BirthdayText)
+    }
     
     
     func isValidEmail(emailID:String) -> Bool {
@@ -186,6 +301,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
     }
+    
+    
     
     
     

@@ -11,5 +11,9 @@ class Global{
     public static let shared = Global()
     
     public var useremailshare : String = ""
+    public var userpasswordshare = ""
+    public var userbirthday = ""
+    public var usercharacter = ""
+    public var usercharacterName = ""
     
 }
