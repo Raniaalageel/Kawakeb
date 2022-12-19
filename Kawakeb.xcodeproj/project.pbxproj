@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A211078D29506F1D00C3FF29 /* mainPage.png in Resources */ = {isa = PBXBuildFile; fileRef = A211078C29506F1D00C3FF29 /* mainPage.png */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A211078C29506F1D00C3FF29 /* mainPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainPage.png; path = ../../mainPage.png; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F02AC89A294A111300152C07 /* Main.storyboard */,
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
+				A211078C29506F1D00C3FF29 /* mainPage.png */,
 				A243CBB7294B2CFE00ABC146 /* white.png */,
 				A243CBBD294B300600ABC146 /* LOGO.PNG */,
 				A243CBBB294B2FFE00ABC146 /* mainBG.jpg */,
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
+				A211078D29506F1D00C3FF29 /* mainPage.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */,
