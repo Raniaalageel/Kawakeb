@@ -35,7 +35,7 @@ class Validation: UIViewController {
     func eq() -> Int{
         x1 = Int(exactly: arc4random_uniform(10) + 1)!
         x2 =  Int(exactly: arc4random_uniform(10) + 1)!
-        let op = Int.random(in: 0..<4)
+        let op = Int.random(in: 0..<3)
         switch op {
             case 0:
             equation.text = "\(x1!) + \(x2!)"
@@ -43,10 +43,10 @@ class Validation: UIViewController {
             case 1:
             equation.text = "\(x1!) - \(x2!)"
             return x1 - x2
+//            case 2:
+//            equation.text = "\(x1!) / \(x2!)"
+//            return x1 / x2
             case 2:
-            equation.text = "\(x1!) / \(x2!)"
-            return x1 / x2
-            case 3:
             equation.text = "\(x1!) * \(x2!)"
             return x1 * x2
         default:
