@@ -54,8 +54,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
 
-        self.tabBarController?.tabBar.isHidden = true
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
+//        self.tabBarController?.tabBar.isHidden = true
+//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
 
         
     }
@@ -191,10 +191,23 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 //            }
             
         self.performSegue(withIdentifier: "goToCharacterName", sender: self)
+//            if (Character == "girl"){
+//            let imageName = "girl.png"
+//            let image = UIImage(named: imageName)
+//            let imageView = UIImageView(image: image!)
+//            imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
+//            view.addSubview(imageView)
+//            }else if (Character == "boy"){
+//                let imageName = "boy.png"
+//                let image = UIImage(named: imageName)
+//                let imageView = UIImageView(image: image!)
+//                imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
+//                view.addSubview(imageView)
+//            }
         }else{
         Charactervalidation.isHidden = false
         }
-        
+
     }
     
     
@@ -233,7 +246,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 //         }else{
 //             selectedImage.image = UIImage(named:"LOGO")
 //         }
-       
+//        ___________________________________________________________________
+        if (Global.shared.usercharacter == "girl"){
+        let imageName = "girl.png"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+        view.addSubview(imageView)
+        }else if (Global.shared.usercharacter == "boy"){
+            let imageName = "boy.png"
+            let image = UIImage(named: imageName)
+            let imageView = UIImageView(image: image!)
+            imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+            view.addSubview(imageView)
+        }
+//        ___________________________________________________________________
+
                let validationResult = isValidName()
                if validationResult.0 == false {return}
        
