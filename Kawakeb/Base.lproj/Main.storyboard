@@ -854,8 +854,8 @@
     <resources>
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="bgwthlogo" width="1414" height="2000"/>
-        <image name="boy" width="225" height="225"/>
-        <image name="girl" width="225" height="225"/>
+        <image name="boy" width="416" height="416"/>
+        <image name="girl" width="500" height="500"/>
         <image name="mainBG.jpg" width="1131" height="1600"/>
         <image name="white.png" width="241" height="258.5"/>
         <systemColor name="systemBackgroundColor">
