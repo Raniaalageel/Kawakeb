@@ -226,6 +226,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                print(" Global character : " , Global.shared.usercharacter)
                print("Global character name : " , Global.shared.usercharacterName)
               
+        storeUserInformation()
 
 
          
@@ -323,16 +324,31 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    func storeUserInformation(collection: String, data: [String: Any]) async {
-        
-        let db = Firestore.firestore()
-        do {
-            try await db.collection(collection).document().setData(data)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+//    func storeUserInformation(collection: String, data: [String: Any]) async {
+//
+//        let db = Firestore.firestore()
+//        do {
+//            try await db.collection(collection).document().setData(data)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
     
+    func storeUserInformation()  {
+            
+            let post = ["email": Global.shared.useremailshare,
+                        "password": Global.shared.userpasswordshare,
+                        "dob": Global.shared.userbirthday,
+                        "character": Global.shared.usercharacter,
+                        "name": Global.shared.usercharacterName]
+            
+            let db = Firestore.firestore()
+                   do {
+                    try db.collection("Child").document().setData(post)
+                   } catch {
+                       print(error.localizedDescription)
+                   }
+        }
     
     
     
