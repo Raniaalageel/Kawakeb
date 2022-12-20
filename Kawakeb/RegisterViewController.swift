@@ -175,14 +175,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         Charactervalidation.isHidden = true
         Charactervalidation.text = "الرجاء اختيار الشخصية"
+        Character = whatCharacterPressed
+        Global.shared.usercharacter = Character
+        print(" Character : " , Character)
+
         if isPressed {
+            
         self.performSegue(withIdentifier: "goToCharacterName", sender: self)
         }else{
         Charactervalidation.isHidden = false
         }
-        Character = whatCharacterPressed
-        Global.shared.usercharacter = Character
-        print(" Character : " , Character)
+        
     }
     
     var isPressed = false
@@ -190,7 +193,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
     Charactervalidation.isHidden = true
     isPressed = true
-    girl.isHidden = true
+//    girl.isHidden = true
+    girl.backgroundColor = UIColor.lightGray
+    boy.backgroundColor = UIColor.white
     print("Girl pressed")
     whatCharacterPressed = "girl"
     }
@@ -199,7 +204,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
       Charactervalidation.isHidden = true
       isPressed = true
-      boy.isHidden = true
+        girl.backgroundColor = UIColor.white
+        boy.backgroundColor = UIColor.lightGray
+//      boy.isHidden = true
       print("Boy pressed")
       whatCharacterPressed = "boy"
     }
