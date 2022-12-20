@@ -15,6 +15,10 @@ class Validation: UIViewController {
     
     @IBOutlet weak var msg: UILabel!
     
+    
+    let formatter: NumberFormatter = NumberFormatter()
+    
+    
     var actual: Int!
     var ans: Int?
     var  x1: Int!
@@ -57,17 +61,26 @@ class Validation: UIViewController {
     }
 
     @IBAction func pressed(_ sender: Any) {
+//        formatter.locale = NSLocale(localeIdentifier: "EN") as Locale?
+//        let final = formatter.number(from: answer.text!)
+//        var check = Int(final)
+//            print("\(check)")
         let check = answer.text
-        let bl = (check?.isEmpty)!
         
+        let bl = (check?.isEmpty)!
+
         if(bl){
             msg.isHidden = false
             msg.text = "الرجاء ادخال رقم صحيح"
         }
         else{
-           let b2 = check?.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
+        let b2 = check?.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil
             if b2{
-        ans = Int(answer.text!)!
+                formatter.locale = NSLocale(localeIdentifier: "EN") as Locale?
+                let final = formatter.number(from: check!)!
+                       var ans = Int(final)
+                           print("\(ans)")
+       // ans = Int(answer.text!)!
         if (actual==ans)
         {
             self.performSegue(withIdentifier: "checked", sender: self)
@@ -77,7 +90,7 @@ class Validation: UIViewController {
             let alert = UIAlertController(title: "تنبيه", message: "اجابة خاطئة،  حاول مجددًا!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "حسنًا", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        
+
         }}
             else{
                 msg.isHidden = false

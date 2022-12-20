@@ -17,6 +17,7 @@
 		A21107A129509F8200C3FF29 /* rocket1.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079F29509F8200C3FF29 /* rocket1.png */; };
 		A21107A32950A18500C3FF29 /* astro.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107A22950A18500C3FF29 /* astro.png */; };
 		A21107A52950A5C800C3FF29 /* ours.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107A42950A5C800C3FF29 /* ours.png */; };
+		A21107AC2952495100C3FF29 /* backk.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107AB2952495100C3FF29 /* backk.png */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
@@ -90,6 +91,8 @@
 		A211079F29509F8200C3FF29 /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket1.png; path = ../../rocket1.png; sourceTree = "<group>"; };
 		A21107A22950A18500C3FF29 /* astro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = astro.png; path = ../../astro.png; sourceTree = "<group>"; };
 		A21107A42950A5C800C3FF29 /* ours.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ours.png; path = ../../ours.png; sourceTree = "<group>"; };
+		A21107A6295236D500C3FF29 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "../../Inter/static/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		A21107AB2952495100C3FF29 /* backk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backk.png; path = ../../backk.png; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -194,7 +197,9 @@
 				F02AC898294A111300152C07 /* ViewController.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
+				A21107A6295236D500C3FF29 /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
+				A21107AB2952495100C3FF29 /* backk.png */,
 				A21107A42950A5C800C3FF29 /* ours.png */,
 				A21107A22950A18500C3FF29 /* astro.png */,
 				A211079F29509F8200C3FF29 /* rocket1.png */,
@@ -368,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21107AC2952495100C3FF29 /* backk.png in Resources */,
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
 				A211079929509E7F00C3FF29 /* store.png in Resources */,
 				A211078D29506F1D00C3FF29 /* mainPage.png in Resources */,
@@ -474,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -534,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -591,7 +599,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K9TPRSV2Z7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kawakeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
