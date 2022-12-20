@@ -180,6 +180,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         print(" Character : " , Character)
 
         if isPressed {
+        
+//            if (whatCharacterPressed == "girl"){
+//                selectedImage.image = UIImage(named:"girl.png")
+//            }else{
+//                selectedImage.image = UIImage(named:"boy.png")
+//            }
             
         self.performSegue(withIdentifier: "goToCharacterName", sender: self)
         }else{
@@ -187,6 +193,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
     
     var isPressed = false
     @IBAction func GirlPressed(_ sender: UIButton) {
@@ -215,6 +222,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBAction func CreateAccountButton(_ sender: UIButton) {
         
         CharacterNamevalidation.isHidden = true
+        
+//        if (Character == "girl"){
+//         selectedImage.image = UIImage(named:"girl.png")
+//         }else if (Character == "boy"){
+//         selectedImage.image = UIImage(named:"boy.png")
+//         }else{
+//             selectedImage.image = UIImage(named:"LOGO")
+//         }
        
                let validationResult = isValidName()
                if validationResult.0 == false {return}
