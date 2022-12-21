@@ -278,8 +278,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                print("Global birthday : ", Global.shared.userbirthday )
                print(" Global character : " , Global.shared.usercharacter)
                print("Global character name : " , Global.shared.usercharacterName)
-              
-        storeUserInformation()
+         
+        
+        self.storeUserInformation()
 
 
          
@@ -330,7 +331,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         guard let birthday = bithdayTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
         else {
             Birthdayvalidation.isHidden = false
-            Birthdayvalidation.text = "الرجاءإدخال تاريخ الميلاد"
+            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد"
             return (false, "", "")
            }
         if !isValidBirthday(BirthdayText: birthday) {
@@ -401,6 +402,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                    } catch {
                        print(error.localizedDescription)
                    }
+        print("add the user into the firebafe firestore")
         }
     
     
