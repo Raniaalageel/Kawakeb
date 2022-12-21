@@ -256,19 +256,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 //             selectedImage.image = UIImage(named:"LOGO")
 //         }
 //        ___________________________________________________________________
-        if (Global.shared.usercharacter == "girl"){
-        let imageName = "girl.png"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
-        view.addSubview(imageView)
-        }else if (Global.shared.usercharacter == "boy"){
-            let imageName = "boy.png"
-            let image = UIImage(named: imageName)
-            let imageView = UIImageView(image: image!)
-            imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
-            view.addSubview(imageView)
-        }
+//        if (Global.shared.usercharacter == "girl"){
+//        let imageName = "girl.png"
+//        let image = UIImage(named: imageName)
+//        let imageView = UIImageView(image: image!)
+//        imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+//        view.addSubview(imageView)
+//        }else if (Global.shared.usercharacter == "boy"){
+//            let imageName = "boy.png"
+//            let image = UIImage(named: imageName)
+//            let imageView = UIImageView(image: image!)
+//            imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+//            view.addSubview(imageView)
+//        }
 //        ___________________________________________________________________
 
                let validationResult = isValidName()
