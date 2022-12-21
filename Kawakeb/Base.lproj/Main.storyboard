@@ -3,6 +3,7 @@
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,22 +86,10 @@
                                         <color key="strokeColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="تسجيل">
+                                        <fragment content="تسجيل الخروج">
                                             <attributes>
                                                 <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name="CourierNewPS-BoldMT"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name="SFMono-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="الخروج">
-                                            <attributes>
-                                                <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name="CourierNewPS-BoldMT"/>
+                                                <font key="NSFont" size="37" name="CourierNewPS-BoldMT"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -169,25 +158,42 @@
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLz-gr-yWC">
-                                <rect key="frame" x="661" y="194" width="66" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="pencil.circle.fill" catalog="system">
-                                    <color key="titleColor" red="0.085746411770000003" green="0.19367566750000001" blue="0.4221459313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="editpro:" destination="YEf-mt-UUL" eventType="touchUpInside" id="REr-J9-qaf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jP-zK-b3B">
-                                <rect key="frame" x="87" y="194" width="69" height="67"/>
+                                <rect key="frame" x="91" y="206" width="87" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="chevron.backward.circle.fill" catalog="system">
+                                <state key="normal">
                                     <color key="titleColor" red="0.085746411770000003" green="0.19367566750000001" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="backgroundImage" image="chevron.backward.circle.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                                        <hierarchicalColors>
+                                            <color white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
                                 </state>
                                 <connections>
                                     <action selector="backb:" destination="YEf-mt-UUL" eventType="touchUpInside" id="aa2-Zp-RUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLz-gr-yWC">
+                                <rect key="frame" x="642" y="204.5" width="85" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="8" height="10"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="backgroundImage" image="pencil.circle.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                                        <hierarchicalColors>
+                                            <color white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                </state>
+                                <connections>
+                                    <action selector="editpro:" destination="YEf-mt-UUL" eventType="touchUpInside" id="REr-J9-qaf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -206,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gh-S1-Yso" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005" y="718"/>
+            <point key="canvasLocation" x="2004.3165467625902" y="717.58793969849251"/>
         </scene>
         <!--Editprofile-->
         <scene sceneID="5ZF-X6-hgW">
@@ -221,36 +227,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fwk-Sv-Gt6">
-                                <rect key="frame" x="2" y="42" width="820" height="1174"/>
+                                <rect key="frame" x="2" y="46" width="820" height="1174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="PFw-NL-24A">
-                                <rect key="frame" x="146" y="586" width="507" height="41"/>
+                                <rect key="frame" x="159" y="613" width="507" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="2C7-0f-xIM">
-                                <rect key="frame" x="146" y="696" width="507" height="41"/>
+                                <rect key="frame" x="159" y="760" width="507" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="كلمة المرور القديمة " borderStyle="roundedRect" textAlignment="right" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="O5f-xy-PFh">
-                                <rect key="frame" x="193" y="819" width="413" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="البريد الالكتروني :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqD-Fa-erx">
-                                <rect key="frame" x="522" y="630" width="225" height="58"/>
+                                <rect key="frame" x="522" y="676" width="225" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تاريخ الميلاد : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2r-xG-9tl">
-                                <rect key="frame" x="569" y="520" width="157" height="58"/>
+                                <rect key="frame" x="569" y="535" width="157" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -260,44 +260,21 @@
                                 <rect key="frame" x="119" y="71" width="586" height="317"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-Qw-k1e">
-                                <rect key="frame" x="119" y="929" width="261" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <backgroundConfiguration key="background" strokeWidth="2">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="strokeColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="إلغاء ">
-                                            <attributes>
-                                                <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name="CourierNewPS-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="cancel:" destination="fYn-64-g8B" eventType="touchUpInside" id="90o-f0-yvc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIr-D2-Sbx">
-                                <rect key="frame" x="444" y="929" width="261" height="83"/>
+                                <rect key="frame" x="444" y="877" width="261" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.82352941176470584" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <backgroundConfiguration key="background" strokeWidth="2">
-                                        <color key="strokeColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
                                         <fragment content="حفظ ">
                                             <attributes>
                                                 <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name="CourierNewPS-BoldMT"/>
+                                                <font key="NSFont" size="50" name="CourierNewPS-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -308,31 +285,43 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="الاسم :  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Y-yn-VDe">
-                                <rect key="frame" x="636" y="436" width="90" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اعادة تعيين كلمة المرور  : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKs-3s-Iw3">
-                                <rect key="frame" x="418" y="753" width="313" height="58"/>
+                                <rect key="frame" x="636" y="408" width="90" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="rJz-X5-MlX">
-                                <rect key="frame" x="146" y="448" width="482" height="41"/>
+                                <rect key="frame" x="159" y="474" width="507" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="كلمة المرور الجديدة " borderStyle="roundedRect" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="iMC-fE-DSC">
-                                <rect key="frame" x="194" y="880" width="413" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-Qw-k1e">
+                                <rect key="frame" x="159" y="877" width="261" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="إلغاء">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.68421775926720274" green="0.6700591205088049" blue="0.68507755163944128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="50" name="CourierNewPS-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancel:" destination="fYn-64-g8B" eventType="touchUpInside" id="90o-f0-yvc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D1T-G6-hyp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -373,6 +362,9 @@
         <image name="mainBG.jpg" width="1131" height="1600"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="white.png" width="241" height="258.5"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

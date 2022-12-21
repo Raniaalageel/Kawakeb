@@ -23,11 +23,11 @@ class Editprofile: UIViewController {
     @IBOutlet weak var Uemail: UITextField!
     
     var delegate : EditprofileDelegate!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.Udob.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
         
         if let child = passedChild {
             Uname.text = child.name
@@ -35,10 +35,9 @@ class Editprofile: UIViewController {
             Udob.text = child.dob
             
             print(child.childID)
-            
  
             //            let formatter = DateFormatter()
-////            formatter.calendar = Calendar(identifier: .gregorian)
+            ////            formatter.calendar = Calendar(identifier: .gregorian)
 //            formatter.locale = Locale(identifier: "ar_DZ")
 //            formatter.dateFormat = "dd/MM/yyyy"
 //            print(formatter.string(from: Date()))
@@ -54,6 +53,18 @@ class Editprofile: UIViewController {
         }
         
     }
+    
+    @objc func dateSelected() {
+          if let datePicker = self.Udob.inputView as? UIDatePicker {
+              let dateFormatter = DateFormatter()
+              dateFormatter.dateStyle = .full
+              dateFormatter.dateFormat = "dd-MM-yyyy"
+              self.Udob.text = dateFormatter.string(from: datePicker.date)
+              Udob.textColor = .black
+              
+          }
+          self.Udob.resignFirstResponder()
+      }
     
     @IBAction func save(_ sender: Any) {
         guard let childID = passedChild?.childID else {return}
