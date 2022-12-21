@@ -54,8 +54,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
 
-//        self.tabBarController?.tabBar.isHidden = true
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
+        self.tabBarController?.tabBar.isHidden = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
 
         
     }
@@ -114,6 +114,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func FirstButton(_ sender: UIButton) {
         
+        self.tabBarController?.tabBar.isHidden = true
         Emailvalidation.isHidden = true
         Passwordvalidation.isHidden = true
         self.emailTextField.delegate = self
@@ -160,7 +161,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func SecondButton(_ sender: UIButton) {
-        
+        self.tabBarController?.tabBar.isHidden = true
         Birthdayvalidation.isHidden = true
         
         let validationResult = isValidbod()
@@ -183,7 +184,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     var whatCharacterPressed = ""
     
     @IBAction func ThirdButton(_ sender: UIButton) {
-        
+        self.tabBarController?.tabBar.isHidden = true
         Charactervalidation.isHidden = true
         Charactervalidation.text = "الرجاء اختيار الشخصية"
         Character = whatCharacterPressed
@@ -244,7 +245,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func CreateAccountButton(_ sender: UIButton) {
-        
+        self.tabBarController?.tabBar.isHidden = true
         CharacterNamevalidation.isHidden = true
         
 //        if (Character == "girl"){
