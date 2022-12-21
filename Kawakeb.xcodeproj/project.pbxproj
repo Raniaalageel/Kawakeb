@@ -63,6 +63,7 @@
 		F0F920C5295333EC0045A75C /* star22.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C4295333EC0045A75C /* star22.png */; };
 		F0F920C7295335060045A75C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C6295335060045A75C /* rocket.png */; };
 		F0F920C9295335190045A75C /* rocket1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C8295335190045A75C /* rocket1.png */; };
+		F0F920D029538AD60045A75C /* RegValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920CF29538AD60045A75C /* RegValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		F0F920C6295335060045A75C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		F0F920C8295335190045A75C /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket1.png; sourceTree = "<group>"; };
 		F0F920CA295335210045A75C /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		F0F920CF29538AD60045A75C /* RegValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F02AC893294A111300152C07 /* Kawakeb */,
 				F02AC8AA294A111700152C07 /* KawakebTests */,
 				F02AC8B4294A111700152C07 /* KawakebUITests */,
@@ -423,6 +426,7 @@
 			files = (
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
+				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,

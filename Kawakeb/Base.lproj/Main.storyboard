@@ -81,7 +81,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="h1Y-Ds-ch3" kind="show" id="Qh9-WZ-Kx7"/>
+                                    <segue destination="1y6-qD-n0J" kind="show" id="oDQ-4s-nPv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2046,10 +2046,10 @@
             </objects>
             <point key="canvasLocation" x="57.553956834532379" y="17.587939698492463"/>
         </scene>
-        <!--Validation-->
+        <!--Reg Validation-->
         <scene sceneID="5h5-EW-zKT">
             <objects>
-                <viewController id="1y6-qD-n0J" customClass="Validation" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1y6-qD-n0J" customClass="RegValidation" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1om-S4-qnX">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2088,6 +2088,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressed:" destination="1y6-qD-n0J" eventType="touchUpInside" id="c6P-Ex-6Qh"/>
+                                    <segue destination="h1Y-Ds-ch3" kind="show" identifier="goToEmailPage" id="HO3-79-xAd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eY-Td-1PJ">
@@ -2162,14 +2163,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alQ-Us-APs" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="-675"/>
+            <point key="canvasLocation" x="812" y="-675"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iI5-kz-FyW"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="yaD-Se-fJp"/>
-        <segue reference="Qh9-WZ-Kx7"/>
+        <segue reference="HO3-79-xAd"/>
         <segue reference="hqg-X7-rr5"/>
         <segue reference="Tf2-zg-CPc"/>
         <segue reference="u2J-iR-xDB"/>
