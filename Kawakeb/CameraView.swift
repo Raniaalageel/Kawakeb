@@ -116,7 +116,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     }
     
     func setupVision() {
-        guard let model = try? VNCoreMLModel(for: versiom4().model) else { return }
+        guard let model = try? VNCoreMLModel(for: MyObjectDetectorsh().model) else { return }
         let request = VNCoreMLRequest(model: model) { (request , err) in
             //print("request")
             if let results = request.results {
