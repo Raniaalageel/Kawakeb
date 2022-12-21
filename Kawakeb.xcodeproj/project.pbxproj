@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A211078D29506F1D00C3FF29 /* mainPage.png in Resources */ = {isa = PBXBuildFile; fileRef = A211078C29506F1D00C3FF29 /* mainPage.png */; };
-		A211079429509DA700C3FF29 /* star11.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079229509DA700C3FF29 /* star11.png */; };
-		A211079529509DA700C3FF29 /* star22.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079329509DA700C3FF29 /* star22.png */; };
-		A211079929509E7F00C3FF29 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079829509E7F00C3FF29 /* store.png */; };
-		A211079B29509E8300C3FF29 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079A29509E8300C3FF29 /* help.png */; };
-		A211079D29509ECC00C3FF29 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079C29509ECC00C3FF29 /* rocket.png */; };
-		A21107A029509F8200C3FF29 /* rocket2.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079E29509F8100C3FF29 /* rocket2.png */; };
-		A21107A129509F8200C3FF29 /* rocket1.png in Resources */ = {isa = PBXBuildFile; fileRef = A211079F29509F8200C3FF29 /* rocket1.png */; };
-		A21107A32950A18500C3FF29 /* astro.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107A22950A18500C3FF29 /* astro.png */; };
-		A21107A52950A5C800C3FF29 /* ours.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107A42950A5C800C3FF29 /* ours.png */; };
-		A21107AC2952495100C3FF29 /* backk.png in Resources */ = {isa = PBXBuildFile; fileRef = A21107AB2952495100C3FF29 /* backk.png */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
@@ -61,6 +50,19 @@
 		F02AC8F8294A12E600152C07 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F7294A12E600152C07 /* FirebaseRemoteConfigSwift */; };
 		F02AC8FA294A12E600152C07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F9294A12E600152C07 /* FirebaseStorage */; };
 		F02AC8FC294A12E600152C07 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8FB294A12E600152C07 /* FirebaseStorageCombine-Community */; };
+		F0F920B1295330F20045A75C /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B0295330F20045A75C /* Globel.swift */; };
+		F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B2295330FE0045A75C /* RegisterViewController.swift */; };
+		F0F920B52953335D0045A75C /* backk.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920B42953335D0045A75C /* backk.png */; };
+		F0F920B72953337A0045A75C /* ours.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920B62953337A0045A75C /* ours.png */; };
+		F0F920B9295333870045A75C /* astro.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920B8295333870045A75C /* astro.png */; };
+		F0F920BB295333970045A75C /* rocket2.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920BA295333970045A75C /* rocket2.png */; };
+		F0F920BD295333A50045A75C /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920BC295333A50045A75C /* help.png */; };
+		F0F920BF295333AF0045A75C /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920BE295333AF0045A75C /* store.png */; };
+		F0F920C1295333B90045A75C /* star11.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C0295333B90045A75C /* star11.png */; };
+		F0F920C3295333C40045A75C /* mainPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C2295333C40045A75C /* mainPage.png */; };
+		F0F920C5295333EC0045A75C /* star22.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C4295333EC0045A75C /* star22.png */; };
+		F0F920C7295335060045A75C /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C6295335060045A75C /* rocket.png */; };
+		F0F920C9295335190045A75C /* rocket1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920C8295335190045A75C /* rocket1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,18 +83,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A211078C29506F1D00C3FF29 /* mainPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainPage.png; path = ../../mainPage.png; sourceTree = "<group>"; };
-		A211079229509DA700C3FF29 /* star11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star11.png; path = ../../star11.png; sourceTree = "<group>"; };
-		A211079329509DA700C3FF29 /* star22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star22.png; path = ../../star22.png; sourceTree = "<group>"; };
-		A211079829509E7F00C3FF29 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = store.png; path = ../../store.png; sourceTree = "<group>"; };
-		A211079A29509E8300C3FF29 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = ../../help.png; sourceTree = "<group>"; };
-		A211079C29509ECC00C3FF29 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket.png; path = ../../rocket.png; sourceTree = "<group>"; };
-		A211079E29509F8100C3FF29 /* rocket2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket2.png; path = ../../rocket2.png; sourceTree = "<group>"; };
-		A211079F29509F8200C3FF29 /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rocket1.png; path = ../../rocket1.png; sourceTree = "<group>"; };
-		A21107A22950A18500C3FF29 /* astro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = astro.png; path = ../../astro.png; sourceTree = "<group>"; };
-		A21107A42950A5C800C3FF29 /* ours.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ours.png; path = ../../ours.png; sourceTree = "<group>"; };
-		A21107A6295236D500C3FF29 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "../../Inter/static/Inter-Regular.ttf"; sourceTree = "<group>"; };
-		A21107AB2952495100C3FF29 /* backk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backk.png; path = ../../backk.png; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -113,6 +103,20 @@
 		F02AC8B5294A111700152C07 /* KawakebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITests.swift; sourceTree = "<group>"; };
 		F02AC8B7294A111700152C07 /* KawakebUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0F920B0295330F20045A75C /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
+		F0F920B2295330FE0045A75C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0F920B42953335D0045A75C /* backk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backk.png; sourceTree = "<group>"; };
+		F0F920B62953337A0045A75C /* ours.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ours.png; sourceTree = "<group>"; };
+		F0F920B8295333870045A75C /* astro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = astro.png; sourceTree = "<group>"; };
+		F0F920BA295333970045A75C /* rocket2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket2.png; sourceTree = "<group>"; };
+		F0F920BC295333A50045A75C /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		F0F920BE295333AF0045A75C /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
+		F0F920C0295333B90045A75C /* star11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star11.png; sourceTree = "<group>"; };
+		F0F920C2295333C40045A75C /* mainPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainPage.png; sourceTree = "<group>"; };
+		F0F920C4295333EC0045A75C /* star22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star22.png; sourceTree = "<group>"; };
+		F0F920C6295335060045A75C /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
+		F0F920C8295335190045A75C /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket1.png; sourceTree = "<group>"; };
+		F0F920CA295335210045A75C /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,25 +195,27 @@
 			isa = PBXGroup;
 			children = (
 				A243CBC5294B7DF700ABC146 /* Login.swift */,
+				F0F920B0295330F20045A75C /* Globel.swift */,
+				F0F920B2295330FE0045A75C /* RegisterViewController.swift */,
 				A2A1C766294F1FD500E0D45E /* resetpw.swift */,
 				F02AC894294A111300152C07 /* AppDelegate.swift */,
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
-				A21107A6295236D500C3FF29 /* Inter-Regular.ttf */,
+				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
-				A21107AB2952495100C3FF29 /* backk.png */,
-				A21107A42950A5C800C3FF29 /* ours.png */,
-				A21107A22950A18500C3FF29 /* astro.png */,
-				A211079F29509F8200C3FF29 /* rocket1.png */,
-				A211079E29509F8100C3FF29 /* rocket2.png */,
-				A211079C29509ECC00C3FF29 /* rocket.png */,
-				A211079A29509E8300C3FF29 /* help.png */,
-				A211079829509E7F00C3FF29 /* store.png */,
-				A211079229509DA700C3FF29 /* star11.png */,
-				A211079329509DA700C3FF29 /* star22.png */,
-				A211078C29506F1D00C3FF29 /* mainPage.png */,
+				F0F920B42953335D0045A75C /* backk.png */,
+				F0F920B62953337A0045A75C /* ours.png */,
+				F0F920B8295333870045A75C /* astro.png */,
+				F0F920C8295335190045A75C /* rocket1.png */,
+				F0F920BA295333970045A75C /* rocket2.png */,
+				F0F920C6295335060045A75C /* rocket.png */,
+				F0F920BC295333A50045A75C /* help.png */,
+				F0F920BE295333AF0045A75C /* store.png */,
+				F0F920C0295333B90045A75C /* star11.png */,
+				F0F920C4295333EC0045A75C /* star22.png */,
+				F0F920C2295333C40045A75C /* mainPage.png */,
 				A243CBB7294B2CFE00ABC146 /* white.png */,
 				A243CBBD294B300600ABC146 /* LOGO.PNG */,
 				A243CBBB294B2FFE00ABC146 /* mainBG.jpg */,
@@ -373,24 +379,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21107AC2952495100C3FF29 /* backk.png in Resources */,
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
-				A211079929509E7F00C3FF29 /* store.png in Resources */,
-				A211078D29506F1D00C3FF29 /* mainPage.png in Resources */,
+				F0F920C5295333EC0045A75C /* star22.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
-				A211079429509DA700C3FF29 /* star11.png in Resources */,
-				A21107A32950A18500C3FF29 /* astro.png in Resources */,
-				A211079D29509ECC00C3FF29 /* rocket.png in Resources */,
-				A21107A029509F8200C3FF29 /* rocket2.png in Resources */,
+				F0F920BB295333970045A75C /* rocket2.png in Resources */,
+				F0F920C9295335190045A75C /* rocket1.png in Resources */,
+				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */,
+				F0F920B52953335D0045A75C /* backk.png in Resources */,
+				F0F920C1295333B90045A75C /* star11.png in Resources */,
 				F02AC89C294A111300152C07 /* Main.storyboard in Resources */,
-				A211079B29509E8300C3FF29 /* help.png in Resources */,
-				A21107A129509F8200C3FF29 /* rocket1.png in Resources */,
+				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
+				F0F920B72953337A0045A75C /* ours.png in Resources */,
+				F0F920BD295333A50045A75C /* help.png in Resources */,
 				A243CBB8294B2CFE00ABC146 /* white.png in Resources */,
+				F0F920B9295333870045A75C /* astro.png in Resources */,
+				F0F920C7295335060045A75C /* rocket.png in Resources */,
 				A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */,
-				A21107A52950A5C800C3FF29 /* ours.png in Resources */,
-				A211079529509DA700C3FF29 /* star22.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,9 +424,11 @@
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
+				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
+				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
