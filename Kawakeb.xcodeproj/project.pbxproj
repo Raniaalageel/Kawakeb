@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
+		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
 		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
@@ -14,8 +16,6 @@
 		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
 		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
-		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
-		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
@@ -91,14 +91,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
+		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
 		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
-		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
-		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -239,9 +239,9 @@
 				F0F920C0295333B90045A75C /* star11.png */,
 				F0F920C4295333EC0045A75C /* star22.png */,
 				F0F920C2295333C40045A75C /* mainPage.png */,
-				A243CBB7294B2CFE00ABC146 /* white.png */,
+				3481A9E029544BAF002431C7 /* white.png */,
 				A243CBBD294B300600ABC146 /* LOGO.PNG */,
-				A243CBBB294B2FFE00ABC146 /* mainBG.jpg */,
+				3481A9DE29544B8F002431C7 /* mainBG.png */,
 				F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */,
 				F02AC89F294A111600152C07 /* LaunchScreen.storyboard */,
 				F02AC8A2294A111600152C07 /* Info.plist */,
@@ -409,6 +409,8 @@
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
+				3481A9E129544BAF002431C7 /* white.png in Resources */,
+				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */,
@@ -418,10 +420,8 @@
 				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
 				F0F920B72953337A0045A75C /* ours.png in Resources */,
 				F0F920BD295333A50045A75C /* help.png in Resources */,
-				A243CBB8294B2CFE00ABC146 /* white.png in Resources */,
 				F0F920B9295333870045A75C /* astro.png in Resources */,
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
-				A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TRZFVT4Q63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kawakeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -667,7 +667,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K9TPRSV2Z7;
+				DEVELOPMENT_TEAM = TRZFVT4Q63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kawakeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
