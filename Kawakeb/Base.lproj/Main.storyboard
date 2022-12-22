@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LOGO.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="fey-pF-NdZ">
-                                <rect key="frame" x="24" y="128" width="820" height="742"/>
+                                <rect key="frame" x="24" y="54" width="820" height="742"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="820" id="YS0-38-O9b"/>
                                     <constraint firstAttribute="height" constant="742" id="pIO-Jf-0Ia"/>
@@ -60,7 +60,7 @@
                                     <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NYv-do-2P6" kind="modal" modalPresentationStyle="fullScreen" id="QhD-u7-VSh"/>
+                                    <segue destination="NYv-do-2P6" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QhD-u7-VSh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwZ-H9-mLX">
@@ -82,7 +82,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1y6-qD-n0J" kind="show" id="oDQ-4s-nPv"/>
+                                    <segue destination="1y6-qD-n0J" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oDQ-4s-nPv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -452,11 +452,6 @@
                                     <segue destination="VOB-7c-ywd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="OGu-ep-2YN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-D1-R2a">
-                                <rect key="frame" x="676" y="0.0" width="120" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket2.png" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-fh-oZS">
                                 <rect key="frame" x="46" y="1002" width="131" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -469,7 +464,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" scale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="y5d-tq-VYh" kind="presentation" modalPresentationStyle="fullScreen" id="1Wb-gS-6yn"/>
+                                    <segue destination="y5d-tq-VYh" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1Wb-gS-6yn"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star11.png" translatesAutoresizingMaskIntoConstraints="NO" id="5eo-Ui-ryQ">
@@ -484,37 +479,16 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" scale="large"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGc-EQ-hAI">
-                                <rect key="frame" x="525" y="23" width="157" height="68"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-D1-R2a">
+                                <rect key="frame" x="590" y="-2.5" width="120" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keh-vT-Tj1">
-                                <rect key="frame" x="735" y="632" width="65" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i78-Oe-iet">
-                                <rect key="frame" x="735" y="601" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQk-GR-xT1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fu9-FZ-bxO"/>
-                    <connections>
-                        <outlet property="Unamee" destination="XGc-EQ-hAI" id="cDg-Ff-9cS"/>
-                        <outlet property="udob" destination="keh-vT-Tj1" id="JIz-vE-Ntw"/>
-                        <outlet property="uemail" destination="i78-Oe-iet" id="U6U-EN-NQ3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7p-mH-Aip" sceneMemberID="firstResponder"/>
             </objects>
@@ -1502,7 +1476,7 @@
             <objects>
                 <viewController id="h1Y-Ds-ch3" customClass="RegisterViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J1P-Ke-AZQ">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vvp-M0-2v5">
@@ -1600,7 +1574,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nf1-hc-OZY">
-                                <rect key="frame" x="20" y="0.0" width="794" height="197"/>
+                                <rect key="frame" x="20" y="0.0" width="794" height="242"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGO.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="qzA-NN-kbV">
                                 <rect key="frame" x="135" y="128" width="574" height="476"/>
@@ -2261,6 +2235,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logouut:" destination="VOB-7c-ywd" eventType="touchUpInside" id="xLx-ku-NET"/>
+                                    <segue destination="AxH-NX-vOx" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xaj-88-hQr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hw-AZ-pqG">
@@ -2324,7 +2299,7 @@
                                 <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-Q2-kLY">
-                                <rect key="frame" x="91" y="206" width="87" height="75"/>
+                                <rect key="frame" x="91" y="208" width="87" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -2339,6 +2314,7 @@
                                 </state>
                                 <connections>
                                     <action selector="backb:" destination="VOB-7c-ywd" eventType="touchUpInside" id="V4m-WE-g13"/>
+                                    <segue destination="9rX-g3-OdF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mdC-1h-dYE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFB-WG-3FE">
@@ -2637,14 +2613,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Wb-gS-6yn"/>
-        <segue reference="iI5-kz-FyW"/>
+        <segue reference="T3J-OQ-uzZ"/>
+        <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="yaD-Se-fJp"/>
-        <segue reference="aNn-mm-eS3"/>
+        <segue reference="HO3-79-xAd"/>
         <segue reference="Y5R-q1-wPb"/>
-        <segue reference="8br-0v-xWi"/>
+        <segue reference="mdC-1h-dYE"/>
         <segue reference="Z5o-PD-IXw"/>
+        <segue reference="xaj-88-hQr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>

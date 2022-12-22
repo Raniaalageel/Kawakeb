@@ -36,10 +36,12 @@ class Profile: UIViewController, EditprofileDelegate {
 //        performSegue(withIdentifier: "editProfileEquation", sender: child)
     }
     @IBAction func backb(_ sender: Any) {
-        let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! Profile
+      /*
+        let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HmeVC") as! Profile
         HomeVC.modalTransitionStyle = .crossDissolve
         HomeVC.modalPresentationStyle = .fullScreen
         self.present(HomeVC, animated: true)
+       */
     }
     
     
