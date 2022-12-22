@@ -289,11 +289,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                print("Global character name : " , Global.shared.usercharacterName)
          
         
-        self.storeUserInformation()
+        
 
 
          
         Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
+            guard let userId  = authResult?.user.uid else {return}
+            self.storeUserInformation(id: userId)
         if let e = error {
         print(e.localizedDescription)
         }else {
@@ -397,7 +399,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 //        }
 //    }
     
-    func storeUserInformation()  {
+    func storeUserInformation(id: String)  {
             
             let post = ["email": Global.shared.useremailshare,
                         "password": Global.shared.userpasswordshare,
@@ -407,7 +409,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             let db = Firestore.firestore()
                    do {
-                    try db.collection("Child").document().setData(post)
+                    try db.collection("Child").document(id).setData(post)
                    } catch {
                        print(error.localizedDescription)
                    }

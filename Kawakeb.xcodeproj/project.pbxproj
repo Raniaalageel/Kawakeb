@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
+		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
+		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
+		5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E82953B0BD00E046FC /* datepicker.swift */; };
+		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
+		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
+		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
 		A243CBBE294B300600ABC146 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBD294B300600ABC146 /* LOGO.PNG */; };
@@ -84,6 +91,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
+		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
+		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
+		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
 		A243CBBD294B300600ABC146 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -140,6 +153,7 @@
 				F02AC8D8294A12E600152C07 /* FirebaseCrashlytics in Frameworks */,
 				F02AC8F8294A12E600152C07 /* FirebaseRemoteConfigSwift in Frameworks */,
 				F02AC8EA294A12E600152C07 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */,
 				F02AC8DC294A12E600152C07 /* FirebaseDatabaseSwift in Frameworks */,
 				F02AC8E6294A12E600152C07 /* FirebaseFunctions in Frameworks */,
 				F02AC8FC294A12E600152C07 /* FirebaseStorageCombine-Community in Frameworks */,
@@ -198,6 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				A243CBC5294B7DF700ABC146 /* Login.swift */,
+				5610D8E22953B09300E046FC /* Profile.swift */,
+				5610D8E42953B0A400E046FC /* Editprofile.swift */,
+				5610D8E62953B0B000E046FC /* Child.swift */,
+				5610D8E82953B0BD00E046FC /* datepicker.swift */,
+				5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				F0F920B2295330FE0045A75C /* RegisterViewController.swift */,
 				A2A1C766294F1FD500E0D45E /* resetpw.swift */,
@@ -205,6 +224,7 @@
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
+				5675477B2953C55100065DB7 /* Pv.swift */,
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
@@ -290,6 +310,7 @@
 				F02AC8F7294A12E600152C07 /* FirebaseRemoteConfigSwift */,
 				F02AC8F9294A12E600152C07 /* FirebaseStorage */,
 				F02AC8FB294A12E600152C07 /* FirebaseStorageCombine-Community */,
+				5610D8ED2953B11100E046FC /* CodableFirebase */,
 			);
 			productName = Kawakeb;
 			productReference = F02AC891294A111300152C07 /* Kawakeb.app */;
@@ -365,6 +386,7 @@
 			mainGroup = F02AC888294A111300152C07;
 			packageReferences = (
 				F02AC8C6294A12E600152C07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5610D8EC2953B11100E046FC /* XCRemoteSwiftPackageReference "CodableFirebase" */,
 			);
 			productRefGroup = F02AC892294A111300152C07 /* Products */;
 			projectDirPath = "";
@@ -425,12 +447,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
+				5610D8E32953B09300E046FC /* Profile.swift in Sources */,
+				5610D8E72953B0B000E046FC /* Child.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
+				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
+				5675477C2953C55100065DB7 /* Pv.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
+				5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
+				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
 			);
@@ -778,6 +806,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5610D8EC2953B11100E046FC /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F02AC8C6294A12E600152C07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -789,6 +825,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5610D8ED2953B11100E046FC /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5610D8EC2953B11100E046FC /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
 		F02AC8C7294A12E600152C07 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F02AC8C6294A12E600152C07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
