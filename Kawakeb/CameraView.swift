@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
+
 class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet weak var bu: UIButton!
@@ -21,42 +22,56 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     var requests = [VNRequest]()
     var boxesLayer: CALayer = CALayer()
     
+    var allLablels = [String]()
     
-    let label: UILabel = {
-        let label = UILabel ()
-        label.textColor = UIColor.red
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Guess"
-        label.textAlignment = .center
-        label.font = label.font.withSize(24)
-        return label
-    }()
+    var labels = ""
+    
+  
+    
+    let button = UIButton(frame: CGRect(x: 100, y: 700, width: 100, height: 50))
+    
+    let session = AVCaptureSession()
+    
+    
     private let shuterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100) )
         button.layer.borderColor = UIColor.red.cgColor
         return button
     }()
     
-    let confidentlabel: UILabel = {
-        let label = UILabel ()
-        label.textColor = UIColor.red
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.text = "Guess"
-        label.font = label.font.withSize(24)
-        return label
-    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("beforeCamera")
         
         
+        
+        button.backgroundColor = .green
+       button.setTitle("stop Button", for: .normal)
+    button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
         //  setupCaptureSession() // Do any additional setup after loading the view.
     }
+    @objc func buttonAction(sender: UIButton!) {
+      print("Button tapped")
+    
+        
+        if session.isRunning {
+                DispatchQueue.global().async {
+                    self.session.stopRunning()
+                }
+            }
+      //  forArray()
+        print(" allLablels STOP REUNING", allLablels)
+    }
+
     
     func setupAVCapture() {
-        let session = AVCaptureSession()
+        
+       // self.view.addSubview(button)
+        
+     //   let session = AVCaptureSession()
         var previewLayer: AVCaptureVideoPreviewLayer! = nil
         let deviceInput: AVCaptureDeviceInput!
         let videoDataOutput = AVCaptureVideoDataOutput()
@@ -113,14 +128,25 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
         session.startRunning()
+        
+        self.view.addSubview(button)
     }
     
     func setupVision() {
-        guard let model = try? VNCoreMLModel(for: MyObjectDetectorsh().model) else { return }
-        let request = VNCoreMLRequest(model: model) { (request , err) in
+        guard let model = try? VNCoreMLModel(for: MyObjectDetector20dec().model) else { return }
+        let request = VNCoreMLRequest(model: model) { [self] (request , err) in
             //print("request")
             if let results = request.results {
                 self.drawVisionRequestResults(results: results)
+               // let uniqueUnordered = Array(Set(allLablels))
+               // let uniqueOrdered = Array(NSOrderedSet(array: allLablels))
+               
+               // print("uniqueUnordered",uniqueUnordered)
+                //print("uniqueOrdered",uniqueOrdered)
+             
+                forArray()
+                
+                print("results stop now ")
             }
         }
         self.requests = [request]
@@ -141,19 +167,8 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         setupAVCapture()
         setupLayers()
         setupVision()
-        
-        
-        //            //setup output , add output to our capture session
-        //            let captureOutput = AVCaptureVideoDataOutput()
-        //            captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
-        //            captureSession.addOutput(captureOutput)
-        //
-        //            let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        //            previewLayer.frame = view.frame
-        //            view.layer.addSublayer(previewLayer)
-        //
-        //            captureSession.startRunning()
-        //            view.addSubview(shuterButton)
+       
+      
         
     }
     
@@ -174,9 +189,15 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             //print("~~~", objectObservation.labels[0])
             let topLabelObservation = objectObservation.labels[0]
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
-            print(topLabelObservation.identifier)
+            print("---")
+            print("topLabelObservation.identifier",topLabelObservation.identifier)
+           
+            labels = topLabelObservation.identifier
+            
+
             let shapeLayer = self.createRoundedRectWithBounds(objectBounds)
-            print(shapeLayer.bounds)
+            
+            print("shapeLayer.bounds",shapeLayer.bounds)
           
             let textLayer = self.createTextSubLayerInBounds(objectBounds,identifier: topLabelObservation.identifier,confidence: topLabelObservation.confidence)
             
@@ -186,8 +207,8 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             detectionOverlay.addSublayer(shapeLayer)
             
             
-            
         }
+   
         
         self.updateLayerGeometry()
         CATransaction.commit()
@@ -218,52 +239,102 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         let imageRequsetHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
+        //print("imageRequsetHandler",imageRequsetHandler)
+       // print("sampleBuffer",sampleBuffer)
         do {
             try imageRequsetHandler.perform(self.requests)
         } catch {
             print(error)
         }
         
-//        guard let model = try? VNCoreMLModel(for: MobileNetV2FP16().model) else { return }
-//
-//        let request = VNCoreMLRequest(model: model) { (request , err) in
-//            print("request")
-//            if let results = request.results {
-//                self.drawVisionRequestResults(results: results)
-//            }
-//            //            guard let results = request.results as? [VNClassificationObservation] else {     print("notdefined",err);   return}
-//            //            print("results")
-//            //           guard let observation = results.first else {return}
-//            //            print("observation")
-//            //            DispatchQueue.main.async {
-//            //                    print("identifier is ",observation.identifier)
-//            //                    print("confidence is",observation.confidence)
-//            //                }
-//        }
-                        
+   
     }
     
     func createRoundedRectWithBounds(_ bounds: CGRect) -> CALayer {
         let shapeLayer = CALayer()
+        
+        
         shapeLayer.bounds = bounds
-        print(bounds.midX, bounds.midY)
+        
+        print("bounds.midX, bounds.midY",bounds.midX, bounds.midY)
+        var numberofx = Int(bounds.midX)
+        var numberofy = Int(bounds.midY)
+        
+var numberofx2 = String(describing: numberofx)
+var numberofy2 = String(describing: numberofy)
+        
+        labels = labels + ":" + numberofx2 + ":" + numberofy2
+        
+        print("labels",labels)
+        
+    allLablels.append(labels)
+        print(" allLablels with append forArray ", allLablels)
+        forArray()
+      
+        
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+        
         shapeLayer.backgroundColor = .init(red: 255/255, green: 0, blue: 0, alpha: 1)
         return shapeLayer
     }
     
-    func setUplabel(){
-        print("setUplabel")
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-        label.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        label.leftAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        confidentlabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        confidentlabel.topAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
+    func forArray(){
+        var alliteration = 0
+        while alliteration < allLablels.count  {
+            var ch = Character(":")
+            var result = allLablels[alliteration].split(separator: ch)
+            
+            var resultx = Int(result[1])!
+            var resulty = Int(result[2])!
+            var resullabel = String(result[0])
+            
+            print("resultx ",resultx)
+            print("resulty ",resulty)
+          print("resullabel",resullabel)
+
+      var indexin = alliteration + 1
+            while indexin < allLablels.count  {
+                print("indexin",indexin)
+                var result2 = allLablels[indexin].split(separator: ch)
+
+                var resultxnext = Int(result2[1])!
+                var resultynext = Int(result2[2])!
+                var resullabelnext = String(result2[0])
+                print("resultxnext",resultxnext)
+                print("resultynext ",resultynext)
+              print("resullabelnext",resullabelnext)
+                
+                if  ( resullabel.elementsEqual(resullabelnext)  ) {
+                    print("resullabel==resullabelnext",resullabel,resullabelnext)
+
+                if  ( resultx + 15 >= resultxnext  && resulty + 15 >= resultynext ){
+                print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 10,resultxnext , resulty + 10 , resultynext)
+                    print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+
+                    allLablels.remove(at: indexin)
+                    print(" allLablels after remove ", allLablels)
+                }
+                }
+              indexin += 1
+            }
+                
+            
+            print("alliteration",   alliteration)
+        alliteration += 1
+            }
+        print(" FINAL allLablels  ", allLablels)
+          
     }
     
     func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence) -> CATextLayer {
+        
+//        labels = identifier
+//            print("labels",labels)
+//
+//        allLablels.append(labels)
+//        print(" allLablels", allLablels)
+        
+        
            let textLayer = CATextLayer()
            textLayer.name = "Object Label"
         
