@@ -25,7 +25,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     var allLablels = [String]()
     
     var labels = ""
-    
+    var enabled = false
   
     
     let button = UIButton(frame: CGRect(x: 100, y: 700, width: 100, height: 50))
@@ -56,14 +56,16 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     @objc func buttonAction(sender: UIButton!) {
       print("Button tapped")
     
+        enabled = true
         
         if session.isRunning {
                 DispatchQueue.global().async {
+                print("  STOP Session")
                     self.session.stopRunning()
                 }
             }
       //  forArray()
-        print(" allLablels STOP REUNING", allLablels)
+       // print(" allLablels STOP REUNING", allLablels)
     }
 
     
@@ -144,7 +146,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                // print("uniqueUnordered",uniqueUnordered)
                 //print("uniqueOrdered",uniqueOrdered)
              
-                forArray()
+              //  forArray()
                 
                 print("results stop now ")
             }
@@ -191,13 +193,16 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
             print("---")
             print("topLabelObservation.identifier",topLabelObservation.identifier)
-           
             labels = topLabelObservation.identifier
             
 
             let shapeLayer = self.createRoundedRectWithBounds(objectBounds)
-            
             print("shapeLayer.bounds",shapeLayer.bounds)
+          //  print("shapeLayer.bounds",shapeLayer.bounds.width)
+         //   print("shapeLayer.bounds",shapeLayer.bounds.height)
+           // print("shapeLayer.bounds",shapeLayer.bounds.origin.x)
+           // print("shapeLayer.bounds",shapeLayer.bounds.origin.y)
+//
           
             let textLayer = self.createTextSubLayerInBounds(objectBounds,identifier: topLabelObservation.identifier,confidence: topLabelObservation.confidence)
             
@@ -239,8 +244,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         let imageRequsetHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
-        //print("imageRequsetHandler",imageRequsetHandler)
-       // print("sampleBuffer",sampleBuffer)
+      //  print("imageRequsetHandler",imageRequsetHandler)
         do {
             try imageRequsetHandler.perform(self.requests)
         } catch {
@@ -253,10 +257,12 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     func createRoundedRectWithBounds(_ bounds: CGRect) -> CALayer {
         let shapeLayer = CALayer()
         
-        
         shapeLayer.bounds = bounds
         
-        print("bounds.midX, bounds.midY",bounds.midX, bounds.midY)
+        if enabled == true {
+            
+        
+            print("bounds.midX, bounds.midY",bounds.midX, bounds.midY)
         var numberofx = Int(bounds.midX)
         var numberofy = Int(bounds.midY)
         
@@ -270,10 +276,11 @@ var numberofy2 = String(describing: numberofy)
     allLablels.append(labels)
         print(" allLablels with append forArray ", allLablels)
         forArray()
+        }
       
         
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-        
+        print("shapeLayer.position ",shapeLayer.position )
         shapeLayer.backgroundColor = .init(red: 255/255, green: 0, blue: 0, alpha: 1)
         return shapeLayer
     }
@@ -307,8 +314,8 @@ var numberofy2 = String(describing: numberofy)
                 if  ( resullabel.elementsEqual(resullabelnext)  ) {
                     print("resullabel==resullabelnext",resullabel,resullabelnext)
 
-                if  ( resultx + 15 >= resultxnext  && resulty + 15 >= resultynext ){
-                print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 10,resultxnext , resulty + 10 , resultynext)
+                if  ( resultx + 25 >= resultxnext  && resulty + 25 >= resultynext ){
+                print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
                     print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
                     allLablels.remove(at: indexin)
