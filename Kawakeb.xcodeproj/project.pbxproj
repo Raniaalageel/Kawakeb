@@ -13,6 +13,7 @@
 		5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E82953B0BD00E046FC /* datepicker.swift */; };
 		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
 		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
+		566E0B3C2957737E009BF2FF /* Gamespage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E0B3B2957737E009BF2FF /* Gamespage.swift */; };
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
 		A243CBB8294B2CFE00ABC146 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = A243CBB7294B2CFE00ABC146 /* white.png */; };
 		A243CBBC294B2FFE00ABC146 /* mainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A243CBBB294B2FFE00ABC146 /* mainBG.jpg */; };
@@ -96,6 +97,7 @@
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
 		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
+		566E0B3B2957737E009BF2FF /* Gamespage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamespage.swift; sourceTree = "<group>"; };
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
 		A243CBB7294B2CFE00ABC146 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = ../../white.png; sourceTree = "<group>"; };
 		A243CBBB294B2FFE00ABC146 /* mainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mainBG.jpg; path = ../../mainBG.jpg; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		F02AC893294A111300152C07 /* Kawakeb */ = {
 			isa = PBXGroup;
 			children = (
+				566E0B3B2957737E009BF2FF /* Gamespage.swift */,
 				A243CBC5294B7DF700ABC146 /* Login.swift */,
 				5610D8E22953B09300E046FC /* Profile.swift */,
 				5610D8E42953B0A400E046FC /* Editprofile.swift */,
@@ -450,6 +453,7 @@
 				5610D8E32953B09300E046FC /* Profile.swift in Sources */,
 				5610D8E72953B0B000E046FC /* Child.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
+				566E0B3C2957737E009BF2FF /* Gamespage.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
