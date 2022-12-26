@@ -56,9 +56,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         self.tabBarController?.tabBar.isHidden = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
-
-        
+   
     }
+    
+//    @objc func dateSelected() {
+//          if let datePicker = self.bithdayTextField.inputView as? UIDatePicker {
+//              let dateFormatter = DateFormatter()
+//              dateFormatter.dateStyle = .full
+//              dateFormatter.dateFormat = "dd-MM-yyyy"
+//              self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
+//              bithdayTextField.textColor = .black
+//
+//          }
+//
+//          self.bithdayTextField.resignFirstResponder()
+//      }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
@@ -158,26 +171,45 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 }
         }
 }// func
-    
+    @objc func dateSelected() {
+          if let datePicker = self.bithdayTextField.inputView as? UIDatePicker {
+              let dateFormatter = DateFormatter()
+              dateFormatter.dateStyle = .full
+              dateFormatter.dateFormat = "dd-MM-yyyy"
+              self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
+              bithdayTextField.textColor = .black
+              
+          }
+        
+          self.bithdayTextField.resignFirstResponder()
+      }
 
     @IBAction func SecondButton(_ sender: UIButton) {
-        self.tabBarController?.tabBar.isHidden = true
-        Birthdayvalidation.isHidden = true
+        //self.tabBarController?.tabBar.isHidden = true
+      //  Birthdayvalidation.isHidden = true
+        
+      //  self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
         
         let validationResult = isValidbod()
         if validationResult.0 == false {
-           
+
             return
-            
+
         }
         
         let Birthday = validationResult.1
-       
+
         Global.shared.userbirthday = Birthday
-        
+
         bod = Birthday
         print("bod : " , Birthday)
-        self.performSegue(withIdentifier: "goToCharacter", sender: self)
+       self.performSegue(withIdentifier: "goToCharacter", sender: self)
+
+    }
+    
+
+    @IBAction func birthdayy(_ sender: UITextField) {
+        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
 
     }
     
@@ -345,11 +377,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد"
             return (false, "", "")
            }
-        if !isValidBirthday(BirthdayText: birthday) {
-            Birthdayvalidation.isHidden = false
-            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
-            return (false, "", "")
-        }
+//        if !isValidBirthday(BirthdayText: birthday) {
+//            Birthdayvalidation.isHidden = false
+//            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
+//            return (false, "", "")
+//        }
         return (true, birthday , "")
     }
     

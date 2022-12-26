@@ -11,12 +11,14 @@ extension UITextField {
     
     func setDatePickerAsInputViewFor(target:Any, selector:Selector) {
         let screenWidth = UIScreen.main.bounds.width
-        let datePicker = UIDatePicker()
+        let datePicker = UIDatePicker(frame: CGRect(x: 20, y: 100, width: 500, height: 200))
         datePicker.datePickerMode = .date
         datePicker.locale = .current
         datePicker.preferredDatePickerStyle = .compact
         datePicker.tintColor = .systemBlue
         self.inputView = datePicker
+           // view.addSubview(datePicker)
+       
         
        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 60.0))
         let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(tapCancel))

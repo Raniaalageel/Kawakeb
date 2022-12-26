@@ -70,6 +70,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
         }
         
         self.Udob.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+     
     }
     
     @objc func dateSelected() {
@@ -79,6 +80,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
               dateFormatter.dateFormat = "dd-MM-yyyy"
               self.Udob.text = dateFormatter.string(from: datePicker.date)
               Udob.textColor = .black
+              // view.addSubview(datePicker)
               
           }
         

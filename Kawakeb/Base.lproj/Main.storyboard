@@ -1741,6 +1741,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="birthdayy:" destination="WNy-jx-kxw" eventType="editingDidEnd" id="PqG-3g-chc"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="nJ6-zk-Kks">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="207"/>
@@ -2668,9 +2671,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OGu-ep-2YN"/>
         <segue reference="iI5-kz-FyW"/>
-        <segue reference="bVx-b7-Wzx"/>
+        <segue reference="unw-hY-3Nj"/>
         <segue reference="yaD-Se-fJp"/>
         <segue reference="aNn-mm-eS3"/>
         <segue reference="hqg-X7-rr5"/>
