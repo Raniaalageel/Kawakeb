@@ -14,11 +14,14 @@ extension UITextField {
         let datePicker = UIDatePicker(frame: CGRect(x: 20, y: 100, width: 500, height: 200))
         datePicker.datePickerMode = .date
         datePicker.locale = .current
-        datePicker.preferredDatePickerStyle = .compact
+        datePicker.preferredDatePickerStyle = .wheels
         datePicker.tintColor = .systemBlue
         self.inputView = datePicker
            // view.addSubview(datePicker)
-       
+
+//        datePicker.preferredDatePickerStyle = .wheels
+
+        
         
        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 60.0))
         let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(tapCancel))
@@ -31,4 +34,5 @@ extension UITextField {
       @objc func tapCancel() {
           self.resignFirstResponder()
       }
+    
   }
