@@ -22,6 +22,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var Udob: UITextField!
     @IBOutlet weak var Uemail: UITextField!
   
+    @IBOutlet weak var char: UILabel!
     
    
     
@@ -48,6 +49,20 @@ class Editprofile: UIViewController , UITextFieldDelegate {
                 Uname.text = userData["name"] as? String
                 Uemail.text = userData["email"] as? String
                 Udob.text = userData["dob"] as? String
+                char.text =  userData["character"] as? String
+                if ( char.text == "girl"){
+                        let imageName = "girl.png"
+                        let image = UIImage(named: imageName)
+                        let imageView = UIImageView(image: image!)
+                        imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                        view.addSubview(imageView)
+                        }else if (char.text == "boy"){
+                            let imageName = "boy.png"
+                            let image = UIImage(named: imageName)
+                            let imageView = UIImageView(image: image!)
+                            imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                            view.addSubview(imageView)
+                        }
                 
             } else {
                 // show error message
