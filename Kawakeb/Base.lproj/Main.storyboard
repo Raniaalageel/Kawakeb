@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Cj-C0-vTg">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -233,6 +233,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="2yA-9X-Kym">
                                 <rect key="frame" x="-48" y="0.0" width="897" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-9O-wM7">
+                                <rect key="frame" x="-32" y="-108" width="1009" height="1302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bmj-wE-2EQ">
@@ -493,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7p-mH-Aip" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.553956834532379" y="752.7638190954774"/>
+            <point key="canvasLocation" x="1565.4676258992806" y="752.7638190954774"/>
         </scene>
         <!--Resetpw-->
         <scene sceneID="iPl-Qh-7fd">
@@ -746,7 +750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fk-n6-00X" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737.41007194244605" y="752.7638190954774"/>
+            <point key="canvasLocation" x="2245.3237410071943" y="752.7638190954774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="no9-tD-ZFs">
@@ -896,7 +900,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOf-dR-SJS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1403.5971223021584" y="752.7638190954774"/>
+            <point key="canvasLocation" x="2911.5107913669067" y="752.7638190954774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z1c-jd-Yfx">
@@ -1046,11 +1050,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjU-Be-SqG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072.6618705035971" y="752.7638190954774"/>
+            <point key="canvasLocation" x="3580.5755395683454" y="752.7638190954774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Fy-kU-HYL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dty-Uo-CFL" sceneMemberID="firstResponder"/>
                 <viewController id="GYj-Gu-9ob" customClass="ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1aY-J9-p2t">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
@@ -1112,11 +1117,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket2.png" translatesAutoresizingMaskIntoConstraints="NO" id="i77-g5-tIz">
                                 <rect key="frame" x="46" y="1002" width="131" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edG-RP-Jbu">
-                                <rect key="frame" x="0.0" y="-2" width="834" height="1196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.43498104809999999" green="0.4117036462" blue="0.41161191460000002" alpha="0.51687884804428808" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="store.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4z-wp-Rbd">
                                 <rect key="frame" x="676" y="1040" width="138" height="135"/>
@@ -1194,9 +1194,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="EM3-Xg-byC"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dty-Uo-CFL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752.517985611511" y="752.7638190954774"/>
+            <point key="canvasLocation" x="4260.4316546762593" y="752.7638190954774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VRS-Pc-D6U">
@@ -1346,7 +1345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiP-iO-Bvn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3419.424460431655" y="752.7638190954774"/>
+            <point key="canvasLocation" x="4926.6187050359713" y="752.7638190954774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pad-QZ-oIX">
@@ -1470,7 +1469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQC-fY-MVV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4070.5035971223024" y="752.7638190954774"/>
+            <point key="canvasLocation" x="5578.4172661870507" y="752.7638190954774"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="kvo-Ba-OeT">
@@ -2042,7 +2041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkB-7b-PkR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="-675"/>
+            <point key="canvasLocation" x="4824" y="-675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UK4-jq-DEA">
@@ -2372,7 +2371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af1-6F-pYy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="1473"/>
+            <point key="canvasLocation" x="1513.6690647482014" y="1472.8643216080402"/>
         </scene>
         <!--Editprofile-->
         <scene sceneID="zOA-Gv-Ud5">
@@ -2509,7 +2508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ora-ug-2OL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520.8633093525182" y="1472.8643216080402"/>
+            <point key="canvasLocation" x="3028.7769784172665" y="1472.8643216080402"/>
         </scene>
         <!--Pv-->
         <scene sceneID="WmC-Z4-s4K">
@@ -2628,18 +2627,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTQ-iK-QuV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="1488"/>
+            <point key="canvasLocation" x="2299.2805755395684" y="1487.9396984924624"/>
+        </scene>
+        <!--StoreVC-->
+        <scene sceneID="GPX-k2-72F">
+            <objects>
+                <viewController id="0Cj-C0-vTg" customClass="StoreVC" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qLy-4V-oyd">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstbg" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-2Z-2Bq">
+                                <rect key="frame" x="-48" y="0.0" width="897" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.png" translatesAutoresizingMaskIntoConstraints="NO" id="b7v-LZ-DtP">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3nC-Ko-eag">
+                                <rect key="frame" x="97" y="401" width="640" height="599"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="rocketCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rocketCell" rowHeight="167" id="J57-1X-adD" customClass="storeCell" customModule="Kawakeb" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="640" height="167"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J57-1X-adD" id="wpp-KP-CS1">
+                                            <rect key="frame" x="0.0" y="0.0" width="640" height="167"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="r3" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-TW-2k9">
+                                                    <rect key="frame" x="403" y="11" width="136" height="148"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-nQ-OU1">
+                                                    <rect key="frame" x="16" y="61" width="89" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.83921581509999998" green="0.39395907819999998" blue="0.29757134940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="شراء"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="الصاروخ الأصفر" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRS-uL-w0X">
+                                                    <rect key="frame" x="134" y="29" width="261" height="67"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="٥ نجوم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-DE-BPh">
+                                                    <rect key="frame" x="134" y="104" width="261" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rocketBtn" destination="PhE-nQ-OU1" id="6HL-ky-H4p"/>
+                                            <outlet property="rocketImage" destination="Qd8-TW-2k9" id="onG-sd-Ua8"/>
+                                            <outlet property="rocketName" destination="MRS-uL-w0X" id="46l-K3-MdT"/>
+                                            <outlet property="rocketPrice" destination="eYi-DE-BPh" id="3Nw-Xh-rjf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g5G-aK-97T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g5G-aK-97T" firstAttribute="trailing" secondItem="3nC-Ko-eag" secondAttribute="trailing" constant="97" id="DVU-AX-qov"/>
+                            <constraint firstItem="3nC-Ko-eag" firstAttribute="leading" secondItem="g5G-aK-97T" secondAttribute="leading" constant="97" id="Dlt-0y-OJa"/>
+                            <constraint firstItem="g5G-aK-97T" firstAttribute="bottom" secondItem="3nC-Ko-eag" secondAttribute="bottom" constant="174" id="y34-cU-PeU"/>
+                            <constraint firstItem="3nC-Ko-eag" firstAttribute="top" secondItem="g5G-aK-97T" secondAttribute="top" constant="377" id="zIX-bm-mCP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fts-f8-wEf"/>
+                    <connections>
+                        <outlet property="StoretableView" destination="3nC-Ko-eag" id="1hl-uy-V4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JS-R0-Ue3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="-842"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T3J-OQ-uzZ"/>
-        <segue reference="ITc-Pv-rak"/>
-        <segue reference="bVx-b7-Wzx"/>
+        <segue reference="iI5-kz-FyW"/>
+        <segue reference="unw-hY-3Nj"/>
         <segue reference="a8r-w4-AzI"/>
-        <segue reference="aNn-mm-eS3"/>
+        <segue reference="HO3-79-xAd"/>
         <segue reference="Y5R-q1-wPb"/>
         <segue reference="mdC-1h-dYE"/>
-        <segue reference="Z5o-PD-IXw"/>
+        <segue reference="u2J-iR-xDB"/>
         <segue reference="xaj-88-hQr"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2660,6 +2741,7 @@
         <image name="ours.png" width="249.5" height="250"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="r3" width="124" height="260"/>
         <image name="rocket2.png" width="378" height="661"/>
         <image name="star11.png" width="302" height="206.5"/>
         <image name="store.png" width="59" height="61"/>
