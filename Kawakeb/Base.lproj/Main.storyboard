@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-22" y="-101"/>
         </scene>
-        <!--Run CamerAB-->
+        <!--Run Camer View Controller-->
         <scene sceneID="4y6-Of-22V">
             <objects>
-                <viewController id="PYl-lF-D5S" customClass="runCamerAB" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PYl-lF-D5S" customClass="runCamerViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h7v-Vf-9Tg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="انطلق"/>
                                 <connections>
-                                    <action selector="gobutton:" destination="PYl-lF-D5S" eventType="touchUpInside" id="V2y-Rh-C1Z"/>
+                                    <action selector="gobutton:" destination="PYl-lF-D5S" eventType="touchUpInside" id="ViL-1m-8JK"/>
                                 </connections>
                             </button>
                         </subviews>
