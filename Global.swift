@@ -17,7 +17,7 @@ class Global{
     var  stopis = false
     
     var allLablels = [String]()
-    
+    //commit
   //  let session = AVCaptureSession()
     
     

@@ -13,7 +13,7 @@ import Vision
 class runCamerAB: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate  {
     
     let session = AVCaptureSession()
-    
+    //commit
     
     override func viewDidLoad() {
         super.viewDidLoad()
