@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
+		536CE5C2295B7BB90092962F /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5C1295B7BB80092962F /* LOGO.png */; };
+		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
 		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
@@ -56,7 +58,6 @@
 		F02AC8F8294A12E600152C07 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F7294A12E600152C07 /* FirebaseRemoteConfigSwift */; };
 		F02AC8FA294A12E600152C07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F9294A12E600152C07 /* FirebaseStorage */; };
 		F02AC8FC294A12E600152C07 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8FB294A12E600152C07 /* FirebaseStorageCombine-Community */; };
-		F0BE7A402955A29A00A9A4A7 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = F0BE7A3F2955A29A00A9A4A7 /* LOGO.PNG */; };
 		F0F920B1295330F20045A75C /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B0295330F20045A75C /* Globel.swift */; };
 		F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B2295330FE0045A75C /* RegisterViewController.swift */; };
 		F0F920B52953335D0045A75C /* backk.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920B42953335D0045A75C /* backk.png */; };
@@ -93,6 +94,8 @@
 /* Begin PBXFileReference section */
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		536CE5C1295B7BB80092962F /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = ../../../Documents/LOGO.png; sourceTree = "<group>"; };
+		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -116,7 +119,6 @@
 		F02AC8B5294A111700152C07 /* KawakebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITests.swift; sourceTree = "<group>"; };
 		F02AC8B7294A111700152C07 /* KawakebUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F0BE7A3F2955A29A00A9A4A7 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
 		F0F920B0295330F20045A75C /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F0F920B2295330FE0045A75C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0F920B42953335D0045A75C /* backk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backk.png; sourceTree = "<group>"; };
@@ -190,7 +192,9 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				536CE5C3295B7C040092962F /* CameraOpen.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
+				F0F920B0295330F20045A75C /* Globel.swift */,
 				F02AC893294A111300152C07 /* Kawakeb */,
 				F02AC8AA294A111700152C07 /* KawakebTests */,
 				F02AC8B4294A111700152C07 /* KawakebUITests */,
@@ -217,7 +221,6 @@
 				5610D8E62953B0B000E046FC /* Child.swift */,
 				5610D8E82953B0BD00E046FC /* datepicker.swift */,
 				5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */,
-				F0F920B0295330F20045A75C /* Globel.swift */,
 				F0F920B2295330FE0045A75C /* RegisterViewController.swift */,
 				A2A1C766294F1FD500E0D45E /* resetpw.swift */,
 				F02AC894294A111300152C07 /* AppDelegate.swift */,
@@ -240,7 +243,7 @@
 				F0F920C4295333EC0045A75C /* star22.png */,
 				F0F920C2295333C40045A75C /* mainPage.png */,
 				3481A9E029544BAF002431C7 /* white.png */,
-				F0BE7A3F2955A29A00A9A4A7 /* LOGO.PNG */,
+				536CE5C1295B7BB80092962F /* LOGO.png */,
 				3481A9DE29544B8F002431C7 /* mainBG.png */,
 				F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */,
 				F02AC89F294A111600152C07 /* LaunchScreen.storyboard */,
@@ -405,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
-				F0BE7A402955A29A00A9A4A7 /* LOGO.PNG in Resources */,
 				F0F920C5295333EC0045A75C /* star22.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
@@ -414,6 +416,7 @@
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
+				536CE5C2295B7BB90092962F /* LOGO.png in Resources */,
 				F0F920B52953335D0045A75C /* backk.png in Resources */,
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
 				F02AC89C294A111300152C07 /* Main.storyboard in Resources */,
@@ -452,6 +455,7 @@
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
+				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				5675477C2953C55100065DB7 /* Pv.swift in Sources */,

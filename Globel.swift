@@ -16,4 +16,12 @@ class Global{
     public var usercharacter = ""
     public var usercharacterName = ""
     
+    var enabled = false
+    var  stopis = false
+      
+    var allLablels = [String]()
+      
+
+    
+    
 }
