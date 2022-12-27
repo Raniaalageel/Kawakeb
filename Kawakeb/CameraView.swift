@@ -22,11 +22,13 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     var requests = [VNRequest]()
     var boxesLayer: CALayer = CALayer()
     
-    var allLablels = [String]()
+    //var allLablels = [String]()
     
     var labels = ""
-    var enabled = false
+    
+    //var enabled = false
   
+    //var stopis = false
     
     let button = UIButton(frame: CGRect(x: 100, y: 700, width: 100, height: 50))
     
@@ -50,24 +52,45 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         button.backgroundColor = .green
        button.setTitle("stop Button", for: .normal)
     button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+       setupAVCapture()
+//          //  setupLayers()
+        setupVision()
 
-        //  setupCaptureSession() // Do any additional setup after loading the view.
+       
     }
     @objc func buttonAction(sender: UIButton!) {
       print("Button tapped")
     
-        enabled = true
+        Global.shared.enabled = true
         
         if session.isRunning {
+    print("session.isRunning",session.isRunning)
                 DispatchQueue.global().async {
-                print("  STOP Session")
+                print("STOP Session")
                     self.session.stopRunning()
                 }
             }
       //  forArray()
-       // print(" allLablels STOP REUNING", allLablels)
     }
-
+    func Stopsessyion(){
+        print("Button tapped")
+        
+        
+      
+        
+// print("session.isRunning",session.isRunning )
+//         if session.isRunning  == false {
+//            print("session.isRunning ")
+//                DispatchQueue.global().async {
+//                print("STOP Session")
+//                    self.session.stopRunning()
+//                }
+//            }
+       // stpAgain()
+    }
+    
+    
     
     func setupAVCapture() {
         
@@ -76,13 +99,20 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
      //   let session = AVCaptureSession()
         var previewLayer: AVCaptureVideoPreviewLayer! = nil
         let deviceInput: AVCaptureDeviceInput!
+        
+        
+        
+        
         let videoDataOutput = AVCaptureVideoDataOutput()
         let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
         //search for camera
         let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices.first
         
         do{
-            deviceInput = try AVCaptureDeviceInput(device: videoDevice!)
+            deviceInput = try AVCaptureDeviceInput.init(device: videoDevice!)
+            
+          //  try AVCaptureDeviceInput(device: videoDevice!)
+            print("deviceInput",deviceInput)
         }catch{
             print(error.localizedDescription)
             return
@@ -90,17 +120,20 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
         session.beginConfiguration()
         session.sessionPreset = .vga640x480
-        
+
         guard session.canAddInput(deviceInput) else {
             print("Could not add video input to the session")
             session.commitConfiguration()
             return
         }
         
+        
+        
         session.addInput(deviceInput)
         
         if session.canAddOutput(videoDataOutput) {
             session.addOutput(videoDataOutput)
+            print("adddddd")
             videoDataOutput.alwaysDiscardsLateVideoFrames = true
             videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
             videoDataOutput.setSampleBufferDelegate(self, queue: videoDataOutputQueue)
@@ -140,11 +173,7 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             //print("request")
             if let results = request.results {
                 self.drawVisionRequestResults(results: results)
-               // let uniqueUnordered = Array(Set(allLablels))
-               // let uniqueOrdered = Array(NSOrderedSet(array: allLablels))
                
-               // print("uniqueUnordered",uniqueUnordered)
-                //print("uniqueOrdered",uniqueOrdered)
              
               //  forArray()
                 
@@ -157,8 +186,8 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     func setupLayers() {
         detectionOverlay = CALayer()
         detectionOverlay.bounds = CGRect(x: 0, y: 0, width: bufferSize.width, height: bufferSize.height)
-        detectionOverlay.position = .init(x: rootLayer.bounds.midX, y: rootLayer.bounds.midY)
-        rootLayer.addSublayer(detectionOverlay)
+        detectionOverlay.position = .init(x: rootLayer!.bounds.midX, y: rootLayer!.bounds.midY)
+        rootLayer!.addSublayer(detectionOverlay)
     }
     
     
@@ -179,11 +208,24 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
     }
     
     func drawVisionRequestResults(results: [Any]) {
-        //print("drawVisionRequestResults")
+        print("session.isRunning drawVisionRequestResults",session.isRunning )
+
+   
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         
-        detectionOverlay.sublayers = nil
+  // detectionOverlay.sublayers = nil
+        print("stopis",Global.shared.stopis)
+        
+        if (Global.shared.stopis == true){
+        print("last try",session.isRunning )
+                if session.isRunning {
+                       DispatchQueue.global().async {
+                       print("STOP Session")
+                           self.session.stopRunning()
+                       }
+                   }
+        }
         
         for observation in results where observation is VNRecognizedObjectObservation {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else { continue }
@@ -198,24 +240,20 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
 
             let shapeLayer = self.createRoundedRectWithBounds(objectBounds)
             print("shapeLayer.bounds",shapeLayer.bounds)
-          //  print("shapeLayer.bounds",shapeLayer.bounds.width)
-         //   print("shapeLayer.bounds",shapeLayer.bounds.height)
-           // print("shapeLayer.bounds",shapeLayer.bounds.origin.x)
-           // print("shapeLayer.bounds",shapeLayer.bounds.origin.y)
-//
+          
           
             let textLayer = self.createTextSubLayerInBounds(objectBounds,identifier: topLabelObservation.identifier,confidence: topLabelObservation.confidence)
             
             shapeLayer.addSublayer(textLayer)
             
             
-            detectionOverlay.addSublayer(shapeLayer)
+          //  detectionOverlay.addSublayer(shapeLayer)
             
             
         }
    
         
-        self.updateLayerGeometry()
+      // self.updateLayerGeometry()
         CATransaction.commit()
     }
     
@@ -259,8 +297,8 @@ class CameraView: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
         shapeLayer.bounds = bounds
         
-        if enabled == true {
-            
+    // if enabled == true {
+        if Global.shared.enabled == true{
         
             print("bounds.midX, bounds.midY",bounds.midX, bounds.midY)
         var numberofx = Int(bounds.midX)
@@ -273,8 +311,8 @@ var numberofy2 = String(describing: numberofy)
         
         print("labels",labels)
         
-    allLablels.append(labels)
-        print(" allLablels with append forArray ", allLablels)
+            Global.shared.allLablels.append(labels)
+        print(" allLablels with append forArray ", Global.shared.allLablels)
         forArray()
         }
       
@@ -287,9 +325,10 @@ var numberofy2 = String(describing: numberofy)
     
     func forArray(){
         var alliteration = 0
-        while alliteration < allLablels.count  {
+        
+        while alliteration < Global.shared.allLablels.count  {
             var ch = Character(":")
-            var result = allLablels[alliteration].split(separator: ch)
+ var result = Global.shared.allLablels[alliteration].split(separator: ch)
             
             var resultx = Int(result[1])!
             var resulty = Int(result[2])!
@@ -300,9 +339,9 @@ var numberofy2 = String(describing: numberofy)
           print("resullabel",resullabel)
 
       var indexin = alliteration + 1
-            while indexin < allLablels.count  {
+            while indexin < Global.shared.allLablels.count  {
                 print("indexin",indexin)
-                var result2 = allLablels[indexin].split(separator: ch)
+                var result2 = Global.shared.allLablels[indexin].split(separator: ch)
 
                 var resultxnext = Int(result2[1])!
                 var resultynext = Int(result2[2])!
@@ -311,17 +350,36 @@ var numberofy2 = String(describing: numberofy)
                 print("resultynext ",resultynext)
               print("resullabelnext",resullabelnext)
                 
-                if  ( resullabel.elementsEqual(resullabelnext)  ) {
+    if  ( resullabel.elementsEqual(resullabelnext)  ) {
                     print("resullabel==resullabelnext",resullabel,resullabelnext)
 
-                if  ( resultx + 25 >= resultxnext  && resulty + 25 >= resultynext ){
+ if  ( resultx + 25 >= resultxnext  && resulty + 25 >= resultynext ){
                 print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
                     print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
-                    allLablels.remove(at: indexin)
-                    print(" allLablels after remove ", allLablels)
+     Global.shared.allLablels.remove(at: indexin)
+                    print(" allLablels after remove ", Global.shared.allLablels)
                 }
                 }
+                var temp = ""
+                var indexinpostion = alliteration + 1
+
+                if(Global.shared.allLablels.indices.contains(indexinpostion)){
+                    
+    var resultpostion = Global.shared.allLablels[indexinpostion].split(separator: ch)
+
+                var resultXnextPostion = Int(resultpostion[1])!
+
+  
+
+                    if(resultx > resultXnextPostion){
+                    print("eneter   ???",resultx,">",resultXnextPostion)
+        temp = Global.shared.allLablels[alliteration]
+                        Global.shared.allLablels[alliteration] = Global.shared.allLablels[indexinpostion]
+                        Global.shared.allLablels[indexinpostion] =  temp
+                }
+    }
+                
               indexin += 1
             }
                 
@@ -329,7 +387,7 @@ var numberofy2 = String(describing: numberofy)
             print("alliteration",   alliteration)
         alliteration += 1
             }
-        print(" FINAL allLablels  ", allLablels)
+        print(" FINAL allLablels  ",Global.shared.allLablels)
           
     }
     

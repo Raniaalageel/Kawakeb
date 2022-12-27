@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Hello sara alsaleh")
     }
+    func justis(){
+        print("Helddddlo sara alsaleh")
+
+    }
 
 }
 
