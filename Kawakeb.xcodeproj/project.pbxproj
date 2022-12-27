@@ -196,8 +196,6 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
-				536CE5C7295B7DE80092962F /* FirstGame.swift */,
-				536CE5C3295B7C040092962F /* CameraOpen.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
@@ -225,6 +223,8 @@
 				5610D8E22953B09300E046FC /* Profile.swift */,
 				5610D8E42953B0A400E046FC /* Editprofile.swift */,
 				5610D8E62953B0B000E046FC /* Child.swift */,
+				536CE5C3295B7C040092962F /* CameraOpen.swift */,
+				536CE5C7295B7DE80092962F /* FirstGame.swift */,
 				5610D8E82953B0BD00E046FC /* datepicker.swift */,
 				5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */,
 				F0F920B2295330FE0045A75C /* RegisterViewController.swift */,
