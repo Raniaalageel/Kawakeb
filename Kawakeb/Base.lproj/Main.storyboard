@@ -36,7 +36,7 @@
                                 <rect key="frame" x="-48" y="0.0" width="897" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LOGO.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="fey-pF-NdZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="fey-pF-NdZ">
                                 <rect key="frame" x="24" y="54" width="820" height="742"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="820" id="YS0-38-O9b"/>
@@ -2026,6 +2026,36 @@
             </objects>
             <point key="canvasLocation" x="57.553956834532379" y="17.587939698492463"/>
         </scene>
+        <!--First Game-->
+        <scene sceneID="hxt-ut-iE4">
+            <objects>
+                <viewController id="TTj-3B-6gz" customClass="FirstGame" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5q2-GM-Nfj"/>
+                        <viewControllerLayoutGuide type="bottom" id="GeM-iN-yy4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cli-Qo-DU1">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I9-jr-YxX">
+                                <rect key="frame" x="93" y="111" width="296" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="انطلق"/>
+                                <connections>
+                                    <action selector="gobutton:" destination="TTj-3B-6gz" eventType="touchUpInside" id="1rX-0Q-QFf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVY-gc-rZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.215827338129497" y="-813.0653266331658"/>
+        </scene>
         <!--Reg Validation-->
         <scene sceneID="5h5-EW-zKT">
             <objects>
@@ -2614,6 +2644,7 @@
         <image name="3" width="1036" height="241"/>
         <image name="4" width="1047" height="238"/>
         <image name="LOGO.PNG" width="375" height="375"/>
+        <image name="LOGO.png" width="375" height="375"/>
         <image name="astro.png" width="443" height="563"/>
         <image name="backk.png" width="55" height="58"/>
         <image name="boy" width="416" height="416"/>
@@ -2634,6 +2665,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
