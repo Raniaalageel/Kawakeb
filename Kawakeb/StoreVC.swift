@@ -51,7 +51,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 
                 for doc in snapshot!.documents {
-                   
+                    
                     
                     
                     
@@ -68,7 +68,6 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     self.prices.append(price1)
                     self.names.append(name1) }
                 
-                //  let a_snapshot = try await db.collection("Child").wherefgetDocuments()
                 db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
                 { [self](snapshot, error) in
                     if let error = error {
@@ -83,18 +82,18 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                             
                             
                             guard let point1  = doc.get("points") as? Int else { continue }
-                            guard let rocket1  = doc.get("rockets") as? [String] else { continue }
+                            guard let rocket1  = doc.get("rockets") as? String else { continue }
                             
                             
-                            print("name1",point1)
-                            print("price1",rocket1)
+                            print("pointsss",point1)
+                            print("rocket1",rocket1)
                             
                             
                             
                             
                             self.points = point1
-                            self.myrockets.append(contentsOf: rocket1)
-                            
+                            self.myrockets.append(rocket1)
+                            self.StoretableView.reloadData()
                             //let a_snapshot = try await db.collection("Child").wherefgetDocuments()
                             
                         }
@@ -106,23 +105,29 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                         
                         print("names.count",names.count)
                         
-                        
+                        print("myrockets",myrockets)
+                        print("my points",points)
                         
                     }
                     
                 }
+            
             }
-        }
+                
+                self.StoretableView.reloadData()}
+                //  let a_snapshot = try await db.collection("Child").wherefgetDocuments()
+               
+        
     }
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 100.0 //Choose your custom row height
+            return 170 //Choose your custom row height
         }
         
         
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
-            
+           
             return names.count
             
         }
@@ -134,6 +139,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             mycell.rocketName.text? = names[indexPath.row]
             print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
             mycell.rocketPrice.text? = String (prices[indexPath.row])
+           // mycell.rocketImage.image =
             if myrockets.contains(names[indexPath.row]) {
                 print("you have it ")
                 mycell.rocketBtn.setTitle("استبدل", for: .normal)
@@ -148,6 +154,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 mycell.rocketBtn.setTitle("شراء", for: .disabled)
                 mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
             }
+    
             return mycell
             
         }
