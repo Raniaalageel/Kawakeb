@@ -16,6 +16,7 @@ class storeCell: UITableViewCell {
     
     @IBOutlet weak var rocketPrice: UILabel!
     
+    @IBOutlet weak var lockIMG: UIImageView!
     
     @IBOutlet weak var rocketBtn: UIButton!
     
