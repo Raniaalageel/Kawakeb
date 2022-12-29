@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
-		536CE5C2295B7BB90092962F /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5C1295B7BB80092962F /* LOGO.png */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
@@ -20,6 +19,8 @@
 		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
 		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
+		56D4B866295DC3D30081A691 /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 56D4B865295DC3D30081A691 /* LOGO.PNG */; };
+		56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4B867295DC50B0081A691 /* Gamespage.swift */; };
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
@@ -96,7 +97,6 @@
 /* Begin PBXFileReference section */
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
-		536CE5C1295B7BB80092962F /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = ../../../Documents/LOGO.png; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
@@ -106,6 +106,8 @@
 		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
 		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
+		56D4B865295DC3D30081A691 /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
+		56D4B867295DC50B0081A691 /* Gamespage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamespage.swift; sourceTree = "<group>"; };
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				A243CBC5294B7DF700ABC146 /* Login.swift */,
 				5610D8E22953B09300E046FC /* Profile.swift */,
 				5610D8E42953B0A400E046FC /* Editprofile.swift */,
+				56D4B867295DC50B0081A691 /* Gamespage.swift */,
 				5610D8E62953B0B000E046FC /* Child.swift */,
 				536CE5C3295B7C040092962F /* CameraOpen.swift */,
 				536CE5C7295B7DE80092962F /* FirstGame.swift */,
@@ -249,7 +252,7 @@
 				F0F920C4295333EC0045A75C /* star22.png */,
 				F0F920C2295333C40045A75C /* mainPage.png */,
 				3481A9E029544BAF002431C7 /* white.png */,
-				536CE5C1295B7BB80092962F /* LOGO.png */,
+				56D4B865295DC3D30081A691 /* LOGO.PNG */,
 				3481A9DE29544B8F002431C7 /* mainBG.png */,
 				F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */,
 				F02AC89F294A111600152C07 /* LaunchScreen.storyboard */,
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
+				56D4B866295DC3D30081A691 /* LOGO.PNG in Resources */,
 				F0F920C5295333EC0045A75C /* star22.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
@@ -422,7 +426,6 @@
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
-				536CE5C2295B7BB90092962F /* LOGO.png in Resources */,
 				F0F920B52953335D0045A75C /* backk.png in Resources */,
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
 				F02AC89C294A111300152C07 /* Main.storyboard in Resources */,
@@ -473,6 +476,7 @@
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
+				56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

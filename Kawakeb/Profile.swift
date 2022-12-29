@@ -21,6 +21,7 @@ class Profile: UIViewController, EditprofileDelegate {
     }
     
     
+    @IBOutlet weak var char: UILabel!
     
     @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -61,10 +62,24 @@ class Profile: UIViewController, EditprofileDelegate {
             if error == nil {
                 // get user data
                 guard let userData = snapshot else {return}
-                child = Child(email: userData["email"] as? String, name: userData["name"] as? String, dob: userData["dob"] as? String, childID: userId)
+                child = Child(email: userData["email"] as? String, name: userData["name"] as? String, dob: userData["dob"] as? String, childID: userId ,char : userData["character"] as? String)
                 name.text = userData["name"] as? String
                 email.text = userData["email"] as? String
                 dob.text = userData["dob"] as? String
+                char.text = userData["character"] as? String
+                              if ( char.text == "girl"){
+                                      let imageName = "girl.png"
+                                      let image = UIImage(named: imageName)
+                                      let imageView = UIImageView(image: image!)
+                                      imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                                      view.addSubview(imageView)
+                                      }else if (char.text == "boy"){
+                                          let imageName = "boy.png"
+                                          let image = UIImage(named: imageName)
+                                          let imageView = UIImageView(image: image!)
+                                          imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                                          view.addSubview(imageView)
+                                      }
                 
             } else {
                 // show error message

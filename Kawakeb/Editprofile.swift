@@ -18,6 +18,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
     let firestore = Firestore.firestore()
 
     
+    @IBOutlet weak var char: UILabel!
     @IBOutlet weak var Uname: UITextField!
     @IBOutlet weak var Udob: UITextField!
     @IBOutlet weak var Uemail: UITextField!
@@ -47,6 +48,20 @@ class Editprofile: UIViewController , UITextFieldDelegate {
                 Uname.text = userData["name"] as? String
                 Uemail.text = userData["email"] as? String
                 Udob.text = userData["dob"] as? String
+                char.text =  userData["character"] as? String
+                                if ( char.text == "girl"){
+                                        let imageName = "girl.png"
+                                        let image = UIImage(named: imageName)
+                                        let imageView = UIImageView(image: image!)
+                                        imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                                        view.addSubview(imageView)
+                                        }else if (char.text == "boy"){
+                                            let imageName = "boy.png"
+                                            let image = UIImage(named: imageName)
+                                            let imageView = UIImageView(image: image!)
+                                            imageView.frame = CGRect(x: 250, y: 100, width: 300, height: 300)
+                                            view.addSubview(imageView)
+                                        }
                 
             } else {
                 // show error message
@@ -92,25 +107,33 @@ class Editprofile: UIViewController , UITextFieldDelegate {
           self.Udob.resignFirstResponder()
       }
     
-    func isValidR() -> (Bool, String) {
-        Eval.isHidden = true
-        guard let email = Uemail.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
-        else {
-           Eval.isHidden = false
-           Eval.text = "الرجاء إدخال البريد الالكتروني"
-            return (false, "")
-        }
-
-        if !isValidEmailR(emailID: email) {
-            Eval.isHidden = false
-            Eval.text = "الرجاء إدخال بريد الكتروني صحيح !"
-            return (false, "")
-        }
-        return (true, email)
-    }
+//    func isValidR() -> (Bool, String) {
+//        Eval.isHidden = true
+//        guard let email = Uemail.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
+//        else {
+//           Eval.isHidden = false
+//           Eval.text = "الرجاء إدخال البريد الالكتروني"
+//            return (false, "")
+//        }
+//
+//        if !isValidEmailR(emailID: email) {
+//            Eval.isHidden = false
+//            Eval.text = "الرجاء إدخال بريد الكتروني صحيح !"
+//            return (false, "")
+//        }
+//        return (true, email)
+//    }
     
     
     @IBAction func save(_ sender: Any) {
+        
+        let validationResult = isValidR()
+                if validationResult.0 == false {return}
+                
+                let validationResult2 = isValidName()
+                if validationResult2.0 == false {return}
+        
+        
         let childData : [String : Any] = ["name" : Uname.text, "email": Uemail.text, "dob": Udob.text]
         firestore.collection("Child").document(userId).updateData(childData) { [self] error in
             if error == nil {
@@ -119,38 +142,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
                 profileVC.modalTransitionStyle = .crossDissolve
                 profileVC.modalPresentationStyle = .fullScreen
                 self.present(profileVC, animated: true)
-                Eval.isHidden = true
-                let validationResult = isValidR()
-                if validationResult.0 == false {
-                    
-                    return
-                    
-                }
-                let email = validationResult.1
                 
-                print("email : " , email)
-    
-                
-                Lemail = email
-             
-                
-                print("Lemail : " , Lemail)
-              
-                
-                Global.shared.useremailshare = email
-                
-                Auth.auth().signIn(withEmail: Lemail, password: Lpassword) { authResult , error in
-                              if let e = error {
-                                //  self.performSegue(withIdentifier: "goToBirthday", sender: self)
-                                print("not exists email")
-                                 }else {
-                                     print("email exists")
-                                     self.Eval.isHidden = false
-                                     self.Eval.text = "الرجاء تغيير البريد الاكتروني"
-                                    
-                        }
-                }
-
             } else {
                 // show error message
             }
@@ -163,66 +155,71 @@ class Editprofile: UIViewController , UITextFieldDelegate {
         profileVC.modalTransitionStyle = .crossDissolve
         profileVC.modalPresentationStyle = .fullScreen
         self.present(profileVC, animated: true)
-        Dval.isHidden = true
-        
-        let validationResult = isValidbod()
-        if validationResult.0 == false {
-           
-            return
-            
-        }
-        
-        let Birthday = validationResult.1
-       
-        Global.shared.userbirthday = Birthday
-        
-        bod = Birthday
-        print("bod : " , Birthday)
-        //self.performSegue(withIdentifier: "goToCharacter", sender: self)
+
     }
-    
-    func isValidbod() -> (Bool, String, String) {
-        
-        guard let birthday = Udob.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
-        else {
-            Dval.isHidden = false
-            Dval.text = "الرجاء إدخال تاريخ الميلاد"
-            return (false, "", "")
-           }
-        if !isValidBirthday(BirthdayText: birthday) {
-            Dval.isHidden = false
-            Dval.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
-            return (false, "", "")
-        }
-        return (true, birthday , "")
-    }
-    func isValidBirthday(BirthdayText:String) -> Bool {
-        
-        let BoDRegEx = "^(0[1-9]|[12][0-9]|3[01])[- \\.](0[1-9]|1[012])[- \\.](19|20)\\d\\d$"
-        let BoDTest = NSPredicate(format:"SELF MATCHES %@", BoDRegEx)
-        return BoDTest.evaluate(with: BirthdayText)
-    }
-    
     func isValidEmailR(emailID:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: emailID)
-    }
+           let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+           let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+           return emailTest.evaluate(with: emailID)
+       }
+    func isValidR() -> (Bool, String, String) {
+           Eval.isHidden = true
+          
+           
+           guard let email = Uemail.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
+           else {
+               Eval.isHidden = false
+               Eval.text = "الرجاء إدخال البريد الالكتروني"
+               return (false, "", "")
+           }
+       
+           if !isValidEmailR(emailID: email) {
+               Eval.isHidden = false
+               Eval.text = "الرجاء إدخال بريد الكتروني صحيح !"
+               return (false, "", "")
+           }
+          
+           
+           return (true, email, "")
+       }
     
-    
-    func checkEmailExist(email: String, collection: String, field: String) async -> Bool {
-        let db = Firestore.firestore()
-        do {
-            let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
-            print("COUNT ", snapshot.count)
-            print("not added")
-            return snapshot.count != 0
-        } catch {
-            print(error.localizedDescription)
-            print("added")
-            return false
+    func isValidName() -> (Bool, String, String) {
+           
+           guard let Name = Uname.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
+           else {
+               Dval.isHidden = false
+               Dval.text = "الرجاء إدخال اسم الشخصية"
+               return (false, "", "")
+              }
+           if !isValidCharacterName(nameText: Name) {
+               Dval.isHidden = false
+               Dval.text = "الرجاء إدخال اسم شخصية صحيح"
+               return (false, "", "")
+           }
+           return (true, Name , "")
+       }
+    func isValidCharacterName(nameText:String) -> Bool {
+            
+            let NameRegEx = "\\w{3,18}"
+            let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
+            return NameTest.evaluate(with: nameText)
         }
-    }
+        
+        
+        
+        func checkEmailExist(email: String, collection: String, field: String) async -> Bool {
+            let db = Firestore.firestore()
+            do {
+                let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
+                print("COUNT ", snapshot.count)
+                print("not added")
+                return snapshot.count != 0
+            } catch {
+                print(error.localizedDescription)
+                print("added")
+                return false
+            }
+        }
     
     /*
     func getInfo (completion: @escaping (_ name: String?) -> Void) {

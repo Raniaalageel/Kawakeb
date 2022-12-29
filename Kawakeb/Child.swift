@@ -12,4 +12,5 @@ struct Child : Codable {
 //    let passowrd : String?
     let dob : String?
     let childID: String?
+    let char: String?
 }
