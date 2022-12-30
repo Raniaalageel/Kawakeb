@@ -108,12 +108,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         if !isValidEmailR(emailID: email) {
             Emailvalidation.isHidden = false
-            Emailvalidation.text = "الرجاء إدخال بريد الكتروني صحيح !"
+            Emailvalidation.text = "الرجاء إدخال بريد الكتروني صحيح "
             return (false, "", "")
         }
         if password.count != 8 {
             Passwordvalidation.isHidden = false
-            Passwordvalidation.text = "الرجاء إدخال كلمة مرور مكونة من ٨ أرقام!"
+            Passwordvalidation.text = "الرجاء إدخال كلمة مرور لا تقل عن ٨ أرقام"
             return (false, "", "")
         }
         
@@ -207,11 +207,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-
+    
     @IBAction func birthdayy(_ sender: UITextField) {
         self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
-
     }
+    
+
+//    @IBAction func birthdayy(_ sender: UITextField) {
+//        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+//
+//    }
     
     var whatCharacterPressed = ""
     

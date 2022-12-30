@@ -1570,13 +1570,6 @@
                                     <segue destination="AxH-NX-vOx" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="JnV-K5-cRI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f0-ky-nl7">
-                                <rect key="frame" x="152" y="628" width="541" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nf1-hc-OZY">
                                 <rect key="frame" x="20" y="0.0" width="794" height="197"/>
                             </imageView>
@@ -1584,6 +1577,13 @@
                                 <rect key="frame" x="135" y="90" width="574" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f0-ky-nl7">
+                                <rect key="frame" x="149" y="562" width="541" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YeY-Sq-OS5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1619,7 +1619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9r3-oH-S7O" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="-675"/>
+            <point key="canvasLocation" x="1478.4172661870505" y="-675.37688442211061"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="cxq-Ut-jvG">
@@ -1711,6 +1711,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="birthdayy:" destination="WNy-jx-kxw" eventType="editingDidEnd" id="Vcz-kC-BKr"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="nJ6-zk-Kks">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="207"/>
@@ -2672,13 +2675,13 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iI5-kz-FyW"/>
-        <segue reference="bVx-b7-Wzx"/>
+        <segue reference="unw-hY-3Nj"/>
         <segue reference="yaD-Se-fJp"/>
-        <segue reference="HO3-79-xAd"/>
+        <segue reference="aNn-mm-eS3"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="mdC-1h-dYE"/>
+        <segue reference="Tf2-zg-CPc"/>
         <segue reference="u2J-iR-xDB"/>
-        <segue reference="xaj-88-hQr"/>
+        <segue reference="JnV-K5-cRI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>
