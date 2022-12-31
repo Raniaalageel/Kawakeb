@@ -18,8 +18,8 @@ class FirstGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("nn")
-        
-        CameraOpen().viewDidLoad()
+        Global.shared.allLablels = ["left","left","up"]
+ //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
         
        // trytocall()
         
@@ -41,7 +41,7 @@ class FirstGame: UIViewController {
         sceneView.presentScene(scene)
         self.view.addSubview(sceneView)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             sceneView.removeFromSuperview()
         }
         
@@ -62,11 +62,11 @@ class FirstGame: UIViewController {
         trytocallSCene()  //GO TOSKSCENE
         
         
-        Global.shared.allLablels = []
+        //!!!!!!!!!!!!!!!    Global.shared.allLablels = []
         print("again open camera ")
         Global.shared.stopis = false  //OPEN CAMERA
         Global.shared.enabled = false //not appned array
-        CameraOpen().viewDidLoad()   //call class CameraOpen
+        //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()   //call class CameraOpen
 
         
         

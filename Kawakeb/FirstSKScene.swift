@@ -58,7 +58,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
         else{
             print("charcter  move")
             var alliteration = 0
-            
+            let moveDuration = 3
             while alliteration < Global.shared.allLablels.count  {
                 var ch = Character(":")
      var result = Global.shared.allLablels[alliteration].split(separator: ch)
@@ -69,27 +69,36 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
                     let actionplayer = SKAction.move(by: .init(dx: 300, dy: 0), duration: 2)
                     
                     player.run(actionplayer)
+                   
+                    
+                   // let actionplayer =    SKAction.move(to: CGPoint(x: 100, y: 0), duration: 0.1)
                 }
                 else if(resullabel == "left"){
                     print(" move left")
-                    let actionplayer = SKAction.move(by: .init(dx: -195, dy: 0), duration: 2)
+                    let actionplayer = SKAction.move(by: .init(dx: -195, dy: 0), duration: 3)
                     
-                    player.run(actionplayer)
+                   player.run(actionplayer)
                     
+                
+                               
+                               
                 }else if(resullabel == "stop"){
                     let actionplayer = SKAction.rotate(byAngle: 10, duration: 2)
                     
                     player.run(actionplayer)
-                    
                 }
                else  if(resullabel == "start"){
                     
                 }
                 else if(resullabel == "up"){
                     print(" move up")
-                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 100), duration: 2)
+                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
                     
-                    player.run(actionplayer)
+                    //player.run(actionplayer)
+                    player.run(SKAction.sequence([SKAction.wait(forDuration: TimeInterval(moveDuration)),actionplayer]),completion:{
+                        
+                     print("done left")
+                    })
                     
                 }else if(resullabel == "down"){
                     print(" move down")
