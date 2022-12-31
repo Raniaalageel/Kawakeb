@@ -22,7 +22,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
         print("didMove", frame)
         ///
         
-        let background = SKSpriteNode(imageNamed: "background")
+        let background = SKSpriteNode(imageNamed: "FirstGameWithOut")
             background.size = self.size
             background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
             background.zPosition = 0
@@ -36,18 +36,18 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
 //             button.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
 //             self.addChild(button)
         
-        var buttongo: SKNode! = nil
-        buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
-             //  buttongo.position = CGPoint(x:self.frame.midX, y:self.frame.midY);
-        buttongo.position = CGPoint(x: 120, y: 100);
-       
-//        buttongo(normalString: "انطلق", normalStringColor: UIColor.blueColor, size: CGSizeMake(200, 40), cornerRadius: 10.0, buttonFunc: gobutton() )
-               self.addChild(buttongo)
+//        var buttongo: SKNode! = nil
+//        buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
+//             //  buttongo.position = CGPoint(x:self.frame.midX, y:self.frame.midY);
+//        buttongo.position = CGPoint(x: 120, y: 100);
+//
+////        buttongo(normalString: "انطلق", normalStringColor: UIColor.blueColor, size: CGSizeMake(200, 40), cornerRadius: 10.0, buttonFunc: gobutton() )
+//               self.addChild(buttongo)
         //
         player = SKSpriteNode(imageNamed: "rocket1")  //shuttle rocket1.png
        // player.position = CGPoint(x: 200, y: player.size.height + 100)
-        player.size = .init(width: 100, height: 100)
-        player.position = CGPoint(x: frame.width * 0.5, y: frame.height * 0.5)
+        player.size = .init(width: 200, height: 200)
+        player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
         self.addChild(player)
         
 //        let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 0), duration: 1), .rotate(byAngle: 10, duration: 1)]) action.timingMode = .easeOut

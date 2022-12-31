@@ -46,9 +46,9 @@ class FirstGame: UIViewController {
         }
         
         
-        let v = UILabel(frame: .init(x: 100, y: 100, width: 100, height: 60))
-        v.text = "Hello"
-        self.view.addSubview(v)
+//        let v = UILabel(frame: .init(x: 100, y: 100, width: 100, height: 60))
+//        v.text = "Hello"
+//        self.view.addSubview(v)
     }
     
     
@@ -58,7 +58,7 @@ class FirstGame: UIViewController {
         Global.shared.enabled = true //add all array
         Global.shared.stopis = true   //stopcamer
         CameraOpen().Stopsessyion()
-        
+
         trytocallSCene()  //GO TOSKSCENE
         
         
