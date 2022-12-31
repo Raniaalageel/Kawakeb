@@ -72,7 +72,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
                 }
                 else if(resullabel == "left"){
                     print(" move left")
-                    let actionplayer = SKAction.move(by: .init(dx: -250, dy: 0), duration: 2)
+                    let actionplayer = SKAction.move(by: .init(dx: -195, dy: 0), duration: 2)
                     
                     player.run(actionplayer)
                     
