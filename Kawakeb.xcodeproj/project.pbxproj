@@ -14,9 +14,6 @@
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
 		536CE5CC295CF4AF0092962F /* FirstSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5CB295CF4AF0092962F /* FirstSKScene.swift */; };
-		536CE5CE295DA14F0092962F /* GameScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5CD295DA14F0092962F /* GameScene.scn */; };
-		536CE5D0295DA16A0092962F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5CF295DA16A0092962F /* GameScene.sks */; };
-		536CE5D2295DA9E90092962F /* VCscene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5D1295DA9E90092962F /* VCscene.swift */; };
 		536CE5D4295F64C40092962F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5D3295F64C40092962F /* background.png */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
@@ -106,9 +103,6 @@
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
 		536CE5CB295CF4AF0092962F /* FirstSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSKScene.swift; sourceTree = "<group>"; };
-		536CE5CD295DA14F0092962F /* GameScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = GameScene.scn; sourceTree = "<group>"; };
-		536CE5CF295DA16A0092962F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		536CE5D1295DA9E90092962F /* VCscene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCscene.swift; sourceTree = "<group>"; };
 		536CE5D3295F64C40092962F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
@@ -206,7 +200,6 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
-				536CE5D1295DA9E90092962F /* VCscene.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
@@ -236,8 +229,6 @@
 				5610D8E62953B0B000E046FC /* Child.swift */,
 				536CE5C3295B7C040092962F /* CameraOpen.swift */,
 				536CE5CB295CF4AF0092962F /* FirstSKScene.swift */,
-				536CE5CF295DA16A0092962F /* GameScene.sks */,
-				536CE5CD295DA14F0092962F /* GameScene.scn */,
 				536CE5C7295B7DE80092962F /* FirstGame.swift */,
 				5610D8E82953B0BD00E046FC /* datepicker.swift */,
 				5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */,
@@ -435,7 +426,6 @@
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
-				536CE5CE295DA14F0092962F /* GameScene.scn in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				536CE5C2295B7BB90092962F /* LOGO.png in Resources */,
@@ -445,7 +435,6 @@
 				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
 				F0F920B72953337A0045A75C /* ours.png in Resources */,
 				536CE5D4295F64C40092962F /* background.png in Resources */,
-				536CE5D0295DA16A0092962F /* GameScene.sks in Resources */,
 				F0F920BD295333A50045A75C /* help.png in Resources */,
 				F0F920B9295333870045A75C /* astro.png in Resources */,
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
@@ -480,7 +469,6 @@
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
-				536CE5D2295DA9E90092962F /* VCscene.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
 				536CE5CC295CF4AF0092962F /* FirstSKScene.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
