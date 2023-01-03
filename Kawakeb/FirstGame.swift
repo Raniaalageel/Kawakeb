@@ -18,7 +18,7 @@ class FirstGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("nn")
-        Global.shared.allLablels = ["left","left","up"]
+        Global.shared.allLablels = ["left","left"]
  //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
         
        // trytocall()

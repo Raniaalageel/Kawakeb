@@ -2128,10 +2128,10 @@
             </objects>
             <point key="canvasLocation" x="327" y="-1641"/>
         </scene>
-        <!--Alert Scs Fai-->
+        <!--Alert Scs-->
         <scene sceneID="nAM-9A-EJP">
             <objects>
-                <viewController storyboardIdentifier="AlertSF" id="h1v-Pm-Iz9" customClass="AlertScsFai" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertSF" id="h1v-Pm-Iz9" customClass="AlertScs" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iAk-Jw-y46"/>
                         <viewControllerLayoutGuide type="bottom" id="QWo-pC-Mpf"/>
@@ -2140,14 +2140,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertBack" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-rd-2Hy">
-                                <rect key="frame" x="64" y="204" width="740" height="544"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alertBack" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-rd-2Hy">
+                                <rect key="frame" x="64" y="204" width="740" height="510"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-yx-3Fa">
-                                <rect key="frame" x="154" y="651" width="216" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-yx-3Fa">
+                                <rect key="frame" x="120" y="584" width="216" height="83"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="216" id="0hl-nC-GGZ"/>
-                                    <constraint firstAttribute="height" constant="83" id="kj6-ai-vqP"/>
+                                    <constraint firstAttribute="height" constant="83" id="g3P-It-28l"/>
+                                    <constraint firstAttribute="width" constant="216" id="tKd-7z-pAQ"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="200" height="500"/>
@@ -2157,10 +2158,56 @@
                                         <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="الصفحة الريثسة">
+                                        <fragment content="الصفحة">
                                             <attributes>
                                                 <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ال">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ر">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="س">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ي">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ة">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -2169,11 +2216,11 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-ng-pCp">
-                                <rect key="frame" x="519" y="651" width="216" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-ng-pCp">
+                                <rect key="frame" x="548" y="584" width="216" height="83"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="216" id="9ai-Ts-qhl"/>
-                                    <constraint firstAttribute="height" constant="83" id="TKp-l5-rnY"/>
+                                    <constraint firstAttribute="width" constant="216" id="hPp-NS-ish"/>
+                                    <constraint firstAttribute="height" constant="83" id="ro1-gd-PjG"/>
                                 </constraints>
                                 <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -2185,7 +2232,7 @@
                                         <fragment content="التالي">
                                             <attributes>
                                                 <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="36"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -2196,33 +2243,48 @@
                                     <action selector="pressed:" destination="1y6-qD-n0J" eventType="touchUpInside" id="bkk-JB-Rcj"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star22.png" translatesAutoresizingMaskIntoConstraints="NO" id="U2c-As-oj9">
-                                <rect key="frame" x="154" y="242" width="353" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star11.png" translatesAutoresizingMaskIntoConstraints="NO" id="U2c-As-oj9">
+                                <rect key="frame" x="108" y="224" width="353" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="H45-Ai-Hdk"/>
-                                    <constraint firstAttribute="width" constant="353" id="Rci-pA-ZXn"/>
+                                    <constraint firstAttribute="height" constant="128" id="40v-4D-mRI"/>
+                                    <constraint firstAttribute="width" constant="353" id="kIc-ns-shE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07O-Sc-9Zh">
-                                <rect key="frame" x="225" y="434" width="253" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star11.png" translatesAutoresizingMaskIntoConstraints="NO" id="8TS-09-0lc">
+                                <rect key="frame" x="271" y="224" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="PqQ-zC-Aye"/>
+                                    <constraint firstAttribute="height" constant="128" id="x7q-qI-Wee"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star11.png" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-ic-kI6">
+                                <rect key="frame" x="400" y="224" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="OAM-l5-PCP"/>
+                                    <constraint firstAttribute="height" constant="128" id="m8r-2I-rcI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نجحت بالوصول إلى كوكب الزهرة! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Pg-Dm5">
+                                <rect key="frame" x="224" y="374" width="568" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="3xk-rd-2Hy" secondAttribute="trailing" constant="10" id="AH6-fX-vie"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="U2c-As-oj9" secondAttribute="trailing" constant="236" id="NG0-eU-eTB"/>
-                            <constraint firstItem="XkR-ng-pCp" firstAttribute="top" secondItem="07O-Sc-9Zh" secondAttribute="bottom" constant="55" id="UpL-bx-Qb8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XkR-ng-pCp" secondAttribute="trailing" constant="134" id="YED-H1-Hp0"/>
-                            <constraint firstItem="7r2-yx-3Fa" firstAttribute="top" secondItem="07O-Sc-9Zh" secondAttribute="bottom" constant="55" id="cvk-jn-FLg"/>
-                            <constraint firstItem="7r2-yx-3Fa" firstAttribute="top" secondItem="07O-Sc-9Zh" secondAttribute="bottom" constant="55" id="fC0-vb-bln"/>
-                            <constraint firstItem="07O-Sc-9Zh" firstAttribute="top" secondItem="U2c-As-oj9" secondAttribute="bottom" constant="8" symbolic="YES" id="i0f-UA-pNN"/>
-                            <constraint firstItem="U2c-As-oj9" firstAttribute="top" secondItem="iAk-Jw-y46" secondAttribute="bottom" constant="309" id="ohn-WQ-BYM"/>
-                            <constraint firstItem="07O-Sc-9Zh" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="185" id="qRb-LZ-vur"/>
-                            <constraint firstItem="3xk-rd-2Hy" firstAttribute="top" secondItem="iAk-Jw-y46" secondAttribute="bottom" constant="180" id="rWZ-8W-AtM"/>
-                            <constraint firstItem="7r2-yx-3Fa" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="140" id="uAz-fo-Sgf"/>
+                            <constraint firstItem="8TS-09-0lc" firstAttribute="top" secondItem="iAk-Jw-y46" secondAttribute="bottom" constant="200" id="4L5-D9-IPf"/>
+                            <constraint firstItem="7r2-yx-3Fa" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="100" id="OKq-4b-Z7F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XkR-ng-pCp" secondAttribute="trailing" constant="50" id="ZPN-mb-zJo"/>
+                            <constraint firstItem="XkR-ng-pCp" firstAttribute="top" secondItem="Zsg-Pg-Dm5" secondAttribute="bottom" constant="156" id="fb4-ON-THA"/>
+                            <constraint firstItem="U2c-As-oj9" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="88" id="foE-ts-Vaw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zsg-Pg-Dm5" secondAttribute="trailing" constant="22" id="gUz-dr-2NU"/>
+                            <constraint firstItem="7r2-yx-3Fa" firstAttribute="top" secondItem="Zsg-Pg-Dm5" secondAttribute="bottom" constant="156" id="gZ2-HT-FNV"/>
+                            <constraint firstItem="8TS-09-0lc" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="251" id="hHP-dn-tQF"/>
+                            <constraint firstItem="U2c-As-oj9" firstAttribute="top" secondItem="iAk-Jw-y46" secondAttribute="bottom" constant="200" id="ky3-xE-BQY"/>
+                            <constraint firstItem="2ZT-ic-kI6" firstAttribute="top" secondItem="iAk-Jw-y46" secondAttribute="bottom" constant="200" id="ogc-TC-ltK"/>
+                            <constraint firstItem="2ZT-ic-kI6" firstAttribute="leading" secondItem="zSW-P2-YsJ" secondAttribute="leadingMargin" constant="380" id="pY3-oH-HWy"/>
+                            <constraint firstItem="Zsg-Pg-Dm5" firstAttribute="top" secondItem="U2c-As-oj9" secondAttribute="bottom" constant="22" id="vub-3n-f0h"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -2801,13 +2863,148 @@
             </objects>
             <point key="canvasLocation" x="792" y="1488"/>
         </scene>
+        <!--Alert Fail-->
+        <scene sceneID="ebo-f2-bKe">
+            <objects>
+                <viewController storyboardIdentifier="AlertFail" id="2Xf-VS-vZy" customClass="AlertFail" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CyC-Fx-bXF"/>
+                        <viewControllerLayoutGuide type="bottom" id="B1L-6M-Mgq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hg3-hD-DMl">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alertBack" translatesAutoresizingMaskIntoConstraints="NO" id="Bzz-At-R5B">
+                                <rect key="frame" x="64" y="204" width="740" height="510"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2X-bn-hA8">
+                                <rect key="frame" x="320" y="584" width="216" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="cR5-tc-mod"/>
+                                    <constraint firstAttribute="width" constant="216" id="zKh-ho-1oh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="200" height="500"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="الصفحة">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647058823528" green="0.21568627450980393" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ال">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ر">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="س">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ي">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="ة">
+                                            <attributes>
+                                                <color key="NSColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="36" name="Times-Roman"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close1" translatesAutoresizingMaskIntoConstraints="NO" id="CZv-Wy-t3q">
+                                <rect key="frame" x="108" y="224" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5yb-1M-bCK"/>
+                                    <constraint firstAttribute="width" constant="353" id="efJ-ob-HS1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close1" translatesAutoresizingMaskIntoConstraints="NO" id="0kX-ow-oOt">
+                                <rect key="frame" x="271" y="224" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HsI-Jk-3Ia"/>
+                                    <constraint firstAttribute="width" constant="353" id="yey-td-wga"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close1" translatesAutoresizingMaskIntoConstraints="NO" id="6NS-Nh-eIX">
+                                <rect key="frame" x="400" y="224" width="353" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PMO-sL-uuN"/>
+                                    <constraint firstAttribute="width" constant="353" id="foT-ND-kk4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حاول مرة اخرى!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFj-iY-ShU">
+                                <rect key="frame" x="511" y="374" width="281" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6NS-Nh-eIX" firstAttribute="top" secondItem="CyC-Fx-bXF" secondAttribute="bottom" constant="200" id="G9S-zH-3Ze"/>
+                            <constraint firstItem="CZv-Wy-t3q" firstAttribute="leading" secondItem="hg3-hD-DMl" secondAttribute="leadingMargin" constant="88" id="Iz1-Yc-JRs"/>
+                            <constraint firstItem="6NS-Nh-eIX" firstAttribute="leading" secondItem="hg3-hD-DMl" secondAttribute="leadingMargin" constant="380" id="JNl-nR-E2A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qFj-iY-ShU" secondAttribute="trailing" constant="22" id="XMT-Ny-bEk"/>
+                            <constraint firstItem="qFj-iY-ShU" firstAttribute="top" secondItem="CZv-Wy-t3q" secondAttribute="bottom" constant="22" id="XWk-xk-mhX"/>
+                            <constraint firstItem="0kX-ow-oOt" firstAttribute="top" secondItem="CyC-Fx-bXF" secondAttribute="bottom" constant="200" id="cc5-ub-hWk"/>
+                            <constraint firstItem="y2X-bn-hA8" firstAttribute="top" secondItem="qFj-iY-ShU" secondAttribute="bottom" constant="156" id="l0M-XK-EyG"/>
+                            <constraint firstItem="CZv-Wy-t3q" firstAttribute="top" secondItem="CyC-Fx-bXF" secondAttribute="bottom" constant="200" id="lvB-F6-71f"/>
+                            <constraint firstItem="y2X-bn-hA8" firstAttribute="leading" secondItem="hg3-hD-DMl" secondAttribute="leadingMargin" constant="300" id="qcM-e2-ESk"/>
+                            <constraint firstItem="0kX-ow-oOt" firstAttribute="leading" secondItem="hg3-hD-DMl" secondAttribute="leadingMargin" constant="251" id="s0S-Z2-Xep"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQd-MV-NUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="-1664"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iI5-kz-FyW"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="yaD-Se-fJp"/>
         <segue reference="HO3-79-xAd"/>
-        <segue reference="Y5R-q1-wPb"/>
+        <segue reference="hqg-X7-rr5"/>
         <segue reference="Tf2-zg-CPc"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="L4T-uD-WVw"/>
@@ -2825,6 +3022,7 @@
         <image name="backk.png" width="55" height="58"/>
         <image name="boy" width="416" height="416"/>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="close1" width="68" height="70"/>
         <image name="firstbg" width="1414" height="2000"/>
         <image name="girl" width="500" height="500"/>
         <image name="help.png" width="53" height="54"/>
@@ -2835,7 +3033,6 @@
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rocket2.png" width="378" height="661"/>
         <image name="star11.png" width="302" height="206.5"/>
-        <image name="star22.png" width="258.5" height="241.5"/>
         <image name="store.png" width="59" height="61"/>
         <image name="white.png" width="241" height="258.5"/>
         <systemColor name="secondaryLabelColor">

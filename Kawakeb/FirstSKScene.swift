@@ -137,38 +137,38 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
     
     
     
-    func alertSucsses() -> AlertScsFai {
+    func alertSucsses() -> AlertScs {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertSF") as! AlertScsFai
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertSF") as! AlertScs
         
         return alertVC
-        
     }
+    
+    func alertFail() -> AlertFail {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertFail") as! AlertFail
+        return alertVC
+    }
+    
     
     func winCondition() {
         if(player.position.x >= 270.0 && player.position.y >= 600.5){
             print("is win")
           let alervc =  alertSucsses()
             view?.window?.rootViewController?.present(alervc, animated: true)
-
             let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
             player.run(actionplayer)
             Global.shared.endgame = true
         } else {
             print("not win")
+            let alervc =  alertFail()
+              view?.window?.rootViewController?.present(alervc, animated: true)
         }
     }
     
-//    override func didFinishUpdate() {
-//        print("what kkkkk")
-//    }
-//
+
 //    override func update(_ currentTime: TimeInterval) {
-//        //        if ( Global.shared.endgame == false){
-//        //
-//        //        }
 //
-//        //  endgame = true
 //
 //    }
     
