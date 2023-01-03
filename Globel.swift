@@ -20,7 +20,7 @@ class Global{
     var  stopis = false
       
     var allLablels = [String]()
-      
+    public   var endgame = false
 
     
     

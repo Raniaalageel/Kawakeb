@@ -13,6 +13,7 @@
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
 		538DDF7D2964193C00562581 /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 538DDF7C2964193C00562581 /* LOGO.png */; };
+		538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF7E29641B7400562581 /* FirstSKScene.swift */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
 		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
@@ -101,6 +102,7 @@
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
 		538DDF7C2964193C00562581 /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = ../../../Documents/LOGO.png; sourceTree = "<group>"; };
+		538DDF7E29641B7400562581 /* FirstSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSKScene.swift; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				538DDF7E29641B7400562581 /* FirstSKScene.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
@@ -471,6 +474,7 @@
 				5675477C2953C55100065DB7 /* Pv.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
 				5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */,
+				538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
