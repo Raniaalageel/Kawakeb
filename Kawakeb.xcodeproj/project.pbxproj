@@ -28,6 +28,7 @@
 		A2509F652964873700278F2E /* redCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = A2509F642964873600278F2E /* redCircle.png */; };
 		A2509F672964873B00278F2E /* p1.png in Resources */ = {isa = PBXBuildFile; fileRef = A2509F662964873A00278F2E /* p1.png */; };
 		A2509F692964892100278F2E /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A2509F682964891F00278F2E /* LOGO.PNG */; };
+		A2509F6B29648D4D00278F2E /* L1.png in Resources */ = {isa = PBXBuildFile; fileRef = A2509F6A29648D4C00278F2E /* L1.png */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
@@ -121,6 +122,7 @@
 		A2509F642964873600278F2E /* redCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redCircle.png; path = ../../redCircle.png; sourceTree = "<group>"; };
 		A2509F662964873A00278F2E /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p1.png; path = ../../p1.png; sourceTree = "<group>"; };
 		A2509F682964891F00278F2E /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
+		A2509F6A29648D4C00278F2E /* L1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = L1.png; path = ../../L1.png; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
+				A2509F6A29648D4C00278F2E /* L1.png */,
 				A2509F682964891F00278F2E /* LOGO.PNG */,
 				A2509F642964873600278F2E /* redCircle.png */,
 				A2509F662964873A00278F2E /* p1.png */,
@@ -440,6 +443,7 @@
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				A2509F692964892100278F2E /* LOGO.PNG in Resources */,
+				A2509F6B29648D4D00278F2E /* L1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
