@@ -58,19 +58,34 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                print("charcter not move")
            }
            else {
-               print("charcter  move")
+               print("charcter move")
+               var ch = Character(":")
                var alliteration = 0
                let moveDuration = 3
                var actions: [SKAction] = []
                for label in Global.shared.allLablels {
-                   print(label, "loop")
-                   switch label {
-                   case "right": actions.append(SKAction.move(by: .init(dx: 300, dy: 0), duration: 2))
-                   case "left": actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 3))
-                   case "up": actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 3))
-                   case "down": actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
+                 
+        var result = Global.shared.allLablels[alliteration].split(separator: ch)
+                            var resullabel = String(result[0])
+                                
+//                        print( resullabel, "in the for loop")
+//                   print(label, "loop")
+                   switch resullabel {
+                   case "right":
+                       print(" move right")
+                       actions.append(SKAction.move(by: .init(dx: 300, dy: 0), duration: 2))
+                   case "left":
+                       print(" move left")
+                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 3))
+                   case "up":
+                       print(" move up")
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 3))
+                   case "down":
+                       print(" move down")
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
                    default: print("")
                    }
+                   alliteration += 1
                }
                
                actions.append(.run({

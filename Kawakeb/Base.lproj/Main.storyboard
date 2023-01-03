@@ -2420,7 +2420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af1-6F-pYy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.755395683453238" y="1472.8643216080402"/>
+            <point key="canvasLocation" x="1513.6690647482014" y="1472.8643216080402"/>
         </scene>
         <!--Editprofile-->
         <scene sceneID="zOA-Gv-Ud5">
@@ -2561,7 +2561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ora-ug-2OL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520.8633093525182" y="1472.8643216080402"/>
+            <point key="canvasLocation" x="3028.7769784172665" y="1472.8643216080402"/>
         </scene>
         <!--Pv-->
         <scene sceneID="WmC-Z4-s4K">
@@ -2680,7 +2680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTQ-iK-QuV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="1488"/>
+            <point key="canvasLocation" x="2299.2805755395684" y="1487.9396984924624"/>
         </scene>
         <!--First Game-->
         <scene sceneID="L8c-W7-hPa">
@@ -2910,10 +2910,11 @@
                             <constraint firstItem="Mhd-iO-WGO" firstAttribute="leading" secondItem="DiJ-CN-JrK" secondAttribute="leadingMargin" constant="100" id="k8D-Qe-hTA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2aj-Ku-9bD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqE-dh-Xtq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1027" y="1538"/>
+            <point key="canvasLocation" x="480.57553956834533" y="1537.6884422110552"/>
         </scene>
         <!--Alert Fail-->
         <scene sceneID="XXo-g2-WYE">
@@ -3045,10 +3046,11 @@
                             <constraint firstItem="op7-PQ-xL7" firstAttribute="top" secondItem="089-4v-jh8" secondAttribute="bottom" constant="200" id="wC8-Wj-i4T"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9vs-g6-Ndr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdl-LE-HlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2011" y="1538"/>
+            <point key="canvasLocation" x="-1257.5539568345325" y="1537.6884422110552"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
