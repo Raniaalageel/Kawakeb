@@ -151,7 +151,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
        
        func winCondition() {
-           if(player.position.x >= 270.0 && player.position.y >= 600.5){
+           if(player.position.x >= 270.0 && player.position.x <= 298.0      && player.position.y >= 600.5 && player.position.y <= 620.5){
                print("is win")
              let alervc =  alertSucsses()
                view?.window?.rootViewController?.present(alervc, animated: true)

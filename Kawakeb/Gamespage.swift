@@ -42,12 +42,6 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     
     
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
                // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
@@ -85,6 +79,12 @@ class Gamespage: UIViewController, EditprofileDelegate {
             }
         }
     }
-   
+    
+    
+    @IBAction func alzahraK(_ sender: UIButton) {
+        
+        
+    }
+    
     
     }
