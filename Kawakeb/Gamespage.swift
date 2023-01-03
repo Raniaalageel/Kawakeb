@@ -83,7 +83,13 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     @IBAction func alzahraK(_ sender: UIButton) {
         
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+//        present(secondViewController, animated: true, completion: nil)
         
+        
+        self.performSegue(withIdentifier: "gofirst", sender: self)
+
     }
     
     

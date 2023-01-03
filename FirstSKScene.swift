@@ -161,7 +161,12 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            } else {
                print("not win")
                let alervc =  alertFail()
-                 view?.window?.rootViewController?.present(alervc, animated: true)
+                 view?.window?.rootViewController?.present(alervc, animated: true,completion: nil)
+//               DispatchQueue.main.async { [weak self] in
+//                   self?.present(alervc, animated: true, completion: nil)
+//               }
+               
+               
            }
        }
        
