@@ -514,7 +514,7 @@
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="alzahraK:" destination="9rX-g3-OdF" eventType="touchUpInside" id="hiU-YL-BnE"/>
-                                    <segue destination="Fbu-lq-fYZ" kind="presentation" modalPresentationStyle="fullScreen" id="yaU-PD-3a5"/>
+                                    <segue destination="Fbu-lq-fYZ" kind="presentation" identifier="gofirst" modalPresentationStyle="fullScreen" id="yaU-PD-3a5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3131,7 +3131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPO-V1-sae">
-                                <rect key="frame" x="364" y="764" width="146" height="64"/>
+                                <rect key="frame" x="364" y="773" width="136" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -3143,7 +3143,7 @@
                                         <fragment content="العودة">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="30" name="CourierNewPS-BoldMT"/>
+                                                <font key="NSFont" size="24" name="CourierNewPS-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -3320,7 +3320,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d8J-0M-e9p"/>
+        <segue reference="jAI-lZ-lU3"/>
         <segue reference="iI5-kz-FyW"/>
         <segue reference="unw-hY-3Nj"/>
         <segue reference="yaD-Se-fJp"/>
