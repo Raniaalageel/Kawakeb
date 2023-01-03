@@ -22,14 +22,7 @@ class FirstGame: UIViewController {
  //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
         
        // trytocall()
-        
-        
-        
-        //        if let view = self.view as? SKView, scene == nil {
-        //                    let scene = FirstSKScene(size: view.bounds.size)
-        //                    view.presentScene(scene)
-        //                    self.scene = scene
-        //                }
+       
     }
     func trytocallSCene(){
         //  CameraOpen().viewDidLoad()
@@ -41,9 +34,13 @@ class FirstGame: UIViewController {
         sceneView.presentScene(scene)
         self.view.addSubview(sceneView)
         
+       
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             sceneView.removeFromSuperview()
         }
+        
+        
         
         
 //        let v = UILabel(frame: .init(x: 100, y: 100, width: 100, height: 60))

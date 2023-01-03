@@ -15,6 +15,8 @@
 		536CE5CC295CF4AF0092962F /* FirstSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5CB295CF4AF0092962F /* FirstSKScene.swift */; };
 		536CE5D4295F64C40092962F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5D3295F64C40092962F /* background.png */; };
 		536CE5D62960B7C00092962F /* PNG 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 536CE5D52960B7C00092962F /* PNG 3.png */; };
+		538DDF77296302C100562581 /* FallingStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 538DDF76296302C100562581 /* FallingStars.sks */; };
+		538DDF7929639E4D00562581 /* AlertScsFai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF7829639E4D00562581 /* AlertScsFai.swift */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
 		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
@@ -104,6 +106,8 @@
 		536CE5CB295CF4AF0092962F /* FirstSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSKScene.swift; sourceTree = "<group>"; };
 		536CE5D3295F64C40092962F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		536CE5D52960B7C00092962F /* PNG 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PNG 3.png"; sourceTree = "<group>"; };
+		538DDF76296302C100562581 /* FallingStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FallingStars.sks; sourceTree = "<group>"; };
+		538DDF7829639E4D00562581 /* AlertScsFai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertScsFai.swift; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				538DDF7829639E4D00562581 /* AlertScsFai.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
@@ -229,6 +234,7 @@
 				5610D8E62953B0B000E046FC /* Child.swift */,
 				536CE5C3295B7C040092962F /* CameraOpen.swift */,
 				536CE5CB295CF4AF0092962F /* FirstSKScene.swift */,
+				538DDF76296302C100562581 /* FallingStars.sks */,
 				536CE5C7295B7DE80092962F /* FirstGame.swift */,
 				5610D8E82953B0BD00E046FC /* datepicker.swift */,
 				5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */,
@@ -420,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				536CE5D62960B7C00092962F /* PNG 3.png in Resources */,
+				538DDF77296302C100562581 /* FallingStars.sks in Resources */,
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
 				F0F920C5295333EC0045A75C /* star22.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
@@ -467,6 +474,7 @@
 				5610D8E32953B09300E046FC /* Profile.swift in Sources */,
 				5610D8E72953B0B000E046FC /* Child.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
+				538DDF7929639E4D00562581 /* AlertScsFai.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
