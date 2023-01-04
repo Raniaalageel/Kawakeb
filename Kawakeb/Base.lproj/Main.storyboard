@@ -37,7 +37,7 @@
                                 <rect key="frame" x="-48" y="0.0" width="897" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LOGO.png" translatesAutoresizingMaskIntoConstraints="NO" id="fey-pF-NdZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="LOGO.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="fey-pF-NdZ">
                                 <rect key="frame" x="24" y="54" width="820" height="742"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="820" id="YS0-38-O9b"/>
@@ -413,7 +413,7 @@
         <!--Gamespage-->
         <scene sceneID="aKM-EP-otk">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="9rX-g3-OdF" customClass="Gamespage" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="9rX-g3-OdF" customClass="Gamespage" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6i-0Q-3JV">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3485,13 +3485,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="oC2-Qk-32N"/>
         <segue reference="d8J-0M-e9p"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="unw-hY-3Nj"/>
         <segue reference="yaD-Se-fJp"/>
         <segue reference="HO3-79-xAd"/>
         <segue reference="kC1-ys-kyJ"/>
-        <segue reference="blo-67-XaK"/>
+        <segue reference="bG7-Os-i85"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="JnV-K5-cRI"/>
     </inferredMetricsTieBreakers>
@@ -3502,7 +3503,6 @@
         <image name="4" width="1047" height="238"/>
         <image name="L1.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="LOGO.PNG" width="375" height="375"/>
-        <image name="LOGO.png" width="375" height="375"/>
         <image name="alertBack" width="740" height="544"/>
         <image name="astro.png" width="443" height="563"/>
         <image name="backk.png" width="55" height="58"/>

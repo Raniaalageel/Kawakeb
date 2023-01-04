@@ -17,6 +17,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var points = Int()
     var photo = [String]()
     var imageView = UIImageView()
+    let remail = String (Global.shared.useremailshare)
     @IBOutlet weak var StoretableView: UITableView!
     
     
@@ -42,9 +43,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
    
                 
+                var remail = String (Global.shared.useremailshare)
+        print(Global.shared.useremailshare)
                 
-                
-        db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments{
+        db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
                     (snapshot, error) in
                     if let error = error {
                         print("FAIL ")
