@@ -2068,7 +2068,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FirstGame" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-UE-B8z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FirstGame2" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-UE-B8z">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2140,6 +2140,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMk-VQ-UGJ">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alertBack" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-rd-2Hy">
                                 <rect key="frame" x="64" y="204" width="740" height="510"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2287,6 +2291,9 @@
                             <constraint firstItem="Zsg-Pg-Dm5" firstAttribute="top" secondItem="U2c-As-oj9" secondAttribute="bottom" constant="22" id="vub-3n-f0h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageview" destination="jMk-VQ-UGJ" id="lUC-bU-SeE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaj-Ma-hwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3014,7 +3021,7 @@
         <image name="2" width="1034" height="241"/>
         <image name="3" width="1036" height="241"/>
         <image name="4" width="1047" height="238"/>
-        <image name="FirstGame" width="1414" height="2000"/>
+        <image name="FirstGame2" width="1414" height="2000"/>
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="LOGO.png" width="375" height="375"/>
         <image name="alertBack" width="740" height="544"/>

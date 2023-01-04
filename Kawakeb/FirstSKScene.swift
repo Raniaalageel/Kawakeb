@@ -18,7 +18,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate  {
     var xAcceration:CGFloat = 0
     var touchbegain : CGPoint?
     
-    
+
     override func didMove(to view: SKView) {
         Global.shared.endgame = false
         super.didMove(to: view)
