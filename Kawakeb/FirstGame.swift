@@ -19,7 +19,9 @@ class FirstGame: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             print("nn")
-            Global.shared.allLablels = ["left:0:500","left:200:2","up:22:1"]
+            Global.shared.allLablels = ["left:0:500","left:200:2","up:2:2"]
+                                        
+                                        //"up:22:1"]
      //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
             
            // trytocall()
@@ -28,26 +30,42 @@ class FirstGame: UIViewController {
         func trytocallSCene(){
             //  CameraOpen().viewDidLoad()
             print(view.frame)
+            
+            
             let sceneView = SKView(frame: view.frame)
             let scene = FirstSKScene()
             scene.size = view.frame.size
             //view.addSubview(sceneView)
+         //   scene.scaleMode = .fill //new
             sceneView.presentScene(scene)
             self.view.addSubview(sceneView)
             
-           
+           // sceneView.ignoresSiblingOrder = true  //new
+           // sceneView.showsFPS = true  //new
+           // sceneView.showsNodeCount = true //new
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                sceneView.removeFromSuperview()
-            }
-            
-            
-            
+//!!!            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                sceneView.removeFromSuperview()
+// !!           }
             
     //        let v = UILabel(frame: .init(x: 100, y: 100, width: 100, height: 60))
     //        v.text = "Hello"
     //        self.view.addSubview(v)
         }
+    func moveto(){
+        if (Global.shared.WinFail == true){
+            performSegue(withIdentifier: "gofail", sender: nil)
+
+            print("Global.shared.WinFail == true")
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+            let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertFail") as! AlertFail
+            
+           // view.window?.rootViewController!.present(alertVC, animated: true,completion: nil)
+
+            present(alertVC, animated: true,completion: nil)
+
+       }
+    }
         
         
         @IBAction func gobutton(_ sender: UIButton) {
@@ -78,3 +96,6 @@ class FirstGame: UIViewController {
         }
 
    }
+
+
+

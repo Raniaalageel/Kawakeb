@@ -9,6 +9,8 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import CoreMotion
+import AVFoundation
+import Vision
 
 class FirstSKScene: SKScene,SKPhysicsContactDelegate {
 
@@ -16,27 +18,28 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
        var xAcceration:CGFloat = 0
        var touchbegain : CGPoint?
-       
-       
+    
+    var winalert :SKSpriteNode!
+  
+    var   buttonnext :SKSpriteNode!
+    var   hombutton :SKSpriteNode!
+
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
            print("didMove", frame)
            ///
            
+           
+         
            let background = SKSpriteNode(imageNamed: "FirstGameWithOut")
            background.size = self.size
            background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
            background.zPosition = 0
            self.addChild(background)
-           ///
-           //
-           //        let button = SKSpriteNode(imageNamed: "star11")
-           //        button.name = "btn"
-           //             button.size.height = 100
-           //             button.size.width = 100
-           //             button.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
-           //             self.addChild(button)
+           
+           
+          
            
            //        var buttongo: SKNode! = nil
            //        buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
@@ -47,12 +50,27 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            //               self.addChild(buttongo)
            //
            player = SKSpriteNode(imageNamed: "rocket1")  //shuttle rocket1.png
-           // player.position = CGPoint(x: 200, y: player.size.height + 100)
            player.size = .init(width: 200, height: 200)
            player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
            self.addChild(player)
            
            //        let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 0), duration: 1), .rotate(byAngle: 10, duration: 1)]) action.timingMode = .easeOut
+           winalert = SKSpriteNode(imageNamed: "Firstwin")
+           winalert.size = .init(width: 600, height: 450)
+            winalert .position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+            winalert .zPosition = 0
+            
+           buttonnext = SKSpriteNode(imageNamed: "nextButton")
+            buttonnext.name = "pressNext"
+          buttonnext.size = .init(width: 160, height: 90)
+           buttonnext.position = CGPoint(x: frame.width * 0.7, y: frame.height * 0.4)
+
+           hombutton = SKSpriteNode(imageNamed: "homeButton")
+            hombutton.name = "pressHome"
+         hombutton.size = .init(width: 160, height: 90)
+           // hombutton.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
+         hombutton.position = CGPoint(x: frame.width * 0.27, y: frame.height * 0.4)
+
            
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
@@ -154,7 +172,6 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        func alertSucsses() -> AlertScs {
            let storyboard = UIStoryboard(name: "Main", bundle: .main)
            let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertSF") as! AlertScs
-           
            return alertVC
        }
        
@@ -163,47 +180,71 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertFail") as! AlertFail
            return alertVC
        }
-       
-       
        func winCondition() {
+           
            if(player.position.x >= 270.0 && player.position.x <= 298.0   && player.position.y >= 600.5 && player.position.y <= 620.5){
-               
                print("is win")
-             let alervc =  alertSucsses()
-               view?.window?.rootViewController?.present(alervc, animated: true)
+               self.addChild(winalert )
+               self.addChild(buttonnext)
+               self.addChild(hombutton)
                let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
                player.run(actionplayer)
-               Global.shared.endgame = true
            } else {
                print("not win")
-               let alervc =  alertFail()
-                 view?.window?.rootViewController?.present(alervc, animated: true,completion: nil)
-//               DispatchQueue.main.async { [weak self] in
-//                   self?.present(alervc, animated: true, completion: nil)
-//               }
-               
+
+          
                
            }
        }
        
 
-   //    override func update(_ currentTime: TimeInterval) {
-   //
-   //
-   //    }
        
        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           guard let touch = touches.first else { return }
-           print("touch",touch)
-           let location = touch.location(in: self)
-           print("location",location)
-           touchbegain = touch.location(in: self)
-           print(" touchbegain ",touchbegain)
-           let tappedNodes = nodes(at: location)
-           print("tappedNodes",tappedNodes)
-           
+           for touch in touches {
+                     let location = touch.location(in: self)
+                     let touchedNode = atPoint(location)
+               
+                     if touchedNode.name == "pressNext" {
+                         print("pressNext")
+                         
+                     }
+               else if touchedNode.name == "pressHome" {
+                   print("pressHome")
+                   
+                   
+                   
+                  // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                //   let vc  = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
+                  // self.view?.window?.rootViewController?.present(vc, animated: true, completion: nil)
+
+                   //self.view?.window?.rootViewController?.performSegue(withIdentifier: "homePage", sender: self)
+                   let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+
+                   let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
+
+                   vcc.view.frame = (self.view?.frame)!
+
+                   vcc.view.layoutIfNeeded()
+
+                   UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:
+
+                   {
+                   self.view?.window?.rootViewController = vcc
+                   }, completion: { completed in
+
+                   })
+
+                   }
+                   
+                   
+                   
+                   
+                   
+               }
+                }
            
        }
 
     
-}
+
+

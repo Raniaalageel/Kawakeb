@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class AlertScs: UIViewController {
 
@@ -17,5 +18,13 @@ class AlertScs: UIViewController {
     
 
     
-
+    @IBAction func nextbutton(_ sender: UIButton) {
+    }
+    
+    @IBAction func homebage(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
+        present(vc, animated: false, completion: nil)
+    }
+    
 }

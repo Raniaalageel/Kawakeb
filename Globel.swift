@@ -18,7 +18,7 @@ class Global{
     
     var enabled = false
     var  stopis = false
-      
+      var WinFail = false 
     var allLablels = [String]()
     public   var endgame = false
 
