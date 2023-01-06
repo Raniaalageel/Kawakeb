@@ -13,7 +13,7 @@ import SpriteKit
 
 class FirstGame: UIViewController {
 
-       
+    static var isUsed = false
        
     var scene: FirstSKScene?
         override func viewDidLoad() {
