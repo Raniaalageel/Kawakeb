@@ -37,9 +37,9 @@ class FirstGame: UIViewController {
             
            
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                sceneView.removeFromSuperview()
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                sceneView.removeFromSuperview()
+//            }
             
             
             
@@ -49,7 +49,18 @@ class FirstGame: UIViewController {
     //        self.view.addSubview(v)
         }
         
+    @IBAction func logoutButton(_ sender: UIButton) {
         
+        print("logout")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                let alertVC = storyboard.instantiateViewController(withIdentifier: "logoutto") as! AlertLogout
+        
+        present(alertVC, animated: true)
+        
+        
+    }
+    
         @IBAction func gobutton(_ sender: UIButton) {
             print("go is pressed")
             
