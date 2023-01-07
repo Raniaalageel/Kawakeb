@@ -15,8 +15,7 @@ class AlertLogout: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func keep(_ sender: UIButton) {
-    }
+    
     
     
     @IBAction func logoutGame(_ sender: UIButton) {
@@ -32,6 +31,25 @@ class AlertLogout: UIViewController {
         })
 
         }
+    
+    
+    
+    @IBAction func nokeep(_ sender: Any) {
+    
+    print("yes go out")
+    
+    let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+    let vcc = storyboardd.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+    vcc.view.frame = (self.view?.frame)!
+    vcc.view.layoutIfNeeded()
+    UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+    self.view?.window?.rootViewController = vcc
+    }, completion: { completed in
+
+    })
+
+    }
+    
     }
     
 

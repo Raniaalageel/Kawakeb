@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -2430,7 +2430,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-L3-J86">
-                                <rect key="frame" x="707" y="67" width="67" height="64"/>
+                                <rect key="frame" x="726" y="51" width="88" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -2438,22 +2438,22 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Nk-HqD">
-                                <rect key="frame" x="707" y="150" width="67" height="69"/>
+                                <rect key="frame" x="488" y="150" width="487" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
-                                    <backgroundConfiguration key="background" image="logout"/>
+                                    <backgroundConfiguration key="background" image="viewdirection"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="FRM-13-ZMp" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oKm-ch-rrM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-gG-fCU">
-                                <rect key="frame" x="105" y="67" width="70" height="75"/>
+                                <rect key="frame" x="-74" y="20" width="503" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="logout"/>
+                                    <backgroundConfiguration key="background" image="logoutButton"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutButton:" destination="bIs-Zj-oYX" eventType="touchUpInside" id="3sy-1D-r6a"/>
@@ -2467,7 +2467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iod-sV-1bW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-737" y="753"/>
+            <point key="canvasLocation" x="-737.41007194244605" y="752.7638190954774"/>
         </scene>
         <!--Alert Scs-->
         <scene sceneID="WbR-TI-cTv">
@@ -2746,6 +2746,62 @@
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyY-xf-GuY">
+                                <rect key="frame" x="491" y="969" width="242" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="التالي" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgi-Sb-dV1">
+                                <rect key="frame" x="124" y="770" width="242" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="نعم" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-Zh-HY9">
+                                <rect key="frame" x="491" y="822" width="242" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="200" height="500"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="الصفحة الرئيسية" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLR-Xt-t0p">
+                                <rect key="frame" x="124" y="969" width="242" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="200" height="500"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="لا،الصفحة الرئيسية" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2765,7 +2821,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdl-LE-HlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1258" y="1460"/>
+            <point key="canvasLocation" x="-1258.2733812949641" y="1459.7989949748744"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tSo-NJ-gzk">
@@ -3257,19 +3313,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="نعم" cornerStyle="large">
                                     <backgroundConfiguration key="background" strokeWidth="2">
                                         <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="نعم">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="30" name="CourierNewPS-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.2117646933" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -3283,24 +3332,16 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="200" height="500"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="لا،الاستمرار" cornerStyle="large">
                                     <backgroundConfiguration key="background" strokeWidth="2">
                                         <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="لا،الاستمرار">
-                                            <attributes>
-                                                <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="30" name="CourierNewPS-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
                                     <color key="baseForegroundColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="keep:" destination="4Hn-0U-vrN" eventType="touchUpInside" id="Bme-eI-RF3"/>
+                                    <action selector="nokeep:" destination="4Hn-0U-vrN" eventType="touchUpInside" id="kC0-6j-K1v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3314,13 +3355,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d8J-0M-e9p"/>
+        <segue reference="jAI-lZ-lU3"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
-        <segue reference="a8r-w4-AzI"/>
-        <segue reference="bCG-uS-jJN"/>
-        <segue reference="UOL-8Z-xrM"/>
-        <segue reference="8br-0v-xWi"/>
+        <segue reference="yaD-Se-fJp"/>
+        <segue reference="hQp-zA-1t1"/>
+        <segue reference="hqg-X7-rr5"/>
+        <segue reference="ptM-7z-fbu"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="L4T-uD-WVw"/>
     </inferredMetricsTieBreakers>
@@ -3345,6 +3386,7 @@
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="logout" width="53" height="58"/>
         <image name="logoutAlert" width="786" height="530"/>
+        <image name="logoutButton" width="647" height="290"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="mainPage.png" width="368" height="522"/>
         <image name="ours.png" width="249.5" height="250"/>
@@ -3355,6 +3397,7 @@
         <image name="rocket2.png" width="378" height="661"/>
         <image name="star11.png" width="302" height="206.5"/>
         <image name="store.png" width="59" height="61"/>
+        <image name="viewdirection" width="585" height="215"/>
         <image name="white.png" width="241" height="258.5"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

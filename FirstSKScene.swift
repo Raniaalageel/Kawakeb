@@ -18,11 +18,20 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        var touchbegain : CGPoint?
     
     var winalert :SKSpriteNode!
+    var faialert :SKSpriteNode!
+
      
        var   buttonnext :SKSpriteNode!
        var   hombutton :SKSpriteNode!
     var buttongo: SKNode! = nil
-       
+    
+    var   buttotryagain :SKSpriteNode!
+    var   tryHomebutton :SKSpriteNode!
+    
+  var failLabel:SKLabelNode!
+    var successLabel:SKLabelNode!
+    var starfiled:SKEmitterNode!
+    
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
@@ -37,7 +46,10 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            ///
            
           
-           
+           starfiled = SKEmitterNode(fileNamed: "Fiwin")
+           starfiled.position = CGPoint(x: 500, y: 1500)
+           //starfiled.advanceSimulationTime(10)
+          // starfiled.zPosition = -1
                    
            
            player = SKSpriteNode(imageNamed: "rocket1")  //shuttle rocket1.png
@@ -45,24 +57,60 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            player.size = .init(width: 200, height: 200)
            player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
            self.addChild(player)
-           
-           winalert = SKSpriteNode(imageNamed: "Firstwin")
-        winalert.size = .init(width: 600, height: 450)
+           //////////////////sucsses alert
+           winalert = SKSpriteNode(imageNamed: "sucsses")
+           winalert.size = .init(width: 745, height: 470)
         winalert .position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         winalert .zPosition = 0
                        
-        buttonnext = SKSpriteNode(imageNamed: "nextButton")
+        buttonnext = SKSpriteNode(imageNamed: "nextButto")
         buttonnext.name = "pressNext"
-        buttonnext.size = .init(width: 160, height: 90)
-        buttonnext.position = CGPoint(x: frame.width * 0.7, y: frame.height * 0.4)
+           buttonnext.size = .init(width: 280, height: 180)
+        buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.35)   //0.6   0.4   y in less be down , x in less go left
+           
 
-        hombutton = SKSpriteNode(imageNamed: "homeButton")
+        hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
         hombutton.name = "pressHome"
-     hombutton.size = .init(width: 160, height: 90)
-                      // hombutton.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
-    hombutton.position = CGPoint(x: frame.width * 0.27, y: frame.height * 0.4)
+     hombutton.size = .init(width: 280, height: 180)
+    hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.383)
+           
+    
+           successLabel = SKLabelNode(fontNamed: "System")
+           successLabel.text = String("نجحت بالوصول إلى كوكب الزهرة!")
+           successLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           successLabel.fontSize = 40.0
+           successLabel.horizontalAlignmentMode = .right
+           successLabel.verticalAlignmentMode = .center
+           successLabel.position = CGPoint(x: 691, y: 747)
            
            
+           ///// Fail alert
+           faialert = SKSpriteNode(imageNamed: "fail")
+            faialert.size = .init(width: 850, height: 580)
+            faialert .position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+            faialert .zPosition = 0
+           
+          buttotryagain = SKSpriteNode(imageNamed: "yes")
+           buttotryagain.name = "buttotryagain"
+           buttotryagain.size = .init(width: 280, height: 180)
+           buttotryagain.position = CGPoint(x: frame.width * 0.75, y: frame.height * 0.323)
+
+          tryHomebutton = SKSpriteNode(imageNamed: "noHome")
+           tryHomebutton.name = "tryHomebutton"
+           tryHomebutton.size = .init(width: 280, height: 180)
+                         // hombutton.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
+           tryHomebutton.position = CGPoint(x: frame.width * 0.4, y: frame.height * 0.33)
+           
+           
+      //  failLabel?.fontName? = "System"
+           failLabel = SKLabelNode(fontNamed: "System")
+        failLabel.text = String("لقد فشلت! هل تريد المحاولة مرة اخرى؟")
+        failLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           failLabel.fontSize = 40.0
+        failLabel.horizontalAlignmentMode = .right
+        failLabel.verticalAlignmentMode = .center
+        failLabel.position = CGPoint(x: 691, y: 760)  //more be in right
+           ///
         
            buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
    buttongo.name = "nextButton"
@@ -142,12 +190,18 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(winalert )
                    self.addChild(buttonnext)
                    self.addChild(hombutton)
+                   self.addChild(successLabel)
+                   self.addChild(starfiled)
                  //  self.addChild(buttongo)
                    
                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
                    player.run(actionplayer)
                } else {
                    print("not win")
+                   self.addChild(faialert)
+                   self.addChild(failLabel)
+                   self.addChild(tryHomebutton)
+                   self.addChild(buttotryagain)
                }
            }
 
@@ -181,7 +235,32 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        })
 
                        }
-                       
+                   else if touchedNode.name == "tryHomebutton" {
+                       print("tryHomebutton")
+                       let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+                       let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
+                       vcc.view.frame = (self.view?.frame)!
+                       vcc.view.layoutIfNeeded()
+                       UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+                       self.view?.window?.rootViewController = vcc
+                       }, completion: { completed in
+
+                       })
+
+                       }
+                   else if touchedNode.name == "buttotryagain" {
+                       print("buttotryagain")
+                       let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+                       vcc.view.frame = (self.view?.frame)!
+                       vcc.view.layoutIfNeeded()
+                       UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+                       self.view?.window?.rootViewController = vcc
+                       }, completion: { completed in
+
+                       })
+
+                       }
                        
                        
                        
