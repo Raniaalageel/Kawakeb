@@ -45,19 +45,16 @@ class ViewHint : UIViewController {
             if ViewHint.selectedHint == 1 {
                 hint1Flip()
             }
-            if ViewHint.selectedHint == 2 {
+            else if ViewHint.selectedHint == 2 {
                 hint2Flip()
             }
-            if ViewHint.selectedHint == 3 {
+            else if ViewHint.selectedHint == 3 {
                 hint3Flip()
             }
-            if ViewHint.selectedHint == 4 {
+           else if ViewHint.selectedHint == 4 {
                 hint4Flip()
             }
         }
-        
-        
-        
     }
     
     
