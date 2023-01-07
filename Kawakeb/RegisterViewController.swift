@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     var bod = ""
     var Character = ""
     var CharacterName = ""
-    
+    var points = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -442,8 +442,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         "password": Global.shared.userpasswordshare,
                         "dob": Global.shared.userbirthday,
                         "character": Global.shared.usercharacter,
-                        "name": Global.shared.usercharacterName]
-            
+                        "name": Global.shared.usercharacterName,
+                        "points" : points ] as [String : Any]
             let db = Firestore.firestore()
                    do {
                     try db.collection("Child").document(id).setData(post)

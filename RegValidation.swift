@@ -64,7 +64,7 @@ class RegValidation: UIViewController {
    
     }
 
-    @IBAction func pressed(_ sender: Any) {
+  @IBAction func pressed(_ sender: Any) {
 //        formatter.locale = NSLocale(localeIdentifier: "EN") as Locale?
 //        let final = formatter.number(from: answer.text!)
 //        var check = Int(final)
