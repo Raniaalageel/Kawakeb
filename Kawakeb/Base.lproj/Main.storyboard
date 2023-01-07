@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -418,7 +418,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="bga-sE-rfr">
-                                <rect key="frame" x="-29" y="0.0" width="920" height="1220"/>
+                                <rect key="frame" x="-32" y="0.0" width="923" height="1220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6J-ho-ZPg">
@@ -3630,14 +3630,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="yaU-PD-3a5"/>
         <segue reference="d8J-0M-e9p"/>
-        <segue reference="ITc-Pv-rak"/>
+        <segue reference="iI5-kz-FyW"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="aNn-mm-eS3"/>
         <segue reference="kC1-ys-kyJ"/>
         <segue reference="ptM-7z-fbu"/>
-        <segue reference="Z5o-PD-IXw"/>
+        <segue reference="u2J-iR-xDB"/>
         <segue reference="xaj-88-hQr"/>
     </inferredMetricsTieBreakers>
     <resources>
