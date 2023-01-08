@@ -169,13 +169,13 @@ class Editprofile: UIViewController , UITextFieldDelegate {
            guard let email = Uemail.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
            else {
                Eval.isHidden = false
-               Eval.text = "الرجاء إدخال البريد الالكتروني"
+               Eval.text = "* الرجاء إدخال البريد الالكتروني"
                return (false, "", "")
            }
        
            if !isValidEmailR(emailID: email) {
                Eval.isHidden = false
-               Eval.text = "الرجاء إدخال بريد الكتروني صحيح !"
+               Eval.text = "* الرجاء إدخال بريد الكتروني صحيح"
                return (false, "", "")
            }
           
@@ -188,19 +188,19 @@ class Editprofile: UIViewController , UITextFieldDelegate {
            guard let Name = Uname.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
            else {
                Dval.isHidden = false
-               Dval.text = "الرجاء إدخال اسم الشخصية"
+               Dval.text = "* الرجاء إدخال اسم الشخصية"
                return (false, "", "")
               }
            if !isValidCharacterName(nameText: Name) {
                Dval.isHidden = false
-               Dval.text = "الرجاء إدخال اسم شخصية صحيح"
+               Dval.text = "* الرجاء إدخال اسم شخصية صحيح"
                return (false, "", "")
            }
            return (true, Name , "")
        }
     func isValidCharacterName(nameText:String) -> Bool {
             
-            let NameRegEx = "\\w{3,18}"
+            let NameRegEx = "\\w{2,12}"
             let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
             return NameTest.evaluate(with: nameText)
         }
