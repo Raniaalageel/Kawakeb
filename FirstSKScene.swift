@@ -23,7 +23,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     
     var winalert :SKSpriteNode!
     var faialert :SKSpriteNode!
-
+    var points:Int!
      
        var   buttonnext :SKSpriteNode!
        var   hombutton :SKSpriteNode!
@@ -280,37 +280,38 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     
     func calculatePoint(){
         
-       // Task {
-            
-           // let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
-            
-           // let points:String = snapshot.documents.first?.data()["points"] as! String
-            
-         //   print("points",points)
-            
-            
-            ///
-            let db = Firestore.firestore()
-            db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments {
-                (snapshot, error) in
-                if let error = error {
-                    print("FAIL ")
-                }
-                else{
-                    print("enter")
-                    guard let lecturer = snapshot?.documents.first else {
-                        return }
-                    print("lecturer",lecturer)
-                    
-                    guard let lecturerId = lecturer.get("points") as? String else { return }
-                    
-                    
-                    print("points",lecturerId)
-            ///
-   // }
-}
-}
         
+            db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
+                        (snapshot, error) in
+                        if let error = error {
+                            print("FAIL")
+                        }
+                        else {
+                            print("SUCCESS??")
+                self.points = snapshot!.documents.first!.get("points") as! Int
+                            print("??????points",self.points!)
+                        }
+
+       }
+            Task{
+            
+            guard let childpoint = try await db.collection("Child").whereField("email", isEqualTo:  "shamma@gmail.com" ).getDocuments().documents.first?.documentID else {return}
+                print("cureent point",self.points!)
+                try await db.collection("Child").document(childpoint).setData([
+                    "points": self.points + 2 ,
+                    "Flower" : "open"
+                ],merge: true) { err in
+                    if let err = err {
+                        print("not Add points  : \(err)")
+                    } else {
+                        print(" Add points sucsseful ")
+                    }
+                }
+            
+                
+            }
     }
+        
+    
     
 }
