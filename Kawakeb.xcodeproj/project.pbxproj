@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34054F422971E33F00B8CCED /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34054F412971E33F00B8CCED /* RocketViewController.swift */; };
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
 		34B4E2812959D6BA002E8FD5 /* storeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4E2802959D6BA002E8FD5 /* storeCell.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34054F412971E33F00B8CCED /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		34B4E2802959D6BA002E8FD5 /* storeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCell.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
+				34054F412971E33F00B8CCED /* RocketViewController.swift */,
 				34B4E2822959D713002E8FD5 /* StoreVC.swift */,
 				34B4E2802959D6BA002E8FD5 /* storeCell.swift */,
 				5675477B2953C55100065DB7 /* Pv.swift */,
@@ -466,6 +469,7 @@
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
 				5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
+				34054F422971E33F00B8CCED /* RocketViewController.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,

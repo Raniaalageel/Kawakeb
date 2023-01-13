@@ -182,10 +182,20 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
               
         //    mycell.rocketImage.image =  UIImage(named: photoRef)
          mycell.rocketImage.image = UIImage(named: photo[indexPath.row])
+            mycell.rocketBtn.tag = indexPath.row
+            mycell.rocketBtn.addTarget(self, action: #selector(add), for: .touchUpInside)
     
             return mycell
             
         }
+    @objc func add (sender:UIButton){
+        let ind = IndexPath(row: sender.tag, section: 0)
+        Sname = names[ind.row]
+        Simage.image = UIImage(named: photo[ind.row])
+        Sprice = prices[ind.row]
+        let roc = self.storyboard?.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
+        self.navigationController?.pushViewController(roc, animated: true)
+    }
     }
     
 
