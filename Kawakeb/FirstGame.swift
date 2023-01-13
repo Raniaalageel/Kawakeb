@@ -20,7 +20,7 @@ class FirstGame: UIViewController {
             super.viewDidLoad()
             print("nn")
         //!!!!
-            Global.shared.allLablels = []
+            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
      //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()
@@ -75,7 +75,7 @@ class FirstGame: UIViewController {
                 print("Global.shared.allLablels.isEmpty")
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                        let alertVC = storyboard.instantiateViewController(withIdentifier: "logoutto") as! AlertLogout
+                        let alertVC = storyboard.instantiateViewController(withIdentifier: "Emptyy") as! EmptyArray
                 
                 present(alertVC, animated: true)
                 

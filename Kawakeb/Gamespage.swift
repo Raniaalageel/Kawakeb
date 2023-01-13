@@ -11,8 +11,20 @@ import CodableFirebase
 import Firebase
 import FirebaseFirestore
 
-
 class Gamespage: UIViewController, EditprofileDelegate {
+    
+    
+    @IBOutlet weak var alzahrabutton: UIButton!
+    @IBOutlet weak var alzahraLuck: UIImageView!
+    
+    
+    @IBOutlet weak var alarghbutton: UIButton!
+    @IBOutlet weak var alarghLuck: UIImageView!
+    
+    
+    @IBOutlet weak var almarighbutton: UIButton!
+    @IBOutlet weak var almarighLuck: UIImageView!
+    
     func userUpdated(child: Child) {
         uuname.text = child.name
         uuemail.text = child.email
@@ -81,16 +93,17 @@ class Gamespage: UIViewController, EditprofileDelegate {
     }
     
     
-    @IBAction func alzahraK(_ sender: UIButton) {
+   
+    @IBAction func FirstAudard(_ sender: Any) {
+            
+    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+    //        present(secondViewController, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "gofirst", sender: self)
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
-//        present(secondViewController, animated: true, completion: nil)
-        
-        
-        self.performSegue(withIdentifier: "gofirst", sender: self)
-
     }
+    
+    
     
     
     }

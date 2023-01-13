@@ -9,9 +9,13 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import CoreMotion
+import Firebase
+import FirebaseFirestore
 
 class FirstSKScene: SKScene,SKPhysicsContactDelegate {
-
+    
+    let db = Firestore.firestore()
+    
     var player:SKSpriteNode!
        
        var xAcceration:CGFloat = 0
@@ -199,6 +203,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
                    player.run(actionplayer)
+                   
+                   calculatePoint()
+                   
                } else {
                    print("not win")
                    self.addChild(faialert)
@@ -270,6 +277,40 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        
                    }
                     }
-
+    
+    func calculatePoint(){
+        
+       // Task {
+            
+           // let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
+            
+           // let points:String = snapshot.documents.first?.data()["points"] as! String
+            
+         //   print("points",points)
+            
+            
+            ///
+            let db = Firestore.firestore()
+            db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments {
+                (snapshot, error) in
+                if let error = error {
+                    print("FAIL ")
+                }
+                else{
+                    print("enter")
+                    guard let lecturer = snapshot?.documents.first else {
+                        return }
+                    print("lecturer",lecturer)
+                    
+                    guard let lecturerId = lecturer.get("points") as? String else { return }
+                    
+                    
+                    print("points",lecturerId)
+            ///
+   // }
+}
+}
+        
+    }
     
 }
