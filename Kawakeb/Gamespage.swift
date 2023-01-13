@@ -51,7 +51,8 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     
     
-    
+    let db = Firestore.firestore()
+
     
     
     override func viewDidLoad() {
@@ -90,6 +91,26 @@ class Gamespage: UIViewController, EditprofileDelegate {
                 // show error message
             }
         }
+        
+        //check lock of game
+        db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
+                    (snapshot, error) in
+                    if let error = error {
+                        print("FAIL") }
+                    else {
+                        print("SUCCESS??")
+                       let Flower = snapshot!.documents.first!.get("Flower") as! String
+                        print("Flower",Flower)
+                        let Earth = snapshot!.documents.first!.get("Earth") as! String
+                         print("Flower",Flower)
+                        let Mars = snapshot!.documents.first!.get("Mars") as! String
+                         print("Flower",Flower)
+                        
+                        
+                    }
+
+   }
+        
     }
     
     

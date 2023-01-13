@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 import Vision
 import SpriteKit
+import FirebaseFirestore
 
 class FirstGame: UIViewController {
 
        
-       
+    let db = Firestore.firestore()
+    
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -24,6 +26,9 @@ class FirstGame: UIViewController {
      //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()
+            
+        
+    
            
         }
         func trytocallSCene(){
