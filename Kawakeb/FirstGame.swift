@@ -19,9 +19,9 @@ class FirstGame: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             print("nn")
-        // Global.shared.allLablels = ["left:0:500","left:200:2","up:2:2"]
-     //!!!!!!!!!!!!!!
-            CameraOpen().viewDidLoad()
+        //!!!!
+            Global.shared.allLablels = []
+     //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()
            
@@ -69,16 +69,25 @@ class FirstGame: UIViewController {
             Global.shared.stopis = true   //stopcamer
             CameraOpen().Stopsessyion()
 
+            
+            if(Global.shared.allLablels.isEmpty){
+                
+                print("Global.shared.allLablels.isEmpty")
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                        let alertVC = storyboard.instantiateViewController(withIdentifier: "logoutto") as! AlertLogout
+                
+                present(alertVC, animated: true)
+                
+            }else {
             trytocallSCene()  //GO TOSKSCENE
             
             
-            //!!!!!!!!!!!!!!!
-            Global.shared.allLablels = []
+            //!!!!!!!!!!!!!!!Global.shared.allLablels = []
             print("again open camera ")
             Global.shared.stopis = false  //OPEN CAMERA
             Global.shared.enabled = false //not appned array
-            //!!!!!!!!!!!!!!!
-            CameraOpen().viewDidLoad()   //call class CameraOpen
+            //!!!!!!!!!!!!!!!CameraOpen().viewDidLoad()   //call class CameraOpen
 
             
             
@@ -89,6 +98,8 @@ class FirstGame: UIViewController {
             //                    self.session.stopRunning()
             //                }
             //            }
+        }
+            
         }
 
    }

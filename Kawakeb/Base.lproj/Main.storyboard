@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -2775,7 +2775,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="200" height="500"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="لا،الصفحة الرئيسية" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="الصفحة الرئيسية" cornerStyle="large">
                                     <backgroundConfiguration key="background" strokeWidth="2">
                                         <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
@@ -2803,7 +2803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdl-LE-HlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1258.2733812949641" y="1459.7989949748744"/>
+            <point key="canvasLocation" x="481" y="2184"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tSo-NJ-gzk">
@@ -3337,16 +3337,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yYT-sT-7A6"/>
         <segue reference="d8J-0M-e9p"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="yUB-su-Geh"/>
         <segue reference="hqg-X7-rr5"/>
-        <segue reference="8br-0v-xWi"/>
+        <segue reference="ptM-7z-fbu"/>
         <segue reference="Z5o-PD-IXw"/>
-        <segue reference="L4T-uD-WVw"/>
+        <segue reference="JnV-K5-cRI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>

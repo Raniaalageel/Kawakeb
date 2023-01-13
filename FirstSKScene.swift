@@ -59,20 +59,20 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            self.addChild(player)
            //////////////////sucsses alert
            winalert = SKSpriteNode(imageNamed: "sucsses")
-           winalert.size = .init(width: 745, height: 470)
-        winalert .position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+           winalert.size = .init(width: 745, height: 550)
+           winalert .position = CGPoint(x: self.size.width/1.8, y: self.size.height/2.2)
         winalert .zPosition = 0
                        
         buttonnext = SKSpriteNode(imageNamed: "nextButto")
         buttonnext.name = "pressNext"
            buttonnext.size = .init(width: 280, height: 180)
-        buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.35)   //0.6   0.4   y in less be down , x in less go left
+        buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.33)   //0.6   0.4   y in less be down , x in less go left
            
 
         hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
         hombutton.name = "pressHome"
      hombutton.size = .init(width: 280, height: 180)
-    hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.383)
+    hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
            
     
            successLabel = SKLabelNode(fontNamed: "System")
@@ -81,7 +81,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            successLabel.fontSize = 40.0
            successLabel.horizontalAlignmentMode = .right
            successLabel.verticalAlignmentMode = .center
-           successLabel.position = CGPoint(x: 691, y: 747)
+           successLabel.position = CGPoint(x: 691, y: 743)
            
            
            ///// Fail alert
@@ -95,14 +95,17 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            buttotryagain.size = .init(width: 280, height: 180)
            buttotryagain.position = CGPoint(x: frame.width * 0.75, y: frame.height * 0.323)
 
-          tryHomebutton = SKSpriteNode(imageNamed: "noHome")
+          tryHomebutton = SKSpriteNode(imageNamed: "HomebuttonSu")
            tryHomebutton.name = "tryHomebutton"
            tryHomebutton.size = .init(width: 280, height: 180)
                          // hombutton.position =  CGPoint(x: self.size.width/3, y: self.size.height/3)
-           tryHomebutton.position = CGPoint(x: frame.width * 0.4, y: frame.height * 0.33)
+           tryHomebutton.position = CGPoint(x: frame.width * 0.4, y: frame.height * 0.36)
            
            
       //  failLabel?.fontName? = "System"
+       
+           
+           
            failLabel = SKLabelNode(fontNamed: "System")
         failLabel.text = String("لقد فشلت! هل تريد المحاولة مرة اخرى؟")
         failLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
