@@ -10,6 +10,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseStorage
+var btnName = ""
 class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var names = [String]()
     var prices = [Int]()
@@ -129,66 +130,82 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            print("enter??")
-            let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("enter??")
+        let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
+        
+        mycell.rocketName.text? = names[indexPath.row]
+        print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
+        if(prices[indexPath.row] < 11){
+            mycell.rocketPrice.text? = String (prices[indexPath.row])
+            mycell.rocketPrice.text? += " نجوم"
+        }
+        else{
+            mycell.rocketPrice.text? = String (prices[indexPath.row])
+            mycell.rocketPrice.text? += " نجمة "
+        }
+        
+        // mycell.rocketImage.image =
+        if myrockets.contains(names[indexPath.row]) {
+            print("you have it ")
+            mycell.rocketBtn.isHidden=true
+            mycell.updatebtn.isHidden=false
+            mycell.updatebtn.setTitle("استبدل", for: .normal)
+            mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            mycell.updatebtn.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            mycell.lockIMG.isHidden = true
+            mycell.rocketImage.alpha = 1
+            mycell.updatebtn.layer.cornerRadius = 20
+            mycell.updatebtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
+            mycell.updatebtn.isUserInteractionEnabled = true
+
+        }
+        else if(points >= prices[indexPath.row]){ //can buy
+            mycell.updatebtn.isHidden=true
+            mycell.rocketBtn.isHidden=false
+            mycell.rocketBtn.setTitle("شراء", for: .normal)
+            mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+            mycell.rocketImage.alpha = 1
+            mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            mycell.lockIMG.isHidden = true
+            mycell.rocketBtn.layer.cornerRadius = 20
+            mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
+            mycell.rocketBtn.isUserInteractionEnabled = true
+
+        }
+        else {//can not buy
+            mycell.updatebtn.isHidden=true
+            mycell.rocketBtn.isHidden=false
+            mycell.rocketBtn.setTitle("شراء", for: .normal)
+            mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+            mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
-            mycell.rocketName.text? = names[indexPath.row]
-            print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
-            if(prices[indexPath.row] < 11){
-                mycell.rocketPrice.text? = String (prices[indexPath.row])
-                mycell.rocketPrice.text? += " نجوم"
-            }
-            else{
-                mycell.rocketPrice.text? = String (prices[indexPath.row])
-                mycell.rocketPrice.text? += " نجمة "
-            }
-         
-           // mycell.rocketImage.image =
-            if myrockets.contains(names[indexPath.row]) {
-                print("you have it ")
-                mycell.rocketBtn.setTitle("استبدل", for: .normal)
-                mycell.rocketBtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-                mycell.lockIMG.isHidden = true
-                mycell.rocketImage.alpha = 1
-                mycell.rocketBtn.layer.cornerRadius = 20
-                mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
-            }
-            else if(points >= prices[indexPath.row]){ //can buy
-                mycell.rocketBtn.setTitle("شراء", for: .normal)
-                mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
-                mycell.rocketImage.alpha = 1
-                mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-                mycell.lockIMG.isHidden = true
-                mycell.rocketBtn.layer.cornerRadius = 20
-             mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
-            }
-            else {//can not buy
-                mycell.rocketBtn.setTitle("شراء", for: .normal)
-                mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
-                mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-             
-                mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
-                mycell.rocketImage.alpha = 0.5
-                mycell.lockIMG.isHidden = false
-                mycell.rocketBtn.layer.cornerRadius = 20
-            }
-            let storageRef = Storage.storage().reference()
-               let photoRef = storageRef.child(photo[indexPath.row])
-           // let imageView: UIImageView = self.imageView
-          //  mycell.rocketImage.sd_setImage(with: photoRef)
-          //  mycell.rocketImage.UIImage(with: photoRef)
-              
+            mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
+            mycell.rocketImage.alpha = 0.5
+            mycell.lockIMG.isHidden = false
+            mycell.rocketBtn.layer.cornerRadius = 20
+            mycell.rocketBtn.isUserInteractionEnabled = false
+        }
+        let storageRef = Storage.storage().reference()
+        let photoRef = storageRef.child(photo[indexPath.row])
+        // let imageView: UIImageView = self.imageView
+        //  mycell.rocketImage.sd_setImage(with: photoRef)
+        //  mycell.rocketImage.UIImage(with: photoRef)
+        
         //    mycell.rocketImage.image =  UIImage(named: photoRef)
-         mycell.rocketImage.image = UIImage(named: photo[indexPath.row])
-            mycell.rocketBtn.tag = indexPath.row
-            mycell.rocketBtn.addTarget(self, action: #selector(add), for: .touchUpInside)
-    
+        mycell.rocketImage.image = UIImage(named: photo[indexPath.row])
+        mycell.rocketBtn.tag = indexPath.row
+        mycell.updatebtn.tag = indexPath.row
+        mycell.rocketBtn.addTarget(self, action: #selector(buyRocket (sender:)), for: .touchUpInside)
+      
+            mycell.updatebtn.addTarget(self, action: #selector(updateRocket  (sender:)), for: .touchUpInside)
+            
+       
+          
             return mycell
             
         }
-    @objc func add (sender:UIButton){
+    @objc func buyRocket (sender:UIButton){
         let ind = IndexPath(row: sender.tag, section: 0)
         Sname = names[ind.row]
         Simage.image = UIImage(named: photo[ind.row])
@@ -196,6 +213,19 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         let roc = self.storyboard?.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
         self.navigationController?.pushViewController(roc, animated: true)
     }
+    
+    @objc func updateRocket(sender: UIButton) {
+        let ind = IndexPath(row: sender.tag, section: 0)
+        Uname = names[ind.row]
+        Uimage.image = UIImage(named: photo[ind.row])
+       
+        let roc2 = self.storyboard?.instantiateViewController(withIdentifier: "updateRocketViewController") as! updateRocketViewController
+        self.navigationController?.pushViewController(roc2, animated: true)
+
+    }
+
     }
     
+
+
 
