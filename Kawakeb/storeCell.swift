@@ -13,6 +13,7 @@ class storeCell: UITableViewCell {
     
     @IBOutlet weak var rocketName: UILabel!
     
+    @IBOutlet weak var currentBTN: UIButton!
     
     @IBOutlet weak var rocketPrice: UILabel!
     

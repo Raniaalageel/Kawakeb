@@ -18,9 +18,13 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var points = Int()
     var photo = [String]()
     var imageView = UIImageView()
+    var current = ""
+    var tableArray = [Int]()
+     var count = 0
     @IBOutlet weak var StoretableView: UITableView!
     
     
+    @IBOutlet weak var mypo: UILabel!
     
     
     
@@ -29,9 +33,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        StoretableView.reloadData()
         
         StoretableView.delegate = self
         StoretableView.dataSource = self
@@ -55,20 +57,23 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                    let points1 = snapshot!.documents.first!.get("points") as! Int
                         
             let myrockets1 = snapshot!.documents.first!.get("rockets") as! [String]
+                        let myROCK = snapshot!.documents.first!.get("currentRocket") as! String
                         //  guard let name1  = doc.get("name") as? String else { continue }
                        // self.myrockets = snapshot!.documents.first!.get("rockets") as! [String]
                      //   self.semster  = snapshot!.documents.first!.get("Semster") as! String
                         self.points = points1
                         self.myrockets.append(contentsOf: myrockets1)
+                        self.current = myROCK
                         print("names",self.names)
                         
                         print("names.count",self.names.count)
                         
                         print("myrockets",self.myrockets)
                         print("my points",self.points)
+                        self.mypo.text = String(self.points)
                        
                       //  print("semster:", self.semster)
-
+                        
                         self.StoretableView.reloadData()
             }
                 }
@@ -136,54 +141,69 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
-        if(prices[indexPath.row] < 11){
+     
             mycell.rocketPrice.text? = String (prices[indexPath.row])
-            mycell.rocketPrice.text? += " نجوم"
-        }
-        else{
-            mycell.rocketPrice.text? = String (prices[indexPath.row])
-            mycell.rocketPrice.text? += " نجمة "
-        }
+           
+      
         
         // mycell.rocketImage.image =
         if myrockets.contains(names[indexPath.row]) {
-            print("you have it ")
-            mycell.rocketBtn.isHidden=true
-            mycell.updatebtn.isHidden=false
-            mycell.updatebtn.setTitle("استبدل", for: .normal)
-            mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            mycell.updatebtn.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-            mycell.lockIMG.isHidden = true
-            mycell.rocketImage.alpha = 1
-            mycell.updatebtn.layer.cornerRadius = 20
-            mycell.updatebtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
-            mycell.updatebtn.isUserInteractionEnabled = true
+            if (current == names[indexPath.row] ){
+                
+             
+                mycell.currentBTN.isUserInteractionEnabled = false
+                mycell.currentBTN.isHidden=false
+                mycell.rocketBtn.isHidden=true
+                mycell.updatebtn.isHidden=true
+                mycell.lockIMG.isHidden = true
+                mycell.rocketImage.alpha = 1
+
+            }
+            else{
+                print("you have it ")
+                mycell.rocketBtn.isHidden=true
+                mycell.currentBTN.isHidden=true
+                mycell.updatebtn.isHidden=false
+                //mycell.updatebtn.setTitle("استبدل", for: .normal)
+             //   mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            //    mycell.updatebtn.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                mycell.lockIMG.isHidden = true
+                mycell.rocketImage.alpha = 1
+              //  mycell.updatebtn.layer.cornerRadius = 20
+               // mycell.updatebtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
+                mycell.updatebtn.isUserInteractionEnabled = true
+            }
+            
+    
+          
 
         }
         else if(points >= prices[indexPath.row]){ //can buy
             mycell.updatebtn.isHidden=true
+            mycell.currentBTN.isHidden=true
             mycell.rocketBtn.isHidden=false
-            mycell.rocketBtn.setTitle("شراء", for: .normal)
-            mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+            
+    
+           // mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
             mycell.rocketImage.alpha = 1
-            mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+           // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             mycell.lockIMG.isHidden = true
-            mycell.rocketBtn.layer.cornerRadius = 20
-            mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
+           // mycell.rocketBtn.layer.cornerRadius = 20
+        //    mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
             mycell.rocketBtn.isUserInteractionEnabled = true
 
         }
         else {//can not buy
             mycell.updatebtn.isHidden=true
             mycell.rocketBtn.isHidden=false
-            mycell.rocketBtn.setTitle("شراء", for: .normal)
-            mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
-            mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            mycell.currentBTN.isHidden=true
+         //   mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+           // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
-            mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
+         //   mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
             mycell.rocketImage.alpha = 0.5
             mycell.lockIMG.isHidden = false
-            mycell.rocketBtn.layer.cornerRadius = 20
+         //   mycell.rocketBtn.layer.cornerRadius = 20
             mycell.rocketBtn.isUserInteractionEnabled = false
         }
         let storageRef = Storage.storage().reference()
@@ -212,17 +232,23 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         Sprice = prices[ind.row]
         let roc = self.storyboard?.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
         self.navigationController?.pushViewController(roc, animated: true)
+        update() 
     }
     
     @objc func updateRocket(sender: UIButton) {
         let ind = IndexPath(row: sender.tag, section: 0)
         Uname = names[ind.row]
         Uimage.image = UIImage(named: photo[ind.row])
-       
+        IMGname = photo[ind.row]
         let roc2 = self.storyboard?.instantiateViewController(withIdentifier: "updateRocketViewController") as! updateRocketViewController
         self.navigationController?.pushViewController(roc2, animated: true)
-
+        update()
     }
+   func update() {
+         
+               self.StoretableView.reloadData()
+         
+       }
 
     }
     

@@ -6,25 +6,90 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
 var Uimage:UIImageView = UIImageView()
 var Uname:String=""
-class updateRocketViewController: UIViewController {
+var IMGname = ""
 
+class updateRocketViewController: UIViewController {
+    var curR = ""
     @IBOutlet weak var cancelBTN: UIButton!
     @IBOutlet weak var newName: UILabel!
     @IBOutlet weak var newRoc: UIImageView!
+    var nameIMG = ""
     override func viewDidLoad() {
     
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "firstbg.png")!)
         newRoc.image = Uimage.image
         view.addSubview(newRoc)
         newName.text = Uname
+        nameIMG = IMGname
+        
        
       
         // Do any additional setup after loading the view.
     }
   
   
+    @IBAction func changeRocket(_ sender: Any) {
+        let db = Firestore.firestore()
+        
+   
+                
+                Task{
+                    db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com").getDocuments{
+                        (snapshot, error) in
+                        if let error = error {
+                            print("FAIL ")
+                        }
+                        else{
+                            print("SUCCESS??")
+                       let myROCK = snapshot!.documents.first!.get("currentRocket") as! String
+                            
+                            //let myrockets1 = snapshot!.documents.first!.get("rockets") as! [String]
+                            //  guard let name1  = doc.get("name") as? String else { continue }
+                           // self.myrockets = snapshot!.documents.first!.get("rockets") as! [String]
+                         //   self.semster  = snapshot!.documents.first!.get("Semster") as! String
+                            self.curR = myROCK
+                            //self.myrocketsS.append(contentsOf: myrockets1)
+                            
+                      
+                            print("my curR",self.curR)
+                           
+                          //  print("semster:", self.semster)
+
+                   
+                }
+                        
+                   
+                    }
+                    
+                    guard let id = try await db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com").getDocuments().documents.first?.documentID else {
+                 
+                        return
+                    }
+                       
+          
+                    try await db.collection("Child").document(id).setData([
+          
+                        "currentRocket":newName.text,
+                        "currentRockIMG":nameIMG
+                    //  "rockets":myrocketsS.append(Sname)
+          
+          
+                    ],merge: true) { err in
+                        if let err = err {
+                            print("Error   : \(err)")
+                        } else {
+                            print("add ")
+                        }
+          
+                    }
+                  
+                    }
+                
+    }
     
 
     /*
