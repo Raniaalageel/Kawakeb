@@ -19,7 +19,7 @@ class Login: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextfiled1: UITextField!
     @IBOutlet weak var passwordTextfiled1: UITextField!
-    @IBOutlet weak var validationMassege1: UILabel!
+   // @IBOutlet weak var validationMassege1: UILabel!
     @IBOutlet weak var validationMessegepass1: UILabel!
         @IBOutlet weak var buttonlogin1: UIButton!
     
@@ -28,7 +28,7 @@ class Login: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        validationMassege1.isHidden = true
+   //     validationMassege1.isHidden = true
         validationMessegepass1.isHidden = true
         self.emailTextfiled1.delegate = self
       
@@ -59,13 +59,13 @@ class Login: UIViewController, UITextFieldDelegate {
  
     
     func isValid() -> (Bool, String, String) {
-        validationMassege1.isHidden = true   // not show
+   //     validationMassege1.isHidden = true   // not show
         validationMessegepass1.isHidden = true
         
         guard let email = emailTextfiled1.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
         else {
-            validationMassege1.isHidden = false
-            validationMassege1.text = "الرجاء ادخال البريد  الالكتروني"
+            validationMessegepass1.isHidden = false
+            validationMessegepass1.text = "الرجاء ادخال البريد  الالكتروني"
             return (false, "", "")
         }
         guard let password = passwordTextfiled1.text, !password.isEmpty else {
@@ -74,8 +74,8 @@ class Login: UIViewController, UITextFieldDelegate {
             return (false, "", "")
         }
         if !isValidEmail(emailID: email) {
-            validationMassege1.isHidden = false
-            validationMassege1.text = "الرجاء ادخال بريد صحيح"
+            validationMessegepass1.isHidden = false
+            validationMessegepass1.text = "الرجاء ادخال بريد صحيح"
             return (false, "", "")
         }
       /*  if password.count != 8 {
