@@ -34,38 +34,69 @@ class ViewHint : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hintIsVieww ()
-        if hintIsView == false {
-            hint1.isUserInteractionEnabled = true
-            hint2.isUserInteractionEnabled = true
-            hint3.isUserInteractionEnabled = true
-            hint4.isUserInteractionEnabled = true
-            
-            hint1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint1Flip)))
-            hint2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint2Flip)))
-            hint3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint3Flip)))
-            hint4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint4Flip)))
-        } else {
-            if ViewHint.selectedHint == 1 {
-                hint1Flip()
-            }
-            else if ViewHint.selectedHint == 2 {
-                hint2Flip()
-            }
-            else if ViewHint.selectedHint == 3 {
-                hint3Flip()
-            }
-           else if ViewHint.selectedHint == 4 {
-                hint4Flip()
-            }
-        }
     }
     
     func hintIsVieww () {
         let db = Firestore.firestore()
         Task {
         let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
-            let hintIsView: DarwinBoolean = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! DarwinBoolean
-        }
+            hintIsView = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! Bool
+            if hintIsView == false {
+                hint1.isUserInteractionEnabled = true
+                hint2.isUserInteractionEnabled = true
+                hint3.isUserInteractionEnabled = true
+                hint4.isUserInteractionEnabled = true
+                
+                hint1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint1Flip)))
+                hint2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint2Flip)))
+                hint3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint3Flip)))
+                hint4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint4Flip)))
+            } else {
+                if ViewHint.selectedHint == 1 {
+                    hint1Flip()
+                }
+                else if ViewHint.selectedHint == 2 {
+                    hint2Flip()
+                }
+                else if ViewHint.selectedHint == 3 {
+                    hint3Flip()
+                }
+               else if ViewHint.selectedHint == 4 {
+                    hint4Flip()
+                }
+            }
+            
+            guard let id = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments().documents.first?.documentID else {
+             return
+            }
+            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+            print("hintIsView",self.hintIsView)
+            try await db.collection("Child").document(id).setData([
+  
+                "FirstGameHintIsUsed": hintIsView ,
+  
+            ],merge: true) { err in
+                if let err = err {
+                    print("Error   : \(err)")
+                } else {
+                    print("add ")
+                    print("hintIsView",self.hintIsView)
+                }
+
+            }
+            
+//                    let updateReference = db.collection("Child").document(message.id!)
+//                    updateReference.getDocument { (document, err) in
+//                        if let err = err {
+//                            print(err.localizedDescription)
+//                        }
+//                        else {
+//                            document?.reference.updateData([
+//                                "FirstGameHintIsUsed": true
+//                                ])
+//                        }
+//                    }
+      }
     }
     
     
