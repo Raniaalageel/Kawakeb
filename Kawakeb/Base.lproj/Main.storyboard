@@ -641,10 +641,10 @@
             </objects>
             <point key="canvasLocation" x="2914.3884892086335" y="17.587939698492463"/>
         </scene>
-        <!--View Controller-->
+        <!--Gamespage-->
         <scene sceneID="6cd-kl-BFD">
             <objects>
-                <viewController id="y5d-tq-VYh" customClass="ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y5d-tq-VYh" customClass="Gamespage" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BEK-nk-Lk7">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -678,7 +678,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="--">
+                                        <fragment content=" ">
                                             <attributes>
                                                 <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="36" name="CourierNewPS-BoldMT"/>
@@ -761,11 +761,21 @@
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-eV-5FZ">
+                                <rect key="frame" x="525" y="46" width="195" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0086509948600000004" green="0.21174463630000001" blue="0.35865825410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZPh-rs-aMf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="enY-1M-bI7"/>
+                    <connections>
+                        <outlet property="n1" destination="Qit-eV-5FZ" id="kff-0w-yH0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fk-n6-00X" sceneMemberID="firstResponder"/>
             </objects>
@@ -3485,12 +3495,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="yaU-PD-3a5"/>
         <segue reference="d8J-0M-e9p"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="yUB-su-Geh"/>
-        <segue reference="Y5R-q1-wPb"/>
+        <segue reference="hqg-X7-rr5"/>
         <segue reference="ptM-7z-fbu"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="JnV-K5-cRI"/>

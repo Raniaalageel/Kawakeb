@@ -57,8 +57,9 @@ var Flower:String!
     
     @IBOutlet weak var uupoints: UILabel!
     
+
     @IBOutlet weak var n1: UILabel!
-  //  @IBOutlet weak var p1: UILabel!
+    //  @IBOutlet weak var p1: UILabel!
     
     
     
@@ -84,7 +85,7 @@ var Flower:String!
                 child = Child(email: userData["email"] as? String, name: userData["name"] as? String, dob: userData["dob"] as? String, childID: userId,char : userData["character"] as? String)
                 uuname.text = userData["name"] as? String
                 //FOR INST
-        //        n1.text = userData["name"] as? String
+              n1.text = userData["name"] as? String
                 
                 uuemail.text = userData["email"] as? String
                 uudob.text = userData["dob"] as? String
