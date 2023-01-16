@@ -21,7 +21,7 @@ class FirstGame: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             print("nn")
-            sethint()
+           // sethint()
     //        Global.shared.useremailshare =
             Global.shared.allLablels = ["left:0:500","left:200:2","up:22:1"]
      //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
@@ -80,80 +80,46 @@ class FirstGame: UIViewController {
             //            }
         }
     
-    func sethint()
-    {
-        
-        let db = Firestore.firestore()
-        let sharedEmail = Global.shared.useremailshare
-           
-                        
-                        Task {
-                            db.collection("Child").whereField("email", isEqualTo:sharedEmail).getDocuments{
-                                (snapshot, error) in
-                                if let error = error {
-                                    print("FAIL ")
-                                }
-                                else{
-                                    print("SUCCESS??")
-                                   }
-                                
-                           
-                            }
-                            
-                            guard let id = try await db.collection("Child").whereField("email", isEqualTo: sharedEmail ).getDocuments().documents.first?.documentID else {
-                             return
-                            }
-                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-
-                            try await db.collection("Child").document(id).setData([
-                  
-                                "FirstGameHintIsUsed": false ,
-                  
-                            ],merge: true) { err in
-                                if let err = err {
-                                    print("Error   : \(err)")
-                                } else {
-                                    print("add ")
-                                }
-            
-                            }
-                          
-                            }
+//    func sethint()
+//    {
+//
 //        let db = Firestore.firestore()
+//        let sharedEmail = Global.shared.useremailshare
 //
-//        Task {
 //
-//            db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments{
-//            (snapshot, error) in
-//            if let error = error {
-//                print("FAIL ")
-//            }else{
-//               print("SUCCESS??")
-//           }
+//                        Task {
+//                            db.collection("Child").whereField("email", isEqualTo:sharedEmail).getDocuments{
+//                                (snapshot, error) in
+//                                if let error = error {
+//                                    print("FAIL ")
+//                                }
+//                                else{
+//                                    print("SUCCESS??")
+//                                   }
+//
+//
+//                            }
+//
+//                            guard let id = try await db.collection("Child").whereField("email", isEqualTo: sharedEmail ).getDocuments().documents.first?.documentID else {
+//                             return
+//                            }
+//                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+//
+//                            try await db.collection("Child").document(id).setData([
+//
+//                                "FirstGameHintIsUsed": false ,
+//
+//                            ],merge: true) { err in
+//                                if let err = err {
+//                                    print("Error   : \(err)")
+//                                } else {
+//                                    print("add ")
+//                                }
+//
+//                            }
+//
+//                            }
+//
 //            }
-//
-//        }
-//
-//
-//        guard let id = await db.collection("Child").whereField("email", isEqualTo:Global.shared.useremailshare).getDocuments().documents.first?.documentID else {
-//
-//                                     return
-//                                 }
-//
-//                 db.collection("Child").document(id).setData([
-//
-//                "FirstGameHintIsUsed": FirstGame.isUsed
-//
-//                                 ],merge: true) { err in
-//                                     if let err = err {
-//                                         print("Error   : \(err)")
-//                                     } else {
-//                                         print("add ")
-//                                     }
-//
-//                                 }
-//
-           
-            }
     }
 

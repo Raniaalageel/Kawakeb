@@ -33,9 +33,46 @@ class ViewHint : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hintIsVieww ()
+        sethint()
+        hintIsVieww()
     }
     
+    
+    
+    func sethint()
+    {
+        let db = Firestore.firestore()
+        let sharedEmail = Global.shared.useremailshare
+
+                        Task {
+                            db.collection("Child").whereField("email", isEqualTo:sharedEmail).getDocuments{
+                                (snapshot, error) in
+                                if let error = error {
+                                    print("FAIL ")
+                                }
+                                else{
+                                    print("SUCCESS??")
+                                   }
+                            }
+                            guard let id = try await db.collection("Child").whereField("email", isEqualTo: sharedEmail ).getDocuments().documents.first?.documentID else {
+                             return
+                            }
+                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+
+                            try await db.collection("Child").document(id).setData([
+
+                                "FirstGameHintIsUsed": false ,
+
+                            ],merge: true) { err in
+                                if let err = err {
+                                    print("Error   : \(err)")
+                                } else {
+                                    print("add ")
+                                }
+                            }
+                            }
+            }
+
     func hintIsVieww () {
         let db = Firestore.firestore()
         Task {
@@ -65,37 +102,20 @@ class ViewHint : UIViewController {
                     hint4Flip()
                 }
             }
-            
-            guard let id = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments().documents.first?.documentID else {
-             return
-            }
-            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-            print("hintIsView",self.hintIsView)
-            try await db.collection("Child").document(id).setData([
-  
-                "FirstGameHintIsUsed": hintIsView ,
-  
-            ],merge: true) { err in
-                if let err = err {
-                    print("Error   : \(err)")
-                } else {
-                    print("add ")
-                    print("hintIsView",self.hintIsView)
-                }
-
-            }
-            
-//                    let updateReference = db.collection("Child").document(message.id!)
-//                    updateReference.getDocument { (document, err) in
-//                        if let err = err {
-//                            print(err.localizedDescription)
-//                        }
-//                        else {
-//                            document?.reference.updateData([
-//                                "FirstGameHintIsUsed": true
-//                                ])
-//                        }
-//                    }
+              guard let id = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments().documents.first?.documentID else {
+                        return
+                        }
+                    let updateReference = db.collection("Child").document(id)
+                    updateReference.getDocument { (document, err) in
+                        if let err = err {
+                            print(err.localizedDescription)
+                        }
+                        else {
+                            document?.reference.updateData([
+                                "FirstGameHintIsUsed": true
+                                ])
+                        }
+                    }
       }
     }
     
