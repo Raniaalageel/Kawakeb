@@ -24,7 +24,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var winalert :SKSpriteNode!
     var faialert :SKSpriteNode!
     var points:Int!
-     
+    var    MercuryPoints:Int!
+    var mercpoints:Int!
+    
        var   buttonnext :SKSpriteNode!
        var   hombutton :SKSpriteNode!
     var buttongo: SKNode! = nil
@@ -204,6 +206,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
                    player.run(actionplayer)
                    
+                   
+                   
+                   
                    calculatePoint()
                    
                } else {
@@ -280,37 +285,49 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     
     func calculatePoint(){
         
+       
         
-            db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
+        db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                         (snapshot, error) in
                         if let error = error {
                             print("FAIL")
                         }
                         else {
                             print("SUCCESS??")
+                            
+            self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
+                print("??????MercuryPoints",self.MercuryPoints!)
+                            
+            self.mercpoints = self.MercuryPoints!
+            print("self33,",self.mercpoints!)
+                            
                 self.points = snapshot!.documents.first!.get("points") as! Int
                             print("??????points",self.points!)
                         }
-
-       }
-            Task{
             
-            guard let childpoint = try await db.collection("Child").whereField("email", isEqualTo:  "shamma@gmail.com" ).getDocuments().documents.first?.documentID else {return}
-                print("cureent point",self.points!)
-                try await db.collection("Child").document(childpoint).setData([
-                    "points": self.points + 2 ,
-                    "Flower" : "open"
-                ],merge: true) { err in
-                    if let err = err {
-                        print("not Add points  : \(err)")
-                    } else {
-                        print(" Add points sucsseful ")
-                    }
-                }
+            let student_docID = snapshot!.documents.first!.documentID
+        
             
-                
+            if(self.mercpoints! == 0 ){
+            self.db.collection("Child").document(student_docID).setData([
+                "points": self.points + 2 ,
+                "Flower" : "open" ,
+                "MercuryPoints": 1
+            ],merge:true) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
             }
+        }
+
+            }else{
+                print("already win ")
+            }
+        }
+      
     }
+    
         
     
     

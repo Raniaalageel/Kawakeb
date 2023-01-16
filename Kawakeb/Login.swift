@@ -102,6 +102,7 @@ class Login: UIViewController, UITextFieldDelegate {
                 if let e=error{   //if no connect with firebase
                     print(email)
             Global.shared.useremailshare = email
+                    print("Global.shared.useremailshare",Global.shared.useremailshare)
                     print(password)
                     print("failed 11111")
                     let alert = UIAlertController(title: "تنبيه", message: "البريد الالكتروني او كلمةالمرور غير صحيح", preferredStyle: .alert)
@@ -110,7 +111,8 @@ class Login: UIViewController, UITextFieldDelegate {
                    // print(e)
                 }else{   //user Auth in firebase
                     print("sucssesYES")
-                    
+                    Global.shared.useremailshare = email
+                            print("Global.shared.useremailshare",Global.shared.useremailshare)
                     Task {
                         let db = Firestore.firestore()
                         if await self.checkEmailExist(email: email, collection: "Child", field: "email") {
