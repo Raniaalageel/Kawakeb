@@ -15,7 +15,6 @@ class Global{
     public var userbirthday = ""
     public var usercharacter = ""
     public var usercharacterName = ""
-    
     var enabled = false
     var  stopis = false
       

@@ -10,20 +10,23 @@ import UIKit
 import AVFoundation
 import Vision
 import SpriteKit
-
+import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 class FirstGame: UIViewController {
 
-    static var isUsed = false
-       
+    //static var isUsed = false
+   
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
             print("nn")
+            sethint()
+    //        Global.shared.useremailshare =
             Global.shared.allLablels = ["left:0:500","left:200:2","up:22:1"]
      //!!!!!!!!!!!!!!!   CameraOpen().viewDidLoad()
             
            // trytocall()
-           
         }
         func trytocallSCene(){
             //  CameraOpen().viewDidLoad()
@@ -76,5 +79,81 @@ class FirstGame: UIViewController {
             //                }
             //            }
         }
+    
+    func sethint()
+    {
+        
+        let db = Firestore.firestore()
+        let sharedEmail = Global.shared.useremailshare
+           
+                        
+                        Task {
+                            db.collection("Child").whereField("email", isEqualTo:sharedEmail).getDocuments{
+                                (snapshot, error) in
+                                if let error = error {
+                                    print("FAIL ")
+                                }
+                                else{
+                                    print("SUCCESS??")
+                                   }
+                                
+                           
+                            }
+                            
+                            guard let id = try await db.collection("Child").whereField("email", isEqualTo: sharedEmail ).getDocuments().documents.first?.documentID else {
+                             return
+                            }
+                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
 
-   }
+                            try await db.collection("Child").document(id).setData([
+                  
+                                "FirstGameHintIsUsed": false ,
+                  
+                            ],merge: true) { err in
+                                if let err = err {
+                                    print("Error   : \(err)")
+                                } else {
+                                    print("add ")
+                                }
+            
+                            }
+                          
+                            }
+//        let db = Firestore.firestore()
+//
+//        Task {
+//
+//            db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments{
+//            (snapshot, error) in
+//            if let error = error {
+//                print("FAIL ")
+//            }else{
+//               print("SUCCESS??")
+//           }
+//            }
+//
+//        }
+//
+//
+//        guard let id = await db.collection("Child").whereField("email", isEqualTo:Global.shared.useremailshare).getDocuments().documents.first?.documentID else {
+//
+//                                     return
+//                                 }
+//
+//                 db.collection("Child").document(id).setData([
+//
+//                "FirstGameHintIsUsed": FirstGame.isUsed
+//
+//                                 ],merge: true) { err in
+//                                     if let err = err {
+//                                         print("Error   : \(err)")
+//                                     } else {
+//                                         print("add ")
+//                                     }
+//
+//                                 }
+//
+           
+            }
+    }
+

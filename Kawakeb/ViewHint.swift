@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import CodableFirebase
+import Firebase
+import FirebaseFirestore
 
 class ViewHint : UIViewController {
     
@@ -25,13 +28,13 @@ class ViewHint : UIViewController {
     @IBOutlet weak var hint4: UIView!
     
     var isSelected = false
-    
+    var hintIsView = false
     static var selectedHint = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if FirstGame.isUsed == false {
+        hintIsVieww ()
+        if hintIsView == false {
             hint1.isUserInteractionEnabled = true
             hint2.isUserInteractionEnabled = true
             hint3.isUserInteractionEnabled = true
@@ -57,14 +60,28 @@ class ViewHint : UIViewController {
         }
     }
     
+    func hintIsVieww () {
+        let db = Firestore.firestore()
+        Task {
+        let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
+            let hintIsView: DarwinBoolean = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! DarwinBoolean
+        }
+    }
+    
+    
     
     @objc func hint1Flip() {
         if isSelected == false {
             UIView.transition(from: hint1FrontImage, to: hint1BackImage, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
         }
         isSelected = true
-        FirstGame.isUsed = true
+       // FirstGame.isUsed = true
+        hintIsView = true
         ViewHint.selectedHint = 1
+        hint1.isUserInteractionEnabled = false
+        hint2.isUserInteractionEnabled = false
+        hint3.isUserInteractionEnabled = false
+        hint4.isUserInteractionEnabled = false
     }
     
     @objc func hint2Flip() {
@@ -72,8 +89,13 @@ class ViewHint : UIViewController {
             UIView.transition(from: hint2FrontImage, to: hint2BackImage, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
         }
         isSelected = true
-        FirstGame.isUsed = true
+       // FirstGame.isUsed = true
+        hintIsView = true
         ViewHint.selectedHint = 2
+        hint1.isUserInteractionEnabled = false
+        hint2.isUserInteractionEnabled = false
+        hint3.isUserInteractionEnabled = false
+        hint4.isUserInteractionEnabled = false
     }
     
     @objc func hint3Flip() {
@@ -81,8 +103,13 @@ class ViewHint : UIViewController {
             UIView.transition(from: hint3FrontImage, to: hint3BackImage, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
         }
         isSelected = true
-        FirstGame.isUsed = true
+      //  FirstGame.isUsed = true
+        hintIsView = true
         ViewHint.selectedHint = 3
+        hint1.isUserInteractionEnabled = false
+        hint2.isUserInteractionEnabled = false
+        hint3.isUserInteractionEnabled = false
+        hint4.isUserInteractionEnabled = false
     }
     
     @objc func hint4Flip() {
@@ -90,8 +117,12 @@ class ViewHint : UIViewController {
             UIView.transition(from: hint4FrontImage, to: hint4BackImage, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
         }
         isSelected = true
-        FirstGame.isUsed = true
+      //  FirstGame.isUsed = true
+        hintIsView = true
         ViewHint.selectedHint = 4
+        hint1.isUserInteractionEnabled = false
+        hint2.isUserInteractionEnabled = false
+        hint3.isUserInteractionEnabled = false
+        hint4.isUserInteractionEnabled = false
     }
-
 }
