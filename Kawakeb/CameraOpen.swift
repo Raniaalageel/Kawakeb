@@ -105,7 +105,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             let videoDataOutput = AVCaptureVideoDataOutput()
             let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
             //search for camera
-            let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices.first
+            let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .front).devices.first
             
             do{
                 deviceInput = try AVCaptureDeviceInput.init(device: videoDevice!)
@@ -352,7 +352,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         if  ( resullabel.elementsEqual(resullabelnext)  ) {
                         print("resullabel==resullabelnext",resullabel,resullabelnext)
 
-     if  ( resultx + 25 >= resultxnext  && resulty + 25 >= resultynext ){
+     if  ( resultx + 17 >= resultxnext  && resulty + 17 >= resultynext ){
                     print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
                         print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 

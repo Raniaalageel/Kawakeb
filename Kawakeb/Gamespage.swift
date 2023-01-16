@@ -11,8 +11,25 @@ import CodableFirebase
 import Firebase
 import FirebaseFirestore
 
-
 class Gamespage: UIViewController, EditprofileDelegate {
+    
+    let db = Firestore.firestore()
+    
+var Flower:String!
+  var Earth :String!
+  var Mars :String!
+    
+    @IBOutlet weak var alzahrabutton: UIButton!
+    @IBOutlet weak var alzahraLuck: UIImageView!
+    
+    
+    @IBOutlet weak var alarghbutton: UIButton!
+    @IBOutlet weak var alarghLuck: UIImageView!
+    
+    
+    @IBOutlet weak var almarighbutton: UIButton!
+    @IBOutlet weak var almarighLuck: UIImageView!
+    
     func userUpdated(child: Child) {
         uuname.text = child.name
         uuemail.text = child.email
@@ -38,7 +55,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     @IBOutlet weak var uuname: UILabel!
     
     
-    //1
+    @IBOutlet weak var uupoints: UILabel!
     
     @IBOutlet weak var n1: UILabel!
   //  @IBOutlet weak var p1: UILabel!
@@ -47,6 +64,11 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        checkOpenClose()
+        
+        
                // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
         //        createUser()
         if let id = Auth.auth().currentUser?.uid {
@@ -84,19 +106,76 @@ class Gamespage: UIViewController, EditprofileDelegate {
                 // show error message
             }
         }
+        
+        
+        //checkOpenClose()
+        
+        
     }
     
-    
-    @IBAction func alzahraK(_ sender: UIButton) {
+    func checkOpenClose(){
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
-//        present(secondViewController, animated: true, completion: nil)
-        
-        
-        self.performSegue(withIdentifier: "gofirst", sender: self)
+        db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
+                           (snapshot, error) in
+                           if let error = error {
+                               print("FAIL") }
+                           else {
+                               print("SUCCESS??")
+                               self.Flower = snapshot!.documents.first!.get("Flower") as? String
+                               print("Flower",self.Flower!)
+                               self.Earth = snapshot!.documents.first!.get("Earth") as? String
+                               print("Earth",self.Earth!)
+                               self.Mars = snapshot!.documents.first!.get("Mars") as? String
+                               print("Mars",self.Mars!)
+                           }
+            
+            if(self.Flower! == "open" ){
+                self.alzahraLuck.isHidden = true
+                self.alzahrabutton.isEnabled = true
+            }else {
+                self.alzahrabutton.isEnabled = false
+            }
+            
+            if(self.Earth! == "open" ){
+                self.alarghLuck.isHidden = true
+                self.alarghbutton.isEnabled = true
+                
+            }else{
+                self.alarghbutton.isEnabled = false
+            }
+            if(self.Mars! == "open" ){
+                self.almarighLuck.isHidden = true
+                self.almarighbutton.isEnabled = true
+            }
+            else{
+                self.almarighbutton.isEnabled = false
+            }
+            
 
+          }
+        
+        
+    }
+   
+    @IBAction func FirstAudard(_ sender: Any) {
+    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+    //        present(secondViewController, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "gofirst", sender: self)
     }
     
+    
+    @IBAction func secondAlzahra(_ sender: Any) {
+        print("Alzahra")
+        
+    }
+    
+    @IBAction func thirdAlargh(_ sender: Any) {
+        print("Alargh")
+    }
+    
+    @IBAction func fourthAlmarigh(_ sender: Any) {
+        print("Almarigh")
+    }
     
     }

@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     var bod = ""
     var Character = ""
     var CharacterName = ""
-    
+    var points = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,22 +98,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         guard let email = emailTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !email.isEmpty
         else {
             Emailvalidation.isHidden = false
-            Emailvalidation.text = "الرجاء إدخال البريد الالكتروني"
+            Emailvalidation.text = "* الرجاء إدخال البريد الالكتروني"
             return (false, "", "")
         }
         guard let password = passwordTextField.text, !password.isEmpty else {
             Passwordvalidation.isHidden = false
-            Passwordvalidation.text = "الرجاء إدخال كلمة المرور"
+            Passwordvalidation.text = "* الرجاء إدخال كلمة المرور"
             return (false, "", "")
         }
         if !isValidEmailR(emailID: email) {
             Emailvalidation.isHidden = false
-            Emailvalidation.text = "الرجاء إدخال بريد الكتروني صحيح "
+            Emailvalidation.text = "* الرجاء إدخال بريد الكتروني صحيح"
             return (false, "", "")
         }
         if password.count != 8 {
             Passwordvalidation.isHidden = false
-            Passwordvalidation.text = "الرجاء إدخال كلمة مرور لا تقل عن ٨ أرقام"
+            Passwordvalidation.text = "* الرجاء إدخال كلمة مرور لا تقل عن ٨ أرقام"
             return (false, "", "")
         }
         
@@ -166,7 +166,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                          }else {
                              print("email exists")
                              self.Emailvalidation.isHidden = false
-                             self.Emailvalidation.text = "الرجاء تغيير البريد الاكتروني"
+                             self.Emailvalidation.text = "* الرجاء تغيير البريد الاكتروني"
                             
                 }
         }
@@ -223,7 +223,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ThirdButton(_ sender: UIButton) {
         self.tabBarController?.tabBar.isHidden = true
         Charactervalidation.isHidden = true
-        Charactervalidation.text = "الرجاء اختيار الشخصية"
+        Charactervalidation.text = "* الرجاء اختيار الشخصية"
         Character = whatCharacterPressed
         Global.shared.usercharacter = Character
         print(" Character : " , Character)
@@ -352,12 +352,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         guard let Name = nameTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
         else {
             CharacterNamevalidation.isHidden = false
-            CharacterNamevalidation.text = "الرجاء إدخال اسم الشخصية"
+            CharacterNamevalidation.text = "* الرجاء إدخال اسم الشخصية"
             return (false, "", "")
            }
         if !isValidCharacterName(nameText: Name) {
             CharacterNamevalidation.isHidden = false
-            CharacterNamevalidation.text = "الرجاء إدخال اسم شخصية صحيح"
+            CharacterNamevalidation.text = "* الرجاء إدخال اسم شخصية صحيح"
             return (false, "", "")
         }
         return (true, Name , "")
@@ -366,7 +366,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     func isValidCharacterName(nameText:String) -> Bool {
         
-        let NameRegEx = "\\w{3,18}"
+        let NameRegEx = "\\w{2,12}"
         let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
         return NameTest.evaluate(with: nameText)
     }
@@ -379,7 +379,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         guard let birthday = bithdayTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
         else {
             Birthdayvalidation.isHidden = false
-            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد"
+            Birthdayvalidation.text = "* الرجاء إدخال تاريخ الميلاد"
             return (false, "", "")
            }
 //        if !isValidBirthday(BirthdayText: birthday) {
@@ -442,8 +442,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         "password": Global.shared.userpasswordshare,
                         "dob": Global.shared.userbirthday,
                         "character": Global.shared.usercharacter,
-                        "name": Global.shared.usercharacterName]
-            
+                        "name": Global.shared.usercharacterName,
+                        "points" : points ] as [String : Any]
             let db = Firestore.firestore()
                    do {
                     try db.collection("Child").document(id).setData(post)
