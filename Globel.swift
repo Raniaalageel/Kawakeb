@@ -21,7 +21,7 @@ class Global{
       
     var allLablels = [String]()
     public   var endgame = false
-
+var rocketImage = ""
     
     
 }
