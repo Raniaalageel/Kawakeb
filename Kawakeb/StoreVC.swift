@@ -247,6 +247,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
    func update() {
          
                self.StoretableView.reloadData()
+       //end
          
        }
 

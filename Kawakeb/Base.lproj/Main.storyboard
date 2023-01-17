@@ -4159,7 +4159,7 @@
                                 <rect key="frame" x="226" y="232" width="383" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="media_result_20230117_40d0caf8-cb12-4f29-8b08-754d4f5f6a31" translatesAutoresizingMaskIntoConstraints="NO" id="mnF-6B-KTe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="media_result_20230117_23bcc5e1-d8ad-4152-bdb7-8909133d6b75" translatesAutoresizingMaskIntoConstraints="NO" id="mnF-6B-KTe">
                                 <rect key="frame" x="295" y="232" width="245" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -4237,6 +4237,7 @@
         <image name="luck" width="463" height="539"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="mainPage.png" width="368" height="522"/>
+        <image name="media_result_20230117_23bcc5e1-d8ad-4152-bdb7-8909133d6b75" width="451" height="610"/>
         <image name="media_result_20230117_40d0caf8-cb12-4f29-8b08-754d4f5f6a31" width="540" height="565"/>
         <image name="ours.png" width="249.5" height="250"/>
         <image name="p1.png" width="30" height="31.363636016845703"/>
