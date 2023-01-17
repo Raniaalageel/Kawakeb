@@ -6,13 +6,38 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class i5ViewController: UIViewController {
 
     @IBOutlet weak var Stars5: UILabel!
     @IBOutlet weak var n5: UILabel!
+    
+    var userId = ""
+    let firestore = Firestore.firestore()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let id = Auth.auth().currentUser?.uid {
+            userId = id
+        }
+        
+        firestore.collection("Child").document(userId).getDocument { [self]snapshot, error in
+            if error == nil {
+                // get user data
+                guard let userData = snapshot else {return}
+                Stars5.text = userData["points"] as? String
+           
+                                        }
+                
+             else {
+                // show error message
+            }
+        }
+        
         n5.text = Global.shared.usercharacterName;
         if ( Global.shared.usercharacter == "girl"){
                 let imageName = "girl.png"
