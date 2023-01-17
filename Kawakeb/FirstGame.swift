@@ -23,6 +23,7 @@ class FirstGame: UIViewController {
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
+            present(G1alert(), animated: true)
             print("nn")
             
             
@@ -82,6 +83,11 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         present(alertVC, animated: true)
         
         
+    }
+    func G1alert() -> G1Alert {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "G1Alert") as! G1Alert
+        return alertVC
     }
     
         @IBAction func gobutton(_ sender: UIButton) {

@@ -40,6 +40,13 @@
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
 		A2451FDB29760BA400121B5C /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A2451FDA29760BA400121B5C /* LOGO.PNG */; };
 		A2451FDD29760BB100121B5C /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = A2451FDC29760BB100121B5C /* fail.png */; };
+		A2451FE12976A94900121B5C /* i1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE02976A94900121B5C /* i1ViewController.swift */; };
+		A2451FE32976B23600121B5C /* i2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE22976B23600121B5C /* i2ViewController.swift */; };
+		A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE42976B29200121B5C /* i3ViewController.swift */; };
+		A2451FE72976B2B400121B5C /* i4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE62976B2B400121B5C /* i4ViewController.swift */; };
+		A2451FE92976B2C900121B5C /* i5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE82976B2C900121B5C /* i5ViewController.swift */; };
+		A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FEA2976B40800121B5C /* i6ViewController.swift */; };
+		A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FEC2976BB4D00121B5C /* G1Alert.swift */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
@@ -145,6 +152,13 @@
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A2451FDA29760BA400121B5C /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
 		A2451FDC29760BB100121B5C /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fail.png; path = ../../fail.png; sourceTree = "<group>"; };
+		A2451FE02976A94900121B5C /* i1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i1ViewController.swift; sourceTree = "<group>"; };
+		A2451FE22976B23600121B5C /* i2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i2ViewController.swift; sourceTree = "<group>"; };
+		A2451FE42976B29200121B5C /* i3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i3ViewController.swift; sourceTree = "<group>"; };
+		A2451FE62976B2B400121B5C /* i4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i4ViewController.swift; sourceTree = "<group>"; };
+		A2451FE82976B2C900121B5C /* i5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i5ViewController.swift; sourceTree = "<group>"; };
+		A2451FEA2976B40800121B5C /* i6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i6ViewController.swift; sourceTree = "<group>"; };
+		A2451FEC2976BB4D00121B5C /* G1Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G1Alert.swift; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +254,7 @@
 				539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */,
 				539AC0292968AA9100A56BB8 /* SecondGame.swift */,
 				538DDF82296423D500562581 /* AlertFail.swift */,
+				A2451FEC2976BB4D00121B5C /* G1Alert.swift */,
 				538DDF80296423B900562581 /* AlertScs.swift */,
 				538DDF7E29641B7400562581 /* FirstSKScene.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
@@ -280,6 +295,12 @@
 				F02AC896294A111300152C07 /* SceneDelegate.swift */,
 				F02AC898294A111300152C07 /* ViewController.swift */,
 				F02AC89A294A111300152C07 /* Main.storyboard */,
+				A2451FEA2976B40800121B5C /* i6ViewController.swift */,
+				A2451FE42976B29200121B5C /* i3ViewController.swift */,
+				A2451FE62976B2B400121B5C /* i4ViewController.swift */,
+				A2451FE82976B2C900121B5C /* i5ViewController.swift */,
+				A2451FE02976A94900121B5C /* i1ViewController.swift */,
+				A2451FE22976B23600121B5C /* i2ViewController.swift */,
 				3417D14C2964B292002F2F36 /* StoreVC.swift */,
 				3417D14E2964B2C2002F2F36 /* storeCell.swift */,
 				5675477B2953C55100065DB7 /* Pv.swift */,
@@ -532,22 +553,29 @@
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
+				A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */,
+				A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				5675477C2953C55100065DB7 /* Pv.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
+				A2451FE92976B2C900121B5C /* i5ViewController.swift in Sources */,
 				5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */,
 				539AC02C2968B1BE00A56BB8 /* AlertLogout.swift in Sources */,
+				A2451FE32976B23600121B5C /* i2ViewController.swift in Sources */,
 				538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */,
 				3417D14F2964B2C2002F2F36 /* storeCell.swift in Sources */,
+				A2451FE72976B2B400121B5C /* i4ViewController.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
+				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
 				538DDF83296423D500562581 /* AlertFail.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */,
 				3417D14D2964B292002F2F36 /* StoreVC.swift in Sources */,
 				539AC04C2971C7DA00A56BB8 /* EmptyArray.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
+				A2451FE12976A94900121B5C /* i1ViewController.swift in Sources */,
 				56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

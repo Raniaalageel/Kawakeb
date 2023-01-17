@@ -12,7 +12,7 @@ import Firebase
 import FirebaseFirestore
 import  QuartzCore
 
-
+//
 class Gamespage: UIViewController, EditprofileDelegate {
     
     let db = Firestore.firestore()
@@ -92,6 +92,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
                 guard let userData = snapshot else {return}
                 child = Child(email: userData["email"] as? String, name: userData["name"] as? String, dob: userData["dob"] as? String, childID: userId,char : userData["character"] as? String)
                 uuname.text = userData["name"] as? String
+                Global.shared.usercharacterName = (userData["name"] as? String)!
                 //FOR INST
 //                if(n1.text != nil)
 //                { n1.text = userData["name"] as? String}
@@ -99,6 +100,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
                 uuemail.text = userData["email"] as? String
                 uudob.text = userData["dob"] as? String
                 char.text = userData["character"] as? String
+                Global.shared.usercharacter = (userData["character"] as? String)!
                  if ( char.text == "girl"){
                          let imageName = "girl.png"
                          let image = UIImage(named: imageName)
@@ -181,7 +183,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
     //        let secondViewController = storyboard.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
     //        present(secondViewController, animated: true, completion: nil)
-            self.performSegue(withIdentifier: "gofirst", sender: self)
+           // self.performSegue(withIdentifier: "gofirst", sender: self)
     }
     
     
