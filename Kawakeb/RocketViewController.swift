@@ -92,13 +92,11 @@ class RocketViewController: UIViewController {
                     }
                     try await db.collection("Child").document(id).updateData([
                         "rockets": FieldValue.arrayUnion([Sname])
+                        
                     ])
-                   // self.present(alert, animated: true, completion: nil)
-          
-                 //   self.performSegue(withIdentifier: "gotoLecturers", sender: self)
+               
                     }
                 
-              
         
         
     }

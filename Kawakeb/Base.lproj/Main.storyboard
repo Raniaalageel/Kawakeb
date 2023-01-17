@@ -2668,7 +2668,7 @@
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="0.94999999999999996"/>
                             </imageView>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="170" estimatedRowHeight="170" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nC-Ko-eag">
-                                <rect key="frame" x="97" y="427" width="640" height="573"/>
+                                <rect key="frame" x="97" y="377" width="640" height="623"/>
                                 <color key="backgroundColor" red="0.94888406989999996" green="0.94928222890000002" blue="0.93725317720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.83921581509999998" green="0.39395907819999998" blue="0.29757134940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.076067470009999999" green="0.20739021899999999" blue="0.34903666379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2771,9 +2771,10 @@
                                                             <color key="strokeColor" systemColor="labelColor"/>
                                                         </backgroundConfiguration>
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="صاروخي">
+                                                            <fragment content="مركبتي">
                                                                 <attributes>
-                                                                    <font key="NSFont" metaFont="system" size="36"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="36" name=".SFArabic-Regular"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -2850,22 +2851,15 @@
                                     <segue destination="9rX-g3-OdF" kind="presentation" modalPresentationStyle="fullScreen" id="tv2-Wk-4Ug"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="نجومي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-Lt-qO7">
-                                <rect key="frame" x="629" y="288" width="115" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="0.076067470009999999" green="0.20739021899999999" blue="0.34903666379999998" alpha="0.88018980719999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="highlightedColor" red="0.076067470009999999" green="0.20739021899999999" blue="0.34903666379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-iy-lhZ">
-                                <rect key="frame" x="661" y="351" width="82" height="39"/>
+                                <rect key="frame" x="655" y="307" width="82" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" red="0.83533316849999995" green="0.39439269900000001" blue="0.29799506069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star22.png" translatesAutoresizingMaskIntoConstraints="NO" id="JII-Zg-B7v">
-                                <rect key="frame" x="591" y="322" width="62" height="97"/>
+                                <rect key="frame" x="585" y="272" width="62" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2983,6 +2977,7 @@
                                 <connections>
                                     <action selector="buyRocket:" destination="83x-nE-x9E" eventType="touchUpInside" id="nun-kp-dth"/>
                                     <action selector="pressed:" destination="NYv-do-2P6" eventType="touchUpInside" id="A8t-tN-zGZ"/>
+                                    <segue destination="IX4-Ez-6cf" kind="presentation" modalPresentationStyle="fullScreen" id="h4P-dF-izq"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star22.png" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-Zq-F04">
@@ -3101,6 +3096,7 @@
                                 <connections>
                                     <action selector="changeRocket:" destination="Lie-Bn-GYb" eventType="touchUpInside" id="c02-Ac-Osk"/>
                                     <action selector="pressed:" destination="NYv-do-2P6" eventType="touchUpInside" id="Uvn-0R-vaq"/>
+                                    <segue destination="1A8-0X-ekL" kind="presentation" modalPresentationStyle="fullScreen" id="XYL-6d-LJJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هل تريد استبدال مركبتك الحالية؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFw-rG-Qb8">
@@ -3124,10 +3120,10 @@
             </objects>
             <point key="canvasLocation" x="866.9064748201439" y="1520.6030150753768"/>
         </scene>
-        <!--Update Rocket View Controller-->
+        <!--View Controller-->
         <scene sceneID="GVl-mf-yhM">
             <objects>
-                <viewController id="1A8-0X-ekL" customClass="updateRocketViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alertUpdate" id="1A8-0X-ekL" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QH1-4i-UH8"/>
                         <viewControllerLayoutGuide type="bottom" id="E6b-fs-Paq"/>
@@ -3142,15 +3138,11 @@
                                 <rect key="contentStretch" x="0.0" y="0.59999999999999998" width="1" height="1"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.44999998807907104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redbg" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-6K-4dh">
-                                <rect key="frame" x="239" y="277" width="356" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ours.png" translatesAutoresizingMaskIntoConstraints="NO" id="S1U-rz-OpP">
-                                <rect key="frame" x="326" y="290" width="190" height="200"/>
+                                <rect key="frame" x="236" y="258" width="370" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h8-7J-4CV">
-                                <rect key="frame" x="191" y="702" width="167" height="80"/>
+                                <rect key="frame" x="263" y="657" width="308" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -3159,10 +3151,10 @@
                                         <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="نعم">
+                                        <fragment content="حسنا">
                                             <attributes>
-                                                <color key="NSColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="39"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="39" name=".SFArabic-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -3170,32 +3162,98 @@
                                     <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="changeRocket:" destination="1A8-0X-ekL" eventType="touchUpInside" id="TPn-bl-B9S"/>
-                                    <action selector="pressed:" destination="NYv-do-2P6" eventType="touchUpInside" id="eAP-Ve-iOP"/>
+                                    <segue destination="0Cj-C0-vTg" kind="presentation" modalPresentationStyle="fullScreen" id="z6b-KH-XHy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تم استبدال مركبتك بنجاح" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K20-19-Rmr">
-                                <rect key="frame" x="145" y="555" width="544" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تم استبدال مركبتك بنجاح!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K20-19-Rmr">
+                                <rect key="frame" x="167" y="547" width="544" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="media_result_20230117_40d0caf8-cb12-4f29-8b08-754d4f5f6a31" translatesAutoresizingMaskIntoConstraints="NO" id="S1U-rz-OpP">
+                                <rect key="frame" x="295" y="245" width="245" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="LRQ-lH-Q5E"/>
-                    <connections>
-                        <outlet property="newRoc" destination="S1U-rz-OpP" id="t2I-6K-Uqp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvn-QH-2nJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="190.64748201438852" y="1487.9396984924624"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rIw-Ca-j8f">
+            <objects>
+                <viewController storyboardIdentifier="alertBuy" id="IX4-Ez-6cf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ztf-UI-QaX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sov-Uw-XIZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-bk-gL5">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white.png" translatesAutoresizingMaskIntoConstraints="NO" id="AXD-5r-gLP">
+                                <rect key="frame" x="-21" y="311" width="876" height="1031"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.59999999999999998" width="1" height="1"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="media_result_20230117_40d0caf8-cb12-4f29-8b08-754d4f5f6a31" translatesAutoresizingMaskIntoConstraints="NO" id="zCk-kG-H47">
+                                <rect key="frame" x="295" y="232" width="245" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsG-s3-4rM">
+                                <rect key="frame" x="263" y="657" width="308" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.2003126442" green="0.32908815149999998" blue="0.59384435420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="العوده الى المتجر ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="39" name=".SFArabic-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="0Cj-C0-vTg" kind="presentation" modalPresentationStyle="fullScreen" id="lm1-2N-rTZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تم شراء المركبة بنجاح !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-1S-BAQ">
+                                <rect key="frame" x="167" y="547" width="544" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.44999998807907104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redbg" translatesAutoresizingMaskIntoConstraints="NO" id="u1y-g3-Ksf">
+                                <rect key="frame" x="226" y="232" width="383" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ISY-Vo-efK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwH-Xc-h1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.98561151079139" y="2191.9597989949748"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="H3m-To-JnJ"/>
+        <segue reference="p2M-Rx-DXA"/>
+        <segue reference="lm1-2N-rTZ"/>
         <segue reference="iI5-kz-FyW"/>
         <segue reference="unw-hY-3Nj"/>
         <segue reference="a8r-w4-AzI"/>
@@ -3222,6 +3280,7 @@
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="mainPage.png" width="368" height="522"/>
+        <image name="media_result_20230117_40d0caf8-cb12-4f29-8b08-754d4f5f6a31" width="540" height="565"/>
         <image name="ours.png" width="249.5" height="250"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

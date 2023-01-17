@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		34054F422971E33F00B8CCED /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34054F412971E33F00B8CCED /* RocketViewController.swift */; };
 		34054F44297308C300B8CCED /* updateRocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34054F43297308C300B8CCED /* updateRocketViewController.swift */; };
-		34054F462976EC2900B8CCED /* تصميم_بدون_عنوان__7_-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 34054F452976EC2800B8CCED /* تصميم_بدون_عنوان__7_-removebg-preview.png */; };
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
 		34B4E2812959D6BA002E8FD5 /* storeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4E2802959D6BA002E8FD5 /* storeCell.swift */; };
@@ -98,7 +97,6 @@
 /* Begin PBXFileReference section */
 		34054F412971E33F00B8CCED /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		34054F43297308C300B8CCED /* updateRocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateRocketViewController.swift; sourceTree = "<group>"; };
-		34054F452976EC2800B8CCED /* تصميم_بدون_عنوان__7_-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "تصميم_بدون_عنوان__7_-removebg-preview.png"; sourceTree = "<group>"; };
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		34B4E2802959D6BA002E8FD5 /* storeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCell.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
-				34054F452976EC2800B8CCED /* تصميم_بدون_عنوان__7_-removebg-preview.png */,
 				F0F920B42953335D0045A75C /* backk.png */,
 				F0F920B62953337A0045A75C /* ours.png */,
 				F0F920B8295333870045A75C /* astro.png */,
@@ -425,7 +422,6 @@
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
-				34054F462976EC2900B8CCED /* تصميم_بدون_عنوان__7_-removebg-preview.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				34EC771B2954765C00A95964 /* LOGO.PNG in Resources */,
