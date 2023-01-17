@@ -16,26 +16,37 @@ class i6ViewController: UIViewController {
     var userId = ""
     let firestore = Firestore.firestore()
     
+    var pointsall : Int!
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let id = Auth.auth().currentUser?.uid {
-            userId = id
+        db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
+                           (snapshot, error) in
+                           if let error = error {
+                               print("FAIL") }
+                           else {
+                               print("SUCCESS??")
+                             
+//                    self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
+//                        print("currentRockIMG",self.currentRockIMG!)
+                               
+                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
+                                  print("pointsall ",self.pointsall!)
+                               
+//
+//                               self.Flower = snapshot!.documents.first!.get("Flower") as? String
+//                               print("Flower",self.Flower!)
+//                               self.Earth = snapshot!.documents.first!.get("Earth") as? String
+//                               print("Earth",self.Earth!)
+//                               self.Mars = snapshot!.documents.first!.get("Mars") as? String
+//                               print("Mars",self.Mars!)
+                           }
+         //   self.rocketimage.image = UIImage(named: self.currentRockIMG!)
+            self.Stars6.text = String (self.pointsall!)
         }
-        
-        firestore.collection("Child").document(userId).getDocument { [self]snapshot, error in
-            if error == nil {
-                // get user data
-                guard let userData = snapshot else {return}
-                Stars6.text = userData["points"] as? String
-           
-                                        }
-                
-             else {
-                // show error message
-            }
-        }
-        
+
         n6.text = Global.shared.usercharacterName;
         if ( Global.shared.usercharacter == "girl"){
                 let imageName = "girl.png"

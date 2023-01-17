@@ -99,6 +99,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
                 
                 uuemail.text = userData["email"] as? String
                 uudob.text = userData["dob"] as? String
+               // uupoints.text = userData["points"] as? String
                 char.text = userData["character"] as? String
                 Global.shared.usercharacter = (userData["character"] as? String)!
                  if ( char.text == "girl"){
@@ -138,7 +139,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
                         print("currentRockIMG",self.currentRockIMG!)
                                
                                self.pointsall = snapshot!.documents.first!.get("points") as? Int
-                                   print("pointsall ",self.pointsall!)
+                                  print("pointsall ",self.pointsall!)
                                
                         
                                self.Flower = snapshot!.documents.first!.get("Flower") as? String
@@ -172,7 +173,6 @@ class Gamespage: UIViewController, EditprofileDelegate {
             else{
                 self.almarighbutton.isEnabled = false
             }
-            
 
           }
         
