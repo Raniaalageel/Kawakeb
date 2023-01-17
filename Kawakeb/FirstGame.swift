@@ -43,8 +43,9 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             }
             
         //!!!!
-            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
-     //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
+//            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
+//     !!!!!!!!!!!!!!
+            CameraOpen().viewDidLoad()
             
            // trytocall()
            
@@ -98,24 +99,26 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             CameraOpen().Stopsessyion()
 
             
-            if(Global.shared.allLablels.isEmpty){
-                
-                print("Global.shared.allLablels.isEmpty")
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                        let alertVC = storyboard.instantiateViewController(withIdentifier: "Emptyy") as! EmptyArray
-                
-                present(alertVC, animated: true)
-                
-            }else {
+//            if(Global.shared.allLablels.isEmpty){
+//
+//                print("Global.shared.allLablels.isEmpty")
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//                        let alertVC = storyboard.instantiateViewController(withIdentifier: "Emptyy") as! EmptyArray
+//
+//                present(alertVC, animated: true)
+//
+//            }else {
             trytocallSCene()  //GO TOSKSCENE
             
             
-            //!!!!!!!!!!!!!!!Global.shared.allLablels = []
+            //!!!!!!!!!!!!!!!
+                Global.shared.allLablels = []
             print("again open camera ")
             Global.shared.stopis = false  //OPEN CAMERA
             Global.shared.enabled = false //not appned array
-            //!!!!!!!!!!!!!!!CameraOpen().viewDidLoad()   //call class CameraOpen
+            //!!!!!!!!!!!!!!!
+                CameraOpen().viewDidLoad()   //call class CameraOpen
 
             
             
@@ -128,6 +131,6 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             //            }
         }
             
-        }
+//        }
 
    }
