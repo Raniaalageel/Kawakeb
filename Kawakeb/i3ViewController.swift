@@ -9,6 +9,7 @@ import UIKit
 
 class i3ViewController: UIViewController {
 
+    @IBOutlet weak var Stars3: UILabel!
     @IBOutlet weak var n3: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,7 @@ import UIKit
 
 class i5ViewController: UIViewController {
 
+    @IBOutlet weak var Stars5: UILabel!
     @IBOutlet weak var n5: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

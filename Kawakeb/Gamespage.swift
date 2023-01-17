@@ -90,7 +90,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
             if error == nil {
                 // get user data
                 guard let userData = snapshot else {return}
-                child = Child(email: userData["email"] as? String, name: userData["name"] as? String, dob: userData["dob"] as? String, childID: userId,char : userData["character"] as? String)
+                child = Child(email: userData["email"] as? String, name: userData["name"] as? String, points: userData["points"] as? String, dob: userData["dob"] as? String, childID: userId,char : userData["character"] as? String)
                 uuname.text = userData["name"] as? String
                 Global.shared.usercharacterName = (userData["name"] as? String)!
                 //FOR INST

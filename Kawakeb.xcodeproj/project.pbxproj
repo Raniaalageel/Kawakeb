@@ -36,6 +36,11 @@
 		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
 		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
+		568278CD2976DD090075C75F /* leeeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 568278CA2976DD090075C75F /* leeeft.png */; };
+		568278CE2976DD090075C75F /* uppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 568278CB2976DD090075C75F /* uppp.png */; };
+		568278D12976DD6C0075C75F /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 568278D02976DD6B0075C75F /* front.jpeg */; };
+		568278D32976DDB80075C75F /* ViewHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568278D22976DDB80075C75F /* ViewHint.swift */; };
+		568278D52976DE330075C75F /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 568278D42976DE330075C75F /* LOGO.PNG */; };
 		56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4B867295DC50B0081A691 /* Gamespage.swift */; };
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
 		A2451FDB29760BA400121B5C /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A2451FDA29760BA400121B5C /* LOGO.PNG */; };
@@ -148,6 +153,11 @@
 		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
 		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
+		568278CA2976DD090075C75F /* leeeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leeeft.png; path = ../../leeeft.png; sourceTree = "<group>"; };
+		568278CB2976DD090075C75F /* uppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uppp.png; path = ../../uppp.png; sourceTree = "<group>"; };
+		568278D02976DD6B0075C75F /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = front.jpeg; path = ../../front.jpeg; sourceTree = "<group>"; };
+		568278D22976DDB80075C75F /* ViewHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHint.swift; sourceTree = "<group>"; };
+		568278D42976DE330075C75F /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
 		56D4B867295DC50B0081A691 /* Gamespage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamespage.swift; sourceTree = "<group>"; };
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A2451FDA29760BA400121B5C /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
@@ -298,6 +308,7 @@
 				A2451FEA2976B40800121B5C /* i6ViewController.swift */,
 				A2451FE42976B29200121B5C /* i3ViewController.swift */,
 				A2451FE62976B2B400121B5C /* i4ViewController.swift */,
+				568278D22976DDB80075C75F /* ViewHint.swift */,
 				A2451FE82976B2C900121B5C /* i5ViewController.swift */,
 				A2451FE02976A94900121B5C /* i1ViewController.swift */,
 				A2451FE22976B23600121B5C /* i2ViewController.swift */,
@@ -308,10 +319,14 @@
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
 				A2451FDA29760BA400121B5C /* LOGO.PNG */,
+				568278D42976DE330075C75F /* LOGO.PNG */,
 				3417D1442964B172002F2F36 /* L1.png */,
 				539AC02F2969EE1F00A56BB8 /* alertsuc.png */,
 				539AC0312969EE3300A56BB8 /* alertfail.png */,
 				3417D1422964B15C002F2F36 /* redCircle.png */,
+				568278CA2976DD090075C75F /* leeeft.png */,
+				568278CB2976DD090075C75F /* uppp.png */,
+				568278D02976DD6B0075C75F /* front.jpeg */,
 				539AC0452971B6F600A56BB8 /* sucsses.png */,
 				3417D1482964B18F002F2F36 /* p1.png */,
 				A2451FDC29760BB100121B5C /* fail.png */,
@@ -498,10 +513,12 @@
 				A2451FDD29760BB100121B5C /* fail.png in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
+				568278D12976DD6C0075C75F /* front.jpeg in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				539AC03B296A216600A56BB8 /* Fiwin.sks in Resources */,
+				568278D52976DE330075C75F /* LOGO.PNG in Resources */,
 				F0F920B52953335D0045A75C /* backk.png in Resources */,
 				539AC0462971B6F600A56BB8 /* sucsses.png in Resources */,
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
@@ -512,10 +529,12 @@
 				539AC03C296A216600A56BB8 /* Assets.xcassets in Resources */,
 				F0F920B72953337A0045A75C /* ours.png in Resources */,
 				F0F920BD295333A50045A75C /* help.png in Resources */,
+				568278CD2976DD090075C75F /* leeeft.png in Resources */,
 				F0F920B9295333870045A75C /* astro.png in Resources */,
 				3417D1472964B184002F2F36 /* directions.png in Resources */,
 				3417D1492964B18F002F2F36 /* p1.png in Resources */,
 				3417D1452964B172002F2F36 /* L1.png in Resources */,
+				568278CE2976DD090075C75F /* uppp.png in Resources */,
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
 				A2451FDB29760BA400121B5C /* LOGO.PNG in Resources */,
 				539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */,
@@ -570,6 +589,7 @@
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
 				538DDF83296423D500562581 /* AlertFail.swift in Sources */,
+				568278D32976DDB80075C75F /* ViewHint.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */,
 				3417D14D2964B292002F2F36 /* StoreVC.swift in Sources */,

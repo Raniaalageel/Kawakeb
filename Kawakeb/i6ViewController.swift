@@ -9,6 +9,7 @@ import UIKit
 
 class i6ViewController: UIViewController {
 
+    @IBOutlet weak var Stars6: UILabel!
     @IBOutlet weak var n6: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

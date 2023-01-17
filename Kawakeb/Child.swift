@@ -10,6 +10,7 @@ struct Child : Codable {
     let email : String?
     let name : String?
 //    let passowrd : String?
+    let points : String?
     let dob : String?
     let childID: String?
     let char: String?
