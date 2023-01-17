@@ -176,6 +176,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
               let dateFormatter = DateFormatter()
               dateFormatter.dateStyle = .full
               dateFormatter.dateFormat = "dd-MM-yyyy"
+              
               self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
               bithdayTextField.textColor = .black
               
