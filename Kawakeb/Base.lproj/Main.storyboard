@@ -2434,6 +2434,9 @@
                                     <color key="baseForegroundColor" red="0.093715257940000005" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VOB-7c-ywd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mpE-0t-APs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="للبالغين فقط!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bh-fh-VPA">
                                 <rect key="frame" x="288" y="453" width="224" height="54"/>
@@ -3420,10 +3423,6 @@
                                     <action selector="logoutButton:" destination="njU-3O-2ba" eventType="touchUpInside" id="C1S-31-pYe"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ob-zt-02K">
-                                <rect key="frame" x="650" y="701" width="163" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVq-pd-wG7">
                                 <rect key="frame" x="0.0" y="-45" width="863" height="1251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3488,9 +3487,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bhz-Ra-VLI"/>
-                    <connections>
-                        <outlet property="rocketImage" destination="7ob-zt-02K" id="PiS-Fo-AYz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2X-9j-NGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3555,10 +3551,6 @@
                                     <action selector="logoutButton:" destination="jaO-xL-xoF" eventType="touchUpInside" id="R4G-pz-A9f"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PER-SS-D3g">
-                                <rect key="frame" x="650" y="701" width="163" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3p-Xa-XTR">
                                 <rect key="frame" x="-29" y="-5" width="900" height="1231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3605,9 +3597,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qpA-2q-s1w"/>
-                    <connections>
-                        <outlet property="rocketImage" destination="PER-SS-D3g" id="oLA-Hx-nvA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9g8-HY-XR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3616,14 +3605,15 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KyA-kp-3OD"/>
+        <segue reference="mpE-0t-APs"/>
         <segue reference="iI5-kz-FyW"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
-        <segue reference="hQp-zA-1t1"/>
+        <segue reference="yUB-su-Geh"/>
         <segue reference="hqg-X7-rr5"/>
         <segue reference="ptM-7z-fbu"/>
         <segue reference="u2J-iR-xDB"/>
-        <segue reference="a9Y-ql-EV8"/>
+        <segue reference="L4T-uD-WVw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>
