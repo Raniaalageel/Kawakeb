@@ -52,7 +52,7 @@ class layerwithCmaeraViewController: UIViewController,AVCaptureVideoDataOutputSa
     button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
        setupAVCapture()
-//          //  setupLayers()
+      setupLayers()
         setupVision()
 
        
@@ -167,7 +167,7 @@ class layerwithCmaeraViewController: UIViewController,AVCaptureVideoDataOutputSa
     }
     
     func setupVision() {
-        guard let model = try? VNCoreMLModel(for: MyObjectDetector20dec().model) else { return }
+        guard let model = try? VNCoreMLModel(for: MyObjectDetector2023 ().model) else { return }
         let request = VNCoreMLRequest(model: model) { [self] (request , err) in
             //print("request")
             if let results = request.results {
@@ -213,7 +213,7 @@ class layerwithCmaeraViewController: UIViewController,AVCaptureVideoDataOutputSa
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         
-  // detectionOverlay.sublayers = nil
+   detectionOverlay.sublayers = nil
         print("stopis",Global.shared.stopis)
         
         if (Global.shared.stopis == true){
@@ -246,13 +246,13 @@ class layerwithCmaeraViewController: UIViewController,AVCaptureVideoDataOutputSa
             shapeLayer.addSublayer(textLayer)
             
             
-          //  detectionOverlay.addSublayer(shapeLayer)
+            detectionOverlay.addSublayer(shapeLayer)
             
             
         }
    
         
-      // self.updateLayerGeometry()
+      self.updateLayerGeometry()
         CATransaction.commit()
     }
     
