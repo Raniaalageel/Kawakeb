@@ -18,8 +18,8 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     
     var player:SKSpriteNode!
     var currentRockIMG:String!
-       var xAcceration:CGFloat = 0
-       var touchbegain : CGPoint?
+    var xAcceration:CGFloat = 0
+    var touchbegain : CGPoint?
     
     var winalert :SKSpriteNode!
     var faialert :SKSpriteNode!
@@ -27,17 +27,21 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var    MercuryPoints:Int!
     var mercpoints:Int!
     
-       var   buttonnext :SKSpriteNode!
-       var   hombutton :SKSpriteNode!
+    var   buttonnext :SKSpriteNode!
+    var   hombutton :SKSpriteNode!
     var buttongo: SKNode! = nil
     
     var   buttotryagain :SKSpriteNode!
     var   tryHomebutton :SKSpriteNode!
     
-  var failLabel:SKLabelNode!
+    var failLabel:SKLabelNode!
     var successLabel:SKLabelNode!
     var starfiled:SKEmitterNode!
+    var emptyArray:SKSpriteNode!
+    var emptyLabel:SKLabelNode!
+    var OkButton:SKSpriteNode!
     
+
     
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
@@ -78,10 +82,32 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
 
         hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
         hombutton.name = "pressHome"
-     hombutton.size = .init(width: 280, height: 180)
-    hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
+        hombutton.size = .init(width: 280, height: 180)
+        hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
            
-    
+           
+//           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+           
+           emptyArray = SKSpriteNode(imageNamed: "alertBack")
+           emptyArray.size = .init(width: 600, height: 450)
+           emptyArray .position = CGPoint(x: self.size.width/1.8, y: self.size.height/2.2)
+           emptyArray .zPosition = 0
+           
+           emptyLabel = SKLabelNode(fontNamed: "System")
+           emptyLabel.text = String("لا يوجد قطعًا ، قم بوضع بعضًا منها ")
+           emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           emptyLabel.fontSize = 40.0
+           emptyLabel.horizontalAlignmentMode = .right
+           emptyLabel.verticalAlignmentMode = .center
+           emptyLabel.position = CGPoint(x: 691, y: 743)
+           
+           OkButton = SKSpriteNode(imageNamed: "HomebuttonSu")
+           OkButton.name = "OkButton"
+           OkButton.size = .init(width: 280, height: 180)
+           OkButton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
+           
+           
+           
            successLabel = SKLabelNode(fontNamed: "System")
            successLabel.text = String("نجحت بالوصول إلى كوكب الزهرة!")
            successLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
@@ -134,6 +160,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
+               self.addChild(emptyArray)
+               self.addChild(emptyLabel)
+               self.addChild(OkButton)
            }
            else {
                print("charcter move")
@@ -277,9 +306,21 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        })
 
                        }
-                       
-                       
-                       
+                   
+                   else if touchedNode.name == "OkButton" {
+                       print("OkButton")
+                       let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+                       vcc.view.frame = (self.view?.frame)!
+                       vcc.view.layoutIfNeeded()
+                       UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+                       self.view?.window?.rootViewController = vcc
+                       }, completion: { completed in
+
+                       })
+
+                       }
+                                          
                        
                    }
                     }
