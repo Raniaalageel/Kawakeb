@@ -87,9 +87,10 @@ class Validation: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "تنبيه", message: "اجابة خاطئة،  حاول مجددًا!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "حسنًا", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+//            let alert = UIAlertController(title: "تنبيه", message: "اجابة خاطئة،  حاول مجددًا!", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "حسنًا", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+            msg.text = "اجابة خاطئة،  حاول مجددًا!"
 
         }}
             else{
