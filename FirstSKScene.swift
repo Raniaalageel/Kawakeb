@@ -60,8 +60,8 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    
           
                player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
-           
-           player.size = .init(width: 200, height: 200)
+           //Global.shared.rocketImage
+         player.size = .init(width: 100, height: 190)
            player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
            self.addChild(player)
            //////////////////sucsses alert

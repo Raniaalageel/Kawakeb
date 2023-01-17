@@ -15,6 +15,10 @@
 		3417D14F2964B2C2002F2F36 /* storeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417D14E2964B2C2002F2F36 /* storeCell.swift */; };
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
+		535650252976CD5A0043257D /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 535650242976CD5A0043257D /* LOGO.png */; };
+		535650272976CD820043257D /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 535650262976CD820043257D /* fail.png */; };
+		5356502929770E2F0043257D /* MyObjectDetector2023 1 Iteration 16010.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502829770E2F0043257D /* MyObjectDetector2023 1 Iteration 16010.mlmodel */; };
+		5356502B29770F0C0043257D /* layerwithCmaeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
@@ -38,8 +42,6 @@
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
 		56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4B867295DC50B0081A691 /* Gamespage.swift */; };
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
-		A2451FDB29760BA400121B5C /* LOGO.PNG in Resources */ = {isa = PBXBuildFile; fileRef = A2451FDA29760BA400121B5C /* LOGO.PNG */; };
-		A2451FDD29760BB100121B5C /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = A2451FDC29760BB100121B5C /* fail.png */; };
 		A2451FE12976A94900121B5C /* i1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE02976A94900121B5C /* i1ViewController.swift */; };
 		A2451FE32976B23600121B5C /* i2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE22976B23600121B5C /* i2ViewController.swift */; };
 		A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FE42976B29200121B5C /* i3ViewController.swift */; };
@@ -128,6 +130,10 @@
 		3417D14E2964B2C2002F2F36 /* storeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCell.swift; sourceTree = "<group>"; };
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		535650242976CD5A0043257D /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = "../../../../../Applications/kwakkp picture/LOGO.png"; sourceTree = "<group>"; };
+		535650262976CD820043257D /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
+		5356502829770E2F0043257D /* MyObjectDetector2023 1 Iteration 16010.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyObjectDetector2023 1 Iteration 16010.mlmodel"; sourceTree = "<group>"; };
+		5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layerwithCmaeraViewController.swift; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
@@ -150,8 +156,6 @@
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
 		56D4B867295DC50B0081A691 /* Gamespage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamespage.swift; sourceTree = "<group>"; };
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		A2451FDA29760BA400121B5C /* LOGO.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.PNG; path = ../../LOGO.PNG; sourceTree = "<group>"; };
-		A2451FDC29760BB100121B5C /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fail.png; path = ../../fail.png; sourceTree = "<group>"; };
 		A2451FE02976A94900121B5C /* i1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i1ViewController.swift; sourceTree = "<group>"; };
 		A2451FE22976B23600121B5C /* i2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i2ViewController.swift; sourceTree = "<group>"; };
 		A2451FE42976B29200121B5C /* i3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i3ViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
@@ -259,6 +264,7 @@
 				538DDF7E29641B7400562581 /* FirstSKScene.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
+				5356502829770E2F0043257D /* MyObjectDetector2023 1 Iteration 16010.mlmodel */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
 				F02AC893294A111300152C07 /* Kawakeb */,
 				F02AC8AA294A111700152C07 /* KawakebTests */,
@@ -307,14 +313,14 @@
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
-				A2451FDA29760BA400121B5C /* LOGO.PNG */,
+				535650242976CD5A0043257D /* LOGO.png */,
 				3417D1442964B172002F2F36 /* L1.png */,
 				539AC02F2969EE1F00A56BB8 /* alertsuc.png */,
 				539AC0312969EE3300A56BB8 /* alertfail.png */,
 				3417D1422964B15C002F2F36 /* redCircle.png */,
 				539AC0452971B6F600A56BB8 /* sucsses.png */,
 				3417D1482964B18F002F2F36 /* p1.png */,
-				A2451FDC29760BB100121B5C /* fail.png */,
+				535650262976CD820043257D /* fail.png */,
 				3417D1462964B184002F2F36 /* directions.png */,
 				F0F920B42953335D0045A75C /* backk.png */,
 				F0F920B62953337A0045A75C /* ours.png */,
@@ -495,7 +501,7 @@
 				F0F920C5295333EC0045A75C /* star22.png in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
-				A2451FDD29760BB100121B5C /* fail.png in Resources */,
+				535650272976CD820043257D /* fail.png in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
@@ -507,6 +513,7 @@
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
 				F02AC89C294A111300152C07 /* Main.storyboard in Resources */,
 				539AC0322969EE3300A56BB8 /* alertfail.png in Resources */,
+				535650252976CD5A0043257D /* LOGO.png in Resources */,
 				3417D1432964B15C002F2F36 /* redCircle.png in Resources */,
 				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
 				539AC03C296A216600A56BB8 /* Assets.xcassets in Resources */,
@@ -517,7 +524,6 @@
 				3417D1492964B18F002F2F36 /* p1.png in Resources */,
 				3417D1452964B172002F2F36 /* L1.png in Resources */,
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
-				A2451FDB29760BA400121B5C /* LOGO.PNG in Resources */,
 				539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,10 +559,12 @@
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
+				5356502929770E2F0043257D /* MyObjectDetector2023 1 Iteration 16010.mlmodel in Sources */,
 				A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */,
 				A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				5675477C2953C55100065DB7 /* Pv.swift in Sources */,
+				5356502B29770F0C0043257D /* layerwithCmaeraViewController.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
 				A2451FE92976B2C900121B5C /* i5ViewController.swift in Sources */,
 				5610D8E92953B0BD00E046FC /* datepicker.swift in Sources */,

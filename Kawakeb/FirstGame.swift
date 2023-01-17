@@ -27,7 +27,7 @@ class FirstGame: UIViewController {
             print("nn")
             
             
-            db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
+            db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com").getDocuments{
                                (snapshot, error) in
                                if let error = error {
                                    print("FAIL") }
