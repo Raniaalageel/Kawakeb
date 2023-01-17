@@ -21,6 +21,7 @@
 		34CDA8B2297703AF00C2ADF3 /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CDA8B1297703AD00C2ADF3 /* LOGO.png */; };
 		34CDA8B62977052000C2ADF3 /* uppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CDA8B52977052000C2ADF3 /* uppp.png */; };
 		34CDA8B82977052600C2ADF3 /* leeeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CDA8B72977052600C2ADF3 /* leeeft.png */; };
+		5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
@@ -139,6 +140,7 @@
 		34CDA8B1297703AD00C2ADF3 /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGO.png; sourceTree = "<group>"; };
 		34CDA8B52977052000C2ADF3 /* uppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uppp.png; sourceTree = "<group>"; };
 		34CDA8B72977052600C2ADF3 /* leeeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leeeft.png; path = ../../../Downloads/leeeft.png; sourceTree = "<group>"; };
+		5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				538DDF7E29641B7400562581 /* FirstSKScene.swift */,
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
+				5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
 				F02AC893294A111300152C07 /* Kawakeb */,
 				F02AC8AA294A111700152C07 /* KawakebTests */,
@@ -594,6 +597,7 @@
 				539AC04C2971C7DA00A56BB8 /* EmptyArray.swift in Sources */,
 				34CDA8A82977016200C2ADF3 /* RocketViewController.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
+				5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */,
 				34CDA8AA2977017800C2ADF3 /* updateRocketViewController.swift in Sources */,
 				A2451FE12976A94900121B5C /* i1ViewController.swift in Sources */,
 				56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */,
