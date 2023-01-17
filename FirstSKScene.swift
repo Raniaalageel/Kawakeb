@@ -17,7 +17,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     let db = Firestore.firestore()
     
     var player:SKSpriteNode!
-       
+    var currentRockIMG:String!
        var xAcceration:CGFloat = 0
        var touchbegain : CGPoint?
     
@@ -38,6 +38,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var successLabel:SKLabelNode!
     var starfiled:SKEmitterNode!
     
+    
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
@@ -57,9 +58,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            //starfiled.advanceSimulationTime(10)
           // starfiled.zPosition = -1
                    
+          
+               player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
            
-           player = SKSpriteNode(imageNamed: "rocket1")  //shuttle rocket1.png
-           // player.position = CGPoint(x: 200, y: player.size.height + 100)
            player.size = .init(width: 200, height: 200)
            player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
            self.addChild(player)

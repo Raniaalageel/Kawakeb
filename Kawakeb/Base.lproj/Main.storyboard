@@ -377,8 +377,8 @@
                                     <segue destination="VOB-7c-ywd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="OGu-ep-2YN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket2.png" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-fh-oZS">
-                                <rect key="frame" x="46" y="1002" width="131" height="171"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-fh-oZS">
+                                <rect key="frame" x="52" y="983" width="131" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-uv-TSC">
@@ -507,8 +507,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.054901964960000001" green="0.031372550870000002" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axb-dv-h8o">
-                                <rect key="frame" x="148" y="43" width="149" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axb-dv-h8o">
+                                <rect key="frame" x="232" y="46" width="68" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.12549020350000001" green="0.2117646933" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="نجمة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-DK-o7g">
+                                <rect key="frame" x="154" y="45" width="70" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" red="0.12549020350000001" green="0.2117646933" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -527,6 +534,7 @@
                         <outlet property="alzahraLuck" destination="ojG-6C-5Uz" id="jLi-U1-Obj"/>
                         <outlet property="alzahrabutton" destination="k9K-Kf-scH" id="rWv-rb-ROt"/>
                         <outlet property="char" destination="adB-py-T2J" id="hJ9-SZ-zE6"/>
+                        <outlet property="rocketimage" destination="rhm-fh-oZS" id="1ej-k8-ADB"/>
                         <outlet property="uudob" destination="UPl-SR-wqr" id="WIF-oc-LhF"/>
                         <outlet property="uuemail" destination="NOY-of-HBv" id="6qz-Lz-4yK"/>
                         <outlet property="uuname" destination="6k4-0I-TBU" id="Ri9-43-nOJ"/>
@@ -2466,7 +2474,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="L1.png" translatesAutoresizingMaskIntoConstraints="NO" id="glL-qG-hd1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FirstGameWithOut" translatesAutoresizingMaskIntoConstraints="NO" id="glL-qG-hd1">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2506,21 +2514,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-gG-fCU">
-                                <rect key="frame" x="-74" y="20" width="503" height="210"/>
+                                <rect key="frame" x="20" y="51" width="88" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="logoutButton"/>
+                                    <backgroundConfiguration key="background" image="backk.png"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutButton:" destination="bIs-Zj-oYX" eventType="touchUpInside" id="3sy-1D-r6a"/>
                                     <segue destination="9rX-g3-OdF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ptM-7z-fbu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QA-tQ-gxu">
+                                <rect key="frame" x="650" y="701" width="163" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="L7s-c7-wXO"/>
+                    <connections>
+                        <outlet property="rocketImage" destination="8QA-tQ-gxu" id="JHX-bN-mhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iod-sV-1bW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3496,13 +3511,14 @@
         <segue reference="hqg-X7-rr5"/>
         <segue reference="blo-67-XaK"/>
         <segue reference="Z5o-PD-IXw"/>
-        <segue reference="JnV-K5-cRI"/>
+        <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>
         <image name="2" width="1034" height="241"/>
         <image name="3" width="1036" height="241"/>
         <image name="4" width="1047" height="238"/>
+        <image name="FirstGameWithOut" width="1414" height="2000"/>
         <image name="L1.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="LOGO.png" width="375" height="375"/>
         <image name="alertBack" width="740" height="544"/>
@@ -3519,7 +3535,6 @@
         <image name="help.png" width="53" height="54"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="logout" width="53" height="58"/>
-        <image name="logoutButton" width="647" height="290"/>
         <image name="luck" width="463" height="539"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="mainPage.png" width="368" height="522"/>

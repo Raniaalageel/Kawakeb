@@ -10,6 +10,8 @@ import AudioToolbox
 import CodableFirebase
 import Firebase
 import FirebaseFirestore
+import  QuartzCore
+
 
 class Gamespage: UIViewController, EditprofileDelegate {
     
@@ -18,7 +20,9 @@ class Gamespage: UIViewController, EditprofileDelegate {
   var Flower:String!
   var Earth :String!
   var Mars :String!
-    
+    var currentRockIMG:String!
+    var timer: Timer?
+    var pointsall : Int!
     @IBOutlet weak var alzahrabutton: UIButton!
     @IBOutlet weak var alzahraLuck: UIImageView!
     
@@ -26,6 +30,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     @IBOutlet weak var alarghbutton: UIButton!
     @IBOutlet weak var alarghLuck: UIImageView!
     
+    @IBOutlet weak var rocketimage: UIImageView!
     
     @IBOutlet weak var almarighbutton: UIButton!
     @IBOutlet weak var almarighLuck: UIImageView!
@@ -65,10 +70,13 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+     
         checkOpenClose()
-        
+       
+        print("origiin",self.rocketimage.frame.origin.y)
+       // rocket.animationImages =
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updaterocket), userInfo: nil, repeats: true)
+     
         
                // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
         //        createUser()
@@ -123,6 +131,14 @@ class Gamespage: UIViewController, EditprofileDelegate {
                                print("FAIL") }
                            else {
                                print("SUCCESS??")
+                             
+                    self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
+                        print("currentRockIMG",self.currentRockIMG!)
+                               
+                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
+                                   print("pointsall ",self.pointsall!)
+                               
+                        
                                self.Flower = snapshot!.documents.first!.get("Flower") as? String
                                print("Flower",self.Flower!)
                                self.Earth = snapshot!.documents.first!.get("Earth") as? String
@@ -130,6 +146,8 @@ class Gamespage: UIViewController, EditprofileDelegate {
                                self.Mars = snapshot!.documents.first!.get("Mars") as? String
                                print("Mars",self.Mars!)
                            }
+            self.rocketimage.image = UIImage(named: self.currentRockIMG!)
+            self.uupoints.text = String (self.pointsall!)
             
             if(self.Flower! == "open" ){
                 self.alzahraLuck.isHidden = true
@@ -178,6 +196,27 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     @IBAction func fourthAlmarigh(_ sender: Any) {
         print("Almarigh")
+    }
+    
+    @objc func updaterocket(){
+        
+        
+        UIView.animate(withDuration: 2, animations: {
+            self.rocketimage.frame.origin.y -= -50
+           // print("origiin before",self.rocketimage.frame.origin.y)
+        },completion: nil)
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.rocketimage.frame.origin.y -= 50
+          //  print("origiin trturn",self.rocketimage.frame.origin.y)
+
+        },completion: nil)
+        
+    //    self.rocketimage.image = self.rocketimage.image?.imageFlippedForRightToLeftLayoutDirection()
+   // self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / 2)) //90 degree
+
+        
+        
     }
     
     }
