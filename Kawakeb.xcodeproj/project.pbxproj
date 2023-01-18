@@ -92,6 +92,7 @@
 		F0AE53F4297844C600B8E3C0 /* sucsses.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F3297844C600B8E3C0 /* sucsses.png */; };
 		F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F5297844CE00B8E3C0 /* fail.png */; };
 		F0AE53F82978602C00B8E3C0 /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F72978602C00B8E3C0 /* front.jpeg */; };
+		F0AE53FA29787AFC00B8E3C0 /* sketch.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F929787AFC00B8E3C0 /* sketch.png */; };
 		F0F20EAE29772A6600B28CC6 /* leeeft.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F20EAD29772A6600B28CC6 /* leeeft.png */; };
 		F0F920B1295330F20045A75C /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B0295330F20045A75C /* Globel.swift */; };
 		F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B2295330FE0045A75C /* RegisterViewController.swift */; };
@@ -188,6 +189,7 @@
 		F0AE53F3297844C600B8E3C0 /* sucsses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sucsses.png; sourceTree = "<group>"; };
 		F0AE53F5297844CE00B8E3C0 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		F0AE53F72978602C00B8E3C0 /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpeg; sourceTree = "<group>"; };
+		F0AE53F929787AFC00B8E3C0 /* sketch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sketch.png; sourceTree = "<group>"; };
 		F0F20EAD29772A6600B28CC6 /* leeeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leeeft.png; sourceTree = "<group>"; };
 		F0F920B0295330F20045A75C /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F0F920B2295330FE0045A75C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				34CDA8B52977052000C2ADF3 /* uppp.png */,
 				F0AE53F3297844C600B8E3C0 /* sucsses.png */,
 				F0F20EAD29772A6600B28CC6 /* leeeft.png */,
+				F0AE53F929787AFC00B8E3C0 /* sketch.png */,
 				3417D1482964B18F002F2F36 /* p1.png */,
 				F0AE53F5297844CE00B8E3C0 /* fail.png */,
 				3417D1462964B184002F2F36 /* directions.png */,
@@ -543,6 +546,7 @@
 				3417D1452964B172002F2F36 /* L1.png in Resources */,
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
 				539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */,
+				F0AE53FA29787AFC00B8E3C0 /* sketch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

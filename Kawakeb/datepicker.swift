@@ -16,6 +16,24 @@ extension UITextField {
         datePicker.locale = .current
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.tintColor = .systemBlue
+//
+        let calendar = Calendar.current
+               var minDateComponent = calendar.dateComponents([.day,.month,.year], from: Date())
+                      minDateComponent.day = 01
+                      minDateComponent.month = 01
+                      minDateComponent.year = 2000
+                      let minDate = calendar.date(from: minDateComponent)
+       //               print(" min date : \(minDate)")
+               var maxDateComponent = calendar.dateComponents([.day,.month,.year], from: Date())
+                      maxDateComponent.day = 31
+                       maxDateComponent.month = 12
+                       maxDateComponent.year = 2019
+
+                       let maxDate = calendar.date(from: maxDateComponent)
+       //                print("max date : \(maxDate)")
+               datePicker.minimumDate = minDate
+               datePicker.maximumDate = maxDate
+//
         self.inputView = datePicker
            // view.addSubview(datePicker)
 //        datePicker.preferredDatePickerStyle = .wheels
