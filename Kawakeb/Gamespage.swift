@@ -189,6 +189,21 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     @IBAction func secondAlzahra(_ sender: Any) {
         print("Alzahra")
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let secondViewController = storyboard.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
+//                present(secondViewController, animated: true, completion: nil)
+//                self.performSegue(withIdentifier: "Secondg", sender: self)
+        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+        let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
+        vcc.view.frame = (self.view?.frame)!
+        vcc.view.layoutIfNeeded()
+        UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+        self.view?.window?.rootViewController = vcc
+        }, completion: { completed in
+
+        })
+        
+        
         
     }
     

@@ -33,6 +33,7 @@
 		539AC03B296A216600A56BB8 /* Fiwin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 539AC039296A216600A56BB8 /* Fiwin.sks */; };
 		539AC03C296A216600A56BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539AC03A296A216600A56BB8 /* Assets.xcassets */; };
 		539AC04C2971C7DA00A56BB8 /* EmptyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */; };
+		539BD06B29789AA500F6AFCF /* AlertLogout2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539BD06A29789AA500F6AFCF /* AlertLogout2.swift */; };
 		5610D8E32953B09300E046FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E22953B09300E046FC /* Profile.swift */; };
 		5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E42953B0A400E046FC /* Editprofile.swift */; };
 		5610D8E72953B0B000E046FC /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8E62953B0B000E046FC /* Child.swift */; };
@@ -154,6 +155,7 @@
 		539AC039296A216600A56BB8 /* Fiwin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fiwin.sks; sourceTree = "<group>"; };
 		539AC03A296A216600A56BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyArray.swift; sourceTree = "<group>"; };
+		539BD06A29789AA500F6AFCF /* AlertLogout2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogout2.swift; sourceTree = "<group>"; };
 		5610D8E22953B09300E046FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5610D8E42953B0A400E046FC /* Editprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editprofile.swift; sourceTree = "<group>"; };
 		5610D8E62953B0B000E046FC /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				539BD06A29789AA500F6AFCF /* AlertLogout2.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
@@ -599,6 +602,7 @@
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
 				538DDF83296423D500562581 /* AlertFail.swift in Sources */,
 				568278D32976DDB80075C75F /* ViewHint.swift in Sources */,
+				539BD06B29789AA500F6AFCF /* AlertLogout2.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
 				539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */,
 				3417D14D2964B292002F2F36 /* StoreVC.swift in Sources */,

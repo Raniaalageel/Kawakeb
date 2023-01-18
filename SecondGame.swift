@@ -12,9 +12,18 @@ class SecondGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
     
+    @IBAction func logoutGame(_ sender: UIButton) {
+        print("logout")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                let alertVC = storyboard.instantiateViewController(withIdentifier: "logoutto2") as! AlertLogout2
+        
+        present(alertVC, animated: true)
+        
+    }
 }
