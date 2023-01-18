@@ -49,6 +49,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     var Character = ""
     var CharacterName = ""
     var points = 0
+    var currentRocket = "الصاروخ الأبيض"
+    var currentRockIMG = "rocket2.png"
+var Mercury = "open"
+ var Flower = "close"
+    var Earth = "close"
+    var Mars = "close"
+    var MercuryPoints = 0
+   var  FlowerPoints = 0
+    var  EarthPoints = 0
+    var MarsPoints = 0
+    var rockets = ["الصاروخ الأبيض"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -443,7 +454,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         "dob": Global.shared.userbirthday,
                         "character": Global.shared.usercharacter,
                         "name": Global.shared.usercharacterName,
-                        "points" : points ] as [String : Any]
+                        "points" : points ,
+                        "currentRocket": currentRocket ,
+                        "currentRockIMG": currentRockIMG ,
+                        "Mercury" : Mercury ,
+                        "Flower" : Flower ,
+                        "Earth" : Earth ,
+                        "Mars" : Mars ,
+                        "MercuryPoints" : MercuryPoints ,
+                        "FlowerPoints" : FlowerPoints ,
+                        "EarthPoints" : FlowerPoints ,
+                        "MarsPoints" : MarsPoints ,
+                        "rockets" : rockets
+            ] as [String : Any]
             let db = Firestore.firestore()
                    do {
                     try db.collection("Child").document(id).setData(post)
