@@ -88,9 +88,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
 //           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
            
-           emptyArray = SKSpriteNode(imageNamed: "alertBack")
-           emptyArray.size = .init(width: 600, height: 450)
-           emptyArray .position = CGPoint(x: self.size.width/1.8, y: self.size.height/2.2)
+           emptyArray = SKSpriteNode(imageNamed: "emptyAlert")
+           emptyArray.size = .init(width: 620, height: 430)
+           emptyArray .position = CGPoint(x: self.size.width/1.90, y: self.size.height/2.2)
            emptyArray .zPosition = 0
            
            emptyLabel = SKLabelNode(fontNamed: "System")
@@ -99,12 +99,12 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
            emptyLabel.verticalAlignmentMode = .center
-           emptyLabel.position = CGPoint(x: 691, y: 743)
+           emptyLabel.position = CGPoint(x: 680, y: 723)
            
-           OkButton = SKSpriteNode(imageNamed: "HomebuttonSu")
+           OkButton = SKSpriteNode(imageNamed: "OKButton")
            OkButton.name = "OkButton"
-           OkButton.size = .init(width: 280, height: 180)
-           OkButton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
+           OkButton.size = .init(width: 140, height: 60)
+           OkButton.position = CGPoint(x: frame.width * 0.53, y: frame.height * 0.34)
            
            
            
