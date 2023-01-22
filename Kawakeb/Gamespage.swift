@@ -35,6 +35,13 @@ class Gamespage: UIViewController, EditprofileDelegate {
     @IBOutlet weak var almarighbutton: UIButton!
     @IBOutlet weak var almarighLuck: UIImageView!
     
+    @IBOutlet weak var AuransLuck: UIImageView!
+    @IBOutlet weak var ZuhalLuck: UIImageView!
+    
+    @IBOutlet weak var almashtryLuck: UIImageView!
+    
+    @IBOutlet weak var nubtonLuck: UIImageView!
+    
     func userUpdated(child: Child) {
         uuname.text = child.name
         uuemail.text = child.email
@@ -74,8 +81,13 @@ class Gamespage: UIViewController, EditprofileDelegate {
         checkOpenClose()
        
         print("origiin",self.rocketimage.frame.origin.y)
-       // rocket.animationImages =
+        
+        self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / 4))
+
+       
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updaterocket), userInfo: nil, repeats: true)
+        
+        
      
         
                // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
@@ -155,24 +167,26 @@ class Gamespage: UIViewController, EditprofileDelegate {
             if(self.Flower! == "open" ){
                 self.alzahraLuck.isHidden = true
                 self.alzahrabutton.isEnabled = true
-            }else {
-                self.alzahrabutton.isEnabled = false
             }
+//            else {
+//                self.alzahrabutton.isEnabled = false
+//            }
             
             if(self.Earth! == "open" ){
                 self.alarghLuck.isHidden = true
                 self.alarghbutton.isEnabled = true
                 
-            }else{
-                self.alarghbutton.isEnabled = false
             }
+//            else{
+//                self.alarghbutton.isEnabled = false
+//            }
             if(self.Mars! == "open" ){
                 self.almarighLuck.isHidden = true
                 self.almarighbutton.isEnabled = true
             }
-            else{
-                self.almarighbutton.isEnabled = false
-            }
+//            else{
+//                self.almarighbutton.isEnabled = false
+//            }
 
           }
         
@@ -189,10 +203,29 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     @IBAction func secondAlzahra(_ sender: Any) {
         print("Alzahra")
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let secondViewController = storyboard.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
-//                present(secondViewController, animated: true, completion: nil)
-//                self.performSegue(withIdentifier: "Secondg", sender: self)
+        
+        if(self.Flower == "close"){
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.alzahraLuck.frame.origin.y -= -50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.alzahraLuck.frame.origin.y -= 50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.alzahraLuck.frame.origin.x -= -30
+            },completion: nil)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                self.alzahraLuck.frame.origin.x -= 30
+            },completion: nil)
+            
+            
+            
+        }
+        if(self.Flower == "open"){
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
         let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
         vcc.view.frame = (self.view?.frame)!
@@ -202,6 +235,9 @@ class Gamespage: UIViewController, EditprofileDelegate {
         }, completion: { completed in
 
         })
+        }
+
+        
         
         
         
@@ -209,30 +245,150 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     @IBAction func thirdAlargh(_ sender: Any) {
         print("Alargh")
+        if(self.Earth == "close"){
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.alarghLuck.frame.origin.y -= -50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.alarghLuck.frame.origin.y -= 50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.alarghLuck.frame.origin.x -= -30
+            },completion: nil)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                self.alarghLuck.frame.origin.x -= 30
+            },completion: nil)
+            
+            
+            
+        }
     }
     
     @IBAction func fourthAlmarigh(_ sender: Any) {
         print("Almarigh")
+        if(self.Mars == "close"){
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.almarighLuck.frame.origin.y -= -50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.almarighLuck.frame.origin.y -= 50
+            },completion: nil)
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.almarighLuck.frame.origin.x -= -30
+            },completion: nil)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                self.almarighLuck.frame.origin.x -= 30
+            },completion: nil)
+            
+            
+        }
+    }
+    
+    
+    
+    @IBAction func fiveAlmashtry(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.almashtryLuck.frame.origin.y -= -50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.almashtryLuck.frame.origin.y -= 50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.almashtryLuck.frame.origin.x -= -30
+        },completion: nil)
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.almashtryLuck.frame.origin.x -= 30
+        },completion: nil)
+    }
+    
+    
+    @IBAction func sixzuhal(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.ZuhalLuck.frame.origin.y -= -50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.ZuhalLuck.frame.origin.y -= 50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.ZuhalLuck.frame.origin.x -= -30
+        },completion: nil)
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.ZuhalLuck.frame.origin.x -= 30
+        },completion: nil)
+        
+    }
+    
+    
+    @IBAction func sevenAurans(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.AuransLuck.frame.origin.y -= -50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.AuransLuck.frame.origin.y -= 50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.AuransLuck.frame.origin.x -= -30
+        },completion: nil)
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.AuransLuck.frame.origin.x -= 30
+        },completion: nil)
+        
+    }
+    
+    @IBAction func eightNapton(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.nubtonLuck.frame.origin.y -= -50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.nubtonLuck.frame.origin.y -= 50
+        },completion: nil)
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            self.nubtonLuck.frame.origin.x -= -30
+        },completion: nil)
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.nubtonLuck.frame.origin.x -= 30
+        },completion: nil)
     }
     
     @objc func updaterocket(){
-        
+//        UIView.animate(withDuration: 2, animations: {
+//            self.rocketimage.frame.origin.y -= -50
+//           // print("origiin before",self.rocketimage.frame.origin.y)
+//        },completion: nil)
+//
+//        UIView.animate(withDuration: 1, animations: {
+//            self.rocketimage.frame.origin.y -= 50
+//          //  print("origiin trturn",self.rocketimage.frame.origin.y)
+//
+//        },completion: nil)
         
         UIView.animate(withDuration: 2, animations: {
-            self.rocketimage.frame.origin.y -= -50
-           // print("origiin before",self.rocketimage.frame.origin.y)
-        },completion: nil)
+        self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / 4.03))
         
+        },completion: nil)
         UIView.animate(withDuration: 1, animations: {
-            self.rocketimage.frame.origin.y -= 50
-          //  print("origiin trturn",self.rocketimage.frame.origin.y)
-
+            self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / -4.03))
         },completion: nil)
-        
-    //    self.rocketimage.image = self.rocketimage.image?.imageFlippedForRightToLeftLayoutDirection()
-   // self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / 2)) //90 degree
-
-        
         
     }
     

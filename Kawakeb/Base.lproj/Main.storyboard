@@ -511,19 +511,59 @@
                                 <rect key="frame" x="-47" y="-22" width="207" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-4b-N1Y">
+                                <rect key="frame" x="164" y="493" width="138" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="fiveAlmashtry:" destination="9rX-g3-OdF" eventType="touchUpInside" id="MhS-MR-snL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-aw-fyH">
+                                <rect key="frame" x="629" y="388" width="77" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="sixzuhal:" destination="9rX-g3-OdF" eventType="touchUpInside" id="3iw-g5-U7X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-ru-12W">
+                                <rect key="frame" x="587" y="188" width="74" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="eightNapton:" destination="9rX-g3-OdF" eventType="touchUpInside" id="cZg-9k-HzP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AH-kQ-mJg">
+                                <rect key="frame" x="115" y="269" width="95" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="sevenAurans:" destination="9rX-g3-OdF" eventType="touchUpInside" id="Rmk-Kh-FRE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQk-GR-xT1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fu9-FZ-bxO"/>
                     <connections>
+                        <outlet property="AuransLuck" destination="jJ9-Lu-IUL" id="dXq-ee-1cC"/>
+                        <outlet property="ZuhalLuck" destination="Jrz-eo-IUY" id="XIU-IR-daZ"/>
                         <outlet property="alarghLuck" destination="XrH-Q1-6gC" id="jAn-3l-WWB"/>
                         <outlet property="alarghbutton" destination="Mwz-YR-ny8" id="VAv-SR-T8b"/>
                         <outlet property="almarighLuck" destination="F7O-VP-4fL" id="4vP-kK-4hF"/>
                         <outlet property="almarighbutton" destination="KhN-UY-NfQ" id="7ZO-VH-szn"/>
+                        <outlet property="almashtryLuck" destination="yfv-k4-d9r" id="oOW-Bt-2K0"/>
                         <outlet property="alzahraLuck" destination="ojG-6C-5Uz" id="jLi-U1-Obj"/>
                         <outlet property="alzahrabutton" destination="k9K-Kf-scH" id="rWv-rb-ROt"/>
                         <outlet property="char" destination="adB-py-T2J" id="hJ9-SZ-zE6"/>
+                        <outlet property="nubtonLuck" destination="eT3-FA-pEf" id="fiI-pw-QW1"/>
                         <outlet property="rocketimage" destination="rhm-fh-oZS" id="1ej-k8-ADB"/>
                         <outlet property="uudob" destination="UPl-SR-wqr" id="WIF-oc-LhF"/>
                         <outlet property="uuemail" destination="NOY-of-HBv" id="6qz-Lz-4yK"/>
@@ -4217,6 +4257,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="e2g-Cb-vi1"/>
         <segue reference="0Iz-LO-L6a"/>
         <segue reference="KyA-kp-3OD"/>
         <segue reference="OGu-ep-2YN"/>
