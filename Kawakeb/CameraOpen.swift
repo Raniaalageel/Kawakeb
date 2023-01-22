@@ -63,7 +63,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         
             Global.shared.enabled = true
             
-            if session.isRunning {
+            if Global.shared.session.isRunning {
         print("session.isRunning",session.isRunning)
                     DispatchQueue.global().async {
                     print("STOP Session")

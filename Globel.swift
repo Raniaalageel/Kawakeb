@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Global{
     public static let shared = Global()
@@ -15,7 +16,7 @@ class Global{
     public var userbirthday = ""
     public var usercharacter = ""
     public var usercharacterName = ""
-    
+    var session = AVCaptureSession()
     var enabled = false
     var  stopis = false
       

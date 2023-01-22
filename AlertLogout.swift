@@ -21,7 +21,7 @@ class AlertLogout: UIViewController {
     @IBAction func logoutGame(_ sender: UIButton) {
         print("yes go out")
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-        let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
+        let vcc = storyboardd.instantiateViewController(withIdentifier: "toe") as! too
         vcc.view.frame = (self.view?.frame)!
         vcc.view.layoutIfNeeded()
         UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{

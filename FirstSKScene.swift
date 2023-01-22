@@ -251,7 +251,19 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-               for touch in touches {
+           //
+        guard let touch = touches.first else { return }
+        print("touch",touch)
+        let location = touch.location(in: self)
+        print("location",location)
+        touchbegain = touch.location(in: self)
+        print(" touchbegain ",touchbegain)
+        let tappedNodes = nodes(at: location)
+        print("tappedNodes",tappedNodes)
+        
+        //
+        
+        for touch in touches {
                          let location = touch.location(in: self)
                          let touchedNode = atPoint(location)
                    
@@ -324,6 +336,11 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        
                    }
                     }
+    
+   
+   
+    
+    
     
     func calculatePoint(){
         

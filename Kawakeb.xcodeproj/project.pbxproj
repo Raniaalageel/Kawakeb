@@ -15,6 +15,8 @@
 		3417D14F2964B2C2002F2F36 /* storeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417D14E2964B2C2002F2F36 /* storeCell.swift */; };
 		3481A9DF29544B8F002431C7 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9DE29544B8F002431C7 /* mainBG.png */; };
 		3481A9E129544BAF002431C7 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3481A9E029544BAF002431C7 /* white.png */; };
+		530B2027297917FD00115BE6 /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 530B2026297917FD00115BE6 /* LOGO.png */; };
+		530B2029297D049200115BE6 /* too.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B2028297D049200115BE6 /* too.swift */; };
 		535650272976CD820043257D /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 535650262976CD820043257D /* fail.png */; };
 		5356502929770E2F0043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502829770E2F0043257D /* MyObjectDetector2023.mlmodel */; };
 		5356502B29770F0C0043257D /* layerwithCmaeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */; };
@@ -87,7 +89,6 @@
 		F02AC8F8294A12E600152C07 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F7294A12E600152C07 /* FirebaseRemoteConfigSwift */; };
 		F02AC8FA294A12E600152C07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F9294A12E600152C07 /* FirebaseStorage */; };
 		F02AC8FC294A12E600152C07 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8FB294A12E600152C07 /* FirebaseStorageCombine-Community */; };
-		F0F20EAC2977140F00B28CC6 /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F20EAB2977140F00B28CC6 /* LOGO.png */; };
 		F0F920B1295330F20045A75C /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B0295330F20045A75C /* Globel.swift */; };
 		F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B2295330FE0045A75C /* RegisterViewController.swift */; };
 		F0F920B52953335D0045A75C /* backk.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F920B42953335D0045A75C /* backk.png */; };
@@ -130,6 +131,8 @@
 		3417D14E2964B2C2002F2F36 /* storeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCell.swift; sourceTree = "<group>"; };
 		3481A9DE29544B8F002431C7 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		3481A9E029544BAF002431C7 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		530B2026297917FD00115BE6 /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = "../../../../../Applications/kwakkp picture/LOGO.png"; sourceTree = "<group>"; };
+		530B2028297D049200115BE6 /* too.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = too.swift; sourceTree = "<group>"; };
 		535650262976CD820043257D /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		5356502829770E2F0043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layerwithCmaeraViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +181,6 @@
 		F02AC8B5294A111700152C07 /* KawakebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITests.swift; sourceTree = "<group>"; };
 		F02AC8B7294A111700152C07 /* KawakebUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F0F20EAB2977140F00B28CC6 /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGO.png; path = "../../kawakeb photo/LOGO.png"; sourceTree = "<group>"; };
 		F0F920B0295330F20045A75C /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F0F920B2295330FE0045A75C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0F920B42953335D0045A75C /* backk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backk.png; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				530B2028297D049200115BE6 /* too.swift */,
 				5356502A29770F0C0043257D /* layerwithCmaeraViewController.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
@@ -313,7 +316,7 @@
 				A2A1C764294DE43600E0D45E /* Validation.swift */,
 				F0F920CA295335210045A75C /* Inter-Regular.ttf */,
 				F02AC89D294A111600152C07 /* Assets.xcassets */,
-				F0F20EAB2977140F00B28CC6 /* LOGO.png */,
+				530B2026297917FD00115BE6 /* LOGO.png */,
 				3417D1442964B172002F2F36 /* L1.png */,
 				539AC02F2969EE1F00A56BB8 /* alertsuc.png */,
 				539AC0312969EE3300A56BB8 /* alertfail.png */,
@@ -513,7 +516,7 @@
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
 				F02AC89C294A111300152C07 /* Main.storyboard in Resources */,
 				539AC0322969EE3300A56BB8 /* alertfail.png in Resources */,
-				F0F20EAC2977140F00B28CC6 /* LOGO.png in Resources */,
+				530B2027297917FD00115BE6 /* LOGO.png in Resources */,
 				3417D1432964B15C002F2F36 /* redCircle.png in Resources */,
 				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
 				539AC03C296A216600A56BB8 /* Assets.xcassets in Resources */,
@@ -573,6 +576,7 @@
 				538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */,
 				3417D14F2964B2C2002F2F36 /* storeCell.swift in Sources */,
 				A2451FE72976B2B400121B5C /* i4ViewController.swift in Sources */,
+				530B2029297D049200115BE6 /* too.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
