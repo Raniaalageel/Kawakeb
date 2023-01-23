@@ -24,8 +24,9 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
     var winalert :SKSpriteNode!
     var faialert :SKSpriteNode!
     var points:Int!
-    var    MercuryPoints:Int!
-    var mercpoints:Int!
+    
+    var   FlowerPoints:Int!
+    var Flowcpoints:Int!
     
     var   buttonnext :SKSpriteNode!
     var   hombutton :SKSpriteNode!
@@ -191,10 +192,10 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                        actions.append(SKAction.move(by: .init(dx: 300, dy: 0), duration: 2))
                    case "left":
                        print(" move left")
-                       actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 3))
+                       actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
                    case "up":
                        print(" move up")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 3))
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
                    case "down":
                        print(" move down")
                        actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
@@ -204,7 +205,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                }
 
                actions.append(.run({
-                   //self.winCondition()
+                   self.winCondition()
                }))
                player.run(.sequence(actions))
 
@@ -221,7 +222,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
                
-               if(player.position.x >= 270.0 && player.position.x <= 298.0   && player.position.y >= 600.5 && player.position.y <= 620.5){
+               if(player.position.x >= 540.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 400.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -251,7 +252,9 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                for touch in touches {
                          let location = touch.location(in: self)
                          let touchedNode = atPoint(location)
-                   
+                   print("location",location)
+                   print("touchedNode",touchedNode)
+
                          if touchedNode.name == "pressNext" {
                              print("pressNext")
                              let storyboardd = UIStoryboard(name: "Main", bundle: nil)
@@ -293,7 +296,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    else if touchedNode.name == "buttotryagain" {
                        print("buttotryagain")
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
                        vcc.view.frame = (self.view?.frame)!
                        vcc.view.layoutIfNeeded()
                        UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
@@ -307,7 +310,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    else if touchedNode.name == "OkButton" {
                        print("OkButton")
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Firstautard") as! FirstGame
+                       let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
                        vcc.view.frame = (self.view?.frame)!
                        vcc.view.layoutIfNeeded()
                        UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
@@ -333,12 +336,12 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                         }
                         else {
                             print("SUCCESS??")
+                        
+            self.FlowerPoints = snapshot!.documents.first!.get("FlowerPoints") as! Int
+                print("??????FlowerPoints",self.FlowerPoints!)
                             
-            self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
-                print("??????MercuryPoints",self.MercuryPoints!)
-                            
-            self.mercpoints = self.MercuryPoints!
-            print("self33,",self.mercpoints!)
+            self.Flowcpoints = self.FlowerPoints!
+            print("self33,",self.Flowcpoints!)
                             
                 self.points = snapshot!.documents.first!.get("points") as! Int
                             print("??????points",self.points!)
@@ -347,11 +350,11 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
             let student_docID = snapshot!.documents.first!.documentID
         
             
-            if(self.mercpoints! == 0 ){
+            if(self.Flowcpoints! == 0 ){
             self.db.collection("Child").document(student_docID).setData([
-                "points": self.points + 2 ,
-                "Flower" : "open" ,
-                "MercuryPoints": 1
+                "points": self.points + 4 ,
+                "Earth" : "open" ,
+                "FlowerPoints": 1
             ],merge:true) { err in
             if let err = err {
                 print("Error writing document: \(err)")

@@ -188,10 +188,10 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        actions.append(SKAction.move(by: .init(dx: 195, dy: 0), duration: 2))
                    case "left":
                        print(" move left")
-                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 3))
+                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 2))
                    case "up":
                        print(" move up")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: 100), duration: 3))
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: 100), duration: 2))
                    case "down":
                        print(" move down")
                        actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
