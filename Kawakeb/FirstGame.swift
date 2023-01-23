@@ -93,6 +93,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
     
         @IBAction func gobutton(_ sender: UIButton) {
             print("go is pressed")
+           
             
             Global.shared.enabled = true //add all array
             Global.shared.stopis = true   //stopcamer

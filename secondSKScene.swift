@@ -1,9 +1,10 @@
 //
-//  FirstSKScene.swift
+//  secondSKScene.swift
 //  Kawakeb
 //
-//  Created by Sara Alsaleh on 10/06/1444 AH.
+//  Created by Sara Alsaleh on 01/07/1444 AH.
 //
+
 
 import UIKit
 import SpriteKit
@@ -11,9 +12,8 @@ import GameplayKit
 import CoreMotion
 import Firebase
 import FirebaseFirestore
+class secondSKScene: SKScene,SKPhysicsContactDelegate {
 
-class FirstSKScene: SKScene,SKPhysicsContactDelegate {
-    
     let db = Firestore.firestore()
     
     var player:SKSpriteNode!
@@ -49,7 +49,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            print("didMove", frame)
            ///
            
-           let background = SKSpriteNode(imageNamed: "FirstGameWithOut")
+           let background = SKSpriteNode(imageNamed: "secondGame-1")
            background.size = self.size
            background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
            background.zPosition = 0
@@ -66,8 +66,11 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
            //Global.shared.rocketImage
          player.size = .init(width: 100, height: 190)
-           player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.35)
+           player.position = CGPoint(x: frame.width * 0.8, y: frame.height * 0.7)
            self.addChild(player)
+           
+           
+           
            //////////////////sucsses alert
            winalert = SKSpriteNode(imageNamed: "sucsses")
            winalert.size = .init(width: 850, height: 990)
@@ -176,36 +179,36 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                let moveDuration = 3
                var actions: [SKAction] = []
                for label in Global.shared.allLablels {
-                 
+
         var result = Global.shared.allLablels[alliteration].split(separator: ch)
                             var resullabel = String(result[0])
-                                
+
 //                        print( resullabel, "in the for loop")
 //                   print(label, "loop")
                    switch resullabel {
                    case "right":
                        print(" move right")
-                       actions.append(SKAction.move(by: .init(dx: 195, dy: 0), duration: 2))
+                       actions.append(SKAction.move(by: .init(dx: 300, dy: 0), duration: 2))
                    case "left":
                        print(" move left")
-                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 3))
+                       actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 3))
                    case "up":
                        print(" move up")
                        actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 3))
                    case "down":
                        print(" move down")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
                    default: print("")
                    }
                    alliteration += 1
                }
-               
+
                actions.append(.run({
-                   self.winCondition()
+                   //self.winCondition()
                }))
                player.run(.sequence(actions))
-            
-               
+
+
            }
            
        }
@@ -213,18 +216,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
        
        
-       func alertSucsses() -> AlertScs {
-           let storyboard = UIStoryboard(name: "Main", bundle: .main)
-           let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertSF") as! AlertScs
-           
-           return alertVC
-       }
        
-       func alertFail() -> AlertFail {
-           let storyboard = UIStoryboard(name: "Main", bundle: .main)
-           let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertFail") as! AlertFail
-           return alertVC
-       }
        
        
     func winCondition() {
@@ -374,8 +366,5 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
         }
       
     }
-    
-        
-    
     
 }

@@ -19,6 +19,7 @@
 		34CDA8AA2977017800C2ADF3 /* updateRocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDA8A92977017800C2ADF3 /* updateRocketViewController.swift */; };
 		34CDA8B2297703AF00C2ADF3 /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CDA8B1297703AD00C2ADF3 /* LOGO.png */; };
 		34CDA8B62977052000C2ADF3 /* uppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 34CDA8B52977052000C2ADF3 /* uppp.png */; };
+		530B202B297E57D900115BE6 /* secondSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B202A297E57D900115BE6 /* secondSKScene.swift */; };
 		5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
@@ -141,6 +142,7 @@
 		34CDA8A92977017800C2ADF3 /* updateRocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateRocketViewController.swift; sourceTree = "<group>"; };
 		34CDA8B1297703AD00C2ADF3 /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGO.png; sourceTree = "<group>"; };
 		34CDA8B52977052000C2ADF3 /* uppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uppp.png; sourceTree = "<group>"; };
+		530B202A297E57D900115BE6 /* secondSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondSKScene.swift; sourceTree = "<group>"; };
 		5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				530B202A297E57D900115BE6 /* secondSKScene.swift */,
 				539BD06A29789AA500F6AFCF /* AlertLogout2.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
@@ -596,6 +599,7 @@
 				538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */,
 				3417D14F2964B2C2002F2F36 /* storeCell.swift in Sources */,
 				A2451FE72976B2B400121B5C /* i4ViewController.swift in Sources */,
+				530B202B297E57D900115BE6 /* secondSKScene.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
