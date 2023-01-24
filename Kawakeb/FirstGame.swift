@@ -44,8 +44,9 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             
         //!!!!
 //            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
-     //!!!!!!!!!!!!!!
-            CameraOpen().viewDidLoad()
+     //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
+            
+        openis()
             
            // trytocall()
            
@@ -73,6 +74,10 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
     //        v.text = "Hello"
     //        self.view.addSubview(v)
         }
+    func openis(){
+        CameraOpen().viewDidLoad()
+        
+    }
         
     @IBAction func logoutButton(_ sender: UIButton) {
         
@@ -94,11 +99,21 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         @IBAction func gobutton(_ sender: UIButton) {
             print("go is pressed")
            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                print("after 10 sec")
+//                print("after 10 sec")
+//                ;print("after 10 sec")
+//                print("after 10 sec")
+//                print("after 10 sec")
+//                print("after 10 sec")
+//                    }
             
             Global.shared.enabled = true //add all array
             Global.shared.stopis = true   //stopcamer
-            CameraOpen().Stopsessyion()
+        //CameraOpen().Stopsessyion()
 
+            
+            
 //
 //            if(Global.shared.allLablels.isEmpty){
 //
@@ -119,7 +134,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             Global.shared.stopis = false  //OPEN CAMERA
             Global.shared.enabled = false //not appned array
             //!!!!!!!!!!!!!!!
-                CameraOpen().viewDidLoad()   //call class CameraOpen
+               // CameraOpen().viewDidLoad()   //call class CameraOpen
 
             
             

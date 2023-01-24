@@ -74,19 +74,17 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         }
         func Stopsessyion(){
             print("Button tapped")
-            
+            if session.isRunning {
+                print("is closed")
+                   DispatchQueue.global().async {
+                   print("STOP Session")
+                       self.session.stopRunning()
+                   }
+               }
             
           
             
-    // print("session.isRunning",session.isRunning )
-    //         if session.isRunning  == false {
-    //            print("session.isRunning ")
-    //                DispatchQueue.global().async {
-    //                print("STOP Session")
-    //                    self.session.stopRunning()
-    //                }
-    //            }
-           // stpAgain()
+   
         }
         
         
@@ -161,7 +159,19 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             rootLayer = view.layer
             previewLayer.frame = rootLayer.bounds
             rootLayer.addSublayer(previewLayer)
+            
+//            if (Global.shared.stopis == true){
+//            print("last try",session.isRunning )
+//                    if session.isRunning {
+//                           DispatchQueue.global().async {
+//                           print("STOP Session")
+//                               self.session.stopRunning()
+//                           }                      }
+           // }
+          //  else if (Global.shared.stopis == false){
             session.startRunning()
+             //   print("Stop camera @@@")
+           // }
             
             self.view.addSubview(button)
         }
@@ -216,15 +226,15 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
       // detectionOverlay.sublayers = nil
             print("stopis",Global.shared.stopis)
             
-            if (Global.shared.stopis == true){
-            print("last try",session.isRunning )
-                    if session.isRunning {
-                           DispatchQueue.global().async {
-                           print("STOP Session")
-                               self.session.stopRunning()
-                           }
-                       }
-            }
+//            if (Global.shared.stopis == true){
+//            print("last try",session.isRunning )
+//                    if session.isRunning {
+//                           DispatchQueue.global().async {
+//                           print("STOP Session")
+//                               self.session.stopRunning()
+//                           }
+//                       }
+//            }
             
             for observation in results where observation is VNRecognizedObjectObservation {
                 guard let objectObservation = observation as? VNRecognizedObjectObservation else { continue }
@@ -312,7 +322,18 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             
                 Global.shared.allLablels.append(labels)
             print(" allLablels with append forArray ", Global.shared.allLablels)
+                
             forArray()
+            removeDuplicate()
+                
+                if session.isRunning {
+                    print("!!")
+                       DispatchQueue.global().async {
+                       print("????bbb")
+                           self.session.stopRunning()
+                       }
+                   }
+                
             }
           
             
@@ -347,25 +368,15 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                     var resullabelnext = String(result2[0])
                     print("resultxnext",resultxnext)
                     print("resultynext ",resultynext)
-                  print("resullabelnext",resullabelnext)
+                    print("resullabelnext",resullabelnext)
                     
-        if  ( resullabel.elementsEqual(resullabelnext)  ) {
-                        print("resullabel==resullabelnext",resullabel,resullabelnext)
-
-     if  ( resultx + 17 >= resultxnext  && resulty + 17 >= resultynext ){
-                    print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
-                        print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-
-         Global.shared.allLablels.remove(at: indexin)
-                        print(" allLablels after remove ", Global.shared.allLablels)
-                    }
-                    }
+                    
                     var temp = ""
                     var indexinpostion = alliteration + 1
 
-                    if(Global.shared.allLablels.indices.contains(indexinpostion)){
+                    if(Global.shared.allLablels.indices.contains(indexin)){
                         
-        var resultpostion = Global.shared.allLablels[indexinpostion].split(separator: ch)
+        var resultpostion = Global.shared.allLablels[indexin].split(separator: ch)
 
                     var resultXnextPostion = Int(resultpostion[1])!
 
@@ -374,10 +385,25 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                         if(resultx > resultXnextPostion){
                         print("eneter   ???",resultx,">",resultXnextPostion)
             temp = Global.shared.allLablels[alliteration]
-                            Global.shared.allLablels[alliteration] = Global.shared.allLablels[indexinpostion]
-                            Global.shared.allLablels[indexinpostion] =  temp
+                            Global.shared.allLablels[alliteration] = Global.shared.allLablels[indexin]
+                            Global.shared.allLablels[indexin] =  temp
                     }
         }
+                    
+//        if  ( resullabel.elementsEqual(resullabelnext)  ) {
+//                        print("resullabel==resullabelnext",resullabel,resullabelnext)
+//
+//
+////     if  ( resultx + 17 >= resultxnext  && resulty + 17 >= resultynext ){
+//        if  ( resultx + 2 >= resultxnext ){
+//                    print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
+//                        print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+//
+//         Global.shared.allLablels.remove(at: indexin)
+//                        print(" allLablels after remove ", Global.shared.allLablels)
+//                    }
+//                    }
+            
                     
                   indexin += 1
                 }
@@ -386,10 +412,70 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                 print("alliteration",   alliteration)
             alliteration += 1
                 }
-            print(" FINAL allLablels  ",Global.shared.allLablels)
-              
+            print(" FINAL allLablels after sort  ",Global.shared.allLablels)
+            
+//            removeDuplicate()
         }
+    func removeDuplicate(){
         
+        print("remove func")
+        var alliteration = 0
+        
+        while alliteration < Global.shared.allLablels.count  {
+        var ch = Character(":")
+        var result = Global.shared.allLablels[alliteration].split(separator: ch)
+            
+            var resultx = Int(result[1])!
+            var resulty = Int(result[2])!
+            var resullabel = String(result[0])
+            
+            print("resultx ",resultx)
+            print("resulty ",resulty)
+            print("resullabel",resullabel)
+
+            var indexin = alliteration + 1
+            
+            while indexin < Global.shared.allLablels.count  {
+                print("indexin",indexin)
+                var result2 = Global.shared.allLablels[indexin].split(separator: ch)
+
+                var resultxnext = Int(result2[1])!
+                var resultynext = Int(result2[2])!
+                var resullabelnext = String(result2[0])
+                print("resultxnext",resultxnext)
+                print("resultynext ",resultynext)
+                print("resullabelnext",resullabelnext)
+                
+                
+            
+            
+                
+        if  ( resullabel.elementsEqual(resullabelnext)  ) {
+                        print("resullabel==resullabelnext",resullabel,resullabelnext)
+
+
+//     if  ( resultx + 17 >= resultxnext  && resulty + 17 >= resultynext ){
+        if  ( resultx + 2 >= resultxnext ){
+                    print(" if  ( resultx <= resultxnext + 10 || resulty <= resultynext + 10 )",resultx + 25,resultxnext , resulty + 25 , resultynext)
+                        print(" remove XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+
+         Global.shared.allLablels.remove(at: indexin)
+                        print(" allLablels after remove ", Global.shared.allLablels)
+                    }
+                    }
+        
+                
+              indexin += 1
+            }
+                
+            
+            print("alliteration",   alliteration)
+        alliteration += 1
+            }
+        print(" ******* FINAL allLablels after sort and remove  ",Global.shared.allLablels)
+        
+        
+    }
         func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence) -> CATextLayer {
             
     //        labels = identifier
