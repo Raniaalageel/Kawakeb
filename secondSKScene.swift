@@ -42,7 +42,8 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
     
-
+    var arrayWithLabel = [String]()
+    
     
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
@@ -118,7 +119,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            successLabel = SKLabelNode(fontNamed: "System")
-           successLabel.text = String("نجحت بالوصول إلى كوكب الزهرة!")
+           successLabel.text = String("نجحت بالوصول إلى كوكب الأرض!")
            successLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            successLabel.fontSize = 36.0
            successLabel.horizontalAlignmentMode = .right
@@ -183,7 +184,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
 
         var result = Global.shared.allLablels[alliteration].split(separator: ch)
                             var resullabel = String(result[0])
-
+                  arrayWithLabel.append(resullabel)
 //                        print( resullabel, "in the for loop")
 //                   print(label, "loop")
                    switch resullabel {
@@ -211,6 +212,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
 
 
            }
+           print("arrawithLabel:",arrayWithLabel)
            
        }
        
@@ -221,7 +223,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
        
        
     func winCondition() {
-               
+        if(Global.shared.winAlertSecondGame == arrayWithLabel){
                if(player.position.x >= 540.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 400.5){
                    print("is win")
                    self.addChild(winalert )
@@ -235,9 +237,8 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    player.run(actionplayer)
                    
                    
-                   
-                   
                    calculatePoint()
+               }
                    
                } else {
                    print("not win")
@@ -258,7 +259,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                          if touchedNode.name == "pressNext" {
                              print("pressNext")
                              let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-                             let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
+                             let vcc = storyboardd.instantiateViewController(withIdentifier: "Thirddg") as! ThirdGame
                              vcc.view.frame = (self.view?.frame)!
                              vcc.view.layoutIfNeeded()
                              UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{

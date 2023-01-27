@@ -20,6 +20,9 @@ class Global{
     var  stopis = false
       
     var allLablels = [String]()
+    var winAlertFirstGame = ["left","left","up","up"]
+    var winAlertSecondGame = ["left","left","down","down","right"]
+    var WinAlertThirdGame = ["left"]
     public   var endgame = false
 var rocketImage = ""
     

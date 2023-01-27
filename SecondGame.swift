@@ -42,7 +42,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         
         
         //!!!!
-        Global.shared.allLablels = ["left:8:9","left:9:1","down:9:9","right:4:4"]
+        Global.shared.allLablels = ["left","left","down","down","right"]
      //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()

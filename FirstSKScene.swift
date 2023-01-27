@@ -41,8 +41,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
     
-
-    
+    var arrayWithLabel = [String]()
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
@@ -179,6 +178,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                  
         var result = Global.shared.allLablels[alliteration].split(separator: ch)
                             var resullabel = String(result[0])
+                   arrayWithLabel.append(resullabel)
                                 
 //                        print( resullabel, "in the for loop")
 //                   print(label, "loop")
@@ -207,7 +207,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
             
                
            }
-           
+           print("arrawithLabel:",arrayWithLabel)
        }
        
        
@@ -228,7 +228,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
        
     func winCondition() {
-               
+        if(Global.shared.winAlertFirstGame == arrayWithLabel){
                if(player.position.x >= 270.0 && player.position.x <= 298.0   && player.position.y >= 600.5 && player.position.y <= 620.5){
                    print("is win")
                    self.addChild(winalert )
@@ -245,7 +245,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    
                    calculatePoint()
-                   
+               }
                } else {
                    print("not win")
                    self.addChild(faialert)
