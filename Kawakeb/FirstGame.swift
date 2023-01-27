@@ -15,7 +15,8 @@ import FirebaseFirestore
 
 class FirstGame: UIViewController {
 
-       
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var rocketImage: UIImageView!
     let db = Firestore.firestore()
     var currentRockIMG:String!
@@ -98,15 +99,15 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
     
         @IBAction func gobutton(_ sender: UIButton) {
             print("go is pressed")
-           
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                print("after 10 sec")
-//                print("after 10 sec")
-//                ;print("after 10 sec")
-//                print("after 10 sec")
-//                print("after 10 sec")
-//                print("after 10 sec")
-//                    }
+            
+            
+            let numGif = UIImage.gifImageWithName("gifNum")
+            imageView.image = numGif
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                print("after 10 sec")
+               
+                
             
             Global.shared.enabled = true //add all array
             Global.shared.stopis = true   //stopcamer
@@ -125,7 +126,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
 //                present(alertVC, animated: true)
 //
 //            }else {
-            trytocallSCene()  //GO TOSKSCENE
+                self.trytocallSCene()  //GO TOSKSCENE
             
             
             //!!!!!!!!!!!!!!!
@@ -147,6 +148,6 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             //            }
         }
             
-//        }
+        }
 
    }

@@ -16,6 +16,8 @@ class SecondGame: UIViewController {
 
     @IBOutlet weak var rocketImage: UIImageView!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     let db = Firestore.firestore()
     var scene: FirstSKScene?
     var currentRockIMG:String!
@@ -42,15 +44,18 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         
         
         //!!!!
-        Global.shared.allLablels = ["left","left","down","down","right"]
+//        Global.shared.allLablels = ["left","left","down","down","right"]
      //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()
 
-        
+        openis()
     }
     
-
+    func openis(){
+        CameraOpen().viewDidLoad()
+        
+    }
     
     @IBAction func logoutGame(_ sender: UIButton) {
         print("logout")
@@ -67,6 +72,13 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         print("go is pressed")
        
         
+        let numGif = UIImage.gifImageWithName("gifNum")
+        imageView.image = numGif
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            print("after 10 sec")
+        
+        
         Global.shared.enabled = true //add all array
         Global.shared.stopis = true   //stopcamer
         CameraOpen().Stopsessyion()
@@ -82,10 +94,11 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
 //                present(alertVC, animated: true)
 //
 //            }else {
-        trytocallSCene()  //GO TOSKSCENE
+            self.trytocallSCene()  //GO TOSKSCENE
         
         
-        //!!!!!!!!!!!!!!!Global.shared.allLablels = []
+        //!!!!!!!!!!!!!!!
+            Global.shared.allLablels = []
         print("again open camera ")
         Global.shared.stopis = false  //OPEN CAMERA
         Global.shared.enabled = false //not appned array
@@ -101,7 +114,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         //                }
         //            }
     }
-
+    }
     
     
     

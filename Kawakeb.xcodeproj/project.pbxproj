@@ -57,6 +57,8 @@
 		A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FEC2976BB4D00121B5C /* G1Alert.swift */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
+		F01B054729843AA5003C45AA /* gifNum.gif in Resources */ = {isa = PBXBuildFile; fileRef = F01B054629843AA1003C45AA /* gifNum.gif */; };
+		F01B054929843ADC003C45AA /* gifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B054829843ADB003C45AA /* gifLoad.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
 		F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC896294A111300152C07 /* SceneDelegate.swift */; };
 		F02AC899294A111300152C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC898294A111300152C07 /* ViewController.swift */; };
@@ -182,6 +184,8 @@
 		A2451FEC2976BB4D00121B5C /* G1Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G1Alert.swift; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
+		F01B054629843AA1003C45AA /* gifNum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifNum.gif; sourceTree = "<group>"; };
+		F01B054829843ADB003C45AA /* gifLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoad.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02AC894294A111300152C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02AC896294A111300152C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,8 +285,10 @@
 				539BD06A29789AA500F6AFCF /* AlertLogout2.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
+				F01B054629843AA1003C45AA /* gifNum.gif */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
 				539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */,
+				F01B054829843ADB003C45AA /* gifLoad.swift */,
 				539AC0292968AA9100A56BB8 /* SecondGame.swift */,
 				538DDF82296423D500562581 /* AlertFail.swift */,
 				A2451FEC2976BB4D00121B5C /* G1Alert.swift */,
@@ -540,6 +546,7 @@
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
+				F01B054729843AA5003C45AA /* gifNum.gif in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */,
 				539AC03B296A216600A56BB8 /* Fiwin.sks in Resources */,
@@ -596,6 +603,7 @@
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
+				F01B054929843ADC003C45AA /* gifLoad.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */,
 				A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */,
