@@ -229,7 +229,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
         if(Global.shared.winAlertFirstGame == arrayWithLabel){
-               if(player.position.x >= 270.0 && player.position.x <= 298.0   && player.position.y >= 600.5 && player.position.y <= 620.5){
+            if(player.position.x >= 275.0 && player.position.x <= 299.0   && player.position.y >= 700.5 && player.position.y <= 899.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -238,20 +238,32 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(starfiled)
                  //  self.addChild(buttongo)
                    
-                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
-                   player.run(actionplayer)
-                   
-                   
-                   
                    
                    calculatePoint()
                }
-               } else {
+               }else if(player.position.x >= 275.0 && player.position.x <= 299.0  && player.position.y >= 700.5 && player.position.y <= 899.5) && (Global.shared.winAlertFirstGame != arrayWithLabel){
+       //            self.addChild(winfailalert)
+       //            self.addChild(OkButton)
+       //            self.addChild(failLabelelse)
+                   failLabel.text = String("لم تعبر جميع الطريق!هل تريد المحاولة مرة اخرى؟")
+                   print("win on another path")
+                   self.addChild(faialert)
+                   self.addChild(failLabel)
+                   self.addChild(tryHomebutton)
+                   self.addChild(buttotryagain)
+                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                    player.run(actionplayer)
+               }
+
+        else {
                    print("not win")
                    self.addChild(faialert)
                    self.addChild(failLabel)
                    self.addChild(tryHomebutton)
                    self.addChild(buttotryagain)
+            let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                      player.run(actionplayer)
+
                }
            }
 

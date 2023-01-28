@@ -266,6 +266,19 @@ class Gamespage: UIViewController, EditprofileDelegate {
             
             
         }
+        
+        if(self.Earth == "open"){
+        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+        let vcc = storyboardd.instantiateViewController(withIdentifier: "Thirddg") as! ThirdGame
+        vcc.view.frame = (self.view?.frame)!
+        vcc.view.layoutIfNeeded()
+        UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+        self.view?.window?.rootViewController = vcc
+        }, completion: { completed in
+
+        })
+        }
+       
     }
     
     @IBAction func fourthAlmarigh(_ sender: Any) {

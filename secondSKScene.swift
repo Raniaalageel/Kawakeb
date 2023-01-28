@@ -224,7 +224,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
         if(Global.shared.winAlertSecondGame == arrayWithLabel){
-               if(player.position.x >= 540.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 400.5){
+            if(player.position.x >= 340.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 640.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -239,6 +239,21 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    calculatePoint()
                }
+            }
+        
+    else if(player.position.x >= 340.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 640.5)
+        && (Global.shared.winAlertSecondGame != arrayWithLabel){
+        //            self.addChild(winfailalert)
+        //            self.addChild(OkButton)
+        //            self.addChild(failLabelelse)
+                    failLabel.text = String("لم تعبر جميع الطريق!هل تريد المحاولة مرة اخرى؟")
+                    print("win on another path")
+                    self.addChild(faialert)
+                    self.addChild(failLabel)
+                    self.addChild(tryHomebutton)
+                    self.addChild(buttotryagain)
+                     let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                     player.run(actionplayer)
                    
                } else {
                    print("not win")
@@ -246,8 +261,11 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(failLabel)
                    self.addChild(tryHomebutton)
                    self.addChild(buttotryagain)
+                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                   player.run(actionplayer)
                }
            }
+            
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
                for touch in touches {
