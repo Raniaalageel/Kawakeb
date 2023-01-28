@@ -16,6 +16,7 @@ import FirebaseFirestore
 class ThirdGame: UIViewController {
     @IBOutlet weak var rocketImage: UIImageView!
     
+    @IBOutlet weak var imageView: UIImageView!
     var endis = true
         var count = 3
         var timer: Timer?
@@ -52,11 +53,11 @@ class ThirdGame: UIViewController {
                     Global.shared.rocketImage = self.currentRockIMG!
                 }
                 
-            //!!!!
-            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
+            //!!!!Global.shared.allLablels = ["right:9:9","right:9:3","up:2:1","up:1:1","right:9:9","right:9:3","up:2:1","up:1:1"]
          //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
                 
-           //!! openis()
+           //!!
+                openis()
                 
                // trytocall()
                
@@ -115,6 +116,8 @@ class ThirdGame: UIViewController {
         
             @IBAction func gobutton(_ sender: UIButton) {
                 print("go is pressed")
+                let numGif = UIImage.gifImageWithName("gifNum")
+                imageView.image = numGif
               // pressgobutton.isEnabled = false
                 
                
@@ -126,7 +129,7 @@ class ThirdGame: UIViewController {
             
            // }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     print("after 10 sec")
                     
                         
@@ -151,7 +154,8 @@ class ThirdGame: UIViewController {
                     self.trytocallSCene()  //GO TOSKSCENE
                 
                 
-                //!!!!!!!!!!!!!!!Global.shared.allLablels = []
+                //!!!!!!!!!!!!!!!
+                    Global.shared.allLablels = []
                 print("again open camera ")
                 Global.shared.stopis = false  //OPEN CAMERA
                 Global.shared.enabled = false //not appned array

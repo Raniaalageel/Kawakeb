@@ -4334,11 +4334,16 @@
                                 <rect key="frame" x="20" y="900" width="163" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-nS-a7W">
+                                <rect key="frame" x="108" y="332" width="618" height="530"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="x8U-dG-Awd"/>
                     <connections>
+                        <outlet property="imageView" destination="FYk-nS-a7W" id="Zqz-Uq-uma"/>
                         <outlet property="rocketImage" destination="QbK-fF-Ixg" id="R0u-GP-RBx"/>
                     </connections>
                 </viewController>
