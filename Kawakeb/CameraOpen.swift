@@ -184,6 +184,11 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                     self.drawVisionRequestResults(results: results)
                    
                  
+                    if ( Global.shared.EmptyStopArray == false ){
+                        
+                        stopTheCamera()
+                        print("stop the camera if the array is emty opencamera")
+                    }
                   //  forArray()
                     
                     print("results stop now ")
@@ -506,6 +511,18 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                return textLayer
            }
         
+    
+    func stopTheCamera(){
+        
+        print("before if sesstion is running")
+        if session.isRunning {
+            print("empty stop camera")
+               DispatchQueue.global().async {
+               print("&&")
+                   self.session.stopRunning()
+               }
+           }
+    }
         
     }
 

@@ -24,7 +24,8 @@ class Global{
     var winAlertSecondGame = ["left","left","down","down","right"]
     var WinAlertThirdGame = ["loop 2","right","right","up","up","loop"]
     public   var endgame = false
-var rocketImage = ""
+    var rocketImage = ""
+    var EmptyStopArray = true 
     
     
 }

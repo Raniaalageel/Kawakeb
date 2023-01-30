@@ -170,6 +170,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
            
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
+               Global.shared.EmptyStopArray = false
                self.addChild(emptyArray)
                self.addChild(emptyLabel)
                self.addChild(OkButton)
@@ -328,6 +329,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    else if touchedNode.name == "OkButton" {
                        print("OkButton")
+                       Global.shared.EmptyStopArray = true
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
                        vcc.view.frame = (self.view?.frame)!

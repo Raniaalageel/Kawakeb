@@ -169,9 +169,13 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
+               Global.shared.EmptyStopArray = false
                self.addChild(emptyArray)
                self.addChild(emptyLabel)
                self.addChild(OkButton)
+//               CameraOpen().stopTheCamera()
+//               EmptyArrayFunc()
+    
            }
            else {
                print("charcter move")
@@ -215,7 +219,15 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
        }
        
-       
+     func EmptyArrayFunc(){
+         
+         self.addChild(emptyArray)
+                       self.addChild(emptyLabel)
+                       self.addChild(OkButton)
+                       CameraOpen().stopTheCamera()
+        
+    }
+
        
        
        
@@ -325,6 +337,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    else if touchedNode.name == "OkButton" {
                        print("OkButton")
+                       Global.shared.EmptyStopArray = true
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "Thirddg") as! ThirdGame
                        vcc.view.frame = (self.view?.frame)!
