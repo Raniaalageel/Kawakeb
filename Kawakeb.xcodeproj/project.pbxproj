@@ -96,6 +96,7 @@
 		F02AC8F8294A12E600152C07 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F7294A12E600152C07 /* FirebaseRemoteConfigSwift */; };
 		F02AC8FA294A12E600152C07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8F9294A12E600152C07 /* FirebaseStorage */; };
 		F02AC8FC294A12E600152C07 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F02AC8FB294A12E600152C07 /* FirebaseStorageCombine-Community */; };
+		F04C9E5D29887C6D00CE150B /* fear_bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */; };
 		F0AE53F4297844C600B8E3C0 /* sucsses.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F3297844C600B8E3C0 /* sucsses.png */; };
 		F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F5297844CE00B8E3C0 /* fail.png */; };
 		F0AE53F82978602C00B8E3C0 /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F72978602C00B8E3C0 /* front.jpeg */; };
@@ -200,6 +201,7 @@
 		F02AC8B5294A111700152C07 /* KawakebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITests.swift; sourceTree = "<group>"; };
 		F02AC8B7294A111700152C07 /* KawakebUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawakebUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F02AC8C4294A11E500152C07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_bg.mp3; sourceTree = "<group>"; };
 		F0AE53F3297844C600B8E3C0 /* sucsses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sucsses.png; sourceTree = "<group>"; };
 		F0AE53F5297844CE00B8E3C0 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		F0AE53F72978602C00B8E3C0 /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpeg; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				539BD06A29789AA500F6AFCF /* AlertLogout2.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
+				F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */,
 				F01B054629843AA1003C45AA /* gifNum.gif */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
 				539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */,
@@ -569,6 +572,7 @@
 				F0F920C7295335060045A75C /* rocket.png in Resources */,
 				539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */,
 				F0AE53FA29787AFC00B8E3C0 /* sketch.png in Resources */,
+				F04C9E5D29887C6D00CE150B /* fear_bg.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

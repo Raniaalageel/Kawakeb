@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFoundation
 
 class i1ViewController: UIViewController {
 
@@ -19,7 +20,8 @@ class i1ViewController: UIViewController {
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        Global.shared.audioHomePage.pause()
+
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in
                            if let error = error {

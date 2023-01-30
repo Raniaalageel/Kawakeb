@@ -26,7 +26,8 @@ class FirstGame: UIViewController {
             super.viewDidLoad()
 //            present(G1alert(), animated: true)
             print("nn")
-            
+            Global.shared.GoBackHomeStopCamera = true
+
             
             db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                                (snapshot, error) in

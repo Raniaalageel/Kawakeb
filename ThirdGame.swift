@@ -36,6 +36,8 @@ class ThirdGame: UIViewController {
     //                        pressgobutton.isEnabled = true}
 //                present(G1alert(), animated: true)
                 print("nn")
+                Global.shared.GoBackHomeStopCamera = true
+
               //  pressgobutton.isEnabled = true
                 
                 db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{

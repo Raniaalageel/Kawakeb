@@ -263,7 +263,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                     self.addChild(failLabel)
                     self.addChild(tryHomebutton)
                     self.addChild(buttotryagain)
-                     let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                     let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                      player.run(actionplayer)
                    
                } else {
@@ -272,7 +272,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(failLabel)
                    self.addChild(tryHomebutton)
                    self.addChild(buttotryagain)
-                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: -900), duration: 1)
+                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                    player.run(actionplayer)
                }
            }
@@ -297,6 +297,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                          }
                    else if touchedNode.name == "pressHome" {
                        print("pressHome")
+                       Global.shared.GoBackHomeStopCamera = false
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
                        vcc.view.frame = (self.view?.frame)!
@@ -310,6 +311,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                        }
                    else if touchedNode.name == "tryHomebutton" {
                        print("tryHomebutton")
+                       Global.shared.GoBackHomeStopCamera = false
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
                        vcc.view.frame = (self.view?.frame)!

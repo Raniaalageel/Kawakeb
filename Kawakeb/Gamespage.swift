@@ -11,6 +11,7 @@ import CodableFirebase
 import Firebase
 import FirebaseFirestore
 import  QuartzCore
+import AVFoundation
 
 //
 class Gamespage: UIViewController, EditprofileDelegate {
@@ -78,6 +79,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        playAlarm()
         checkOpenClose()
        
         print("origiin",self.rocketimage.frame.origin.y)
@@ -404,5 +406,17 @@ class Gamespage: UIViewController, EditprofileDelegate {
         },completion: nil)
         
     }
+    
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "fear_bg", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioHomePage = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioHomePage .play()
+    }
+    
+    
     
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Global{
     public static let shared = Global()
@@ -25,7 +26,9 @@ class Global{
     var WinAlertThirdGame = ["loop 2","right","right","up","up","loop"]
     public   var endgame = false
     var rocketImage = ""
-    var EmptyStopArray = true 
+    var EmptyStopArray = true
+    var GoBackHomeStopCamera = true
+    var audioHomePage : AVPlayer!
     
     
 }

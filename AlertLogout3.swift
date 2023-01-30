@@ -19,6 +19,7 @@ class AlertLogout3: UIViewController {
     
     @IBAction func yesgog(_ sender: Any) {
         print("yes go out")
+        Global.shared.GoBackHomeStopCamera = false
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
         let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
         vcc.view.frame = (self.view?.frame)!

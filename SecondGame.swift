@@ -26,6 +26,8 @@ class SecondGame: UIViewController {
         super.viewDidLoad()
         
         print("nn")
+        Global.shared.GoBackHomeStopCamera = true
+
         
         db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
                            (snapshot, error) in
