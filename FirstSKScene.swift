@@ -98,7 +98,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("لا يوجد قطعًا ، قم بوضع بعضًا منها ")
+           emptyLabel.text = String("لا يوجد قطع ، قم بوضع بعضًا منها ")
            emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
@@ -191,7 +191,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                        actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 2))
                    case "up":
                        print(" move up")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: 100), duration: 2))
+                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
                    case "down":
                        print(" move down")
                        actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
@@ -228,10 +228,12 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        
        
     func winCondition() {
-        if(Global.shared.winAlertFirstGame == arrayWithLabel){
-            if(player.position.x >= 275.0 && player.position.x <= 299.0   && player.position.y >= 700.5 && player.position.y <= 899.5){
+//        if(Global.shared.winAlertFirstGame == arrayWithLabel){
+//            print("first if $$")
+            if(player.position.x >= 180.0 && player.position.x <= 395.0 && player.position.y >= 770.5 && player.position.y <= 900.5)&&(Global.shared.winAlertFirstGame == arrayWithLabel){
+                print("here if $$")
                    print("is win")
-                   self.addChild(winalert )
+                   self.addChild(winalert)
                    self.addChild(buttonnext)
                    self.addChild(hombutton)
                    self.addChild(successLabel)
@@ -241,7 +243,8 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    
                    calculatePoint()
                }
-               }else if(player.position.x >= 275.0 && player.position.x <= 299.0  && player.position.y >= 700.5 && player.position.y <= 899.5) && (Global.shared.winAlertFirstGame != arrayWithLabel){
+//               }
+        else if(player.position.x >= 180.0 && player.position.x <= 395.0  && player.position.y >= 770.5 && player.position.y <= 900.5) && (Global.shared.winAlertFirstGame != arrayWithLabel){
        //            self.addChild(winfailalert)
        //            self.addChild(OkButton)
        //            self.addChild(failLabelelse)
@@ -270,6 +273,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
                for touch in touches {
                          let location = touch.location(in: self)
+                   print("location",location)
                          let touchedNode = atPoint(location)
                    
                          if touchedNode.name == "pressNext" {

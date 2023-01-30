@@ -24,7 +24,7 @@ class FirstGame: UIViewController {
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
-            present(G1alert(), animated: true)
+//            present(G1alert(), animated: true)
             print("nn")
             
             
@@ -111,7 +111,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             
             Global.shared.enabled = true //add all array
             Global.shared.stopis = true   //stopcamer
-        //CameraOpen().Stopsessyion()
+        CameraOpen().Stopsessyion()
 
             
             

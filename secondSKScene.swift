@@ -224,7 +224,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
         if(Global.shared.winAlertSecondGame == arrayWithLabel){
-            if(player.position.x >= 340.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 640.5){
+            if(player.position.x >= 450.0 && player.position.x <= 665.0   && player.position.y >= 330.0 && player.position.y <= 450.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -233,15 +233,15 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(starfiled)
                  //  self.addChild(buttongo)
                    
-                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
-                   player.run(actionplayer)
+//                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
+//                   player.run(actionplayer)
                    
                    
                    calculatePoint()
                }
             }
         
-    else if(player.position.x >= 340.0 && player.position.x <= 560.0   && player.position.y >= 340.5 && player.position.y <= 640.5)
+    else if(player.position.x >= 450.0 && player.position.x <= 665.0   && player.position.y >= 330.0 && player.position.y <= 450.5)
         && (Global.shared.winAlertSecondGame != arrayWithLabel){
         //            self.addChild(winfailalert)
         //            self.addChild(OkButton)

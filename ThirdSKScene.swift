@@ -103,7 +103,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("لا يوجد قطعًا ، قم بوضع بعضًا منها ")
+           emptyLabel.text = String("لا يوجد قطع ، قم بوضع بعضًا منها ")
            emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
@@ -205,7 +205,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                }
 
                actions.append(.run({
-             //      self.winCondition()
+                   self.winCondition()
                }))
                player.run(.sequence(actions))
 
@@ -223,7 +223,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
         if(Global.shared.WinAlertThirdGame == arrayWithLabel){
-            if(player.position.x >= 470.0 && player.position.x <= 770.0   && player.position.y >= 870.5 && player.position.y <= 990.5){
+            if(player.position.x >= 500.0 && player.position.x <= 720.0   && player.position.y >= 870.5 && player.position.y <= 995.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -240,7 +240,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                }
             }
         
-    else if(player.position.x >= 470.0 && player.position.x <= 770.0   && player.position.y >= 870.5 && player.position.y <= 990.5)
+    else if(player.position.x >= 500.0 && player.position.x <= 720.0   && player.position.y >= 870.5 && player.position.y <= 995.5)
         && (Global.shared.WinAlertThirdGame != arrayWithLabel){
         //            self.addChild(winfailalert)
         //            self.addChild(OkButton)

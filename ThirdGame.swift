@@ -34,7 +34,7 @@ class ThirdGame: UIViewController {
     //                pressgobutton.isEnabled = false}
     //                    else if(endis == true){
     //                        pressgobutton.isEnabled = true}
-                present(G1alert(), animated: true)
+//                present(G1alert(), animated: true)
                 print("nn")
               //  pressgobutton.isEnabled = true
                 
@@ -136,7 +136,7 @@ class ThirdGame: UIViewController {
                 
                 Global.shared.enabled = true //add all array
                 Global.shared.stopis = true   //stopcamer
-            //CameraOpen().Stopsessyion()
+                CameraOpen().Stopsessyion()
 
                 
                 
