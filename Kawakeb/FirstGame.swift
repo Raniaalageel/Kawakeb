@@ -102,7 +102,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             print("go is pressed")
             
             
-            let numGif = UIImage.gifImageWithName("gifNum")
+            let numGif = UIImage.gifImageWithName("ArabicGif5")
             imageView.image = numGif
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

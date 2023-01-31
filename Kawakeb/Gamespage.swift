@@ -409,7 +409,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     
     func playAlarm() {
             // need to declare local path as url
-            let url = Bundle.main.url(forResource: "fear_bg", withExtension: "mp3")
+            let url = Bundle.main.url(forResource: "HomeSound", withExtension: "mp3")
             // now use declared path 'url' to initialize the player
             Global.shared.audioHomePage = AVPlayer.init(url: url!)
             // after initialization play audio its just like click on play button

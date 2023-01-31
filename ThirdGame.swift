@@ -118,7 +118,7 @@ class ThirdGame: UIViewController {
         
             @IBAction func gobutton(_ sender: UIButton) {
                 print("go is pressed")
-                let numGif = UIImage.gifImageWithName("gifNum")
+                let numGif = UIImage.gifImageWithName("ArabicGif5")
                 imageView.image = numGif
               // pressgobutton.isEnabled = false
                 
