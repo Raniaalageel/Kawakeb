@@ -25,6 +25,7 @@
 		530B20312984166B00115BE6 /* AlertLogout3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B20302984166B00115BE6 /* AlertLogout3.swift */; };
 		530B203B2989684500115BE6 /* msgP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B203A2989684500115BE6 /* msgP2.swift */; };
 		530B203D2989685400115BE6 /* msgP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B203C2989685300115BE6 /* msgP3.swift */; };
+		530B203F29896B3B00115BE6 /* longerInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B203E29896B3B00115BE6 /* longerInPage.swift */; };
 		5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
@@ -158,6 +159,7 @@
 		530B20302984166B00115BE6 /* AlertLogout3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogout3.swift; sourceTree = "<group>"; };
 		530B203A2989684500115BE6 /* msgP2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msgP2.swift; sourceTree = "<group>"; };
 		530B203C2989685300115BE6 /* msgP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msgP3.swift; sourceTree = "<group>"; };
+		530B203E29896B3B00115BE6 /* longerInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = longerInPage.swift; sourceTree = "<group>"; };
 		5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				530B203E29896B3B00115BE6 /* longerInPage.swift */,
 				530B203C2989685300115BE6 /* msgP3.swift */,
 				530B203A2989684500115BE6 /* msgP2.swift */,
 				530B20302984166B00115BE6 /* AlertLogout3.swift */,
@@ -619,6 +622,7 @@
 				538DDF81296423B900562581 /* AlertScs.swift in Sources */,
 				530B202F2984138C00115BE6 /* ThirdSKScene.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
+				530B203F29896B3B00115BE6 /* longerInPage.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
 				536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */,
 				F01B054929843ADC003C45AA /* gifLoad.swift in Sources */,

@@ -30,5 +30,6 @@ class Global{
     var GoBackHomeStopCamera = true
     var audioHomePage : AVPlayer!
     
-    
+    var longerTime =  true
+
 }
