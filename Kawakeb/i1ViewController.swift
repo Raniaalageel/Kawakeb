@@ -10,6 +10,7 @@ import Firebase
 import FirebaseFirestore
 import AVFoundation
 
+
 class i1ViewController: UIViewController {
 
     @IBOutlet weak var Stars1: UILabel!
@@ -22,6 +23,7 @@ class i1ViewController: UIViewController {
         super.viewDidLoad()
         Global.shared.audioHomePage.pause()
 
+        playAlarm()
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in
                            if let error = error {
@@ -63,5 +65,14 @@ class i1ViewController: UIViewController {
                     view.addSubview(imageView)
                 }
         // Do any additional setup after loading the view.
+    }
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "i1VC", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioi1VC = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioi1VC .play()
     }
 }

@@ -29,7 +29,8 @@ class Global{
     var EmptyStopArray = true
     var GoBackHomeStopCamera = true
     var audioHomePage : AVPlayer!
-    
+    var audiomsgP1 : AVPlayer!
+    var audioi1VC : AVPlayer!
     var longerTime =  true
 
 }

@@ -33,6 +33,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Global.shared.audioHomePage.pause()
         StoretableView.reloadData()
         
         StoretableView.delegate = self

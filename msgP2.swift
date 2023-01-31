@@ -12,6 +12,8 @@ class msgP2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Global.shared.audioHomePage.pause()
+
         // Do any additional setup after loading the view.
     }
     

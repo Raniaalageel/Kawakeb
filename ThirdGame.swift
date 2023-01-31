@@ -29,7 +29,9 @@ class ThirdGame: UIViewController {
         var scene: FirstSKScene?
             override func viewDidLoad() {
                 super.viewDidLoad()
-                
+                Global.shared.audioHomePage.pause()
+                Global.shared.longerTime = true
+
     //            if(endis == false){
     //                pressgobutton.isEnabled = false}
     //                    else if(endis == true){
@@ -65,7 +67,7 @@ class ThirdGame: UIViewController {
                 if(Global.shared.longerTime == true ){
                                   
                                   print("Global.shared.longerTime",Global.shared.longerTime)
-                      let  displayTimer = Timer.scheduledTimer(timeInterval: 60.0,
+                      let  displayTimer = Timer.scheduledTimer(timeInterval: 120.0,
                                                       target: self,
                                                       selector: #selector(self.displayTimerFired(_:)),
                                                       userInfo: nil,
