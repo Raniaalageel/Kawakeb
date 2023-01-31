@@ -229,7 +229,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
         }
         if(self.Flower == "open"){
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-        let vcc = storyboardd.instantiateViewController(withIdentifier: "Secondg") as! SecondGame
+        let vcc = storyboardd.instantiateViewController(withIdentifier: "msgP2") as! msgP2
         vcc.view.frame = (self.view?.frame)!
         vcc.view.layoutIfNeeded()
         UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
@@ -271,7 +271,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
         
         if(self.Earth == "open"){
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-        let vcc = storyboardd.instantiateViewController(withIdentifier: "Thirddg") as! ThirdGame
+        let vcc = storyboardd.instantiateViewController(withIdentifier: "msgP3") as! msgP3
         vcc.view.frame = (self.view?.frame)!
         vcc.view.layoutIfNeeded()
         UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
