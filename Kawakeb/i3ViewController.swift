@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVFoundation
 
 class i3ViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class i3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Global.shared.audioi2VC.pause()
+        playAlarm()
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in
                            if let error = error {
@@ -66,14 +69,14 @@ class i3ViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "i3VC", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioi3VC = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioi3VC .play()
     }
-    */
 
 }

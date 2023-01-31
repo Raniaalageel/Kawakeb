@@ -31,6 +31,10 @@ class Global{
     var audioHomePage : AVPlayer!
     var audiomsgP1 : AVPlayer!
     var audioi1VC : AVPlayer!
+    var audioi2VC : AVPlayer!
+    var audioi3VC : AVPlayer!
+    var audioi4VC : AVPlayer!
+    var audioi5VC : AVPlayer!
     var longerTime =  true
 
 }

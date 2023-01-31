@@ -103,6 +103,10 @@
 		F036CCD72989738A00376EBE /* msgP1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036CCD62989738A00376EBE /* msgP1.swift */; };
 		F036CCD92989740C00376EBE /* msgP1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCD82989740C00376EBE /* msgP1.mp3 */; };
 		F036CCDB298978C100376EBE /* i1VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCDA298978C000376EBE /* i1VC.mp3 */; };
+		F036CCDD29897C0500376EBE /* i2VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCDC29897C0500376EBE /* i2VC.mp3 */; };
+		F036CCDF29897C9D00376EBE /* i3VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCDE29897C9D00376EBE /* i3VC.mp3 */; };
+		F036CCE129897D4900376EBE /* i4VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCE029897D4900376EBE /* i4VC.mp3 */; };
+		F036CCE329897D6400376EBE /* i5VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCE229897D6400376EBE /* i5VC.mp3 */; };
 		F04C9E5D29887C6D00CE150B /* fear_bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */; };
 		F04C9E6F2989322600CE150B /* ArabicGif5.gif in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E6E2989322500CE150B /* ArabicGif5.gif */; };
 		F04C9E752989384300CE150B /* HomeSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E742989384200CE150B /* HomeSound.mp3 */; };
@@ -217,6 +221,10 @@
 		F036CCD62989738A00376EBE /* msgP1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msgP1.swift; sourceTree = "<group>"; };
 		F036CCD82989740C00376EBE /* msgP1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = msgP1.mp3; sourceTree = "<group>"; };
 		F036CCDA298978C000376EBE /* i1VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i1VC.mp3; sourceTree = "<group>"; };
+		F036CCDC29897C0500376EBE /* i2VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i2VC.mp3; sourceTree = "<group>"; };
+		F036CCDE29897C9D00376EBE /* i3VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i3VC.mp3; sourceTree = "<group>"; };
+		F036CCE029897D4900376EBE /* i4VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i4VC.mp3; sourceTree = "<group>"; };
+		F036CCE229897D6400376EBE /* i5VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i5VC.mp3; sourceTree = "<group>"; };
 		F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_bg.mp3; sourceTree = "<group>"; };
 		F04C9E6E2989322500CE150B /* ArabicGif5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ArabicGif5.gif; sourceTree = "<group>"; };
 		F04C9E742989384200CE150B /* HomeSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HomeSound.mp3; sourceTree = "<group>"; };
@@ -314,6 +322,10 @@
 				F036CCD82989740C00376EBE /* msgP1.mp3 */,
 				F036CCD42989729600376EBE /* HomePageSound.mp3 */,
 				F036CCDA298978C000376EBE /* i1VC.mp3 */,
+				F036CCDC29897C0500376EBE /* i2VC.mp3 */,
+				F036CCDE29897C9D00376EBE /* i3VC.mp3 */,
+				F036CCE029897D4900376EBE /* i4VC.mp3 */,
+				F036CCE229897D6400376EBE /* i5VC.mp3 */,
 				F01B054629843AA1003C45AA /* gifNum.gif */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
 				F04C9E6E2989322500CE150B /* ArabicGif5.gif */,
@@ -569,10 +581,12 @@
 				34CDA8B2297703AF00C2ADF3 /* LOGO.png in Resources */,
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
 				F0F920C5295333EC0045A75C /* star22.png in Resources */,
+				F036CCDF29897C9D00376EBE /* i3VC.mp3 in Resources */,
 				F036CCD92989740C00376EBE /* msgP1.mp3 in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
 				34CDA8B62977052000C2ADF3 /* uppp.png in Resources */,
+				F036CCE129897D4900376EBE /* i4VC.mp3 in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
@@ -582,6 +596,7 @@
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */,
 				539AC03B296A216600A56BB8 /* Fiwin.sks in Resources */,
+				F036CCE329897D6400376EBE /* i5VC.mp3 in Resources */,
 				F0F920B52953335D0045A75C /* backk.png in Resources */,
 				F0AE53F4297844C600B8E3C0 /* sucsses.png in Resources */,
 				F0F920C1295333B90045A75C /* star11.png in Resources */,
@@ -592,6 +607,7 @@
 				F0F920C3295333C40045A75C /* mainPage.png in Resources */,
 				539AC03C296A216600A56BB8 /* Assets.xcassets in Resources */,
 				F0F920B72953337A0045A75C /* ours.png in Resources */,
+				F036CCDD29897C0500376EBE /* i2VC.mp3 in Resources */,
 				F0AE53F82978602C00B8E3C0 /* front.jpeg in Resources */,
 				F0F920BD295333A50045A75C /* help.png in Resources */,
 				F04C9E752989384300CE150B /* HomeSound.mp3 in Resources */,

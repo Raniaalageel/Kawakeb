@@ -21,8 +21,8 @@ class i1ViewController: UIViewController {
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Global.shared.audioHomePage.pause()
-
         playAlarm()
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in
