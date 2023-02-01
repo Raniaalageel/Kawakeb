@@ -21,6 +21,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var current = ""
     var tableArray = [Int]()
      var count = 0
+    
+    var tableSorted = [(Int,String,String)]()
+    var tableSorted2 = [(Int,String,String)]()
+ 
     @IBOutlet weak var StoretableView: UITableView!
     
     
@@ -104,23 +108,37 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     print("price1",price1)
                     
                     
-                    
+                 //   self.arr.append(price1,name1,photo1)
+                   
                     
                     self.prices.append(price1)
                     self.names.append(name1)
                     self.photo.append(photo1)
+                    self.tableSorted.append(( prices[count], names[count], photo[count]))
+                    count = count+1
+
+                
                 }
                 
                 
-                
+   
+               
                 
                 
     }
            
                 //
+          
+           
+            tableSorted2 = tableSorted ?? [(0,"","")]
+           let sortedArray1 = prices.sort { ($0 as Int) < ($1 as Int) }
+            print("44######")
+            print(sortedArray1)
+        
+         
+            
                 self.StoretableView.reloadData()}
                 //  let a_snapshot = try await db.collection("Child").wherefgetDocuments()
-               
         
     }
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -139,6 +157,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("enter??")
         let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
+      
+        let (p, n, im) = tableSorted2[indexPath.row]
+         
+      
         
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
@@ -255,5 +277,15 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
 
-
-
+//var arr = [[AnyObject]]()
+//
+//let sortedArray1 = arr.sort { ($0[0] as? Int) < ($1[0] as? Int) }
+//
+//print(sortedArray1) // []
+//
+//arr = [[5, "test123"], [2, "test443"], [3, "test663"], [1, "test123"]]
+//
+//let sortedArray2 = arr.sort { ($0[0] as? Int) < ($1[0] as? Int) }
+//
+//print(sortedArray2)  // [[1, test123], [2, test443], [3, test663], [5, test123]]
+//
