@@ -28,8 +28,8 @@ class FirstGame: UIViewController {
             Global.shared.audioHomePage.pause()
             Global.shared.audiomsgP1.pause()
             print("nn")
-            Global.shared.GoBackHomeStopCamera = true
-            Global.shared.longerTime = true
+//            Global.shared.GoBackHomeStopCamera = true
+//            Global.shared.longerTime = true
 
             
             db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
@@ -55,29 +55,36 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             
            // trytocall()
             
-            if(Global.shared.longerTime == true ){
-                              
-                              print("Global.shared.longerTime",Global.shared.longerTime)
-                  let  displayTimer = Timer.scheduledTimer(timeInterval: 120.0,
-                                                  target: self,
-                                                  selector: #selector(self.displayTimerFired(_:)),
-                                                  userInfo: nil,
-                                                  repeats: true)}
+//            if(Global.shared.longerTime == true ){
+//
+//                              print("Global.shared.longerTime",Global.shared.longerTime)
+//                  let  displayTimer = Timer.scheduledTimer(timeInterval: 10.0,
+//                                                  target: self,
+//                                                  selector: #selector(self.displayTimerFired(_:)),
+//                                                  userInfo: nil,
+//                                                  repeats: true)}
            
         }
-    @objc func displayTimerFired(_ timer: Timer) {
-            print("Global.shared.lon333333gerTime",Global.shared.longerTime)
-
-            if(Global.shared.longerTime == true ){
-
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                    let alertVC = storyboard.instantiateViewController(withIdentifier: "longer") as! longerInPage
-
-                present(alertVC, animated: true,completion: nil) }
-
-            //clean up timer
-           // displayTimer.invalidate()
-        }
+//    @objc func displayTimerFired(_ timer: Timer) {
+//            print("Global.shared.lon333333gerTime",Global.shared.longerTime)
+//
+//            if(Global.shared.longerTime == true ){
+////
+////            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+////                    let alertVC = storyboard.instantiateViewController(withIdentifier: "longer") as! longerInPage
+////
+////                present(alertVC, animated: true,completion: nil)
+//                let alertController = UIAlertController(title: "60 Seconds...", message: "60 Seconds have elapsed.", preferredStyle: .alert)
+//                    alertController.addAction(UIAlertAction(title: "OK",  style: .default, handler: nil))
+//                    self.present(alertController, animated: true, completion: nil)
+//
+//                    //clean up timer
+////                    displayTimer.invalidate()‏
+//            }
+//
+//            //clean up timer
+//           // displayTimer.invalidate()
+//        }
         func trytocallSCene(){
             //  CameraOpen().viewDidLoad()
             print(view.frame)
@@ -126,7 +133,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         @IBAction func gobutton(_ sender: UIButton) {
             print("go is pressed")
             
-            Global.shared.longerTime = false
+//            Global.shared.longerTime = false
             
             let numGif = UIImage.gifImageWithName("ArabicGif5")
             imageView.image = numGif

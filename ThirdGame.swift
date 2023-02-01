@@ -30,7 +30,7 @@ class ThirdGame: UIViewController {
             override func viewDidLoad() {
                 super.viewDidLoad()
                 Global.shared.audioHomePage.pause()
-                Global.shared.longerTime = true
+//                Global.shared.longerTime = true
 
     //            if(endis == false){
     //                pressgobutton.isEnabled = false}
@@ -38,7 +38,7 @@ class ThirdGame: UIViewController {
     //                        pressgobutton.isEnabled = true}
 //                present(G1alert(), animated: true)
                 print("nn")
-                Global.shared.GoBackHomeStopCamera = true
+//                Global.shared.GoBackHomeStopCamera = true
 
               //  pressgobutton.isEnabled = true
                 
@@ -64,32 +64,32 @@ class ThirdGame: UIViewController {
                 openis()
                 
                // trytocall()
-                if(Global.shared.longerTime == true ){
-                                  
-                                  print("Global.shared.longerTime",Global.shared.longerTime)
-                      let  displayTimer = Timer.scheduledTimer(timeInterval: 120.0,
-                                                      target: self,
-                                                      selector: #selector(self.displayTimerFired(_:)),
-                                                      userInfo: nil,
-                                                               repeats: false)}
+//                if(Global.shared.longerTime == true ){
+//
+//                                  print("Global.shared.longerTime",Global.shared.longerTime)
+//                      let  displayTimer = Timer.scheduledTimer(timeInterval: 120.0,
+//                                                      target: self,
+//                                                      selector: #selector(self.displayTimerFired(_:)),
+//                                                      userInfo: nil,
+//                                                               repeats: false)}
                               
                              
                           
 
             }
-    @objc func displayTimerFired(_ timer: Timer) {
-            print("Global.shared.lon333333gerTime",Global.shared.longerTime)
-
-            if(Global.shared.longerTime == true ){
-
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                    let alertVC = storyboard.instantiateViewController(withIdentifier: "longer") as! longerInPage
-
-                present(alertVC, animated: true,completion: nil) }
-
-            //clean up timer
-           // displayTimer.invalidate()
-        }
+//    @objc func displayTimerFired(_ timer: Timer) {
+//            print("Global.shared.lon333333gerTime",Global.shared.longerTime)
+//
+//            if(Global.shared.longerTime == true ){
+//
+//            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//                    let alertVC = storyboard.instantiateViewController(withIdentifier: "longer") as! longerInPage
+//
+//                present(alertVC, animated: true,completion: nil) }
+//
+//            //clean up timer
+//           // displayTimer.invalidate()
+//        }
             func trytocallSCene(){
                 //  CameraOpen().viewDidLoad()
                 print(view.frame)
@@ -144,7 +144,7 @@ class ThirdGame: UIViewController {
         
             @IBAction func gobutton(_ sender: UIButton) {
                 print("go is pressed")
-                Global.shared.longerTime = false
+//                Global.shared.longerTime = false
                 let numGif = UIImage.gifImageWithName("ArabicGif5")
                 imageView.image = numGif
               // pressgobutton.isEnabled = false

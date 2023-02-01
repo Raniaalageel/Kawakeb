@@ -20,7 +20,7 @@ class AlertLogout: UIViewController {
     
     @IBAction func logoutGame(_ sender: UIButton) {
         print("yes go out")
-        Global.shared.GoBackHomeStopCamera = false
+//        Global.shared.GoBackHomeStopCamera = false
         let storyboardd = UIStoryboard(name: "Main", bundle: nil)
         let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
         vcc.view.frame = (self.view?.frame)!

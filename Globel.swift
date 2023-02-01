@@ -27,7 +27,7 @@ class Global{
     public   var endgame = false
     var rocketImage = ""
     var EmptyStopArray = true
-    var GoBackHomeStopCamera = true
+//    var GoBackHomeStopCamera = true
     var audioHomePage : AVPlayer!
     var audiomsgP1 : AVPlayer!
     var audioi1VC : AVPlayer!
@@ -35,6 +35,6 @@ class Global{
     var audioi3VC : AVPlayer!
     var audioi4VC : AVPlayer!
     var audioi5VC : AVPlayer!
-    var longerTime =  true
+//    var longerTime =  true
 
 }

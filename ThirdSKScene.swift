@@ -297,7 +297,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                          }
                    else if touchedNode.name == "pressHome" {
                        print("pressHome")
-                       Global.shared.GoBackHomeStopCamera = false
+//                       Global.shared.GoBackHomeStopCamera = false
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
                        vcc.view.frame = (self.view?.frame)!
@@ -311,7 +311,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                        }
                    else if touchedNode.name == "tryHomebutton" {
                        print("tryHomebutton")
-                       Global.shared.GoBackHomeStopCamera = false
+//                       Global.shared.GoBackHomeStopCamera = false
                        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
                        let vcc = storyboardd.instantiateViewController(withIdentifier: "HomeVC") as! Gamespage
                        vcc.view.frame = (self.view?.frame)!

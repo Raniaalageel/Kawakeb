@@ -188,10 +188,10 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
                         stopTheCamera()
                         print("stop the camera if the array is emty opencamera **")
                     }
-                    if ( Global.shared.GoBackHomeStopCamera == false ){
-                        stopTheCamera()
-                        print("stop the camera if the go back to home page ^^ ")
-                    }
+//                    if ( Global.shared.GoBackHomeStopCamera == false ){
+//                        stopTheCamera()
+//                        print("stop the camera if the go back to home page ^^ ")
+//                    }
                   //  forArray()
                     
                     print("results stop now ")
