@@ -27,7 +27,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
     @IBOutlet weak var alzahrabutton: UIButton!
     @IBOutlet weak var alzahraLuck: UIImageView!
     
-    
+    var a = ""
     @IBOutlet weak var alarghbutton: UIButton!
     @IBOutlet weak var alarghLuck: UIImageView!
     
@@ -152,9 +152,14 @@ class Gamespage: UIViewController, EditprofileDelegate {
                     self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
                         print("currentRockIMG",self.currentRockIMG!)
                                
-                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
-                                  print("pointsall ",self.pointsall!)
-                               
+//                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
+//                                  print("pointsall ",self.pointsall!)
+                               let formatter: NumberFormatter = NumberFormatter()
+                               var  x1: Int!
+                               x1 = snapshot!.documents.first!.get("points")  as! Int
+                               var  a1 = NSNumber(value: x1)
+                             formatter.locale = Locale(identifier: "ar")
+                               self.a = formatter.string(from: a1)!
                         
                                self.Flower = snapshot!.documents.first!.get("Flower") as? String
                                print("Flower",self.Flower!)
@@ -164,7 +169,7 @@ class Gamespage: UIViewController, EditprofileDelegate {
                                print("Mars",self.Mars!)
                            }
             self.rocketimage.image = UIImage(named: self.currentRockIMG!)
-            self.uupoints.text = String (self.pointsall!)
+            self.uupoints.text = self.a
             
             if(self.Flower! == "open" ){
                 self.alzahraLuck.isHidden = true

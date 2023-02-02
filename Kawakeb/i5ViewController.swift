@@ -17,7 +17,7 @@ class i5ViewController: UIViewController {
     
     var userId = ""
     let firestore = Firestore.firestore()
-    
+    var  a = ""
     var pointsall : Int!
     let db = Firestore.firestore()
     
@@ -36,8 +36,12 @@ class i5ViewController: UIViewController {
 //                    self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
 //                        print("currentRockIMG",self.currentRockIMG!)
                                
-                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
-                                  print("pointsall ",self.pointsall!)
+                               let formatter: NumberFormatter = NumberFormatter()
+                               var  x1: Int!
+                               x1 = snapshot!.documents.first!.get("points")  as! Int
+                               var  a1 = NSNumber(value: x1)
+                             formatter.locale = Locale(identifier: "ar")
+                               self.a = formatter.string(from: a1)!
                                
 //
 //                               self.Flower = snapshot!.documents.first!.get("Flower") as? String
@@ -48,7 +52,7 @@ class i5ViewController: UIViewController {
 //                               print("Mars",self.Mars!)
                            }
          //   self.rocketimage.image = UIImage(named: self.currentRockIMG!)
-            self.Stars5.text = String (self.pointsall!)
+            self.Stars5.text = self.a
         }
 
         

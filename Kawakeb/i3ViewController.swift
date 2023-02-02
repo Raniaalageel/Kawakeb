@@ -14,7 +14,7 @@ class i3ViewController: UIViewController {
 
     @IBOutlet weak var Stars3: UILabel!
     @IBOutlet weak var n3: UILabel!
-    
+    var a = ""
     var userId = ""
     let firestore = Firestore.firestore()
     var pointsall : Int!
@@ -35,8 +35,12 @@ class i3ViewController: UIViewController {
 //                    self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
 //                        print("currentRockIMG",self.currentRockIMG!)
                                
-                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
-                                  print("pointsall ",self.pointsall!)
+                               let formatter: NumberFormatter = NumberFormatter()
+                               var  x1: Int!
+                               x1 = snapshot!.documents.first!.get("points")  as! Int
+                               var  a1 = NSNumber(value: x1)
+                             formatter.locale = Locale(identifier: "ar")
+                               self.a = formatter.string(from: a1)!
                                
 //
 //                               self.Flower = snapshot!.documents.first!.get("Flower") as? String
@@ -47,7 +51,7 @@ class i3ViewController: UIViewController {
 //                               print("Mars",self.Mars!)
                            }
          //   self.rocketimage.image = UIImage(named: self.currentRockIMG!)
-            self.Stars3.text = String (self.pointsall!)
+            self.Stars3.text = self.a
         }
 
 

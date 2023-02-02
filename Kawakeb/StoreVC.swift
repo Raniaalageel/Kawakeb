@@ -21,7 +21,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var current = ""
     var tableArray = [Int]()
      var count = 0
-    
+    var a = ""
     var tableSorted = [(Int,String,String)]()
     var tableSorted2 = [(Int,String,String)]()
  
@@ -60,7 +60,12 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     else{
                         print("SUCCESS??")
                    let points1 = snapshot!.documents.first!.get("points") as! Int
-                        
+                        let formatter: NumberFormatter = NumberFormatter()
+                        var  x1: Int!
+                        x1 = snapshot!.documents.first!.get("points")  as! Int
+                        var  a1 = NSNumber(value: x1)
+                      formatter.locale = Locale(identifier: "ar")
+                        self.a = formatter.string(from: a1)!
             let myrockets1 = snapshot!.documents.first!.get("rockets") as! [String]
                         let myROCK = snapshot!.documents.first!.get("currentRocket") as! String
                         //  guard let name1  = doc.get("name") as? String else { continue }
@@ -75,7 +80,9 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                         
                         print("myrockets",self.myrockets)
                         print("my points",self.points)
-                        self.mypo.text = String(self.points)
+                        
+                        
+                        self.mypo.text = self.a
                        
                       //  print("semster:", self.semster)
                         
@@ -103,15 +110,25 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     guard let price1  = doc.get("price") as? Int else { continue }
                     guard let photo1  = doc.get("image") as? String else { continue }
                     
+                    //amani  start
+               
+                    var a = ""
+                    let formatter: NumberFormatter = NumberFormatter()
+                    var  x1: Int!
+                    x1 = doc.get("price") as? Int
+                    var  a1 = NSNumber(value: x1)
+                  formatter.locale = Locale(identifier: "ar")
+                   a = formatter.string(from: a1)!
+                    //amani end
                     
                     print("name1",name1)
                     print("price1",price1)
-                    
+                    print("ARABIC",a)
                     
                  //   self.arr.append(price1,name1,photo1)
                    
                     
-                    self.prices.append(price1)
+                    self.prices.append(Int(a) ?? 0)
                     self.names.append(name1)
                     self.photo.append(photo1)
                     self.tableSorted.append(( prices[count], names[count], photo[count]))

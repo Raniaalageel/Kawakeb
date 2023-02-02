@@ -15,7 +15,7 @@ class i6ViewController: UIViewController {
     
     var userId = ""
     let firestore = Firestore.firestore()
-    
+    var  a =  ""
     var pointsall : Int!
     let db = Firestore.firestore()
     
@@ -32,9 +32,14 @@ class i6ViewController: UIViewController {
 //                    self.currentRockIMG = snapshot!.documents.first!.get("currentRockIMG") as? String
 //                        print("currentRockIMG",self.currentRockIMG!)
                                
-                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
-                                  print("pointsall ",self.pointsall!)
-                               
+//                               self.pointsall = snapshot!.documents.first!.get("points") as? Int
+//                                  print("pointsall ",self.pointsall!)
+                               let formatter: NumberFormatter = NumberFormatter()
+                               var  x1: Int!
+                               x1 = snapshot!.documents.first!.get("points")  as! Int
+                               var  a1 = NSNumber(value: x1)
+                             formatter.locale = Locale(identifier: "ar")
+                               self.a = formatter.string(from: a1)!
 //
 //                               self.Flower = snapshot!.documents.first!.get("Flower") as? String
 //                               print("Flower",self.Flower!)
@@ -44,7 +49,7 @@ class i6ViewController: UIViewController {
 //                               print("Mars",self.Mars!)
                            }
          //   self.rocketimage.image = UIImage(named: self.currentRockIMG!)
-            self.Stars6.text = String (self.pointsall!)
+            self.Stars6.text = self.a
         }
 
         n6.text = Global.shared.usercharacterName;

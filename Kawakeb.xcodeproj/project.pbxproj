@@ -60,6 +60,7 @@
 		A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2451FEC2976BB4D00121B5C /* G1Alert.swift */; };
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
+		A2D5F6BD298BD77D00BD54A2 /* point-.png in Resources */ = {isa = PBXBuildFile; fileRef = A2D5F6BC298BD77B00BD54A2 /* point-.png */; };
 		F01B054729843AA5003C45AA /* gifNum.gif in Resources */ = {isa = PBXBuildFile; fileRef = F01B054629843AA1003C45AA /* gifNum.gif */; };
 		F01B054929843ADC003C45AA /* gifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B054829843ADB003C45AA /* gifLoad.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
@@ -201,6 +202,7 @@
 		A2451FEC2976BB4D00121B5C /* G1Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G1Alert.swift; sourceTree = "<group>"; };
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
+		A2D5F6BC298BD77B00BD54A2 /* point-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "point-.png"; path = "../point-.png"; sourceTree = "<group>"; };
 		F01B054629843AA1003C45AA /* gifNum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gifNum.gif; sourceTree = "<group>"; };
 		F01B054829843ADB003C45AA /* gifLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoad.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +328,7 @@
 				F036CCDE29897C9D00376EBE /* i3VC.mp3 */,
 				F036CCE029897D4900376EBE /* i4VC.mp3 */,
 				F036CCE229897D6400376EBE /* i5VC.mp3 */,
+				A2D5F6BC298BD77B00BD54A2 /* point-.png */,
 				F01B054629843AA1003C45AA /* gifNum.gif */,
 				539AC03A296A216600A56BB8 /* Assets.xcassets */,
 				F04C9E6E2989322500CE150B /* ArabicGif5.gif */,
@@ -586,6 +589,7 @@
 				F036CCD92989740C00376EBE /* msgP1.mp3 in Resources */,
 				F02AC8C5294A11E500152C07 /* GoogleService-Info.plist in Resources */,
 				F0F920BB295333970045A75C /* rocket2.png in Resources */,
+				A2D5F6BD298BD77D00BD54A2 /* point-.png in Resources */,
 				34CDA8B62977052000C2ADF3 /* uppp.png in Resources */,
 				F036CCE129897D4900376EBE /* i4VC.mp3 in Resources */,
 				F0F920C9295335190045A75C /* rocket1.png in Resources */,
