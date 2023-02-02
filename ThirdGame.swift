@@ -55,11 +55,11 @@ class ThirdGame: UIViewController {
                     Global.shared.rocketImage = self.currentRockIMG!
                 }
                 
-            //!!!!Global.shared.allLablels = ["right:9:9","right:9:3","up:2:1","up:1:1","right:9:9","right:9:3","up:2:1","up:1:1"]
+            //!!!!
+                Global.shared.allLablels = ["right:9:9","right:9:3","up:2:1","up:1:1","right:9:9","right:9:3","up:2:1","up:1:1"]
          //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
                 
-           //!!
-                openis()
+           //!!openis()
                 
                // trytocall()
                 if(Global.shared.longerTime == true ){
@@ -163,7 +163,7 @@ class ThirdGame: UIViewController {
                 
                 Global.shared.enabled = true //add all array
                 Global.shared.stopis = true   //stopcamer
-                CameraOpen().Stopsessyion()
+                //!CameraOpen().Stopsessyion()
 
                 
                 
@@ -181,8 +181,7 @@ class ThirdGame: UIViewController {
                     self.trytocallSCene()  //GO TOSKSCENE
                 
                 
-                //!!!!!!!!!!!!!!!
-                    Global.shared.allLablels = []
+                //!!!!!!!!!!!!!!!Global.shared.allLablels = []
                 print("again open camera ")
                 Global.shared.stopis = false  //OPEN CAMERA
                 Global.shared.enabled = false //not appned array

@@ -45,10 +45,11 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             }
             
         //!!!!
-//            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
+//
+            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
      //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
-        openis()
+       //! openis()
             
            // trytocall()
            
@@ -112,7 +113,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             
             Global.shared.enabled = true //add all array
             Global.shared.stopis = true   //stopcamer
-        CameraOpen().Stopsessyion()
+        //!CameraOpen().Stopsessyion()
 
             
             
@@ -130,8 +131,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
                 self.trytocallSCene()  //GO TOSKSCENE
             
             
-            //!!!!!!!!!!!!!!!
-                Global.shared.allLablels = []
+            //!!!!!!!!!!!!!!!Global.shared.allLablels = []
             print("again open camera ")
             Global.shared.stopis = false  //OPEN CAMERA
             Global.shared.enabled = false //not appned array

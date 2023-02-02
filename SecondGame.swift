@@ -46,12 +46,13 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         
         
         //!!!!
-//        Global.shared.allLablels = ["left","left","down","down","right"]
+//
+        Global.shared.allLablels = ["left","left","down","down","right"]
      //!!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
            // trytocall()
 
-        openis()
+       //!! openis()
     }
     
     func openis(){
@@ -83,7 +84,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
         
         Global.shared.enabled = true //add all array
         Global.shared.stopis = true   //stopcamer
-        CameraOpen().Stopsessyion()
+       //! CameraOpen().Stopsessyion()
 
 //
 //            if(Global.shared.allLablels.isEmpty){
@@ -99,8 +100,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             self.trytocallSCene()  //GO TOSKSCENE
         
         
-        //!!!!!!!!!!!!!!!
-            Global.shared.allLablels = []
+        //!!!!!!!!!!!!!!!Global.shared.allLablels = []
         print("again open camera ")
         Global.shared.stopis = false  //OPEN CAMERA
         Global.shared.enabled = false //not appned array
