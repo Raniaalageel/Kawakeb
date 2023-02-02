@@ -48,6 +48,8 @@
 		5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */; };
 		5610D8EE2953B11100E046FC /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 5610D8ED2953B11100E046FC /* CodableFirebase */; };
 		5675477C2953C55100065DB7 /* Pv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675477B2953C55100065DB7 /* Pv.swift */; };
+		567BCBC7298A33E000558885 /* ViewHint2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567BCBC6298A33E000558885 /* ViewHint2.swift */; };
+		567BCBC9298BCDD000558885 /* ViewHint3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567BCBC8298BCDCF00558885 /* ViewHint3.swift */; };
 		568278D32976DDB80075C75F /* ViewHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568278D22976DDB80075C75F /* ViewHint.swift */; };
 		56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4B867295DC50B0081A691 /* Gamespage.swift */; };
 		A243CBC6294B7DF700ABC146 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A243CBC5294B7DF700ABC146 /* Login.swift */; };
@@ -181,6 +183,8 @@
 		5610D8E82953B0BD00E046FC /* datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datepicker.swift; sourceTree = "<group>"; };
 		5610D8EA2953B0DF00E046FC /* CodableFirebaseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFirebaseSupport.swift; sourceTree = "<group>"; };
 		5675477B2953C55100065DB7 /* Pv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pv.swift; sourceTree = "<group>"; };
+		567BCBC6298A33E000558885 /* ViewHint2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHint2.swift; sourceTree = "<group>"; };
+		567BCBC8298BCDCF00558885 /* ViewHint3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHint3.swift; sourceTree = "<group>"; };
 		568278D22976DDB80075C75F /* ViewHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHint.swift; sourceTree = "<group>"; };
 		56D4B867295DC50B0081A691 /* Gamespage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamespage.swift; sourceTree = "<group>"; };
 		A243CBC5294B7DF700ABC146 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				567BCBC8298BCDCF00558885 /* ViewHint3.swift */,
 				530B203E29896B3B00115BE6 /* longerInPage.swift */,
 				530B203C2989685300115BE6 /* msgP3.swift */,
 				530B203A2989684500115BE6 /* msgP2.swift */,
@@ -355,6 +360,7 @@
 				A2451FE42976B29200121B5C /* i3ViewController.swift */,
 				A2451FE62976B2B400121B5C /* i4ViewController.swift */,
 				568278D22976DDB80075C75F /* ViewHint.swift */,
+				567BCBC6298A33E000558885 /* ViewHint2.swift */,
 				A2451FE82976B2C900121B5C /* i5ViewController.swift */,
 				A2451FE02976A94900121B5C /* i1ViewController.swift */,
 				A2451FE22976B23600121B5C /* i2ViewController.swift */,
@@ -616,6 +622,7 @@
 			files = (
 				536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */,
 				F02AC899294A111300152C07 /* ViewController.swift in Sources */,
+				567BCBC9298BCDD000558885 /* ViewHint3.swift in Sources */,
 				5610D8E32953B09300E046FC /* Profile.swift in Sources */,
 				5610D8E72953B0B000E046FC /* Child.swift in Sources */,
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
@@ -656,6 +663,7 @@
 				539AC04C2971C7DA00A56BB8 /* EmptyArray.swift in Sources */,
 				530B203B2989684500115BE6 /* msgP2.swift in Sources */,
 				34CDA8A82977016200C2ADF3 /* RocketViewController.swift in Sources */,
+				567BCBC7298A33E000558885 /* ViewHint2.swift in Sources */,
 				F0F920B1295330F20045A75C /* Globel.swift in Sources */,
 				5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */,
 				34CDA8AA2977017800C2ADF3 /* updateRocketViewController.swift in Sources */,
