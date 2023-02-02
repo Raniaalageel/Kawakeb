@@ -15,6 +15,9 @@ import FirebaseFirestore
 
 class FirstGame: UIViewController {
 
+    @IBOutlet weak var Dbtn: UIButton!
+    @IBOutlet weak var hintBTN: UIButton!
+    @IBOutlet weak var BKbtn: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var rocketImage: UIImageView!
@@ -24,6 +27,42 @@ class FirstGame: UIViewController {
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            
+            Dbtn.layer.cornerRadius = Dbtn.frame.width/2
+            Dbtn.layer.borderWidth = 6
+            Dbtn.layer.borderColor =    #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+
+                    
+            Dbtn.clipsToBounds = true
+            //
+            
+            hintBTN.layer.cornerRadius = hintBTN.frame.width/2
+            hintBTN.layer.borderWidth = 6
+            hintBTN.layer.borderColor =      #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+
+                    
+            hintBTN.clipsToBounds = true
+            //
+            
+            BKbtn.layer.cornerRadius = BKbtn.frame.width/2
+            BKbtn.layer.borderWidth = 6
+            BKbtn.layer.borderColor =     #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+
+                    
+            BKbtn.clipsToBounds = true
+            
+            
+         
+            
+            
+            
+            
+            
+            
 //            present(G1alert(), animated: true)
 //            Global.shared.audioHomePage.pause()
 //            Global.shared.audiomsgP1.pause()

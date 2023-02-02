@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -378,24 +379,32 @@
                                 <rect key="frame" x="52" y="983" width="131" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-uv-TSC">
-                                <rect key="frame" x="540" y="1055" width="121" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="help.png">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" scale="large"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-uv-TSC">
+                                <rect key="frame" x="556" y="1055" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Dlg-tf-bR6"/>
+                                    <constraint firstAttribute="width" constant="120" id="KiB-a1-t4J"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="17" minY="21" maxX="12" maxY="17"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="questionmark" catalog="system" symbolScale="small"/>
                                 </state>
                                 <connections>
                                     <segue destination="y5d-tq-VYh" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1Wb-gS-6yn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tb-ni-nx0">
-                                <rect key="frame" x="673" y="1048" width="139" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="store.png">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31" scale="large"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tb-ni-nx0">
+                                <rect key="frame" x="670" y="1048" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="PD4-5y-C7l"/>
+                                    <constraint firstAttribute="height" constant="120" id="WiK-kq-bQL"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="17" minY="21" maxX="12" maxY="17"/>
+                                <state key="normal" image="cart.fill" catalog="system"/>
                                 <connections>
                                     <segue destination="hbK-oi-roB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0Iz-LO-L6a"/>
                                 </connections>
@@ -428,9 +437,8 @@
                                 <color key="textColor" red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7p-ap-Mgj">
-                                <rect key="frame" x="250" y="1011" width="88" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7p-ap-Mgj">
+                                <rect key="frame" x="330" y="1011" width="24" height="79"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -481,9 +489,8 @@
                                     <action selector="thirdAlargh:" destination="9rX-g3-OdF" eventType="touchUpInside" id="pUs-JO-N99"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Kf-scH">
-                                <rect key="frame" x="603" y="846" width="95" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Kf-scH">
+                                <rect key="frame" x="603" y="920" width="95" height="14"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -550,6 +557,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQk-GR-xT1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tZW-uv-TSC" secondAttribute="bottom" constant="19" id="7pt-iY-W8J"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6tb-ni-nx0" secondAttribute="bottom" constant="-6" id="BJi-iJ-9Pz"/>
+                            <constraint firstItem="tZW-uv-TSC" firstAttribute="leading" secondItem="l7p-ap-Mgj" secondAttribute="trailing" constant="202" id="MY9-HI-vwL"/>
+                            <constraint firstItem="6tb-ni-nx0" firstAttribute="leading" secondItem="tZW-uv-TSC" secondAttribute="trailing" constant="16" id="Pmi-yK-J0p"/>
+                            <constraint firstItem="tZW-uv-TSC" firstAttribute="top" secondItem="k9K-Kf-scH" secondAttribute="bottom" constant="121" id="RNC-Wh-skV"/>
+                            <constraint firstItem="qQk-GR-xT1" firstAttribute="trailing" secondItem="6tb-ni-nx0" secondAttribute="trailing" constant="22" id="YmK-is-moq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fu9-FZ-bxO"/>
                     <connections>
@@ -564,7 +579,9 @@
                         <outlet property="alzahrabutton" destination="k9K-Kf-scH" id="rWv-rb-ROt"/>
                         <outlet property="char" destination="adB-py-T2J" id="hJ9-SZ-zE6"/>
                         <outlet property="nubtonLuck" destination="eT3-FA-pEf" id="fiI-pw-QW1"/>
+                        <outlet property="quesBTN" destination="tZW-uv-TSC" id="aGE-Rs-xDD"/>
                         <outlet property="rocketimage" destination="rhm-fh-oZS" id="1ej-k8-ADB"/>
+                        <outlet property="storeBTN" destination="6tb-ni-nx0" id="Ftd-oh-iHW"/>
                         <outlet property="uudob" destination="UPl-SR-wqr" id="WIF-oc-LhF"/>
                         <outlet property="uuemail" destination="NOY-of-HBv" id="6qz-Lz-4yK"/>
                         <outlet property="uuname" destination="6k4-0I-TBU" id="Ri9-43-nOJ"/>
@@ -2493,22 +2510,36 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-L3-J86">
-                                <rect key="frame" x="739" y="51" width="75" height="75"/>
+                                <rect key="frame" x="703" y="51" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="help.png"/>
+                                    <backgroundConfiguration key="background">
+                                        <imageReference key="image" image="questionmark" catalog="system" symbolScale="small"/>
+                                    </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="gfz-sg-aEG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="lWS-8x-Bih"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-gG-fCU">
-                                <rect key="frame" x="34" y="51" width="74" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-gG-fCU">
+                                <rect key="frame" x="34" y="51" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="fyK-oG-BB7"/>
+                                    <constraint firstAttribute="width" constant="110" id="jeF-hN-h9t"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="21"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="20" maxX="28" maxY="10"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="backk.png"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <imageReference key="image" image="arrowshape.backward.fill" catalog="system" symbolScale="medium"/>
+                                    </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutButton:" destination="bIs-Zj-oYX" eventType="touchUpInside" id="3sy-1D-r6a"/>
@@ -2519,26 +2550,39 @@
                                 <rect key="frame" x="650" y="701" width="163" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Nk-HqD">
-                                <rect key="frame" x="538" y="134" width="418" height="144"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-z5-9W2">
+                                <rect key="frame" x="179" y="400" width="463" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Nk-HqD">
+                                <rect key="frame" x="704" y="194" width="110" height="110"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="9" minY="6" maxX="27" maxY="33"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
-                                    <backgroundConfiguration key="background" image="viewdirection"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background">
+                                        <imageReference key="image" image="doc.append" catalog="system" symbolScale="small"/>
+                                    </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="jaO-xL-xoF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4Us-i7-sU1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-z5-9W2">
-                                <rect key="frame" x="179" y="400" width="463" height="456"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d1m-b9-EZH" firstAttribute="top" secondItem="WVo-gG-fCU" secondAttribute="bottom" constant="1013" id="D1n-8g-52a"/>
+                            <constraint firstItem="WVo-gG-fCU" firstAttribute="top" secondItem="ujc-1t-ax5" secondAttribute="bottom" constant="51" id="JUK-GJ-DwY"/>
+                            <constraint firstItem="yth-Nk-HqD" firstAttribute="leading" secondItem="WVo-gG-fCU" secondAttribute="trailing" constant="394" id="QPO-Oz-JPP"/>
+                            <constraint firstItem="WVo-gG-fCU" firstAttribute="leading" secondItem="cJg-G4-6Bv" secondAttribute="leadingMargin" constant="14" id="mbL-Lc-3VF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L7s-c7-wXO"/>
                     <connections>
+                        <outlet property="BKbtn" destination="WVo-gG-fCU" id="WzA-xs-6lu"/>
+                        <outlet property="Dbtn" destination="yth-Nk-HqD" id="RCN-Rd-1E3"/>
+                        <outlet property="hintBTN" destination="dZj-L3-J86" id="0Tj-D7-B89"/>
                         <outlet property="imageView" destination="72Z-z5-9W2" id="vBg-hM-nv5"/>
                         <outlet property="rocketImage" destination="8QA-tQ-gxu" id="JHX-bN-mhd"/>
                     </connections>
@@ -2681,7 +2725,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نجحت بالوصول إلى كوكب الزهرة! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rou-Rc-QID">
-                                <rect key="frame" x="224" y="374" width="568" height="54"/>
+                                <rect key="frame" x="217.5" y="374" width="574.5" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2819,7 +2863,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حاول مرة اخرى!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOk-Xp-ieM">
-                                <rect key="frame" x="511" y="374" width="281" height="54"/>
+                                <rect key="frame" x="509.5" y="374" width="282.5" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3614,7 +3658,7 @@
                                 <color key="separatorColor" red="0.076067470009999999" green="0.20739021899999999" blue="0.34903666379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="rocketCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rocketCell" rowHeight="161" id="bks-d0-raq" customClass="storeCell" customModule="Kawakeb" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="640" height="161"/>
+                                        <rect key="frame" x="0.0" y="50" width="640" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bks-d0-raq" id="EcO-JL-cxU">
                                             <rect key="frame" x="0.0" y="0.0" width="640" height="161"/>
@@ -4619,8 +4663,8 @@
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="yUB-su-Geh"/>
-        <segue reference="VUe-B9-O9t"/>
-        <segue reference="ggw-n2-oPl"/>
+        <segue reference="hqg-X7-rr5"/>
+        <segue reference="ptM-7z-fbu"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="L4T-uD-WVw"/>
     </inferredMetricsTieBreakers>
@@ -4634,19 +4678,21 @@
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="ThirdGame" width="1414" height="2000"/>
         <image name="alertBack" width="740" height="544"/>
+        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="astro.png" width="443" height="563"/>
         <image name="backk.png" width="55" height="58"/>
         <image name="boy" width="416" height="416"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="close1" width="68" height="70"/>
         <image name="directions.png" width="176.84210205078125" height="250.10527038574219"/>
+        <image name="doc.append" catalog="system" width="115" height="128"/>
         <image name="empty" width="607" height="411"/>
         <image name="firstbg" width="1414" height="2000"/>
         <image name="front.jpeg" width="1170" height="360"/>
         <image name="girl" width="500" height="500"/>
         <image name="help.png" width="53" height="54"/>
         <image name="leeeft" width="286" height="108"/>
-        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="logout" width="53" height="58"/>
         <image name="luck" width="463" height="539"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
@@ -4658,6 +4704,7 @@
         <image name="p2" width="133" height="107"/>
         <image name="p3" width="117" height="104"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="questionmark" catalog="system" width="94" height="128"/>
         <image name="r3" width="124" height="260"/>
         <image name="redCircle.png" width="102" height="95"/>
         <image name="redbg" width="580" height="572"/>
@@ -4670,6 +4717,12 @@
         <image name="white.png" width="241" height="258.5"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
