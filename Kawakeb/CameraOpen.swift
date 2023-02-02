@@ -326,11 +326,12 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             
             labels = labels + ":" + numberofx2 + ":" + numberofy2
             
+                if (numberofx >= 255 && numberofx <= 458 && numberofy >= 180 && numberofy <= 293 ){
             print("labels",labels)
             
                 Global.shared.allLablels.append(labels)
             print(" allLablels with append forArray ", Global.shared.allLablels)
-                
+                }
             forArray()
             removeDuplicate()
                 

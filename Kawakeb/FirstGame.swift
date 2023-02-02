@@ -25,8 +25,8 @@ class FirstGame: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
 //            present(G1alert(), animated: true)
-            Global.shared.audioHomePage.pause()
-            Global.shared.audiomsgP1.pause()
+//            Global.shared.audioHomePage.pause()
+//            Global.shared.audiomsgP1.pause()
             print("nn")
 //            Global.shared.GoBackHomeStopCamera = true
 //            Global.shared.longerTime = true
