@@ -20,6 +20,9 @@ class Profile: UIViewController, EditprofileDelegate {
         dob.text = child.dob
     }
     
+    @IBOutlet weak var EDTbtn: UIButton!
+    
+    @IBOutlet weak var bkbtn: UIButton!
     
     @IBOutlet weak var char: UILabel!
     
@@ -48,10 +51,25 @@ class Profile: UIViewController, EditprofileDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Global.shared.audioHomePage.pause()
        // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
         
         //        createUser()
+        
+        EDTbtn.layer.cornerRadius = EDTbtn.frame.width/2
+        EDTbtn.layer.borderWidth = 6
+        EDTbtn.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+        EDTbtn.clipsToBounds = true
+        //
+        
+        bkbtn.layer.cornerRadius = bkbtn.frame.width/2
+        bkbtn.layer.borderWidth = 6
+        bkbtn.layer.borderColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+        bkbtn.clipsToBounds = true
+        
         if let id = Auth.auth().currentUser?.uid {
             userId = id
         }

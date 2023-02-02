@@ -18,6 +18,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var points = Int()
     var photo = [String]()
     var imageView = UIImageView()
+    @IBOutlet weak var babtn: UIButton!
     var current = ""
     var tableArray = [Int]()
      var count = 0
@@ -37,6 +38,11 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        babtn.layer.cornerRadius = babtn.frame.width/2
+        babtn.layer.borderWidth = 6
+        babtn.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+        babtn.clipsToBounds = true
         Global.shared.audioHomePage.pause()
         StoretableView.reloadData()
         
