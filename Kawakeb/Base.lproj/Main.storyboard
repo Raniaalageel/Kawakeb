@@ -2542,7 +2542,7 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <imageReference key="image" image="arrowshape.backward.fill" catalog="system" symbolScale="medium"/>
+                                        <imageReference key="image" image="arrow-small-left_48pt_3x" symbolScale="medium"/>
                                     </backgroundConfiguration>
                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
@@ -2564,11 +2564,13 @@
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <inset key="imageEdgeInsets" minX="9" minY="6" maxX="27" maxY="33"/>
+                                <size key="titleShadowOffset" width="1" height="-13"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background">
-                                        <imageReference key="image" image="doc.append" catalog="system" symbolScale="small"/>
+                                        <imageReference key="image" image="expand-arrows-alt_48pt_1x" symbolScale="small"/>
                                     </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="jaO-xL-xoF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4Us-i7-sU1"/>
@@ -3806,15 +3808,21 @@
                                 <color key="textColor" red="0.076067470009999999" green="0.20739021899999999" blue="0.34903666379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-iw-9LF">
-                                <rect key="frame" x="97" y="288" width="110" height="110"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-iw-9LF">
+                                <rect key="frame" x="120" y="299" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="contentStretch" x="0.20000000000000001" y="0.10000000000000001" width="1" height="1"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="-7" maxY="3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" " image="arrowshape.left.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                <size key="titleShadowOffset" width="16" height="8"/>
+                                <state key="normal" title=" " image="arrow-small-left_48pt_3x">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small" weight="thin">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
                                     <segue destination="9rX-g3-OdF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ggw-n2-oPl"/>
@@ -4672,7 +4680,7 @@
         <segue reference="a8r-w4-AzI"/>
         <segue reference="yUB-su-Geh"/>
         <segue reference="hqg-X7-rr5"/>
-        <segue reference="ggw-n2-oPl"/>
+        <segue reference="ptM-7z-fbu"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="xaj-88-hQr"/>
     </inferredMetricsTieBreakers>
@@ -4686,7 +4694,7 @@
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="ThirdGame" width="1414" height="2000"/>
         <image name="alertBack" width="740" height="544"/>
-        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="arrow-small-left_48pt_3x" width="48" height="48"/>
         <image name="arrowshape.left.fill" catalog="system" width="128" height="104"/>
         <image name="astro.png" width="443" height="563"/>
         <image name="backk.png" width="55" height="58"/>
@@ -4694,8 +4702,8 @@
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="close1" width="68" height="70"/>
         <image name="directions.png" width="176.84210205078125" height="250.10527038574219"/>
-        <image name="doc.append" catalog="system" width="115" height="128"/>
         <image name="empty" width="607" height="411"/>
+        <image name="expand-arrows-alt_48pt_1x" width="48" height="48"/>
         <image name="firstbg" width="1414" height="2000"/>
         <image name="front.jpeg" width="1170" height="360"/>
         <image name="girl" width="500" height="500"/>
