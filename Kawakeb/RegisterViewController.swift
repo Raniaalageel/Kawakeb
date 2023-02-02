@@ -466,7 +466,8 @@ var Mercury = "open"
                         "EarthPoints" : FlowerPoints ,
                         "MarsPoints" : MarsPoints ,
                         "rockets" : rockets ,
-                        "FirstGameHintIsUsed" : false
+                        "FirstGameHintIsUsed" : false ,
+                        "SecondGameHintIsUsed" : false
             ] as [String : Any]
             let db = Firestore.firestore()
                    do {
