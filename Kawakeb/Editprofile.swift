@@ -187,13 +187,18 @@ class Editprofile: UIViewController , UITextFieldDelegate {
            
            guard let Name = Uname.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
            else {
-               Dval.isHidden = false
-               Dval.text = "* الرجاء إدخال اسم الشخصية"
+//               Dval.isHidden = false
+//               Dval.text = "* الرجاء إدخال اسم الشخصية"
+               Eval.isHidden = false
+                         Eval.text = "* الرجاء إدخال اسم الشخصية"
                return (false, "", "")
               }
            if !isValidCharacterName(nameText: Name) {
-               Dval.isHidden = false
-               Dval.text = "* الرجاء إدخال اسم شخصية صحيح"
+//               Dval.isHidden = false
+//               Dval.text = "* الرجاء إدخال اسم شخصية صحيح"
+               Eval.isHidden = false
+                            Eval.text = "* الرجاء إدخال اسم شخصية صحيح"
+               
                return (false, "", "")
            }
            return (true, Name , "")
