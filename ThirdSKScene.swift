@@ -42,15 +42,23 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     var OkButton:SKSpriteNode!
     
     var arrayWithLabel = [String]()
+    var indexLoop:Int!
+        var indexcloseLoop:Int!
+        var start:Int!
+    var arrayLoop = [String]()
+        var arrayBeforLoop = [String]()
+        var arrayAfterLoop = [String]()
     
     
+    var cnodtionArray = true
+    var NormalSnario = true
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
            print("didMove", frame)
            ///
            
-           let background = SKSpriteNode(imageNamed: "ThirdGame")
+           let background = SKSpriteNode(imageNamed: "thirdLevel")
            background.size = self.size
            background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
            background.zPosition = 0
@@ -103,7 +111,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("لا يوجد قطع ، قم بوضع بعضًا منها ")
+           emptyLabel.text = String("تأكد من وضع القطع امام الكاميرا ")
            emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
@@ -149,7 +157,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            failLabel = SKLabelNode(fontNamed: "System")
-        failLabel.text = String("للأسف لقد أخطأت! هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("لم تتمكن من الوصول! هل تريد المحاولة مرة اخرى؟")
         failLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            failLabel.fontSize = 33.0
         failLabel.horizontalAlignmentMode = .right
@@ -166,7 +174,10 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            //        let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 0), duration: 1), .rotate(byAngle: 10, duration: 1)]) action.timingMode = .easeOut
-           
+           var actions: [SKAction] = []
+           arraywithlabel()
+           checkArray()
+
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
                Global.shared.EmptyStopArray = false
@@ -177,20 +188,115 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 //               EmptyArrayFunc()
     
            }
-           else {
-               print("charcter move")
-               var ch = Character(":")
-               var alliteration = 0
-               let moveDuration = 3
-               var actions: [SKAction] = []
-               for label in Global.shared.allLablels {
+           
+           if(!(arrayBeforLoop.isEmpty) ){
+                          print("charcter move1")
+                          var alliteration = 0
+                          for label in arrayBeforLoop {
+                              switch label {
+                              case "right":
+                                  print(" move right")
+                                  actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
+                              case "left":
+                                  print(" move left")
+                                  actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
+                              case "up":
+                                  print(" move up")
+                                  actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                              case "down":
+                                  print(" move down")
+                                  actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
+                              default: print("")
+                             
+                              }
+                              alliteration += 1
+                          }
 
-        var result = Global.shared.allLablels[alliteration].split(separator: ch)
-                            var resullabel = String(result[0])
-                  arrayWithLabel.append(resullabel)
-//                        print( resullabel, "in the for loop")
-//                   print(label, "loop")
-                   switch resullabel {
+                          
+                      }
+                      if(!(arrayLoop.isEmpty) ){
+                           print("charcter move2")
+                           var alliteration = 0
+                          
+                          var alliteration2 = 0
+
+                         //  var actions: [SKAction] = []
+                           for label in arrayLoop {
+                               switch label {
+                               case "right":
+                                   print(" move right")
+                                   actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
+                               case "left":
+                                   print(" move left")
+                                   actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
+                               case "up":
+                                   print(" move up")
+                                   actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                               case "down":
+                                   print(" move down")
+                                   actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
+                               default: print("")
+                               
+                               }
+                               alliteration += 1
+                           }
+                          
+                          ///second itartion:
+                          for label in arrayLoop {
+                              switch label {
+                              case "right":
+                                  print(" move right")
+                                  actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
+                              case "left":
+                                  print(" move left")
+                                  actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
+                              case "up":
+                                  print(" move up")
+                                  actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                              case "down":
+                                  print(" move down")
+                                  actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
+                              default: print("")
+                              
+                              }
+                              alliteration2 += 1
+                          }
+
+                       
+                       }
+                      if(!(arrayAfterLoop.isEmpty) ){
+                           print("charcter move3")
+                           var alliteration = 0
+                           //var actions: [SKAction] = []
+                           for label in arrayAfterLoop {
+                               switch label {
+                               case "right":
+                                   print(" move right")
+                                   actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
+                               case "left":
+                                   print(" move left")
+                                   actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
+                               case "up":
+                                   print(" move up")
+                                   actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                               case "down":
+                                   print(" move down")
+                                   actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
+                           default: print("")
+                               
+                               }
+                               alliteration += 1
+                           }
+
+                          
+                       }
+           
+           
+           if(  NormalSnario == false ){
+               print("charcter move3")
+               var alliteration = 0
+               for label in arrayWithLabel {
+                   switch label {
                    case "right":
                        print(" move right")
                        actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
@@ -203,21 +309,32 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    case "down":
                        print(" move down")
                        actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-                   default: print("")
+               default: print("")
+                   
                    }
                    alliteration += 1
                }
-
-               actions.append(.run({
-                   self.winCondition()
-               }))
-               player.run(.sequence(actions))
-
-
            }
-           print("arrawithLabel:",arrayWithLabel)
+
            
-       }
+                      actions.append(.run(    {
+                          if(self.cnodtionArray == true){
+                             self.winCondition() }
+                          }))
+           print(actions,"actions")
+        
+           
+           print(player.position,"1player.position")
+
+                      player.run(.sequence(actions))
+           print(player.position,"player.position")
+           print("arrawithLabel:",arrayWithLabel)
+                  }
+           
+        
+           
+           
+       
        
      func EmptyArrayFunc(){
          
@@ -228,7 +345,110 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
         
     }
 
-       
+    func arraywithlabel(){
+            var ch = Character(":")
+            var alliteration = 0
+            for label in Global.shared.allLablels {
+     var result = Global.shared.allLablels[alliteration].split(separator: ch)
+                         var resullabel = String(result[0])
+               arrayWithLabel.append(resullabel)
+                alliteration += 1
+            }
+            print("arrawithLabel:",arrayWithLabel)
+        }
+        func  checkArray(){
+            var local = 0
+       // if(arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3") && (arrayWithLabel.contains("loop")) ){
+            if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3")){
+        print("loop end close are exist")
+                print("loop2 exist")
+                indexLoop = arrayWithLabel.firstIndex(of: "loop2")!
+                 local = indexLoop!
+                print("locawl",local)
+                print("close loop exist")
+                indexcloseLoop = arrayWithLabel.firstIndex(of: "loop")!
+            print("index close loop",indexcloseLoop! )
+                ///
+            if(indexLoop! <= indexcloseLoop!){
+                print("indexLoop! <= indexcloseLoop!")
+            appneArrayLoop(local: local)   //3 array
+                appendArraybefore(before: indexcloseLoop)}
+            
+            else if(indexLoop! >= indexcloseLoop!) {
+                print("indexLoop! >= indexcloseLoop!")
+                cnodtionArray = false
+                failLabel.text = String("قم بوضع تكرار اولاً !هل تريد المحاولة مرة اخرى؟")
+                self.addChild(faialert)
+                self.addChild(failLabel)
+                self.addChild(tryHomebutton)
+                self.addChild(buttotryagain)
+            }
+            }
+        else if(arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3") && !(arrayWithLabel.contains("loop")) ) {
+                print("close loop please")
+            cnodtionArray = false
+            failLabel.text = String("قم ب انهاء التكرار !هل تريد المحاولة مرة اخرى؟")
+            print("win on another path")
+            self.addChild(faialert)
+            self.addChild(failLabel)
+            self.addChild(tryHomebutton)
+            self.addChild(buttotryagain)
+            
+            }
+            else if ( !(arrayWithLabel.contains("loop2")) && arrayWithLabel.contains("loop") ) {
+                      //|| !(arrayWithLabel.contains("loop3") ) && arrayWithLabel.contains("loop") ){
+                print("put starter loop please")
+                cnodtionArray = false
+                failLabel.text = String("قم بوضع بداية التكرار !هل تريد المحاولة مرة اخرى؟")
+                print("win on another path")
+                self.addChild(faialert)
+                self.addChild(failLabel)
+                self.addChild(tryHomebutton)
+                self.addChild(buttotryagain)
+                
+            }
+            else{  //normal array
+                print("normal array")
+                NormalSnario = false
+
+
+            }
+            
+        }
+        func  appneArrayLoop( local:Int ){
+        var i = 0
+            start = local+1
+            print("starta",start!)
+            while start < indexcloseLoop  {
+           var label = arrayWithLabel[start!]
+                print("label",label)
+                
+                arrayLoop.append(arrayWithLabel[start!])
+                start+=1
+        }
+            ///// arrayloop
+            if(local != 0){
+                while i < local {
+                    arrayBeforLoop.append(arrayWithLabel[i])
+                    i+=1
+                }
+            }
+            ///array before loop
+            print("arrayBeforLoop", arrayBeforLoop)
+            print(" arrayLoop", arrayLoop)
+        }
+        
+        func appendArraybefore(before:Int){
+            var befo = before + 1
+            var count = arrayWithLabel.count - 1
+            while befo <= count {
+                arrayAfterLoop.append(arrayWithLabel[befo])
+            befo+=1
+            }
+            print("arrayAfterLoop", arrayAfterLoop)
+
+        }
+
        
        
        

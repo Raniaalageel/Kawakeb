@@ -98,7 +98,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("لا يوجد قطع ، قم بوضع بعضًا منها ")
+           emptyLabel.text = String("تأكد من وضع القطع امام الكاميرا ")
            emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
@@ -144,7 +144,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            failLabel = SKLabelNode(fontNamed: "System")
-        failLabel.text = String("للأسف لقد أخطأت! هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("لم تتمكن من الوصول! هل تريد المحاولة مرة اخرى؟")
         failLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            failLabel.fontSize = 33.0
         failLabel.horizontalAlignmentMode = .right

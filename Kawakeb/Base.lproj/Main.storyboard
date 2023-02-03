@@ -4314,7 +4314,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThirdGame" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-yQ-U5w">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thirdLevel" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-yQ-U5w">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -4361,12 +4361,12 @@
                                     <action selector="gobutton:" destination="U7m-rb-EUf" eventType="touchUpInside" id="C8m-xa-4av"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-fF-Ixg">
-                                <rect key="frame" x="20" y="900" width="163" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-nS-a7W">
                                 <rect key="frame" x="108" y="332" width="618" height="530"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-fF-Ixg">
+                                <rect key="frame" x="123" y="911" width="163" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -4518,8 +4518,8 @@
                                 <rect key="frame" x="65" y="175" width="704" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو أسخن كوكب وحجمه مقارب لكوكب الأرض " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-Di-TOI">
-                                <rect key="frame" x="261" y="566" width="320" height="230"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو أسخن الكواكب وحجمه مقارب لكوكب الأرض " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-Di-TOI">
+                                <rect key="frame" x="261" y="566" width="339" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4675,11 +4675,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-rA-Rzb">
-                                <rect key="frame" x="-45" y="569" width="400" height="362"/>
+                                <rect key="frame" x="-48" y="569" width="400" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو الكوكب الوحيد المعروف الذي يمكن أن تسكنه الكائنات الحية" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6I-NN-RlA">
-                                <rect key="frame" x="244" y="522" width="360" height="353"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو كوكبنا الذي نعيش فيه ويتكون من اليابسة والمياة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6I-NN-RlA">
+                                <rect key="frame" x="262" y="498" width="360" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4703,7 +4703,7 @@
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="yUB-su-Geh"/>
-        <segue reference="Y5R-q1-wPb"/>
+        <segue reference="0Ve-yy-L1s"/>
         <segue reference="mdC-1h-dYE"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="xaj-88-hQr"/>
@@ -4755,6 +4755,7 @@
         <image name="star11.png" width="302" height="206.5"/>
         <image name="star22.png" width="258.5" height="241.5"/>
         <image name="store.png" width="59" height="61"/>
+        <image name="thirdLevel" width="1414" height="2000"/>
         <image name="uppp" width="281" height="98"/>
         <image name="viewdirection" width="585" height="215"/>
         <image name="white.png" width="241" height="258.5"/>
