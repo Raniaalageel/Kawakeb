@@ -409,8 +409,6 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             else{  //normal array
                 print("normal array")
                 NormalSnario = false
-
-
             }
             
         }
@@ -485,7 +483,23 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                      let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                      player.run(actionplayer)
                    
-               } else {
+               }
+        else if(player.position.x >= 480.0 && player.position.x <= 670.0   && player.position.y >= 900.5 && player.position.y <= 980.5)
+            && ( arrayWithLabel == ["up","up","right","up","up","right"] ){
+            //            self.addChild(winfailalert)
+            //            self.addChild(OkButton)
+            //            self.addChild(failLabelelse)
+                        failLabel.text = String("قم باستخدام التكرار!هل تريد المحاولة مرة اخرى؟")
+                        print("win on another path")
+                        self.addChild(faialert)
+                        self.addChild(failLabel)
+                        self.addChild(tryHomebutton)
+                        self.addChild(buttotryagain)
+                         let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
+                         player.run(actionplayer)
+                       
+                   }
+        else {
                    print("not win")
                    self.addChild(faialert)
                    self.addChild(failLabel)
