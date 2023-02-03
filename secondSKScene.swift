@@ -261,7 +261,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 actions.append(SKAction.move(by: .init(dx: 300, dy: 0), duration: 2))
             } else {
                 current = moves.count - 1
-                winCondition()
+                OutOfrange()
                 return
             }
             
@@ -270,7 +270,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
             }else {
                 current = moves.count - 1
-                winCondition()
+                OutOfrange()
                 return
             }
             
@@ -279,7 +279,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
             }else {
                 current = moves.count - 1
-                winCondition()
+                OutOfrange()
                 return
             }
             
@@ -288,7 +288,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
             }else {
                 current = moves.count - 1
-                winCondition()
+                OutOfrange()
                 return
             }
             
@@ -305,6 +305,20 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         }))
         player.run(.sequence(actions))
     }
+    
+    
+    func OutOfrange(){
+        failLabel.text = String("خارج !هل تريد المحاولة مرة اخرى؟")
+        print("win on another path")
+        self.addChild(faialert)
+        self.addChild(failLabel)
+        self.addChild(tryHomebutton)
+        self.addChild(buttotryagain)
+         let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1000), duration: 1)
+         player.run(actionplayer)
+        
+    }
+    
     
     
     

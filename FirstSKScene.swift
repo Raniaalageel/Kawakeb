@@ -41,6 +41,9 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
     
+    var current: Int = 0
+    var moves: [String] = []
+    
     var arrayWithLabel = [String]()
        override func didMove(to view: SKView) {
            Global.shared.endgame = false
@@ -175,44 +178,107 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                var alliteration = 0
                let moveDuration = 3
                var actions: [SKAction] = []
-               for label in Global.shared.allLablels {
-                 
-        var result = Global.shared.allLablels[alliteration].split(separator: ch)
-                            var resullabel = String(result[0])
-                   arrayWithLabel.append(resullabel)
-                                
-//                        print( resullabel, "in the for loop")
-//                   print(label, "loop")
-                   switch resullabel {
-                   case "right":
-                       print(" move right")
-                       actions.append(SKAction.move(by: .init(dx: 195, dy: 0), duration: 2))
-                   case "left":
-                       print(" move left")
-                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 2))
-                   case "up":
-                       print(" move up")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
-                   case "down":
-                       print(" move down")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
-                   default: print("")
-                   }
-                   alliteration += 1
+            moves = Global.shared.allLablels.map {
+                   String($0.split(separator: ":").first!)
                }
+               doMove(label: moves[current])
+               return
                
-               actions.append(.run({
-                   self.winCondition()
-               }))
-               player.run(.sequence(actions))
+               
+//               for label in Global.shared.allLablels {
+//
+//        var result = Global.shared.allLablels[alliteration].split(separator: ch)
+//                            var resullabel = String(result[0])
+//                   arrayWithLabel.append(resullabel)
+//
+////                        print( resullabel, "in the for loop")
+////                   print(label, "loop")
+//                   switch resullabel {
+//                   case "right":
+//                       print(" move right")
+//                       actions.append(SKAction.move(by: .init(dx: 195, dy: 0), duration: 2))
+//                   case "left":
+//                       print(" move left")
+//                       actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 2))
+//                   case "up":
+//                       print(" move up")
+//                       actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
+//                   case "down":
+//                       print(" move down")
+//                       actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
+//                   default: print("")
+//                   }
+//                   alliteration += 1
+//               }
+               
+//               actions.append(.run({
+//                   self.winCondition()
+//               }))
+//               player.run(.sequence(actions))
             
                
            }
            print("arrawithLabel:",arrayWithLabel)
        }
        
+    func doMove(label: String)  {
+        var actions: [SKAction] = []
+        switch label {
+        case "right":
+            if (player.position.x + 195) < scene!.size.width {
+                actions.append(SKAction.move(by: .init(dx: 195, dy: 0), duration: 2))
+            } else {
+                current = moves.count - 1
+                OutOfrange()
+                return
+            }
+            
+        case "left":
+            if (player.position.x - 195) > 0 {
+                actions.append(SKAction.move(by: .init(dx: -195, dy: 0), duration: 2))
+            }else {
+                current = moves.count - 1
+                OutOfrange()
+                return
+            }
+            
+        case "up":
+            if (player.position.y + 200) < scene!.size.height {
+                actions.append(SKAction.move(by: .init(dx: 0, dy: 200), duration: 2))
+            }else {
+                current = moves.count - 1
+                OutOfrange()
+                return
+            }
+            
+        case "down":
+            if (player.position.y - 100) > 0 {
+                actions.append(SKAction.move(by: .init(dx: 0, dy: -100), duration: 2))
+            }else {
+                current = moves.count - 1
+                OutOfrange()
+                return
+            }
+            
+        default: print("")
+        }
+        
+        actions.append(.run({
+            if self.current + 1 < self.moves.count {
+                self.current += 1
+                self.doMove(label: self.moves[self.current])
+            } else {
+                self.winCondition()
+            }
+        }))
+        player.run(.sequence(actions))
+    }
        
-       
+    
+    
+    
+    
+    
        
        func alertSucsses() -> AlertScs {
            let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -227,11 +293,25 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            return alertVC
        }
        
-       
+    func OutOfrange(){
+        failLabel.text = String("خارج !هل تريد المحاولة مرة اخرى؟")
+        print("win on another path")
+        self.addChild(faialert)
+        self.addChild(failLabel)
+        self.addChild(tryHomebutton)
+        self.addChild(buttotryagain)
+         let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1000), duration: 1)
+         player.run(actionplayer)
+        
+    }
+    
+    
+    
+    
     func winCondition() {
 //        if(Global.shared.winAlertFirstGame == arrayWithLabel){
 //            print("first if $$")
-            if(player.position.x >= 180.0 && player.position.x <= 395.0 && player.position.y >= 770.5 && player.position.y <= 900.5)&&(Global.shared.winAlertFirstGame == arrayWithLabel){
+            if(player.position.x >= 180.0 && player.position.x <= 395.0 && player.position.y >= 770.5 && player.position.y <= 900.5)&&(Global.shared.winAlertFirstGame == moves){
                 print("here if $$")
                    print("is win")
                    self.addChild(winalert)
@@ -245,7 +325,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    calculatePoint()
                }
 //               }
-        else if(player.position.x >= 180.0 && player.position.x <= 395.0  && player.position.y >= 770.5 && player.position.y <= 900.5) && (Global.shared.winAlertFirstGame != arrayWithLabel){
+        else if(player.position.x >= 180.0 && player.position.x <= 395.0  && player.position.y >= 770.5 && player.position.y <= 900.5) && (Global.shared.winAlertFirstGame != moves){
        //            self.addChild(winfailalert)
        //            self.addChild(OkButton)
        //            self.addChild(failLabelelse)
