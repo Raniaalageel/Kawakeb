@@ -296,6 +296,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         Sname = names[ind.row]
         Simage.image = UIImage(named: photo[ind.row])
         Sprice = prices[ind.row]
+        myTableView = StoretableView
         let roc = self.storyboard?.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
         self.navigationController?.pushViewController(roc, animated: true)
         update()
@@ -306,6 +307,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         Uname = names[ind.row]
         Uimage.image = UIImage(named: photo[ind.row])
         IMGname = photo[ind.row]
+        myTableView2 = StoretableView
         let roc2 = self.storyboard?.instantiateViewController(withIdentifier: "updateRocketViewController") as! updateRocketViewController
         self.navigationController?.pushViewController(roc2, animated: true)
         update()

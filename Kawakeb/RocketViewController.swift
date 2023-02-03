@@ -12,7 +12,7 @@ var Simage:UIImageView = UIImageView()
 var Sname:String=""
 var Sprice:Int=0
 var realPrice :Int=0
-
+ var myTableView: UITableView!
 class RocketViewController: UIViewController {
     var pointss:Int=0
     var myrocketsS = [String]()
@@ -87,6 +87,7 @@ class RocketViewController: UIViewController {
                             print("Error   : \(err)")
                         } else {
                             print("add ")
+                            myTableView.reloadData()
                         }
           
                     }

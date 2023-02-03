@@ -11,7 +11,7 @@ import FirebaseStorage
 var Uimage:UIImageView = UIImageView()
 var Uname:String=""
 var IMGname = ""
-
+var myTableView2: UITableView!
 class updateRocketViewController: UIViewController {
     var curR = ""
     @IBOutlet weak var cancelBTN: UIButton!
@@ -83,7 +83,7 @@ class updateRocketViewController: UIViewController {
                             print("Error   : \(err)")
                         } else {
                             print("add ")
-                            
+                            myTableView2.reloadData()
                             
                      
                         }
