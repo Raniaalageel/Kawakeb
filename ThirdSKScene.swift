@@ -75,7 +75,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
            //Global.shared.rocketImage
          player.size = .init(width: 100, height: 190)
-           player.position = CGPoint(x: frame.width * 0.12, y: frame.height * 0.15)
+           player.position = CGPoint(x: frame.width * 0.20, y: frame.height * 0.15)
            self.addChild(player) //0.8
            
            
@@ -195,19 +195,18 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                           for label in arrayBeforLoop {
                               switch label {
                               case "right":
-                                  print(" move right")
-                                  actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
-                              case "left":
-                                  print(" move left")
-                                  actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
-                              case "up":
-                                  print(" move up")
-                                  actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
-                              case "down":
-                                  print(" move down")
-                                  actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-                              default: print("")
-                             
+                            print(" move right")
+                        actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                            case "left":
+                            print(" move left")
+                        actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                            case "up":
+                            print(" move up")
+                            actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                           case "down":
+                            print(" move down")
+                            actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                            default: print("")
                               }
                               alliteration += 1
                           }
@@ -224,18 +223,18 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                            for label in arrayLoop {
                                switch label {
                                case "right":
-                                   print(" move right")
-                                   actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
-                               case "left":
-                                   print(" move left")
-                                   actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
-                               case "up":
-                                   print(" move up")
-                                   actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
-                               case "down":
-                                   print(" move down")
-                                   actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-                               default: print("")
+                             print(" move right")
+                         actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                             case "left":
+                             print(" move left")
+                         actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                             case "up":
+                             print(" move up")
+                             actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                            case "down":
+                             print(" move down")
+                             actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                             default: print("")
                                
                                }
                                alliteration += 1
@@ -245,18 +244,18 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                           for label in arrayLoop {
                               switch label {
                               case "right":
-                                  print(" move right")
-                                  actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
-                              case "left":
-                                  print(" move left")
-                                  actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
-                              case "up":
-                                  print(" move up")
-                                  actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
-                              case "down":
-                                  print(" move down")
-                                  actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-                              default: print("")
+                            print(" move right")
+                        actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                            case "left":
+                            print(" move left")
+                        actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                            case "up":
+                            print(" move up")
+                            actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                           case "down":
+                            print(" move down")
+                            actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                            default: print("")
                               
                               }
                               alliteration2 += 1
@@ -271,18 +270,18 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                            for label in arrayAfterLoop {
                                switch label {
                                case "right":
-                                   print(" move right")
-                                   actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
-                               case "left":
-                                   print(" move left")
-                                   actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
-                               case "up":
-                                   print(" move up")
-                                   actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
-                               case "down":
-                                   print(" move down")
-                                   actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-                           default: print("")
+                             print(" move right")
+                         actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                             case "left":
+                             print(" move left")
+                         actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                             case "up":
+                             print(" move up")
+                             actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                            case "down":
+                             print(" move down")
+                             actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                             default: print("")
                                
                                }
                                alliteration += 1
@@ -298,18 +297,18 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                for label in arrayWithLabel {
                    switch label {
                    case "right":
-                       print(" move right")
-                       actions.append(SKAction.move(by: .init(dx: 150, dy: 0), duration: 2))
-                   case "left":
-                       print(" move left")
-                       actions.append(SKAction.move(by: .init(dx: -210, dy: 0), duration: 2))
-                   case "up":
-                       print(" move up")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
-                   case "down":
-                       print(" move down")
-                       actions.append(SKAction.move(by: .init(dx: 0, dy: -230), duration: 2))
-               default: print("")
+                 print(" move right")
+             actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                 case "left":
+                 print(" move left")
+             actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                 case "up":
+                 print(" move up")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                case "down":
+                 print(" move down")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                 default: print("")
                    
                    }
                    alliteration += 1
@@ -455,7 +454,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
        
     func winCondition() {
         if(Global.shared.WinAlertThirdGame == arrayWithLabel){
-            if(player.position.x >= 500.0 && player.position.x <= 720.0   && player.position.y >= 870.5 && player.position.y <= 995.5){
+            if(player.position.x >= 480.0 && player.position.x <= 670.0   && player.position.y >= 900.5 && player.position.y <= 980.5){
                    print("is win")
                    self.addChild(winalert )
                    self.addChild(buttonnext)
@@ -472,7 +471,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                }
             }
         
-    else if(player.position.x >= 500.0 && player.position.x <= 720.0   && player.position.y >= 870.5 && player.position.y <= 995.5)
+    else if(player.position.x >= 480.0 && player.position.x <= 670.0   && player.position.y >= 900.5 && player.position.y <= 980.5)
         && (Global.shared.WinAlertThirdGame != arrayWithLabel){
         //            self.addChild(winfailalert)
         //            self.addChild(OkButton)
