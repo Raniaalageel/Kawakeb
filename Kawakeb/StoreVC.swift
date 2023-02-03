@@ -14,6 +14,7 @@ var btnName = ""
 class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var names = [String]()
     var prices = [Int]()
+    var pricesAR = [String]()
     var myrockets = [String]()
     @IBOutlet weak var pinnedIMG: UIImageView!
     @IBOutlet weak var pinnedTXT: UILabel!
@@ -27,6 +28,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var tableArray = [Int]()
     var count = 0
     var a = ""
+    
     @IBOutlet weak var PinnedRocket: UIView!
     var tableSorted = [(Int,String,String)]()
     var tableSorted2 = [(Int,String,String)]()
@@ -132,14 +134,14 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     guard let photo1  = doc.get("image") as? String else { continue }
                     
                     //amani  start
-                    
-                    //                    var a = ""
-                    //                    let formatter: NumberFormatter = NumberFormatter()
-                    //                    var  x1: Int!
-                    //                    x1 = doc.get("price") as? Int
-                    //                    var  a1 = NSNumber(value: x1)
-                    //                  formatter.locale = Locale(identifier: "ar")
-                    //                   a = formatter.string(from: a1)!
+//
+//                                        var a = ""
+//                                        let formatter: NumberFormatter = NumberFormatter()
+//                                        var  x1: Int!
+//                                        x1 = doc.get("price") as? Int
+//                                        var  a1 = NSNumber(value: x1)
+//                                      formatter.locale = Locale(identifier: "ar")
+//                                       a = formatter.string(from: a1)!
                     //amani end
                     
                     print("name1",name1)
@@ -211,7 +213,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
         
-        mycell.rocketPrice.text? = String (prices[indexPath.row])
+        mycell.rocketPrice.text? = String (pricesAR[indexPath.row])
         
         
         
@@ -376,12 +378,30 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             prices.append(Int(r2[0])!)
            photo.append(String(r2[2]))
             print("           r2[0])[h] ",r2[0])
+            
 //            Int(result2[0])! //price2
 //            var namenext = String(result2[1])//name2
 //            var photonext = String(result2[2]) //ph
             h += 1
+           // let formatter: NumberFormatter = NumberFormatter()
+           // var  x1: Int!
+            //x1 = snapshot!.documents.first!.get("points")  as! Int
+          //  var  a1 = NSNumber(value: x1)
+        //    formatter.locale = Locale(identifier: "ar")
+            //self.a = formatter.string(from: a1)!
+            
+                                var p = ""
+                                let formatter: NumberFormatter = NumberFormatter()
+                                var  x1: Int!
+                                x1 = Int( r2[0])
+                                var  a1 = NSNumber(value: x1)
+                              formatter.locale = Locale(identifier: "ar")
+                               a = formatter.string(from: a1)!
+            pricesAR.append(a)
+            print("a",a)
+            
         }
-       
+       //print("pricesAR",pricesAR)
     
     }
     
