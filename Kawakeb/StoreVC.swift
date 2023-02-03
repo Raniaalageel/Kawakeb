@@ -19,9 +19,11 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var pinnedTXT: UILabel!
     var points = Int()
     var photo = [String]()
+    var allShop = [String]()
     var imageView = UIImageView()
     @IBOutlet weak var babtn: UIButton!
     var current = ""
+    var currentimg = ""
     var tableArray = [Int]()
     var count = 0
     var a = ""
@@ -47,7 +49,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         babtn.clipsToBounds = true
         Global.shared.audioHomePage.pause()
-        StoretableView.reloadData()
+   //StoretableView.reloadData()
         
         StoretableView.delegate = self
         StoretableView.dataSource = self
@@ -58,7 +60,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         //        PinnedRocket.layer.cornerRadius = 10
         //
         
-        self.StoretableView.contentInsetAdjustmentBehavior = .never
+      
         
         let db = Firestore.firestore()
         
@@ -82,12 +84,14 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 self.a = formatter.string(from: a1)!
                 let myrockets1 = snapshot!.documents.first!.get("rockets") as! [String]
                 let myROCK = snapshot!.documents.first!.get("currentRocket") as! String
+                let myROCK2 = snapshot!.documents.first!.get("currentRockIMG") as! String
                 //  guard let name1  = doc.get("name") as? String else { continue }
                 // self.myrockets = snapshot!.documents.first!.get("rockets") as! [String]
                 //   self.semster  = snapshot!.documents.first!.get("Semster") as! String
                 self.points = points1
                 self.myrockets.append(contentsOf: myrockets1)
                 self.current = myROCK
+                self.currentimg = myROCK2
                // print("names",self.names)
                 
                 print("names.count",self.names.count)
@@ -97,6 +101,9 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 
                 self.mypo.text = self.a
+                self.pinnedIMG.image = UIImage(named: myROCK2 )
+                self.pinnedTXT.text = myROCK
+                
                 
                 //  print("semster:", self.semster)
                 
@@ -143,11 +150,13 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     
                     
                     //   self.prices.append(Int(a) ?? 0)
-                    self.prices.append(price1)
-                    self.names.append(name1)
-                    self.photo.append(photo1)
-                    Global.shared.allShop = price1+":"+name1+":"+photo1
-                    
+                   // self.prices.append(price1)
+                    //self.names.append(name1)
+                   // self.photo.append(photo1)
+                  //  Global.shared.allShop = price1+":"+name1+":"+photo1
+                    var dd = String(price1)
+                    dd += ":"+name1+":"+photo1
+                    self.allShop.append(dd)
                     
                     
                 }
@@ -158,7 +167,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 
             }
+            print("Global.shared.allShop",allShop)
             AllArray()
+            
+            self.StoretableView.reloadData()
             //
             
             
@@ -169,9 +181,12 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             
             
             
-            self.StoretableView.reloadData()}
+           }
+        self.StoretableView.reloadData()
+
+       
         //  let a_snapshot = try await db.collection("Child").wherefgetDocuments()
-        
+        //self.StoretableView.reloadData()
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -190,11 +205,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("enter??")
         let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
-        //
-        //    mycell.layer.borderWidth = 2
-        //      mycell.layer.borderColor = #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
-        //mycell.layer.cornerRadius = 10
-        //
+ 
         
         
         mycell.rocketName.text? = names[indexPath.row]
@@ -241,27 +252,21 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         }
         else if(points >= prices[indexPath.row]){ //can buy
             mycell.updatebtn.isHidden=true
-            //mycell.currentBTN.isHidden=true
+         
             mycell.rocketBtn.isHidden=false
             
-            
-            // mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+           
             mycell.rocketImage.alpha = 1
-            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+           
             mycell.lockIMG.isHidden = true
-            // mycell.rocketBtn.layer.cornerRadius = 20
-            //    mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) , for: .normal)
+           
             mycell.rocketBtn.isUserInteractionEnabled = true
             
         }
         else {//can not buy
             mycell.updatebtn.isHidden=true
             mycell.rocketBtn.isHidden=false
-            //mycell.currentBTN.isHidden=true
-            //   mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
-            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
-            //   mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
             mycell.rocketImage.alpha = 0.5
             mycell.lockIMG.isHidden = false
             //   mycell.rocketBtn.layer.cornerRadius = 20
@@ -269,11 +274,9 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         }
         let storageRef = Storage.storage().reference()
         let photoRef = storageRef.child(photo[indexPath.row])
-        // let imageView: UIImageView = self.imageView
-        //  mycell.rocketImage.sd_setImage(with: photoRef)
-        //  mycell.rocketImage.UIImage(with: photoRef)
         
-        //    mycell.rocketImage.image =  UIImage(named: photoRef)
+        
+      
         mycell.rocketImage.image = UIImage(named: photo[indexPath.row])
         mycell.rocketBtn.tag = indexPath.row
         mycell.updatebtn.tag = indexPath.row
@@ -281,7 +284,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         mycell.updatebtn.addTarget(self, action: #selector(updateRocket  (sender:)), for: .touchUpInside)
         
-        
+       
         
         return mycell
         
@@ -314,26 +317,26 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     func AllArray(){
         var alliteration = 0
         
-        while alliteration < Global.shared.allShop.count  { //big loop #array length first ind
+        while alliteration < allShop.count  { //big loop #array length first ind
             var ch = Character(":") //righ: 2 :30 up: 3 :11
-            var result = Global.shared.allShop[alliteration].split(separator: ch)
+            var result = allShop[alliteration].split(separator: ch)
             
-            var price1 = Int(result[1])! //price
-            var name1 = Int(result[2])! //name
-            var photo1 = String(result[0]) //photo
+            var price1 = Int(result[0])! //price
+            var name1 = String(result[1])//name
+            var photo1 = String(result[2]) //photo
             
             print("resultx ",price1)
             print("resulty ",name1)
             print("resullabel",photo1)
             
             var indexin = alliteration + 1
-            while indexin < Global.shared.allShop.count  {//sec ind2
+            while indexin < allShop.count  {//sec ind2
                 print("indexin",indexin)
-                var result2 = Global.shared.allShop[indexin].split(separator: ch)
+                var result2 = allShop[indexin].split(separator: ch)
                 
-                var price2next = Int(result2[1])! //price2
-                var namenext = Int(result2[2])! //name2
-                var photonext = String(result2[0]) //phoh2
+                var price2next = Int(result2[0])! //price2
+                var namenext = String(result2[1])//name2
+                var photonext = String(result2[2]) //phoh2
                 print("resultxnext",price2next)
                 print("resultynext ",namenext)
                 print("resullabelnext",photonext)
@@ -348,9 +351,9 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 if(price1 > price2next){
                     print("eneter   ???",price1,">",price2next)
-                    temp = Global.shared.allShop[alliteration]
-                    Global.shared.allShop[alliteration] = Global.shared.allShop[indexin]
-                    Global.shared.allShop[indexin] =  temp
+                    temp = allShop[alliteration]
+                   allShop[alliteration] = allShop[indexin]
+                 allShop[indexin] =  temp
                 }
                 
                 
@@ -363,25 +366,24 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             print("alliteration",   alliteration)
             alliteration += 1
         }
-        print(" FINAL allLablels after sort  ",Global.shared.allShop)
-        
-        //            removeDuplicate()
+        print(" FINAL allLablels after sort  ", allShop)
+        var h = 0
+        var xx = allShop.count
+        while h < xx {
+            let r2 = allShop[h].split(separator: ":")
+            print(r2)
+            names.append(String(r2[1]))
+            prices.append(Int(r2[0])!)
+           photo.append(String(r2[2]))
+            print("           r2[0])[h] ",r2[0])
+//            Int(result2[0])! //price2
+//            var namenext = String(result2[1])//name2
+//            var photonext = String(result2[2]) //ph
+            h += 1
+        }
+       
+    
     }
     
 }
     
-
-//var arr = [[AnyObject]]()
-//
-//let sortedArray1 = arr.sort { ($0[0] as? Int) < ($1[0] as? Int) }
-//
-//print(sortedArray1) // []
-//
-//arr = [[5, "test123"], [2, "test443"], [3, "test663"], [1, "test123"]]
-//
-//let sortedArray2 = arr.sort { ($0[0] as? Int) < ($1[0] as? Int) }
-//
-//print(sortedArray2)  // [[1, test123], [2, test443], [3, test663], [5, test123]]
-//
-
-
