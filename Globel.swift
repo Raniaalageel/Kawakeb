@@ -16,6 +16,10 @@ class Global{
     public var userbirthday = ""
     public var usercharacter = ""
     public var usercharacterName = ""
+    public var allPrices = [Int]()
+    public var allPricesAR = [Int]()
+    public var allShop = [String]()
+    public var allPhotos = [String]()
     
     var enabled = false
     var  stopis = false

@@ -355,8 +355,8 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         func forArray(){
             var alliteration = 0
             
-            while alliteration < Global.shared.allLablels.count  {
-                var ch = Character(":")
+            while alliteration < Global.shared.allLablels.count  { //big loop #array length first ind
+                var ch = Character(":") //righ: 2 :30 up: 3 :11
      var result = Global.shared.allLablels[alliteration].split(separator: ch)
                 
                 var resultx = Int(result[1])!
@@ -368,7 +368,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
               print("resullabel",resullabel)
 
           var indexin = alliteration + 1
-                while indexin < Global.shared.allLablels.count  {
+                while indexin < Global.shared.allLablels.count  {//sec ind2
                     print("indexin",indexin)
                     var result2 = Global.shared.allLablels[indexin].split(separator: ch)
 
