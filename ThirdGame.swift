@@ -145,7 +145,7 @@ class ThirdGame: UIViewController {
             @IBAction func gobutton(_ sender: UIButton) {
                 print("go is pressed")
 //                Global.shared.longerTime = false
-                let numGif = UIImage.gifImageWithName("ArabicGif5")
+                let numGif = UIImage.gifImageWithName("ArabicGif9")
                 imageView.image = numGif
               // pressgobutton.isEnabled = false
                 
@@ -158,7 +158,7 @@ class ThirdGame: UIViewController {
             
            // }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                     print("after 10 sec")
                     
                         
