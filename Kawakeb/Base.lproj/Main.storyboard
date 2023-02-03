@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U7m-rb-EUf">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -437,8 +437,9 @@
                                 <color key="textColor" red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7p-ap-Mgj">
-                                <rect key="frame" x="330" y="1011" width="24" height="79"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7p-ap-Mgj">
+                                <rect key="frame" x="237" y="999" width="117" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -489,8 +490,9 @@
                                     <action selector="thirdAlargh:" destination="9rX-g3-OdF" eventType="touchUpInside" id="pUs-JO-N99"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Kf-scH">
-                                <rect key="frame" x="603" y="920" width="95" height="14"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-Kf-scH">
+                                <rect key="frame" x="574" y="836" width="144" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -560,9 +562,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tZW-uv-TSC" secondAttribute="bottom" constant="19" id="7pt-iY-W8J"/>
                             <constraint firstAttribute="bottomMargin" secondItem="6tb-ni-nx0" secondAttribute="bottom" constant="-6" id="BJi-iJ-9Pz"/>
-                            <constraint firstItem="tZW-uv-TSC" firstAttribute="leading" secondItem="l7p-ap-Mgj" secondAttribute="trailing" constant="202" id="MY9-HI-vwL"/>
                             <constraint firstItem="6tb-ni-nx0" firstAttribute="leading" secondItem="tZW-uv-TSC" secondAttribute="trailing" constant="16" id="Pmi-yK-J0p"/>
-                            <constraint firstItem="tZW-uv-TSC" firstAttribute="top" secondItem="k9K-Kf-scH" secondAttribute="bottom" constant="121" id="RNC-Wh-skV"/>
                             <constraint firstItem="qQk-GR-xT1" firstAttribute="trailing" secondItem="6tb-ni-nx0" secondAttribute="trailing" constant="22" id="YmK-is-moq"/>
                         </constraints>
                     </view>

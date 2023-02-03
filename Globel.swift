@@ -23,7 +23,7 @@ class Global{
     var allLablels = [String]()
     var winAlertFirstGame = ["left","left","up","up"]
     var winAlertSecondGame = ["left","left","down","down","right"]
-    var WinAlertThirdGame = ["loop 2","right","right","up","up","loop"]
+    var WinAlertThirdGame = ["loop2","up","up","right","loop"]
     public   var endgame = false
     var rocketImage = ""
     var EmptyStopArray = true
