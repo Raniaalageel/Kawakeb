@@ -15,6 +15,8 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var names = [String]()
     var prices = [Int]()
     var myrockets = [String]()
+    @IBOutlet weak var pinnedIMG: UIImageView!
+    @IBOutlet weak var pinnedTXT: UILabel!
     var points = Int()
     var photo = [String]()
     var imageView = UIImageView()
@@ -23,6 +25,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var tableArray = [Int]()
      var count = 0
     var a = ""
+    @IBOutlet weak var PinnedRocket: UIView!
     var tableSorted = [(Int,String,String)]()
     var tableSorted2 = [(Int,String,String)]()
  
@@ -49,9 +52,14 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         StoretableView.delegate = self
         StoretableView.dataSource = self
         
-        
-        
-        
+//
+//        PinnedRocket.layer.borderWidth = 2
+//        PinnedRocket.layer.borderColor = #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+//        PinnedRocket.layer.cornerRadius = 10
+//
+      
+            self.StoretableView.contentInsetAdjustmentBehavior = .never
+
         let db = Firestore.firestore()
         
    
@@ -118,27 +126,27 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     
                     //amani  start
                
-                    var a = ""
-                    let formatter: NumberFormatter = NumberFormatter()
-                    var  x1: Int!
-                    x1 = doc.get("price") as? Int
-                    var  a1 = NSNumber(value: x1)
-                  formatter.locale = Locale(identifier: "ar")
-                   a = formatter.string(from: a1)!
+//                    var a = ""
+//                    let formatter: NumberFormatter = NumberFormatter()
+//                    var  x1: Int!
+//                    x1 = doc.get("price") as? Int
+//                    var  a1 = NSNumber(value: x1)
+//                  formatter.locale = Locale(identifier: "ar")
+//                   a = formatter.string(from: a1)!
                     //amani end
                     
                     print("name1",name1)
                     print("price1",price1)
-                    print("ARABIC",a)
+                  //  print("ARABIC",a)
                     
                  //   self.arr.append(price1,name1,photo1)
                    
                     
-                    self.prices.append(Int(a) ?? 0)
+                 //   self.prices.append(Int(a) ?? 0)
+                    self.prices.append(price1)
                     self.names.append(name1)
                     self.photo.append(photo1)
-                    self.tableSorted.append(( prices[count], names[count], photo[count]))
-                    count = count+1
+                   
 
                 
                 }
@@ -153,10 +161,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 //
           
            
-            tableSorted2 = tableSorted ?? [(0,"","")]
-           let sortedArray1 = prices.sort { ($0 as Int) < ($1 as Int) }
-            print("44######")
-            print(sortedArray1)
+           // tableSorted2 = tableSorted ?? [(0,"","")]
+         //  let sortedArray1 = prices.sort { ($0 as Int) < ($1 as Int) }
+          //  print("44######")
+           // print(sortedArray1)
         
          
             
@@ -171,7 +179,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
+           
            
             return names.count
             
@@ -180,10 +188,12 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("enter??")
         let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
-      
-        let (p, n, im) = tableSorted2[indexPath.row]
-         
-      
+//
+//    mycell.layer.borderWidth = 2
+//      mycell.layer.borderColor = #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+//mycell.layer.cornerRadius = 10
+//
+       
         
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
@@ -197,18 +207,21 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             if (current == names[indexPath.row] ){
                 
              
-                mycell.currentBTN.isUserInteractionEnabled = false
-                mycell.currentBTN.isHidden=false
+             //   mycell.currentBTN.isUserInteractionEnabled = false
+              //  mycell.currentBTN.isHidden=false
                 mycell.rocketBtn.isHidden=true
                 mycell.updatebtn.isHidden=true
                 mycell.lockIMG.isHidden = true
                 mycell.rocketImage.alpha = 1
+                pinnedIMG.image = UIImage(named: photo[indexPath.row])
+                pinnedTXT.text = names[indexPath.row]
+                
 
             }
             else{
                 print("you have it ")
                 mycell.rocketBtn.isHidden=true
-                mycell.currentBTN.isHidden=true
+              //  mycell.currentBTN.isHidden=true
                 mycell.updatebtn.isHidden=false
                 //mycell.updatebtn.setTitle("استبدل", for: .normal)
              //   mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -226,7 +239,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         }
         else if(points >= prices[indexPath.row]){ //can buy
             mycell.updatebtn.isHidden=true
-            mycell.currentBTN.isHidden=true
+            //mycell.currentBTN.isHidden=true
             mycell.rocketBtn.isHidden=false
             
     
@@ -242,7 +255,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         else {//can not buy
             mycell.updatebtn.isHidden=true
             mycell.rocketBtn.isHidden=false
-            mycell.currentBTN.isHidden=true
+            //mycell.currentBTN.isHidden=true
          //   mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
