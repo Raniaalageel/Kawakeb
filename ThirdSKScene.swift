@@ -174,9 +174,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            //        let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 0), duration: 1), .rotate(byAngle: 10, duration: 1)]) action.timingMode = .easeOut
-           var actions: [SKAction] = []
-           arraywithlabel()
-           checkArray()
+          
 
            if Global.shared.allLablels .isEmpty {
                print("charcter not move")
@@ -188,6 +186,9 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 //               EmptyArrayFunc()
     
            }
+           var actions: [SKAction] = []
+           arraywithlabel()
+           checkArray()
            
            if(!(arrayBeforLoop.isEmpty) ){
                           print("charcter move1")
