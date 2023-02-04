@@ -3450,10 +3450,10 @@
             </objects>
             <point key="canvasLocation" x="200.71942446043167" y="1504.5226130653266"/>
         </scene>
-        <!--View Controller-->
+        <!--Dire3-->
         <scene sceneID="0zm-Ye-Rpm">
             <objects>
-                <viewController id="jaO-xL-xoF" sceneMemberID="viewController">
+                <viewController id="jaO-xL-xoF" customClass="dire3" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QaD-ff-7y4"/>
                         <viewControllerLayoutGuide type="bottom" id="swM-YM-BQQ"/>
@@ -3556,6 +3556,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qpA-2q-s1w"/>
+                    <connections>
+                        <outlet property="backButton" destination="wuM-gv-M17" id="cTf-Vq-NBt"/>
+                        <outlet property="hintButton" destination="1Sz-iI-1uk" id="1Sv-wj-yej"/>
+                        <outlet property="viewInstruction" destination="0tr-yP-yyZ" id="2L6-jX-Ez0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9g8-HY-XR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4460,8 +4465,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="x8U-dG-Awd"/>
                     <connections>
+                        <outlet property="backButton" destination="gC2-Ux-TCB" id="di8-Dg-MlP"/>
+                        <outlet property="hintButton" destination="maZ-Eq-xfl" id="YCs-T5-5n2"/>
                         <outlet property="imageView" destination="FYk-nS-a7W" id="Zqz-Uq-uma"/>
                         <outlet property="rocketImage" destination="QbK-fF-Ixg" id="R0u-GP-RBx"/>
+                        <outlet property="viewInstruction" destination="gYi-gu-t9d" id="k5t-DX-Hka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I71-GE-E5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4802,10 +4810,10 @@
             </objects>
             <point key="canvasLocation" x="-568.34532374100718" y="1504.5226130653266"/>
         </scene>
-        <!--View Controller-->
+        <!--Dire1-->
         <scene sceneID="9hi-ok-Lu8">
             <objects>
-                <viewController id="pu6-S0-3gD" sceneMemberID="viewController">
+                <viewController id="pu6-S0-3gD" customClass="dire1" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6nu-81-cvM"/>
                         <viewControllerLayoutGuide type="bottom" id="rww-8n-vF7"/>
@@ -4908,15 +4916,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="aVW-GN-xob"/>
+                    <connections>
+                        <outlet property="backButton" destination="J9a-Dy-Qrp" id="mjj-pu-cVR"/>
+                        <outlet property="hint" destination="Qw7-xx-mbs" id="eRW-cG-iyN"/>
+                        <outlet property="instr" destination="Em6-u0-bpN" id="ITs-NN-t6F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KD5-MR-lnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2276" y="753"/>
         </scene>
-        <!--View Controller-->
+        <!--Dir2-->
         <scene sceneID="rFO-Sg-ZPI">
             <objects>
-                <viewController id="QtI-P1-92H" sceneMemberID="viewController">
+                <viewController id="QtI-P1-92H" customClass="dir2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ig7-Fp-HP0"/>
                         <viewControllerLayoutGuide type="bottom" id="Xvm-xh-N4J"/>
@@ -5019,6 +5032,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="nya-XT-Gis"/>
+                    <connections>
+                        <outlet property="backButton" destination="ET3-GR-qeh" id="m4h-qM-Ncl"/>
+                        <outlet property="hin" destination="fjd-Tv-mXo" id="7Qr-e4-b93"/>
+                        <outlet property="instr" destination="CRP-Yb-KeQ" id="AAP-zW-RXU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekv-BC-VhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5026,10 +5044,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B5P-vx-eWI"/>
+        <segue reference="wx3-60-l1b"/>
         <segue reference="9XW-q2-Qd7"/>
-        <segue reference="8LF-le-WNa"/>
-        <segue reference="KyA-kp-3OD"/>
+        <segue reference="Jyi-6Y-zs0"/>
+        <segue reference="wLB-3K-fjO"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>

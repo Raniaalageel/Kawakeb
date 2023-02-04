@@ -31,6 +31,9 @@
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
 		536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C7295B7DE80092962F /* FirstGame.swift */; };
 		5377DF73298D229E00A339B3 /* pointdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5377DF72298D229E00A339B3 /* pointdd.png */; };
+		5377DF75298EE73C00A339B3 /* dire1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF74298EE73C00A339B3 /* dire1.swift */; };
+		5377DF77298EE74800A339B3 /* dire2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF76298EE74800A339B3 /* dire2.swift */; };
+		5377DF79298EE75200A339B3 /* dire3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF78298EE75200A339B3 /* dire3.swift */; };
 		538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF7E29641B7400562581 /* FirstSKScene.swift */; };
 		538DDF81296423B900562581 /* AlertScs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF80296423B900562581 /* AlertScs.swift */; };
 		538DDF83296423D500562581 /* AlertFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF82296423D500562581 /* AlertFail.swift */; };
@@ -179,6 +182,9 @@
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
 		536CE5C7295B7DE80092962F /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
 		5377DF72298D229E00A339B3 /* pointdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointdd.png; sourceTree = "<group>"; };
+		5377DF74298EE73C00A339B3 /* dire1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire1.swift; sourceTree = "<group>"; };
+		5377DF76298EE74800A339B3 /* dire2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire2.swift; sourceTree = "<group>"; };
+		5377DF78298EE75200A339B3 /* dire3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire3.swift; sourceTree = "<group>"; };
 		538DDF7E29641B7400562581 /* FirstSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSKScene.swift; sourceTree = "<group>"; };
 		538DDF80296423B900562581 /* AlertScs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertScs.swift; sourceTree = "<group>"; };
 		538DDF82296423D500562581 /* AlertFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFail.swift; sourceTree = "<group>"; };
@@ -318,6 +324,9 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				5377DF78298EE75200A339B3 /* dire3.swift */,
+				5377DF76298EE74800A339B3 /* dire2.swift */,
+				5377DF74298EE73C00A339B3 /* dire1.swift */,
 				F036CCD62989738A00376EBE /* msgP1.swift */,
 				530B203E29896B3B00115BE6 /* longerInPage.swift */,
 				530B203C2989685300115BE6 /* msgP3.swift */,
@@ -683,6 +692,7 @@
 				F01B054929843ADC003C45AA /* gifLoad.swift in Sources */,
 				F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */,
 				A2451FED2976BB4E00121B5C /* G1Alert.swift in Sources */,
+				5377DF79298EE75200A339B3 /* dire3.swift in Sources */,
 				F036CCD72989738A00376EBE /* msgP1.swift in Sources */,
 				A2451FE52976B29200121B5C /* i3ViewController.swift in Sources */,
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
@@ -701,10 +711,12 @@
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
+				5377DF77298EE74800A339B3 /* dire2.swift in Sources */,
 				538DDF83296423D500562581 /* AlertFail.swift in Sources */,
 				568278D32976DDB80075C75F /* ViewHint.swift in Sources */,
 				539BD06B29789AA500F6AFCF /* AlertLogout2.swift in Sources */,
 				A243CBC6294B7DF700ABC146 /* Login.swift in Sources */,
+				5377DF75298EE73C00A339B3 /* dire1.swift in Sources */,
 				530B20312984166B00115BE6 /* AlertLogout3.swift in Sources */,
 				539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */,
 				530B203D2989685400115BE6 /* msgP3.swift in Sources */,
