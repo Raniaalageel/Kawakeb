@@ -15,8 +15,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var names = [String]()
     var prices = [Int]()
     var myrockets = [String]()
-    @IBOutlet weak var pinnedIMG: UIImageView!
-    @IBOutlet weak var pinnedTXT: UILabel!
+  
     var points = Int()
     var photo = [String]()
     var imageView = UIImageView()
@@ -25,9 +24,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var tableArray = [Int]()
      var count = 0
     var a = ""
-    @IBOutlet weak var PinnedRocket: UIView!
-    var tableSorted = [(Int,String,String)]()
-    var tableSorted2 = [(Int,String,String)]()
+
  
     @IBOutlet weak var StoretableView: UITableView!
     
@@ -208,20 +205,19 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
              
              //   mycell.currentBTN.isUserInteractionEnabled = false
-              //  mycell.currentBTN.isHidden=false
+              mycell.check.isHidden=false
                 mycell.rocketBtn.isHidden=true
                 mycell.updatebtn.isHidden=true
                 mycell.lockIMG.isHidden = true
                 mycell.rocketImage.alpha = 1
-                pinnedIMG.image = UIImage(named: photo[indexPath.row])
-                pinnedTXT.text = names[indexPath.row]
+                mycell.backgroundColor = #colorLiteral(red: 0.9981690049, green: 0.8108515739, blue: 0.3431697786, alpha: 0.4195256517)
                 
 
             }
             else{
                 print("you have it ")
                 mycell.rocketBtn.isHidden=true
-              //  mycell.currentBTN.isHidden=true
+            mycell.check.isHidden=true
                 mycell.updatebtn.isHidden=false
                 //mycell.updatebtn.setTitle("استبدل", for: .normal)
              //   mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -239,7 +235,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         }
         else if(points >= prices[indexPath.row]){ //can buy
             mycell.updatebtn.isHidden=true
-            //mycell.currentBTN.isHidden=true
+         mycell.check.isHidden=true
             mycell.rocketBtn.isHidden=false
             
     
@@ -255,7 +251,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         else {//can not buy
             mycell.updatebtn.isHidden=true
             mycell.rocketBtn.isHidden=false
-            //mycell.currentBTN.isHidden=true
+        mycell.check.isHidden=true
          //   mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
