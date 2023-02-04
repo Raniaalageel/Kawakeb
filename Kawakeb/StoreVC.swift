@@ -39,7 +39,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var mypo: UILabel!
     
     
-    
+   
     
     
     
@@ -48,7 +48,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         babtn.layer.cornerRadius = babtn.frame.width/2
         babtn.layer.borderWidth = 6
         babtn.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
-        
+        print("one")
         babtn.clipsToBounds = true
         Global.shared.audioHomePage.pause()
    //StoretableView.reloadData()
@@ -67,7 +67,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         let db = Firestore.firestore()
         
         
-        
+        Task{
         
         
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments{
@@ -113,7 +113,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        
+        print("two")
         
         
         db.collection("Rockets").getDocuments(){ [self](snapshot, error) in
@@ -134,14 +134,14 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     guard let photo1  = doc.get("image") as? String else { continue }
                     
                     //amani  start
-//
-//                                        var a = ""
-//                                        let formatter: NumberFormatter = NumberFormatter()
-//                                        var  x1: Int!
-//                                        x1 = doc.get("price") as? Int
-//                                        var  a1 = NSNumber(value: x1)
-//                                      formatter.locale = Locale(identifier: "ar")
-//                                       a = formatter.string(from: a1)!
+                    //
+                    //                                        var a = ""
+                    //                                        let formatter: NumberFormatter = NumberFormatter()
+                    //                                        var  x1: Int!
+                    //                                        x1 = doc.get("price") as? Int
+                    //                                        var  a1 = NSNumber(value: x1)
+                    //                                      formatter.locale = Locale(identifier: "ar")
+                    //                                       a = formatter.string(from: a1)!
                     //amani end
                     
                     print("name1",name1)
@@ -152,10 +152,10 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     
                     
                     //   self.prices.append(Int(a) ?? 0)
-                   // self.prices.append(price1)
+                    // self.prices.append(price1)
                     //self.names.append(name1)
-                   // self.photo.append(photo1)
-                  //  Global.shared.allShop = price1+":"+name1+":"+photo1
+                    // self.photo.append(photo1)
+                    //  Global.shared.allShop = price1+":"+name1+":"+photo1
                     var dd = String(price1)
                     dd += ":"+name1+":"+photo1
                     self.allShop.append(dd)
@@ -165,14 +165,16 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 
                 
-                
+                print("three")
                 
                 
             }
             print("Global.shared.allShop",allShop)
+            print("four")
+        }
             AllArray()
-            
-            self.StoretableView.reloadData()
+            print("five")
+         StoretableView.reloadData()
             //
             
             
@@ -184,38 +186,43 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             
             
            }
-        self.StoretableView.reloadData()
+        print("six")
+       //
+           // StoretableView.reloadData()
 
-       
+        print("eight")
         //  let a_snapshot = try await db.collection("Child").wherefgetDocuments()
         //self.StoretableView.reloadData()
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("nine")
         return 170 //Choose your custom row height
+        
     }
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
+        print("ten")
         return names.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("eleven")
         print("enter??")
         let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
  
-        
+        print("telf")
         
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
         
         mycell.rocketPrice.text? = String (pricesAR[indexPath.row])
         
-        
+        print("therty")
         
         // mycell.rocketImage.image =
         if myrockets.contains(names[indexPath.row]) {
