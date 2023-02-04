@@ -14,6 +14,10 @@ import Firebase
 import FirebaseFirestore
 class SecondGame: UIViewController {
     
+    @IBOutlet weak var hintButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var viewInstruction: UIButton!
     @IBOutlet weak var rocketImage: UIImageView!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -25,6 +29,25 @@ class SecondGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 Global.shared.audioHomePage.pause()
+        
+        
+        backButton.layer.cornerRadius =       backButton.frame.width/2
+         backButton.layer.borderWidth = 6
+         backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+         backButton.clipsToBounds = true
+        
+        
+      hintButton.layer.cornerRadius =       hintButton.frame.width/2
+        hintButton.layer.borderWidth = 6
+        hintButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        hintButton.clipsToBounds = true
+        
+        
+        viewInstruction.layer.cornerRadius =      viewInstruction.frame.width/2
+        viewInstruction.layer.borderWidth = 6
+        viewInstruction.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        viewInstruction.clipsToBounds = true
+        
         if(Global.shared.audiomsgP2 == nil)
         {
             print("Global.shared.audiomsgP2 = ", Global.shared.audiomsgP2)

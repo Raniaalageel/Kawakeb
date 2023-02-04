@@ -974,7 +974,9 @@
                     <navigationItem key="navigationItem" id="MzD-MY-Esb"/>
                     <connections>
                         <outlet property="Stars" destination="IAx-WT-iQm" id="y97-3l-W2i"/>
+                        <outlet property="instruction" destination="iwF-Ot-ock" id="pgo-Vc-DrU"/>
                         <outlet property="n2" destination="HWW-tC-cWx" id="eeR-Mb-XtK"/>
+                        <outlet property="storeButton" destination="Imy-5C-PnI" id="EUc-KA-DAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOf-dR-SJS" sceneMemberID="firstResponder"/>
@@ -1110,7 +1112,9 @@
                     <navigationItem key="navigationItem" id="7m8-nA-Hou"/>
                     <connections>
                         <outlet property="Stars3" destination="Ppx-54-McG" id="5jU-CM-Qq2"/>
+                        <outlet property="instruction" destination="Yr3-s3-n0H" id="244-4t-Yk3"/>
                         <outlet property="n3" destination="Hxl-hL-e97" id="e2r-tJ-2oY"/>
+                        <outlet property="storeButton" destination="9XX-BJ-Bok" id="NUc-Vn-Szr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjU-Be-SqG" sceneMemberID="firstResponder"/>
@@ -1246,7 +1250,9 @@
                     <navigationItem key="navigationItem" id="EM3-Xg-byC"/>
                     <connections>
                         <outlet property="Stars4" destination="Vw9-hz-oar" id="YzB-JW-jEh"/>
+                        <outlet property="instruction" destination="dHw-iK-iPc" id="cpj-YG-cHd"/>
                         <outlet property="n4" destination="oV5-Gt-ROu" id="6wB-EV-Wpg"/>
+                        <outlet property="storeButton" destination="xBs-Xe-lzX" id="Lbn-aT-XGT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dty-Uo-CFL" sceneMemberID="firstResponder"/>
@@ -1390,7 +1396,9 @@
                     <navigationItem key="navigationItem" id="DAZ-jd-lX5"/>
                     <connections>
                         <outlet property="Stars5" destination="YrM-uL-wHO" id="8OE-Av-LGP"/>
+                        <outlet property="instruction" destination="nsh-3c-EGa" id="Buk-hh-R4d"/>
                         <outlet property="n5" destination="X6M-3N-WDn" id="rWT-bm-td3"/>
+                        <outlet property="storeButton" destination="iJm-bd-S9B" id="H5E-Cr-j1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiP-iO-Bvn" sceneMemberID="firstResponder"/>
@@ -1508,7 +1516,9 @@
                     <navigationItem key="navigationItem" id="2Kr-Tu-KQm"/>
                     <connections>
                         <outlet property="Stars6" destination="uJC-Kp-dv3" id="f56-ML-1yJ"/>
+                        <outlet property="instruction" destination="3sB-bg-7ki" id="Ykd-nL-iVa"/>
                         <outlet property="n6" destination="bZB-hw-Qyt" id="F4C-eD-oaL"/>
+                        <outlet property="storeButton" destination="2cw-mX-EmL" id="tRM-SF-jbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQC-fY-MVV" sceneMemberID="firstResponder"/>
@@ -3189,8 +3199,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="tuI-Ry-WKf"/>
                     <connections>
+                        <outlet property="backButton" destination="X4t-Sf-rWE" id="FDr-Be-7Vj"/>
+                        <outlet property="hintButton" destination="bw7-7m-Gk5" id="aXB-6W-xqa"/>
                         <outlet property="imageView" destination="eDP-db-Smy" id="guI-3E-6ed"/>
                         <outlet property="rocketImage" destination="AYd-4H-17k" id="8qL-LU-k8q"/>
+                        <outlet property="viewInstruction" destination="jAm-yh-7YW" id="tH2-Xa-JGz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6N-p6-6Aj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3427,6 +3440,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bhz-Ra-VLI"/>
+                    <connections>
+                        <outlet property="backButton" destination="Duo-Yq-gAe" id="Inl-iI-O8O"/>
+                        <outlet property="hintButton" destination="kuG-UM-A2B" id="G3k-s3-ABH"/>
+                        <outlet property="viewInstruction" destination="g4u-3H-2St" id="mJy-R3-C5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2X-9j-NGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4644,6 +4662,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6TT-Z7-UCw"/>
+                    <connections>
+                        <outlet property="backButton" destination="iyO-xK-VfB" id="EMG-pB-36n"/>
+                        <outlet property="hintbutton" destination="rQ5-fc-6I3" id="Lcn-kb-Q9v"/>
+                        <outlet property="viewInstruction" destination="RSE-aK-Uuo" id="7TP-eE-y6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7d-4y-OWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4769,6 +4792,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Sfv-dr-gla"/>
+                    <connections>
+                        <outlet property="backButton" destination="dAS-bE-pbe" id="Kys-xS-a2S"/>
+                        <outlet property="hintButton" destination="w2Z-U1-hGc" id="DvL-l0-kv5"/>
+                        <outlet property="viewInstruction" destination="mZV-XI-8LO" id="tln-uO-gu5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tF-qd-Tk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4998,16 +5026,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wx3-60-l1b"/>
+        <segue reference="B5P-vx-eWI"/>
         <segue reference="9XW-q2-Qd7"/>
-        <segue reference="Jyi-6Y-zs0"/>
-        <segue reference="pnt-ca-DET"/>
+        <segue reference="8LF-le-WNa"/>
+        <segue reference="KyA-kp-3OD"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="hqg-X7-rr5"/>
+        <segue reference="UOL-8Z-xrM"/>
         <segue reference="ptM-7z-fbu"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="x1h-CJ-wsc"/>

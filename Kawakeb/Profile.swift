@@ -52,6 +52,10 @@ class Profile: UIViewController, EditprofileDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
+        
         Global.shared.audioHomePage.pause()
        // Auth.auth().signIn(withEmail: "a@a.com", password: "123123")
         

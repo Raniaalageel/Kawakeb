@@ -12,6 +12,8 @@ import AVFoundation
 
 class i3ViewController: UIViewController {
 
+    @IBOutlet weak var storeButton: UIButton!
+    @IBOutlet weak var instruction: UIButton!
     @IBOutlet weak var Stars3: UILabel!
     @IBOutlet weak var n3: UILabel!
     var a = ""
@@ -22,6 +24,19 @@ class i3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        instruction.layer.cornerRadius =      instruction.frame.width/2
+        instruction.layer.borderWidth = 6
+        instruction.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        instruction.clipsToBounds = true
+        
+        
+       storeButton.layer.cornerRadius =      storeButton.frame.width/2
+       storeButton.layer.borderWidth = 6
+      storeButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+       storeButton.clipsToBounds = true
+        
+        
         
         Global.shared.audioi2VC.pause()
         playAlarm()

@@ -13,6 +13,8 @@ class i6ViewController: UIViewController {
     @IBOutlet weak var Stars6: UILabel!
     @IBOutlet weak var n6: UILabel!
     
+    @IBOutlet weak var instruction: UIButton!
+    @IBOutlet weak var storeButton: UIButton!
     var userId = ""
     let firestore = Firestore.firestore()
     var  a =  ""
@@ -21,6 +23,16 @@ class i6ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        instruction.layer.cornerRadius =      instruction.frame.width/2
+        instruction.layer.borderWidth = 6
+        instruction.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        instruction.clipsToBounds = true
+        
+      storeButton.layer.cornerRadius =      storeButton.frame.width/2
+        storeButton.layer.borderWidth = 6
+      storeButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        storeButton.clipsToBounds = true
         
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in
