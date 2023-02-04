@@ -324,6 +324,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="unf-0X-2hz"/>
                     <connections>
+                        <outlet property="backButton" destination="6l4-hb-MgB" id="zYP-DX-I7F"/>
                         <outlet property="buttonlogin1" destination="0ut-ML-Wwl" id="EKB-g2-hb0"/>
                         <outlet property="emailTextfiled1" destination="MCz-3L-u7N" id="hE8-Rd-XuQ"/>
                         <outlet property="passwordTextfiled1" destination="Lj6-7j-RIR" id="e2F-AH-HUE"/>
@@ -681,6 +682,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JDT-eg-BtO"/>
                     <connections>
+                        <outlet property="backbutton" destination="tdC-NA-k88" id="dqE-aS-5St"/>
                         <outlet property="emailField" destination="ak7-Qj-5yq" id="9wt-es-4k6"/>
                         <outlet property="errorMsg" destination="3wf-gN-H2o" id="tfV-rb-WqI"/>
                         <outlet property="resetB" destination="Fmj-MG-ONl" id="GMC-cC-tLp"/>
@@ -827,7 +829,9 @@
                     <navigationItem key="navigationItem" id="enY-1M-bI7"/>
                     <connections>
                         <outlet property="Stars1" destination="30v-uY-iVm" id="Iu3-8n-fhO"/>
+                        <outlet property="instruction" destination="acg-F9-EsP" id="Ojw-1j-Mq5"/>
                         <outlet property="n1" destination="Qit-eV-5FZ" id="fMQ-lE-gpa"/>
+                        <outlet property="storebutton" destination="ISE-wv-anu" id="wy0-GX-g4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fk-n6-00X" sceneMemberID="firstResponder"/>
@@ -4774,8 +4778,8 @@
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="VUe-B9-O9t"/>
-        <segue reference="mdC-1h-dYE"/>
+        <segue reference="hqg-X7-rr5"/>
+        <segue reference="blo-67-XaK"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>

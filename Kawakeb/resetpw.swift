@@ -13,6 +13,7 @@ import CoreMedia
 
 class resetpw: UIViewController {
 
+    @IBOutlet weak var backbutton: UIButton!
     @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var errorMsg: UILabel!
@@ -20,6 +21,11 @@ class resetpw: UIViewController {
     @IBOutlet weak var resetB: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        backbutton.layer.cornerRadius =    backbutton.frame.width/2
+         backbutton.layer.borderWidth = 6
+         backbutton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+         backbutton.clipsToBounds = true
         errorMsg.isHidden = true
         // Do any additional setup after loading the view.
     }

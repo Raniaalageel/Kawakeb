@@ -13,6 +13,9 @@ import AVFoundation
 
 class i1ViewController: UIViewController {
 
+    @IBOutlet weak var storebutton: UIButton!
+    @IBOutlet weak var instruction: UIButton!
+    
     @IBOutlet weak var Stars1: UILabel!
     @IBOutlet weak var n1: UILabel!
     var a = ""
@@ -22,6 +25,20 @@ class i1ViewController: UIViewController {
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+  instruction.layer.cornerRadius =     instruction.frame.width/2
+        instruction.layer.borderWidth = 6
+        instruction.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        instruction.clipsToBounds = true
+        
+        
+      storebutton.layer.cornerRadius =      storebutton.frame.width/2
+        storebutton.layer.borderWidth = 6
+        storebutton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        storebutton.clipsToBounds = true
+        
+        
+        
         
         Global.shared.audioHomePage.pause()
         playAlarm()

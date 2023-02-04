@@ -17,6 +17,8 @@ import CoreMedia
 
 class Login: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var emailTextfiled1: UITextField!
     @IBOutlet weak var passwordTextfiled1: UITextField!
    // @IBOutlet weak var validationMassege1: UILabel!
@@ -28,6 +30,10 @@ class Login: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        backButton.layer.cornerRadius =    backButton.frame.width/2
+         backButton.layer.borderWidth = 6
+         backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+         backButton.clipsToBounds = true
    //     validationMassege1.isHidden = true
         validationMessegepass1.isHidden = true
         self.emailTextfiled1.delegate = self
@@ -38,6 +44,9 @@ class Login: UIViewController, UITextFieldDelegate {
         
     //    self.emailTextfiled.text = " 1232@lecture.ksu.edu.sa"
      //   self.passwordTextfiled.text = "12345678"
+        
+        
+       
     }
   
     override func viewWillDisappear(_ animated: Bool) {
