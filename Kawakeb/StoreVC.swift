@@ -17,7 +17,8 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var myrockets = [String]()
   
     var points = Int()
-    var photo = [String]()
+    var photo = [String]()//pricesAR
+    var pricesAR = [String]()
     var imageView = UIImageView()
     @IBOutlet weak var babtn: UIButton!
     var current = ""
@@ -48,6 +49,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         StoretableView.delegate = self
         StoretableView.dataSource = self
+        
         
 //
 //        PinnedRocket.layer.borderWidth = 2
@@ -134,6 +136,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     
                     print("name1",name1)
                     print("price1",price1)
+                    
                   //  print("ARABIC",a)
                     
                  //   self.arr.append(price1,name1,photo1)
@@ -143,6 +146,15 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                     self.prices.append(price1)
                     self.names.append(name1)
                     self.photo.append(photo1)
+                    let formatter: NumberFormatter = NumberFormatter()
+                    var  x1: Int!
+                    x1 = Int( price1)
+                    var  a1 = NSNumber(value: x1)
+                  formatter.locale = Locale(identifier: "ar")
+                   a = formatter.string(from: a1)!
+                    self.pricesAR.append(a)
+print("a",a)
+                   
                    
 
                 
@@ -195,7 +207,7 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         mycell.rocketName.text? = names[indexPath.row]
         print(" my.rocketName.text = names[indexPath.row]",names[indexPath.row])
      
-            mycell.rocketPrice.text? = String (prices[indexPath.row])
+            mycell.rocketPrice.text? = pricesAR[indexPath.row]
            
       
         
@@ -275,8 +287,18 @@ class StoreVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
       
             mycell.updatebtn.addTarget(self, action: #selector(updateRocket  (sender:)), for: .touchUpInside)
             
-       
-          
+        mycell.updatebtn.layer.cornerRadius = mycell.updatebtn.frame.width/2
+
+        mycell.updatebtn.clipsToBounds = true
+        
+    mycell.rocketBtn.layer.cornerRadius = mycell.rocketBtn.frame.width/2
+
+    mycell.rocketBtn.clipsToBounds = true
+      
+        mycell.rocketBtn.layer.borderWidth = 1
+        mycell.rocketBtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
+        mycell.updatebtn.layer.borderWidth = 1
+        mycell.updatebtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
             return mycell
             
         }
