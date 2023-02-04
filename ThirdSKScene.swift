@@ -49,6 +49,10 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
         var arrayBeforLoop = [String]()
         var arrayAfterLoop = [String]()
     
+    var FailSound = SKAction.playSoundFileNamed("FailSound.mp3", waitForCompletion: false)
+    var FailSound2 = SKAction.playSoundFileNamed("FailSound2.mp3", waitForCompletion: false)
+    var SuccsusSound = SKAction.playSoundFileNamed("SuccsecSound.mp3", waitForCompletion: false)
+    var SuccsusSound2 = SKAction.playSoundFileNamed("SuccsecSound3.mp3", waitForCompletion: false)
     
     var cnodtionArray = true
     var NormalSnario = true
@@ -460,6 +464,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(hombutton)
                    self.addChild(successLabel)
                    self.addChild(starfiled)
+                playSound1(sound: SuccsusSound)
+                playSound2(sound: SuccsusSound2)
                  //  self.addChild(buttongo)
                    
                    let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
@@ -481,6 +487,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                     self.addChild(failLabel)
                     self.addChild(tryHomebutton)
                     self.addChild(buttotryagain)
+                    playSound3(sound: FailSound)
+                    playSound4(sound: FailSound2)
                      let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                      player.run(actionplayer)
                    
@@ -496,6 +504,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                         self.addChild(failLabel)
                         self.addChild(tryHomebutton)
                         self.addChild(buttotryagain)
+                        playSound3(sound: FailSound)
+                        playSound4(sound: FailSound2)
                          let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                          player.run(actionplayer)
                        
@@ -634,6 +644,27 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
         }
       
     }
+    
+    func playSound1(sound : SKAction)
+        {
+            run(sound)
+           // runAction(sound)
+        }
+    func playSound2(sound : SKAction)
+        {
+            run(sound)
+           // runAction(sound)
+        }
+    func playSound3(sound : SKAction)
+        {
+            run(sound)
+           // runAction(sound)
+        }
+    func playSound4(sound : SKAction)
+        {
+            run(sound)
+           // runAction(sound)
+        }
     
 }
 
