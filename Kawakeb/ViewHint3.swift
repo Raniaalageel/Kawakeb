@@ -14,7 +14,9 @@ class ViewHint3: UIViewController {
     
     @IBOutlet weak var hint13: UIView!
     @IBOutlet weak var hint23: UIView!
-    @IBOutlet weak var hint33: UIImageView!
+    //@IBOutlet weak var hint33: UIView!
+    
+    @IBOutlet weak var hint33: UIView!
     @IBOutlet weak var hint43: UIView!
     @IBOutlet weak var hint53: UIView!
     @IBOutlet weak var hint63: UIView!
