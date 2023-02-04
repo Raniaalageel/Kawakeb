@@ -93,14 +93,14 @@ class ViewHint3: UIViewController {
                 hint33.isUserInteractionEnabled = true
                 hint43.isUserInteractionEnabled = true
                 hint53.isUserInteractionEnabled = true
-                hint63.isUserInteractionEnabled = true
+              //  hint63.isUserInteractionEnabled = true
                 
                 hint13.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint31Flip)))
                 hint23.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint32Flip)))
                 hint33.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint33Flip)))
                 hint43.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint34Flip)))
                 hint53.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint35Flip)))
-                hint63.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint36Flip)))
+//                hint63.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hint36Flip)))
             } else {
                 if ViewHint.selectedHint == 1 {
                     hint31Flip()
@@ -117,9 +117,9 @@ class ViewHint3: UIViewController {
                 else if ViewHint.selectedHint == 5 {
                      hint35Flip()
                  }
-                else if ViewHint.selectedHint == 5 {
-                     hint36Flip()
-                 }
+//                else if ViewHint.selectedHint == 6 {
+//                     hint36Flip()
+//                 }
             }
               guard let id = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments().documents.first?.documentID else {
                         return
@@ -151,7 +151,7 @@ class ViewHint3: UIViewController {
         hint33.isUserInteractionEnabled = false
         hint43.isUserInteractionEnabled = false
         hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
+        //hint63.isUserInteractionEnabled = false
     }
     
     @objc func hint32Flip() {
@@ -167,7 +167,7 @@ class ViewHint3: UIViewController {
         hint33.isUserInteractionEnabled = false
         hint43.isUserInteractionEnabled = false
         hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
+       // hint63.isUserInteractionEnabled = false
     }
     
     @objc func hint33Flip() {
@@ -183,7 +183,7 @@ class ViewHint3: UIViewController {
         hint33.isUserInteractionEnabled = false
         hint43.isUserInteractionEnabled = false
         hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
+      //  hint63.isUserInteractionEnabled = false
     }
     
     @objc func hint34Flip() {
@@ -199,7 +199,7 @@ class ViewHint3: UIViewController {
         hint33.isUserInteractionEnabled = false
         hint43.isUserInteractionEnabled = false
         hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
+       // hint63.isUserInteractionEnabled = false
     }
     
     @objc func hint35Flip() {
@@ -215,24 +215,24 @@ class ViewHint3: UIViewController {
         hint33.isUserInteractionEnabled = false
         hint43.isUserInteractionEnabled = false
         hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
+        //hint63.isUserInteractionEnabled = false
     }
     
-    @objc func hint36Flip() {
-        if isSelected == false {
-            UIView.transition(from: front36, to: back36, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
-        }
-        isSelected = true
-      //  FirstGame.isUsed = true
-        hintIsView = true
-        ViewHint.selectedHint = 6
-        hint13.isUserInteractionEnabled = false
-        hint23.isUserInteractionEnabled = false
-        hint33.isUserInteractionEnabled = false
-        hint43.isUserInteractionEnabled = false
-        hint53.isUserInteractionEnabled = false
-        hint63.isUserInteractionEnabled = false
-    }
+//    @objc func hint36Flip() {
+//        if isSelected == false {
+//            UIView.transition(from: front36, to: back36, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews])
+//        }
+//        isSelected = true
+//      //  FirstGame.isUsed = true
+//        hintIsView = true
+//        ViewHint.selectedHint = 6
+//        hint13.isUserInteractionEnabled = false
+//        hint23.isUserInteractionEnabled = false
+//        hint33.isUserInteractionEnabled = false
+//        hint43.isUserInteractionEnabled = false
+//        hint53.isUserInteractionEnabled = false
+//        hint63.isUserInteractionEnabled = false
+//    }
 
     
 }
