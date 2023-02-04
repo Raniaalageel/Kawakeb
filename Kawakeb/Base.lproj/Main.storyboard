@@ -2638,8 +2638,9 @@
                                 <rect key="frame" x="179" y="400" width="463" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Nk-HqD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yth-Nk-HqD">
                                 <rect key="frame" x="704" y="194" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <inset key="imageEdgeInsets" minX="9" minY="6" maxX="27" maxY="33"/>
@@ -2658,7 +2659,6 @@
                         <constraints>
                             <constraint firstItem="d1m-b9-EZH" firstAttribute="top" secondItem="WVo-gG-fCU" secondAttribute="bottom" constant="1013" id="D1n-8g-52a"/>
                             <constraint firstItem="WVo-gG-fCU" firstAttribute="top" secondItem="ujc-1t-ax5" secondAttribute="bottom" constant="51" id="JUK-GJ-DwY"/>
-                            <constraint firstItem="yth-Nk-HqD" firstAttribute="leading" secondItem="WVo-gG-fCU" secondAttribute="trailing" constant="394" id="QPO-Oz-JPP"/>
                             <constraint firstItem="WVo-gG-fCU" firstAttribute="leading" secondItem="cJg-G4-6Bv" secondAttribute="leadingMargin" constant="14" id="mbL-Lc-3VF"/>
                         </constraints>
                     </view>
@@ -4698,7 +4698,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThirdGame" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-ev-fIY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thirdLevel" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-ev-fIY">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -5448,7 +5448,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ur7-Gg-KHQ"/>
+        <segue reference="lWS-8x-Bih"/>
+        <segue reference="B5P-vx-eWI"/>
         <segue reference="9XW-q2-Qd7"/>
         <segue reference="aoE-lQ-NZG"/>
         <segue reference="pnt-ca-DET"/>
@@ -5470,7 +5471,6 @@
         <image name="FirstGameWithOut" width="1414" height="2000"/>
         <image name="L1.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="LOGO.PNG" width="375" height="375"/>
-        <image name="ThirdGame" width="1414" height="2000"/>
         <image name="alertBack" width="740" height="544"/>
         <image name="arrow-small-left_48pt_3x" width="48" height="48"/>
         <image name="astro.png" width="443" height="563"/>
