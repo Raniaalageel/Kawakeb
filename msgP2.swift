@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class msgP2: UIViewController {
 
@@ -14,18 +15,18 @@ class msgP2: UIViewController {
 
         Global.shared.audioHomePage.pause()
 
-        // Do any additional setup after loading the view.
+        playAlarm()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "msgP2", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audiomsgP2 = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audiomsgP2 .play()
     }
-    */
 
 }

@@ -29,7 +29,15 @@ class ThirdGame: UIViewController {
         var scene: FirstSKScene?
             override func viewDidLoad() {
                 super.viewDidLoad()
-//                Global.shared.audioHomePage.pause()
+                Global.shared.audioHomePage.pause()
+
+                if(Global.shared.audiomsgP3 == nil)
+                {
+                    print("Global.shared.audiomsgP3 = ", Global.shared.audiomsgP3)
+                }else{
+                    Global.shared.audiomsgP3.pause()
+                }
+
 //                Global.shared.longerTime = true
 
     //            if(endis == false){

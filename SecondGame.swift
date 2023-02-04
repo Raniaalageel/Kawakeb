@@ -24,7 +24,15 @@ class SecondGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Global.shared.audioHomePage.pause()
+                Global.shared.audioHomePage.pause()
+        if(Global.shared.audiomsgP2 == nil)
+        {
+            print("Global.shared.audiomsgP2 = ", Global.shared.audiomsgP2)
+        }else{
+            Global.shared.audiomsgP2.pause()
+        }
+
+
         print("nn")
         //        Global.shared.GoBackHomeStopCamera = true
 //        Global.shared.longerTime = true

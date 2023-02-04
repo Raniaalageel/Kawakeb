@@ -318,7 +318,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 
            
                       actions.append(.run(    {
-                          if(self.cnodtionArray == true){
+                          if(self.cnodtionArray == true && Global.shared.EmptyStopArray == true ){
                              self.winCondition() }
                           }))
            print(actions,"actions")
@@ -407,7 +407,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(buttotryagain)
                 
             }
-            else{  //normal array
+            else if(!(arrayWithLabel.isEmpty)) {  //normal array
                 print("normal array")
                 NormalSnario = false
             }
