@@ -125,6 +125,7 @@
 		F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F5297844CE00B8E3C0 /* fail.png */; };
 		F0AE53F82978602C00B8E3C0 /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F72978602C00B8E3C0 /* front.jpeg */; };
 		F0AE53FA29787AFC00B8E3C0 /* sketch.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AE53F929787AFC00B8E3C0 /* sketch.png */; };
+		F0B616DC298FF46200AC8A1C /* RegisterationValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B616DB298FF46200AC8A1C /* RegisterationValidation.swift */; };
 		F0F20EAE29772A6600B28CC6 /* leeeft.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F20EAD29772A6600B28CC6 /* leeeft.png */; };
 		F0F920B1295330F20045A75C /* Globel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B0295330F20045A75C /* Globel.swift */; };
 		F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F920B2295330FE0045A75C /* RegisterViewController.swift */; };
@@ -254,6 +255,7 @@
 		F0AE53F5297844CE00B8E3C0 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		F0AE53F72978602C00B8E3C0 /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpeg; sourceTree = "<group>"; };
 		F0AE53F929787AFC00B8E3C0 /* sketch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sketch.png; sourceTree = "<group>"; };
+		F0B616DB298FF46200AC8A1C /* RegisterationValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationValidation.swift; sourceTree = "<group>"; };
 		F0F20EAD29772A6600B28CC6 /* leeeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leeeft.png; sourceTree = "<group>"; };
 		F0F920B0295330F20045A75C /* Globel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globel.swift; sourceTree = "<group>"; };
 		F0F920B2295330FE0045A75C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				F02AC8AB294A111700152C07 /* KawakebTests.swift */,
+				F0B616DB298FF46200AC8A1C /* RegisterationValidation.swift */,
 			);
 			path = KawakebTests;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02AC8AC294A111700152C07 /* KawakebTests.swift in Sources */,
+				F0B616DC298FF46200AC8A1C /* RegisterationValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

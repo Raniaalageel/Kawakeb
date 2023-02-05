@@ -122,15 +122,22 @@ var Mercury = "open"
             Emailvalidation.text = "* الرجاء إدخال بريد الكتروني صحيح"
             return (false, "", "")
         }
-        if password.count != 8 {
+        if !isValidPasswordR(PasswordText: password){
+         
             Passwordvalidation.isHidden = false
-            Passwordvalidation.text = "* الرجاء إدخال كلمة مرور لا تقل عن ٨ أرقام"
+            Passwordvalidation.text = "* الرجاء إدخال كلمة مرور بين ٨ و ١٥ رقم"
             return (false, "", "")
         }
+//        if password.count != 8 {
+//            Passwordvalidation.isHidden = false
+//            Passwordvalidation.text = "* الرجاء إدخال كلمة مرور لا تقل عن ٨ أرقام"
+//            return (false, "", "")
+//        }
         
         
         return (true, email, password)
     }
+    
     
     
     
@@ -414,6 +421,12 @@ var Mercury = "open"
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailID)
+    }
+    
+    func isValidPasswordR(PasswordText:String) -> Bool {
+        let passwordRegEx = ".{8,15}"
+        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+        return passwordTest.evaluate(with: PasswordText)
     }
     
     
