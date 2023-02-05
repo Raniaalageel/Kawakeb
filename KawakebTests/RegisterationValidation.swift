@@ -9,6 +9,7 @@
 import XCTest
 import FirebaseAuth
 
+
 class RegisterationValidation: XCTestCase {
 
     var validation: RegisterViewController!
