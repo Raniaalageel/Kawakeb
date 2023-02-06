@@ -493,6 +493,56 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
       
     }
     
+    var userPoint: Int = 13
+   
+    func CalculatUserPoint(emailID:String) -> Int {
+        
+       
+
+        db.collection("Child").whereField("email", isEqualTo: emailID ).getDocuments{
+                        (snapshot, error) in
+                        if let error = error {
+                            print("FAIL")
+                        }
+                        else {
+                            print("SUCCESS??")
+                            
+            self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
+                print("??????MercuryPoints",self.MercuryPoints!)
+                            
+            self.mercpoints = self.MercuryPoints!
+            print("self33,",self.mercpoints!)
+                            
+                self.points = snapshot!.documents.first!.get("points") as! Int
+                            print("??????points",self.points!)
+                        }
+            
+            let student_docID = snapshot!.documents.first!.documentID
+        
+            
+            if(self.mercpoints! == 0 ){
+            self.db.collection("Child").document(student_docID).setData([
+               "points": self.points + 2 ,
+                "Flower" : "open" ,
+                "MercuryPoints": 1
+            ],merge:true) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+                self.userPoint = snapshot!.documents.first!.get("points") as! Int
+            }
+                
+        }
+
+            }else{
+                print("already win ")
+                self.userPoint = snapshot!.documents.first!.get("points") as! Int
+            }
+        }
+        return userPoint
+    }
+    
     func playSound1(sound : SKAction)
         {
             run(sound)

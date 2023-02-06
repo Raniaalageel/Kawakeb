@@ -34,34 +34,16 @@ class CalculatePointsValidation: XCTestCase {
     
     func test_Calculate_First_Game_Point()  {
         
-//        XCTAssertNoThrow(validation.calculatePoint())
-//
-//        db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
-//                        (snapshot, error) in
-//                        if let error = error {}
-//                        else {
-//
-//        self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
-//        self.mercpoints = self.MercuryPoints!
-//        self.points = snapshot!.documents.first!.get("points") as! Int
-//
-//        let expected = self.points + 2
-//        let actual = 13 + 2
-////        XCTAssertEqual(expected,self.points)
-//        XCTAssertEqual(expected, actual)
-//      }
-//
-//    }
+ 
+        let userPoint = validation.CalculatUserPoint(emailID: "shamma@gmail.com")
+                        
+//   *** the point of the user with email address = "shamma@gmail.com" is = 13
         
-    let expected = 0+2
-    let actual = validation.calculatePoint() as! Int
-    XCTAssertEqual(expected, actual)
-
+        let expected = 13
         
+        XCTAssertEqual(userPoint, expected)
         
- }
-   
+  
+   }
 }
-    
-    
 
