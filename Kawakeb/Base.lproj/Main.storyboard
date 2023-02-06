@@ -27,7 +27,7 @@
         <!--View Controller-->
         <scene sceneID="kSg-jV-olD">
             <objects>
-                <viewController id="AxH-NX-vOx" customClass="ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logout" id="AxH-NX-vOx" customClass="ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cht-vh-9rm">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2182,7 +2182,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-dk-yo3">
-                                <rect key="frame" x="205" y="872" width="413" height="83"/>
+                                <rect key="frame" x="205" y="802" width="413" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
@@ -2283,29 +2283,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFB-WG-3FE">
-                                <rect key="frame" x="584" y="209.5" width="110" height="105.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
-                                <size key="titleShadowOffset" width="8" height="10"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.094117647060000004" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <imageReference key="backgroundImage" image="sign-out-alt_48pt_1x" symbolScale="default" renderingMode="hierarchical">
-                                        <hierarchicalColors>
-                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </hierarchicalColors>
-                                    </imageReference>
-                                </state>
-                                <connections>
-                                    <action selector="editpro:" destination="VOB-7c-ywd" eventType="touchUpInside" id="PLP-pI-keD"/>
-                                    <segue destination="AxH-NX-vOx" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="x1h-CJ-wsc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-QK-OzA">
                                 <rect key="frame" x="161" y="727" width="535" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2313,6 +2290,20 @@
                                 <color key="textColor" red="0.0086509948600000004" green="0.21174463630000001" blue="0.35865825410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98i-eI-ZgH">
+                                <rect key="frame" x="211" y="906" width="413" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="تسجيل الخروج" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButton:" destination="VOB-7c-ywd" eventType="touchUpInside" id="mc7-Wb-Mac"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ha4-pq-KoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2321,7 +2312,6 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Qys-mr-lax"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="EDTbtn" destination="mFB-WG-3FE" id="Gtt-as-CG4"/>
                         <outlet property="bkbtn" destination="rnC-Q2-kLY" id="XAQ-EA-4zx"/>
                         <outlet property="char" destination="ikN-iq-BLw" id="8Hd-pM-cky"/>
                         <outlet property="dob" destination="Eso-89-OjQ" id="XbW-eH-tQV"/>
@@ -2331,7 +2321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af1-6F-pYy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513.6690647482014" y="1472.8643216080402"/>
+            <point key="canvasLocation" x="1555" y="1569"/>
         </scene>
         <!--Editprofile-->
         <scene sceneID="zOA-Gv-Ud5">
@@ -5448,20 +5438,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lWS-8x-Bih"/>
         <segue reference="B5P-vx-eWI"/>
-        <segue reference="9XW-q2-Qd7"/>
+        <segue reference="0Iz-LO-L6a"/>
         <segue reference="aoE-lQ-NZG"/>
-        <segue reference="pnt-ca-DET"/>
+        <segue reference="wLB-3K-fjO"/>
         <segue reference="OGu-ep-2YN"/>
-        <segue reference="ITc-Pv-rak"/>
+        <segue reference="iI5-kz-FyW"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="ptM-7z-fbu"/>
-        <segue reference="Z5o-PD-IXw"/>
-        <segue reference="x1h-CJ-wsc"/>
+        <segue reference="mdC-1h-dYE"/>
+        <segue reference="u2J-iR-xDB"/>
+        <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>
@@ -5479,7 +5468,7 @@
         <image name="bulb_48pt_1x" width="48" height="48"/>
         <image name="check-mark" width="256" height="256"/>
         <image name="close1" width="68" height="70"/>
-        <image name="directions.png" width="176.84210205078125" height="250.10527038574219"/>
+        <image name="directions.png" width="125.89473724365234" height="199.15789794921875"/>
         <image name="downn" width="265" height="95"/>
         <image name="empty" width="607" height="411"/>
         <image name="expand-arrows-alt_48pt_1x" width="48" height="48"/>
@@ -5508,7 +5497,6 @@
         <image name="riight" width="269" height="112"/>
         <image name="secondGame-1" width="1414" height="2000"/>
         <image name="shopping-cart_48pt_1x" width="48" height="48"/>
-        <image name="sign-out-alt_48pt_1x" width="48" height="48"/>
         <image name="star11.png" width="302" height="206.5"/>
         <image name="star22.png" width="258.5" height="241.5"/>
         <image name="thirdLevel" width="1414" height="2000"/>
