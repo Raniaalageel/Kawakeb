@@ -3531,7 +3531,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-dJ-uBQ">
-                                <rect key="frame" x="0.0" y="533" width="400" height="362"/>
+                                <rect key="frame" x="-17" y="533" width="400" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-oq-IU5">
@@ -3542,7 +3542,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="directions.png" translatesAutoresizingMaskIntoConstraints="NO" id="mfZ-vX-SyZ">
-                                <rect key="frame" x="290" y="382" width="288" height="421"/>
+                                <rect key="frame" x="288" y="381" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -4894,7 +4894,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="gCd-Re-Qvb">
-                                <rect key="frame" x="0.0" y="533" width="400" height="362"/>
+                                <rect key="frame" x="-19" y="533" width="400" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-D8-773">
@@ -4905,7 +4905,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="directions.png" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-vX-p4G">
-                                <rect key="frame" x="290" y="382" width="288" height="421"/>
+                                <rect key="frame" x="286" y="382" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -5010,7 +5010,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="aiL-Vj-Rn1">
-                                <rect key="frame" x="0.0" y="533" width="400" height="362"/>
+                                <rect key="frame" x="-22" y="533" width="400" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhM-Ae-1qV">
@@ -5021,7 +5021,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="directions.png" translatesAutoresizingMaskIntoConstraints="NO" id="FUN-Sk-m1Y">
-                                <rect key="frame" x="290" y="382" width="288" height="421"/>
+                                <rect key="frame" x="284" y="382" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -5438,9 +5438,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B5P-vx-eWI"/>
+        <segue reference="wx3-60-l1b"/>
         <segue reference="0Iz-LO-L6a"/>
-        <segue reference="aoE-lQ-NZG"/>
+        <segue reference="Jyi-6Y-zs0"/>
         <segue reference="wLB-3K-fjO"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="iI5-kz-FyW"/>
@@ -5468,7 +5468,7 @@
         <image name="bulb_48pt_1x" width="48" height="48"/>
         <image name="check-mark" width="256" height="256"/>
         <image name="close1" width="68" height="70"/>
-        <image name="directions.png" width="125.89473724365234" height="199.15789794921875"/>
+        <image name="directions.png" width="128.84210205078125" height="197.05262756347656"/>
         <image name="downn" width="265" height="95"/>
         <image name="empty" width="607" height="411"/>
         <image name="expand-arrows-alt_48pt_1x" width="48" height="48"/>
