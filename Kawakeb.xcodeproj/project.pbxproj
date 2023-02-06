@@ -115,6 +115,7 @@
 		F036CCE529899AE500376EBE /* i1VC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F036CCE429899AE500376EBE /* i1VC.mp3 */; };
 		F04C9E5D29887C6D00CE150B /* fear_bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */; };
 		F04C9E752989384300CE150B /* HomeSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04C9E742989384200CE150B /* HomeSound.mp3 */; };
+		F05D556A2990F43400AEE63A /* CalculatePointsValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05D55692990F43400AEE63A /* CalculatePointsValidation.swift */; };
 		F07B13E5298EB25700C88628 /* msgP2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F07B13E4298EB25700C88628 /* msgP2.mp3 */; };
 		F07B13E7298EB26700C88628 /* msgP3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F07B13E6298EB26700C88628 /* msgP3.mp3 */; };
 		F07B13E9298EC65F00C88628 /* FailSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F07B13E8298EC65E00C88628 /* FailSound.mp3 */; };
@@ -248,6 +249,7 @@
 		F036CCE429899AE500376EBE /* i1VC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = i1VC.mp3; sourceTree = "<group>"; };
 		F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_bg.mp3; sourceTree = "<group>"; };
 		F04C9E742989384200CE150B /* HomeSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HomeSound.mp3; sourceTree = "<group>"; };
+		F05D55692990F43400AEE63A /* CalculatePointsValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePointsValidation.swift; sourceTree = "<group>"; };
 		F07B13E4298EB25700C88628 /* msgP2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = msgP2.mp3; sourceTree = "<group>"; };
 		F07B13E6298EB26700C88628 /* msgP3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = msgP3.mp3; sourceTree = "<group>"; };
 		F07B13E8298EC65E00C88628 /* FailSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FailSound.mp3; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 				F0B616DB298FF46200AC8A1C /* RegisterationValidation.swift */,
 				F0B616DD2990479D00AC8A1C /* CalculatePoints.swift */,
 				F0B616E129905C7F00AC8A1C /* EditProfileValidation.swift */,
+				F05D55692990F43400AEE63A /* CalculatePointsValidation.swift */,
 				F0B616DF299055DC00AC8A1C /* UpdateRocketValidation.swift */,
 			);
 			path = KawakebTests;
@@ -756,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05D556A2990F43400AEE63A /* CalculatePointsValidation.swift in Sources */,
 				F0B616DE2990479D00AC8A1C /* CalculatePoints.swift in Sources */,
 				F0B616E229905C8000AC8A1C /* EditProfileValidation.swift in Sources */,
 				F0B616E0299055DD00AC8A1C /* UpdateRocketValidation.swift in Sources */,

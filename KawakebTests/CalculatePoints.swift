@@ -12,20 +12,20 @@ import FirebaseFirestore
 
 class CalculatePoints: XCTestCase {
 
-//    var validation: FirstSKScene!
+    var validation: FirstSKScene!
     var GlobalUser: Global!
     let db = Firestore.firestore()
-    var curR = ""
-//    var MercuryPoints:Int!
-//    var mercpoints:Int!
-//    var points:Int!
-    var validation: updateRocketViewController!
+//    var curR = ""
+    var MercuryPoints:Int!
+    var mercpoints:Int!
+    var points:Int!
+//    var validation: updateRocketViewController!
     
     override func setUp() {
         super.setUp()
-//        validation = FirstSKScene()
+        validation = FirstSKScene()
           GlobalUser = Global()
-          validation = updateRocketViewController()
+//          validation = updateRocketViewController()
     }
     
     override func tearDown() {
@@ -37,38 +37,26 @@ class CalculatePoints: XCTestCase {
     
     func CalculateGamePoints() {
 
-//        XCTAssertNoThrow(validation.calculatePoint())
-//
-        let GlobalUserEmail = GlobalUser.useremailshare
-        let UserCurentRocket =  db.collection("Child").whereField("email", isEqualTo: GlobalUserEmail).getDocuments{
-            (snapshot, error) in
-            if let error = error {}
-            else{}
-            
-            let myROCK = snapshot!.documents.first!.get("currentRocket") as! String
-            self.curR = myROCK
-            
-            XCTAssertNotEqual(myROCK, self.curR)
-//
-//        self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
-//        self.mercpoints = self.MercuryPoints!
-//        self.points = snapshot!.documents.first!.get("points") as! Int
-//
-//        let expected = self.points + 2
+        XCTAssertNoThrow(validation.calculatePoint())
+
+        db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
+                        (snapshot, error) in
+                        if let error = error {}
+                        else {
+                 
+        self.MercuryPoints = snapshot!.documents.first!.get("MercuryPoints") as! Int
+        self.mercpoints = self.MercuryPoints!
+        self.points = snapshot!.documents.first!.get("points") as! Int
+
+        let expected = self.points + 2
+        let actual = 13 + 2
 //        XCTAssertEqual(expected, self.points)
-//
-//        }
-        
-        
-        
-        
-        
-        
-        
+        XCTAssertEqual(expected, actual)
+
     }
     
     
+    }
   }
-   
 
 }
