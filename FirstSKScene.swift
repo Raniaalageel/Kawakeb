@@ -91,9 +91,10 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                       buttonnext.size = .init(width: 280, height: 180)
                    buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.30)
                     
-                      add = SKSpriteNode(imageNamed: "add6")
-                      add.size = .init(width: 350, height: 180)
-                      add.position = CGPoint(x: frame.width * 0.80, y: frame.height * 0.10)
+           add = SKSpriteNode(imageNamed: "add100")
+                                 add.size = .init(width: 250, height: 180)
+                                 add.position = CGPoint(x: frame.width * 0.80, y: frame.height * 0.10)
+
                       //0.6   0.4   y in less be down , x in less go left
                       
 
@@ -342,9 +343,10 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    playSound1(sound: SuccsusSound)
                    playSound2(sound: SuccsusSound2)
                 self.addChild(add)
-                   let action = SKAction.sequence([.move(by: .init(dx: -520, dy: 950), duration: 1), .rotate(byAngle: 10, duration: 1)]);
-                                
-                                add.run(action)
+                let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 490), duration: 1)]) //,
+                                    //.rotate(byAngle: 4, duration: 1)]);
+                                                
+                            add.run(action)
 
 
                  //  self.addChild(buttongo)
