@@ -35,6 +35,11 @@ class ViewHint2: UIViewController {
     @IBOutlet weak var hint42: UIView!
     @IBOutlet weak var hint52: UIView!
     
+    @IBOutlet weak var bac: UIButton!
+    
+    @IBOutlet weak var dire: UIButton!
+    
+    @IBOutlet weak var hint: UIButton!
     
     
     var isSelected = false
@@ -43,6 +48,25 @@ class ViewHint2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        hint.layer.cornerRadius =       hint.frame.width/2
+         hint.layer.borderWidth = 6
+        hint.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+         hint.clipsToBounds = true
+        
+        
+      dire.layer.cornerRadius =        dire.frame.width/2
+        dire.layer.borderWidth = 6
+        dire.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        dire.clipsToBounds = true
+        
+        
+       bac.layer.cornerRadius =      bac.frame.width/2
+        bac.layer.borderWidth = 6
+        bac.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        bac.clipsToBounds = true
+        
        sethint()
         hintIsVieww()
     }
