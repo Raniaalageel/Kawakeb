@@ -63,7 +63,7 @@ class FirstGame: UIViewController {
             
             
             
-//            present(G1alert(), animated: true)
+  // present(G1alert(), animated: true)
             Global.shared.audioHomePage.pause()
             Global.shared.audiomsgP1.pause()
             print("nn")

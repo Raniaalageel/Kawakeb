@@ -40,11 +40,11 @@ class Login: UIViewController, UITextFieldDelegate {
       
         self.passwordTextfiled1.delegate = self
         self.tabBarController?.tabBar.isHidden = true
-        bkbtn.layer.cornerRadius = bkbtn.frame.width/2
-        bkbtn.layer.borderWidth = 6
-        bkbtn.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        backButton.layer.cornerRadius = backButton.frame.width/2
+        backButton.layer.borderWidth = 6
+        backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 
-        bkbtn.clipsToBounds = true
+        backButton.clipsToBounds = true
         // Do any additional setup after loading the view.
         
     //    self.emailTextfiled.text = " 1232@lecture.ksu.edu.sa"
