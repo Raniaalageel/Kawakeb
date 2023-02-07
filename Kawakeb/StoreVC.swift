@@ -295,9 +295,9 @@ print("a",a)
 
     mycell.rocketBtn.clipsToBounds = true
       
-        mycell.rocketBtn.layer.borderWidth = 1
+        mycell.rocketBtn.layer.borderWidth = 2
         mycell.rocketBtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
-        mycell.updatebtn.layer.borderWidth = 1
+        mycell.updatebtn.layer.borderWidth = 2
         mycell.updatebtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
             return mycell
             
