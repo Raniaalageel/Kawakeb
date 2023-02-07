@@ -16,11 +16,11 @@ class ViewHint : UIViewController {
     @IBOutlet weak var hint2BackImage: UIImageView!
     @IBOutlet weak var hint3BackImage: UIImageView!
     @IBOutlet weak var hint4BackImage: UIImageView!
-   
+    
     @IBOutlet weak var hint1FrontImage: UIImageView!
     @IBOutlet weak var hint2FrontImage: UIImageView!
-    @IBOutlet weak var hint3FrontImage: UIImageView!
     @IBOutlet weak var hint4FrontImage: UIImageView!
+    @IBOutlet weak var hint3FrontImage: UIImageView!
     
     @IBOutlet weak var hint1: UIView!
     @IBOutlet weak var hint2: UIView!

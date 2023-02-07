@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -2020,7 +2019,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OWN-Jg-Hb7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BPB-jS-XtS">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2800,7 +2799,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نجحت بالوصول إلى كوكب الزهرة! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rou-Rc-QID">
-                                <rect key="frame" x="217.5" y="374" width="574.5" height="54"/>
+                                <rect key="frame" x="224" y="374" width="568" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2962,7 +2961,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حاول مرة اخرى!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOk-Xp-ieM">
-                                <rect key="frame" x="509.5" y="374" width="282.5" height="54"/>
+                                <rect key="frame" x="511" y="374" width="281" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3658,15 +3657,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2pD-Wv-pH4">
-                                <rect key="frame" x="279" y="498" width="266" height="89"/>
+                                <rect key="frame" x="258" y="544" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-5C-NsG">
-                                        <rect key="frame" x="1" y="8" width="265" height="84"/>
+                                        <rect key="frame" x="8" y="-7" width="307" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="KUy-64-fPa">
-                                        <rect key="frame" x="-14" y="8" width="280" height="88"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="QYk-N7-2Nv">
+                                        <rect key="frame" x="-15" y="-7" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -3699,8 +3698,8 @@
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-lf-hop">
-                                <rect key="frame" x="311" y="292" width="214" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بالضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-lf-hop">
+                                <rect key="frame" x="299" y="292" width="226" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3710,44 +3709,44 @@
                                 <rect key="frame" x="0.0" y="764" width="324" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpx-kw-cn3">
-                                <rect key="frame" x="279" y="707" width="266" height="89"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlV-WG-msS">
+                                <rect key="frame" x="258" y="444" width="306" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="ml4-jd-gFa">
-                                        <rect key="frame" x="-18" y="-4" width="302" height="97"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-rP-DAG">
+                                        <rect key="frame" x="-15" y="-11" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="fMm-Dc-eKm">
-                                        <rect key="frame" x="8" y="-7" width="258" height="102"/>
+                                        <rect key="frame" x="-15" y="-11" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlV-WG-msS">
-                                <rect key="frame" x="279" y="604" width="266" height="89"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpx-kw-cn3">
+                                <rect key="frame" x="258" y="349" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-jc-bWb">
-                                        <rect key="frame" x="0.0" y="4" width="258" height="77"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="ml4-jd-gFa">
+                                        <rect key="frame" x="-22" y="-12" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-GE-blp">
-                                        <rect key="frame" x="-10" y="0.0" width="276" height="93"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="FJM-lZ-4xn">
+                                        <rect key="frame" x="-22" y="-13" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56V-2y-mDZ">
-                                <rect key="frame" x="279" y="387" width="266" height="89"/>
+                                <rect key="frame" x="259" y="641" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="fti-hS-jLO">
-                                        <rect key="frame" x="-4" y="8" width="275" height="83"/>
+                                        <rect key="frame" x="16" y="0.0" width="282" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="jra-Ps-Cia">
-                                        <rect key="frame" x="-12" y="2" width="278" height="95"/>
+                                        <rect key="frame" x="-22" y="-7" width="335" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -3760,13 +3759,13 @@
                     <connections>
                         <outlet property="hint1" destination="Cpx-kw-cn3" id="PKr-cr-6n9"/>
                         <outlet property="hint1BackImage" destination="ml4-jd-gFa" id="JRh-SR-4MQ"/>
-                        <outlet property="hint1FrontImage" destination="fMm-Dc-eKm" id="Jp2-CW-9Ny"/>
+                        <outlet property="hint1FrontImage" destination="FJM-lZ-4xn" id="FX7-l8-Qmo"/>
                         <outlet property="hint2" destination="PlV-WG-msS" id="eo3-XS-kua"/>
-                        <outlet property="hint2BackImage" destination="V4x-jc-bWb" id="zan-td-8CX"/>
-                        <outlet property="hint2FrontImage" destination="8dZ-GE-blp" id="Pae-hR-alR"/>
+                        <outlet property="hint2BackImage" destination="R7h-rP-DAG" id="7rj-s8-SO8"/>
+                        <outlet property="hint2FrontImage" destination="fMm-Dc-eKm" id="b5W-7T-rS7"/>
                         <outlet property="hint3" destination="2pD-Wv-pH4" id="vbb-gJ-9Kk"/>
                         <outlet property="hint3BackImage" destination="U7b-5C-NsG" id="MDz-ZQ-1po"/>
-                        <outlet property="hint3FrontImage" destination="KUy-64-fPa" id="Ipi-9o-aa6"/>
+                        <outlet property="hint3FrontImage" destination="QYk-N7-2Nv" id="x1q-lp-mQA"/>
                         <outlet property="hint4" destination="56V-2y-mDZ" id="9Ct-wi-DuX"/>
                         <outlet property="hint4BackImage" destination="fti-hS-jLO" id="uSZ-wJ-Bzg"/>
                         <outlet property="hint4FrontImage" destination="jra-Ps-Cia" id="7VR-pB-wKr"/>
@@ -3805,7 +3804,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="rocketCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rocketCell" rowHeight="184" id="bks-d0-raq" customClass="storeCell" customModule="Kawakeb" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="55.5" width="562" height="184"/>
+                                        <rect key="frame" x="8" y="49.5" width="562" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bks-d0-raq" id="EcO-JL-cxU">
                                             <rect key="frame" x="0.0" y="0.0" width="562" height="184"/>
@@ -5152,8 +5151,8 @@
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wo-Xv-SQS">
-                                <rect key="frame" x="310" y="260" width="214" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بالضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wo-Xv-SQS">
+                                <rect key="frame" x="298" y="260" width="226" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5164,71 +5163,71 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIG-ZF-riB">
-                                <rect key="frame" x="279" y="737" width="266" height="89"/>
+                                <rect key="frame" x="258" y="308" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="HHg-vj-9MK">
-                                        <rect key="frame" x="-18" y="-4" width="302" height="97"/>
+                                        <rect key="frame" x="-15" y="-12" width="336" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="Nca-pX-iSG">
-                                        <rect key="frame" x="-21" y="-20" width="308" height="129"/>
+                                        <rect key="frame" x="-22" y="-18" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-uH-GUB">
-                                <rect key="frame" x="279" y="627" width="266" height="89"/>
+                                <rect key="frame" x="258" y="414" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leeeft" translatesAutoresizingMaskIntoConstraints="NO" id="HYq-cS-fts">
-                                        <rect key="frame" x="-42" y="-4" width="331" height="97"/>
+                                        <rect key="frame" x="-15" y="-12" width="337" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="Iew-D5-qyU">
-                                        <rect key="frame" x="-30" y="-4" width="319" height="104"/>
+                                        <rect key="frame" x="-21" y="-12" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-FX-rm1">
-                                <rect key="frame" x="279" y="521" width="266" height="89"/>
+                                <rect key="frame" x="258" y="529" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downn" translatesAutoresizingMaskIntoConstraints="NO" id="oqE-It-wkK">
-                                        <rect key="frame" x="-7" y="8" width="273" height="87"/>
+                                        <rect key="frame" x="-10" y="-7" width="327" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-w7-prO">
-                                        <rect key="frame" x="-23" y="-2" width="304" height="106"/>
+                                        <rect key="frame" x="-18" y="-18" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pp7-BD-js9">
-                                <rect key="frame" x="279" y="410" width="266" height="89"/>
+                                <rect key="frame" x="258" y="634" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downn" translatesAutoresizingMaskIntoConstraints="NO" id="wgy-dI-Xbq">
-                                        <rect key="frame" x="-9" y="8" width="275" height="81"/>
+                                        <rect key="frame" x="8" y="-7" width="293" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-ie-EGK">
-                                        <rect key="frame" x="-25" y="0.0" width="301" height="103"/>
+                                        <rect key="frame" x="-18" y="-18" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gF-cu-V8y">
-                                <rect key="frame" x="279" y="314" width="266" height="75"/>
+                                <rect key="frame" x="258" y="739" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="riight" translatesAutoresizingMaskIntoConstraints="NO" id="yjd-T3-Vbx">
-                                        <rect key="frame" x="8" y="-16" width="232" height="114"/>
+                                        <rect key="frame" x="-15" y="-12" width="337" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="8k5-bs-wq1">
-                                        <rect key="frame" x="-26" y="-11" width="300" height="105"/>
+                                        <rect key="frame" x="-18" y="-18" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -5258,7 +5257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEJ-e2-B9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3676" y="189"/>
+            <point key="canvasLocation" x="-3676.2589928057555" y="188.94472361809045"/>
         </scene>
         <!--View Hint3-->
         <scene sceneID="ffh-XX-oCQ">
@@ -5351,8 +5350,8 @@
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrK-xh-naT">
-                                <rect key="frame" x="311" y="292" width="214" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="بالضغط على احد المربعات " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrK-xh-naT">
+                                <rect key="frame" x="299" y="292" width="226" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5363,71 +5362,71 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eiq-OI-iBp">
-                                <rect key="frame" x="282" y="360" width="301" height="60"/>
+                                <rect key="frame" x="265" y="754" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-h6-04F">
-                                        <rect key="frame" x="-36" y="0.0" width="349" height="85"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="endloop" translatesAutoresizingMaskIntoConstraints="NO" id="JI2-h6-04F">
+                                        <rect key="frame" x="-33" y="-16" width="376" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="CZO-lg-GDk">
-                                        <rect key="frame" x="-46" y="-4" width="359" height="93"/>
+                                        <rect key="frame" x="-18" y="-16" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q98-zQ-NaE">
-                                <rect key="frame" x="280" y="478" width="300" height="64"/>
+                                <rect key="frame" x="264" y="439" width="306" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="riight" translatesAutoresizingMaskIntoConstraints="NO" id="7T2-T5-B6N">
-                                        <rect key="frame" x="-17" y="-11" width="309" height="86"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="7T2-T5-B6N">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="gwN-jS-AH9">
-                                        <rect key="frame" x="-33" y="-14" width="341" height="92"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzb-vN-ent">
-                                <rect key="frame" x="271" y="573" width="300" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="2Xk-fe-0jn">
-                                        <rect key="frame" x="-17" y="-8" width="334" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="dc5-nu-iFh">
-                                        <rect key="frame" x="-33" y="-8" width="350" height="94"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-ki-9Xj">
-                                <rect key="frame" x="265" y="673" width="305" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="0Ot-Ha-oXA">
-                                        <rect key="frame" x="-19" y="0.0" width="343" height="85"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="Zjk-Vr-0S4">
-                                        <rect key="frame" x="-39" y="-4" width="363" height="92"/>
+                                        <rect key="frame" x="-18" y="-13" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bh5-Xe-yoa">
-                                <rect key="frame" x="258" y="776" width="309" height="71"/>
+                                <rect key="frame" x="264" y="341" width="306" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="5DL-LL-LJ1">
-                                        <rect key="frame" x="0.0" y="-10" width="294" height="91"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2loop" translatesAutoresizingMaskIntoConstraints="NO" id="5DL-LL-LJ1">
+                                        <rect key="frame" x="-14" y="-12" width="334" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-J5-QNt">
-                                        <rect key="frame" x="-28" y="-14" width="350" height="95"/>
+                                        <rect key="frame" x="-23" y="-18" width="343" height="115"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-ki-9Xj">
+                                <rect key="frame" x="265" y="644" width="306" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="riight" translatesAutoresizingMaskIntoConstraints="NO" id="0Ot-Ha-oXA">
+                                        <rect key="frame" x="-43" y="-14" width="366" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="Zjk-Vr-0S4">
+                                        <rect key="frame" x="-20" y="-14" width="343" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzb-vN-ent">
+                                <rect key="frame" x="268" y="542" width="306" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="uppp" translatesAutoresizingMaskIntoConstraints="NO" id="2Xk-fe-0jn">
+                                        <rect key="frame" x="-24" y="-8" width="354" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qm" translatesAutoresizingMaskIntoConstraints="NO" id="dc5-nu-iFh">
+                                        <rect key="frame" x="-24" y="-18" width="343" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -5450,7 +5449,7 @@
                         <outlet property="front35" destination="CZO-lg-GDk" id="341-9l-h7W"/>
                         <outlet property="hint13" destination="Bh5-Xe-yoa" id="OIn-w6-vrs"/>
                         <outlet property="hint23" destination="i3G-ki-9Xj" id="hDP-hL-geQ"/>
-                        <outlet property="hint33" destination="dc5-nu-iFh" id="eTs-mx-AMl"/>
+                        <outlet property="hint33" destination="nzb-vN-ent" id="TeS-Li-mUC"/>
                         <outlet property="hint43" destination="Q98-zQ-NaE" id="sGQ-W2-fnc"/>
                         <outlet property="hint53" destination="Eiq-OI-iBp" id="bwM-eO-YpK"/>
                     </connections>
@@ -5461,9 +5460,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B5P-vx-eWI"/>
+        <segue reference="ur7-Gg-KHQ"/>
         <segue reference="0Iz-LO-L6a"/>
-        <segue reference="8LF-le-WNa"/>
+        <segue reference="aoE-lQ-NZG"/>
         <segue reference="pnt-ca-DET"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="iI5-kz-FyW"/>
@@ -5471,13 +5470,14 @@
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="ggw-n2-oPl"/>
+        <segue reference="8br-0v-xWi"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="1029" height="242"/>
         <image name="2" width="1034" height="241"/>
+        <image name="2loop" width="397" height="152"/>
         <image name="3" width="1036" height="241"/>
         <image name="4" width="1047" height="238"/>
         <image name="FirstGameWithOut" width="1414" height="2000"/>
@@ -5494,13 +5494,13 @@
         <image name="directions.png" width="128.84210205078125" height="197.05262756347656"/>
         <image name="downn" width="265" height="95"/>
         <image name="empty" width="607" height="411"/>
+        <image name="endloop" width="417" height="156"/>
         <image name="expand-arrows-alt_48pt_1x" width="48" height="48"/>
         <image name="firstbg" width="1414" height="2000"/>
         <image name="girl" width="500" height="500"/>
         <image name="help.png" width="53" height="54"/>
         <image name="leeeft" width="286" height="108"/>
-        <image name="lock.fill" catalog="system" width="125" height="128"/>
-        <image name="loop" width="308" height="113"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="luck" width="463" height="539"/>
         <image name="mainBG.png" width="595.368408203125" height="842.10528564453125"/>
         <image name="mainPage.png" width="368" height="522"/>
