@@ -937,7 +937,7 @@
                                     <segue destination="Y6p-bU-ruO" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kC1-ys-kyJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هنا هي نقاطك التي تم جمعها" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Fu-mfX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هنا نقاطك التي جمعتها" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Fu-mfX">
                                 <rect key="frame" x="201" y="388" width="430" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -1075,7 +1075,7 @@
                                     <segue destination="Y6p-bU-ruO" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Y5R-q1-wPb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ومن هنا تستطيع الذهاب إلى صفحتك الشخصية" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-fU-pro">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ومن هنا يمكنك الذهاب لصفحتك الشخصية" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-fU-pro">
                                 <rect key="frame" x="194" y="388" width="446" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -1213,7 +1213,7 @@
                                     <segue destination="Y6p-bU-ruO" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0Ve-yy-L1s"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ومن هنا تستطيع الذهاب إلى المتجر للشراء بالنجوم" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch2-6T-vhX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ومن هنا يمكنك الذهاب إلى المتجر لاستبدال نقاطك" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch2-6T-vhX">
                                 <rect key="frame" x="222" y="370" width="388" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -1359,7 +1359,7 @@
                                     <segue destination="Y6p-bU-ruO" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UOL-8Z-xrM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ومن هنا تستطيع إعادة هذه التعليمات في اي وقت" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-Xm-9uY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="لإعادة هذه التعليمات اضغط هنا" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-Xm-9uY">
                                 <rect key="frame" x="198" y="405" width="437" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -2169,21 +2169,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-dk-yo3">
-                                <rect key="frame" x="205" y="802" width="413" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="تعديل الحساب" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="baseBackgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logouut:" destination="VOB-7c-ywd" eventType="touchUpInside" id="xLx-ku-NET"/>
-                                    <segue destination="ZZO-TQ-KpD" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mt8-dk-OjQ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hw-AZ-pqG">
                                 <rect key="frame" x="523" y="527" width="204" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2292,6 +2277,25 @@
                                     <action selector="logoutButton:" destination="VOB-7c-ywd" eventType="touchUpInside" id="mc7-Wb-Mac"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-dk-yo3">
+                                <rect key="frame" x="605" y="208" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62352943419999995" green="0.86274516580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="backgroundImage" image="pencil" catalog="system" symbolScale="large"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                    <backgroundConfiguration key="background"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="46"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logouut:" destination="VOB-7c-ywd" eventType="touchUpInside" id="xLx-ku-NET"/>
+                                    <segue destination="ZZO-TQ-KpD" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mt8-dk-OjQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ha4-pq-KoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2300,6 +2304,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Qys-mr-lax"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="EditButton" destination="vS2-dk-yo3" id="l04-Z5-myG"/>
                         <outlet property="bkbtn" destination="rnC-Q2-kLY" id="XAQ-EA-4zx"/>
                         <outlet property="char" destination="ikN-iq-BLw" id="8Hd-pM-cky"/>
                         <outlet property="dob" destination="Eso-89-OjQ" id="XbW-eH-tQV"/>
@@ -2309,7 +2314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af1-6F-pYy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1555" y="1569"/>
+            <point key="canvasLocation" x="1554.676258992806" y="1568.8442211055276"/>
         </scene>
         <!--Editprofile-->
         <scene sceneID="zOA-Gv-Ud5">
@@ -3087,7 +3092,7 @@
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو أصغر كوكب وأقرب كوكب إلى الشمس" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-Ri-aFv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو أصغر وأقرب كوكب إلى الشمس" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-Ri-aFv">
                                 <rect key="frame" x="292" y="497" width="285" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -3182,8 +3187,8 @@
                                 <rect key="frame" x="717" y="199" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="expand-arrows-alt_48pt_1x" cornerStyle="fixed">
-                                    <backgroundConfiguration key="background" image="viewdirection">
+                                <buttonConfiguration key="configuration" style="plain" image="expand-arrows-alt_48pt_1x" title="" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.62352941179999999" green="0.86274509799999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
@@ -3411,7 +3416,7 @@
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو أصغر كوكب وأقرب كوكب إلى الشمس" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykS-dw-KWb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="أصغر الكواكب وأقربها إلى الشمس" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykS-dw-KWb">
                                 <rect key="frame" x="277" y="546" width="285" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -4790,7 +4795,7 @@
                                 <rect key="frame" x="-48" y="569" width="400" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو كوكبنا الذي نعيش فيه ويتكون من اليابسة والمياة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6I-NN-RlA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="هو كوكبنا الذي نعيش فيه ويتكون من اليابسة والماء" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6I-NN-RlA">
                                 <rect key="frame" x="262" y="498" width="360" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -4927,10 +4932,10 @@
             </objects>
             <point key="canvasLocation" x="-2276.2589928057555" y="752.7638190954774"/>
         </scene>
-        <!--Dir2-->
+        <!--Dire2-->
         <scene sceneID="rFO-Sg-ZPI">
             <objects>
-                <viewController id="QtI-P1-92H" customClass="dir2" sceneMemberID="viewController">
+                <viewController id="QtI-P1-92H" customClass="dire2" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ig7-Fp-HP0"/>
                         <viewControllerLayoutGuide type="bottom" id="Xvm-xh-N4J"/>
@@ -5602,7 +5607,7 @@
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="ptM-7z-fbu"/>
+        <segue reference="mdC-1h-dYE"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
@@ -5640,6 +5645,7 @@
         <image name="p1.png" width="30" height="31.363636016845703"/>
         <image name="p2" width="133" height="107"/>
         <image name="p3" width="117" height="104"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pointdd.png" width="339" height="734"/>
         <image name="qm" width="285" height="96"/>
         <image name="question_48pt_1x" width="48" height="48"/>
@@ -5654,7 +5660,6 @@
         <image name="star22.png" width="258.5" height="241.5"/>
         <image name="thirdLevel" width="1414" height="2000"/>
         <image name="uppp" width="281" height="98"/>
-        <image name="viewdirection" width="585" height="215"/>
         <image name="white.png" width="241" height="258.5"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

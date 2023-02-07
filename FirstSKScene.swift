@@ -70,7 +70,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
           
            starfiled = SKEmitterNode(fileNamed: "Fiwin")
-           starfiled.position = CGPoint(x: 500, y: 1500)
+           starfiled.position = CGPoint(x: -500, y: 1500)
            //starfiled.advanceSimulationTime(10)
           // starfiled.zPosition = -1
                    

@@ -25,6 +25,8 @@ class Profile: UIViewController, EditprofileDelegate {
     
     @IBOutlet weak var char: UILabel!
     
+    @IBOutlet weak var EditButton: UIButton!
+    
     @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var name: UILabel!
@@ -62,6 +64,12 @@ class Profile: UIViewController, EditprofileDelegate {
         
         
         //
+        
+        EditButton.layer.cornerRadius = EditButton.frame.width/2
+        EditButton.layer.borderWidth = 6
+        EditButton.layer.borderColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+
+        EditButton.clipsToBounds = true
         
         bkbtn.layer.cornerRadius = bkbtn.frame.width/2
         bkbtn.layer.borderWidth = 6
