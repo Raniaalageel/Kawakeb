@@ -307,6 +307,7 @@ print("a",a)
         Sname = names[ind.row]
         Simage.image = UIImage(named: photo[ind.row])
         Sprice = prices[ind.row]
+        r2 = pricesAR[ind.row]
         let roc = self.storyboard?.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
         self.navigationController?.pushViewController(roc, animated: true)
         update()
