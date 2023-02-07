@@ -19,7 +19,17 @@ class msgP2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Global.shared.audioHomePage.pause()
+        
+        if(Global.shared.audioHomePage == nil){
+            print("Global.shared.audioHomePage = ", Global.shared.audioHomePage)
+            
+        }else{
+            Global.shared.audioHomePage.pause()
+
+        }
+        
+        
+        
         
         viewInstruction.layer.cornerRadius =      viewInstruction.frame.width/2
        viewInstruction.layer.borderWidth = 6
