@@ -17,7 +17,14 @@ class msgP3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Global.shared.audioHomePage.pause()
+        
+        if(Global.shared.audioHomePage == nil){
+            print("Global.shared.audioHomePage = ", Global.shared.audioHomePage)
+            
+        }else{
+            Global.shared.audioHomePage.pause()
+
+        }
         
         
         hintButton.layer.cornerRadius =       hintButton.frame.width/2
