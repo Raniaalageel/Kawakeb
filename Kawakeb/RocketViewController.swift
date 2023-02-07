@@ -12,6 +12,7 @@ var Simage:UIImageView = UIImageView()
 var Sname:String=""
 var Sprice:Int=0
 var realPrice :Int=0
+var r2 = ""
 
 class RocketViewController: UIViewController {
     var pointss:Int=0
@@ -29,7 +30,7 @@ class RocketViewController: UIViewController {
         selectedIMG.image = Simage.image
         view.addSubview(selectedIMG)
         selectedName.text = Sname
-        selectedPrice.text = String(Sprice)
+        selectedPrice.text = r2
         realPrice = Sprice
         // Do any additional setup after loading the view.
         
