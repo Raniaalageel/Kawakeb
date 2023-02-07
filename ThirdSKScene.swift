@@ -48,11 +48,14 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     var arrayLoop = [String]()
         var arrayBeforLoop = [String]()
         var arrayAfterLoop = [String]()
+    var add:SKSpriteNode!
     
     var FailSound = SKAction.playSoundFileNamed("FailSound.mp3", waitForCompletion: false)
     var FailSound2 = SKAction.playSoundFileNamed("FailSound2.mp3", waitForCompletion: false)
-    var SuccsusSound = SKAction.playSoundFileNamed("SuccsecSound.mp3", waitForCompletion: false)
-    var SuccsusSound2 = SKAction.playSoundFileNamed("SuccsecSound3.mp3", waitForCompletion: false)
+    var SuccsusSound = SKAction.playSoundFileNamed("sucessSound.mp3", waitForCompletion: false)
+    var SuccsusSound2 = SKAction.playSoundFileNamed("suc.mp3", waitForCompletion: false)
+    var emptySound = SKAction.playSoundFileNamed("emptySound.mp3", waitForCompletion: false)
+    var FailTryagainSound = SKAction.playSoundFileNamed("TryagainSound.mp3", waitForCompletion: false)
     
     var cnodtionArray = true
     var NormalSnario = true
@@ -85,21 +88,26 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            //////////////////sucsses alert
-           winalert = SKSpriteNode(imageNamed: "sucsses")
-           winalert.size = .init(width: 850, height: 990)
-           winalert .position = CGPoint(x: self.size.width/1.8, y: self.size.height/2.8)
-        winalert .zPosition = 0
-                       
-        buttonnext = SKSpriteNode(imageNamed: "nextButto")
-        buttonnext.name = "pressNext"
-           buttonnext.size = .init(width: 280, height: 180)
-        buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.33)   //0.6   0.4   y in less be down , x in less go left
-           
+           winalert = SKSpriteNode(imageNamed: "sucsses2")
+                      winalert.size = .init(width: 830, height: 770)
+                      winalert .position = CGPoint(x: self.size.width/2.1, y: self.size.height/2)
+                   winalert .zPosition = 0
+                                  
+                   buttonnext = SKSpriteNode(imageNamed: "nextButto")
+                   buttonnext.name = "pressNext"
+                      buttonnext.size = .init(width: 280, height: 180)
+                   buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.30)
+                    
+                      add = SKSpriteNode(imageNamed: "add6")
+                      add.size = .init(width: 350, height: 180)
+                      add.position = CGPoint(x: frame.width * 0.80, y: frame.height * 0.10)
+                      //0.6   0.4   y in less be down , x in less go left
+                      
 
-        hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
-        hombutton.name = "pressHome"
-        hombutton.size = .init(width: 280, height: 180)
-        hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.370)
+                   hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
+                   hombutton.name = "pressHome"
+                   hombutton.size = .init(width: 280, height: 180)
+                   hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.335)
            
            
 //           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -132,10 +140,10 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            successLabel = SKLabelNode(fontNamed: "System")
            successLabel.text = String(" نجحت بالوصول إلى كوكب المريخ!")
            successLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
-           successLabel.fontSize = 36.0
+           successLabel.fontSize = 38.0
            successLabel.horizontalAlignmentMode = .right
            successLabel.verticalAlignmentMode = .center
-           successLabel.position = CGPoint(x: 660, y: 743)
+           successLabel.position = CGPoint(x: 660, y: 760)
            
            
            ///// Fail alert
@@ -186,6 +194,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                self.addChild(emptyArray)
                self.addChild(emptyLabel)
                self.addChild(OkButton)
+               playSound2(sound: emptySound)
+               playSound1(sound: FailSound)
 //               CameraOpen().stopTheCamera()
 //               EmptyArrayFunc()
     
@@ -464,12 +474,15 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(hombutton)
                    self.addChild(successLabel)
                    self.addChild(starfiled)
-                playSound1(sound: SuccsusSound)
-                playSound2(sound: SuccsusSound2)
+                
                  //  self.addChild(buttongo)
                    
-                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: 200), duration: 3)
-                   player.run(actionplayer)
+                playSound1(sound: SuccsusSound)
+                playSound2(sound: SuccsusSound2)
+             self.addChild(add)
+                let action = SKAction.sequence([.move(by: .init(dx: -520, dy: 950), duration: 1), .rotate(byAngle: 10, duration: 1)]);
+                             
+                             add.run(action)
                    
                    
                    calculatePoint()
@@ -487,8 +500,9 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                     self.addChild(failLabel)
                     self.addChild(tryHomebutton)
                     self.addChild(buttotryagain)
-                    playSound3(sound: FailSound)
                     playSound4(sound: FailSound2)
+                    playSound3(sound: FailSound)
+                    
                      let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                      player.run(actionplayer)
                    
@@ -516,7 +530,9 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(failLabel)
                    self.addChild(tryHomebutton)
                    self.addChild(buttotryagain)
-                   let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
+            playSound3(sound: FailTryagainSound)
+            playSound4(sound: FailSound)
+            let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1500), duration: 1)
                    player.run(actionplayer)
                }
            }
@@ -627,7 +643,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             
             if(self.Earthcpoints! == 0 ){
             self.db.collection("Child").document(student_docID).setData([
-                "points": self.points + 6 ,
+                "points": self.points + 30 ,
                 "Mars" : "open" ,
                 "EarthPoints": 1
             ],merge:true) { err in
