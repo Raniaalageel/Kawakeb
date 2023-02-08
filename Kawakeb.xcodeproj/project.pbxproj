@@ -31,6 +31,7 @@
 		532487A32991DD6800AF8E8C /* emptySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 532487A22991DD6800AF8E8C /* emptySound.mp3 */; };
 		532487A52991DD7500AF8E8C /* TryagainSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 532487A42991DD7500AF8E8C /* TryagainSound.mp3 */; };
 		532487A72991DF3000AF8E8C /* sucessSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 532487A62991DF3000AF8E8C /* sucessSound.mp3 */; };
+		5330F854299373DB00DAFA60 /* loopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F853299373DB00DAFA60 /* loopViewController.swift */; };
 		5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
@@ -192,6 +193,7 @@
 		532487A22991DD6800AF8E8C /* emptySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = emptySound.mp3; sourceTree = "<group>"; };
 		532487A42991DD7500AF8E8C /* TryagainSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TryagainSound.mp3; sourceTree = "<group>"; };
 		532487A62991DF3000AF8E8C /* sucessSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sucessSound.mp3; sourceTree = "<group>"; };
+		5330F853299373DB00DAFA60 /* loopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loopViewController.swift; sourceTree = "<group>"; };
 		5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				5330F853299373DB00DAFA60 /* loopViewController.swift */,
 				5377DF78298EE75200A339B3 /* dire3.swift */,
 				5377DF76298EE74800A339B3 /* dire2.swift */,
 				5377DF74298EE73C00A339B3 /* dire1.swift */,
@@ -745,6 +748,7 @@
 				530B202B297E57D900115BE6 /* secondSKScene.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
+				5330F854299373DB00DAFA60 /* loopViewController.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
 				5377DF77298EE74800A339B3 /* dire2.swift in Sources */,
