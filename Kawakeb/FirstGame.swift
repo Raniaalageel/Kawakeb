@@ -65,7 +65,7 @@ class FirstGame: UIViewController {
             
   // present(G1alert(), animated: true)
             Global.shared.audioHomePage.pause()
-            Global.shared.audiomsgP1.pause()
+           Global.shared.audiomsgP1.pause()
             print("nn")
 //            Global.shared.GoBackHomeStopCamera = true
 //            Global.shared.longerTime = true
@@ -87,7 +87,8 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             }
             
         //!!!!
-//            Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9"]
+//
+       //     Global.shared.allLablels = ["left:9:9","left:8:9","up:9:9","up:2:1"]
      //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
         openis()
@@ -147,6 +148,16 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
     //        v.text = "Hello"
     //        self.view.addSubview(v)
         }
+    
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "timer", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioTimer = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioTimer .play()
+    }
     func openis(){
         CameraOpen().viewDidLoad()
         
@@ -176,6 +187,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
             
             let numGif = UIImage.gifImageWithName("ArabicGif9")
             imageView.image = numGif
+            playAlarm()
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 print("after 10 sec")

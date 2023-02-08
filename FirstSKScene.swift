@@ -37,6 +37,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var failLabel:SKLabelNode!
     var successLabel:SKLabelNode!
     var starfiled:SKEmitterNode!
+    var starfiled2:SKEmitterNode!
     var emptyArray:SKSpriteNode!
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
@@ -69,11 +70,14 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            ///
            
           
+           
            starfiled = SKEmitterNode(fileNamed: "Fiwin")
-           starfiled.position = CGPoint(x: -500, y: 1500)
-           //starfiled.advanceSimulationTime(10)
-          // starfiled.zPosition = -1
-                   
+                      starfiled.position = CGPoint(x: -50, y: 1500)
+                      //starfiled.advanceSimulationTime(10)
+                     // starfiled.zPosition = -1
+                              
+                      starfiled2 = SKEmitterNode(fileNamed: "my")
+                      starfiled2.position = CGPoint(x: 400, y: 1500)
           
                player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
            //Global.shared.rocketImage
@@ -340,6 +344,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(hombutton)
                    self.addChild(successLabel)
                    self.addChild(starfiled)
+               self.addChild(starfiled2)
                    playSound1(sound: SuccsusSound)
                    playSound2(sound: SuccsusSound2)
                 self.addChild(add)

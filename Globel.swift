@@ -37,6 +37,8 @@ class Global{
     var audioi3VC : AVPlayer!
     var audioi4VC : AVPlayer!
     var audioi5VC : AVPlayer!
+    var audioTimer : AVPlayer!
+    
 //    var longerTime =  true
 
 }
