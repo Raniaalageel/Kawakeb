@@ -509,7 +509,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axb-dv-h8o">
                                 <rect key="frame" x="164" y="40" width="84" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
                                 <color key="textColor" red="0.12549020350000001" green="0.2117646933" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3903,8 +3903,9 @@
                                                         <constraint firstAttribute="width" constant="71" id="sOG-gQ-pFQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-MU-UhG">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-MU-UhG">
                                                     <rect key="frame" x="16" y="39" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="shopping-cart_48pt_1x" cornerStyle="large">
@@ -3947,8 +3948,9 @@
                                                     </constraints>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYc-Av-Vtx">
-                                                    <rect key="frame" x="16" y="39" width="80" height="80"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYc-Av-Vtx">
+                                                    <rect key="frame" x="24" y="30" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="shopping-cart_48pt_1x" cornerStyle="large">
@@ -3964,24 +3966,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0gy-K6-YyO" firstAttribute="top" secondItem="QgD-HB-gWD" secondAttribute="bottom" constant="8" id="1El-UG-Qc9"/>
-                                                <constraint firstItem="MYc-Av-Vtx" firstAttribute="firstBaseline" secondItem="g9N-MU-UhG" secondAttribute="firstBaseline" id="3eg-Rn-lw9"/>
                                                 <constraint firstItem="QgD-HB-gWD" firstAttribute="leading" secondItem="EcO-JL-cxU" secondAttribute="leadingMargin" constant="88" id="BHL-Tq-jwi"/>
-                                                <constraint firstItem="okg-Kl-4X9" firstAttribute="trailing" secondItem="MYc-Av-Vtx" secondAttribute="trailing" id="D4A-6j-s6S"/>
-                                                <constraint firstItem="okg-Kl-4X9" firstAttribute="trailing" secondItem="g9N-MU-UhG" secondAttribute="trailing" id="Ds5-UZ-jzs"/>
                                                 <constraint firstItem="w4u-Nb-6oy" firstAttribute="leading" secondItem="0gy-K6-YyO" secondAttribute="trailing" constant="50" id="GFU-Ad-2mV"/>
                                                 <constraint firstItem="w4u-Nb-6oy" firstAttribute="top" secondItem="EcO-JL-cxU" secondAttribute="topMargin" constant="3" id="I0f-L9-yv7"/>
                                                 <constraint firstItem="okg-Kl-4X9" firstAttribute="top" secondItem="EcO-JL-cxU" secondAttribute="topMargin" constant="24" id="Iys-Jb-KRL"/>
-                                                <constraint firstItem="MYc-Av-Vtx" firstAttribute="baseline" secondItem="g9N-MU-UhG" secondAttribute="baseline" id="K31-v0-gfo"/>
                                                 <constraint firstItem="w4u-Nb-6oy" firstAttribute="leading" secondItem="RYq-zx-jEt" secondAttribute="trailing" constant="23" id="Nkm-pD-dzA"/>
                                                 <constraint firstItem="okg-Kl-4X9" firstAttribute="leading" secondItem="Lza-7e-WmO" secondAttribute="leading" id="Rs4-0c-u0p"/>
-                                                <constraint firstItem="okg-Kl-4X9" firstAttribute="leading" secondItem="g9N-MU-UhG" secondAttribute="leading" id="UzQ-BB-hgi"/>
-                                                <constraint firstItem="okg-Kl-4X9" firstAttribute="leading" secondItem="MYc-Av-Vtx" secondAttribute="leading" id="WeY-2y-TDW"/>
                                                 <constraint firstItem="w4u-Nb-6oy" firstAttribute="centerY" secondItem="YjZ-0u-NBo" secondAttribute="centerY" id="Y4T-AV-Mwd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Lza-7e-WmO" secondAttribute="bottom" constant="61" id="dlm-AU-SOa"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="w4u-Nb-6oy" secondAttribute="bottom" constant="11" id="eLU-wE-51r"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MYc-Av-Vtx" secondAttribute="bottom" constant="54" id="gJt-UB-HnK"/>
                                                 <constraint firstAttribute="trailing" secondItem="w4u-Nb-6oy" secondAttribute="trailing" constant="43" id="jAP-Km-k4n"/>
-                                                <constraint firstItem="MYc-Av-Vtx" firstAttribute="top" secondItem="EcO-JL-cxU" secondAttribute="topMargin" constant="28" id="lt8-1A-HPo"/>
                                                 <constraint firstItem="QgD-HB-gWD" firstAttribute="leading" secondItem="okg-Kl-4X9" secondAttribute="trailing" id="mW3-GQ-9Pt"/>
                                                 <constraint firstItem="QgD-HB-gWD" firstAttribute="top" secondItem="EcO-JL-cxU" secondAttribute="topMargin" constant="17" id="mwB-5b-jR0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YjZ-0u-NBo" secondAttribute="trailing" constant="61" id="oVn-nD-rz6"/>
@@ -5713,9 +5707,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qz7-Ld-UU2"/>
         <segue reference="D4H-af-jRY"/>
-        <segue reference="An5-Yw-A4N"/>
+        <segue reference="0Iz-LO-L6a"/>
         <segue reference="8LF-le-WNa"/>
         <segue reference="KyA-kp-3OD"/>
         <segue reference="OGu-ep-2YN"/>
