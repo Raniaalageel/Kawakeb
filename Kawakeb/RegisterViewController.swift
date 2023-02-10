@@ -176,7 +176,6 @@ var Mercury = "open"
         
         Global.shared.useremailshare = email
         Global.shared.userpasswordshare = password
-        
         Auth.auth().signIn(withEmail: email, password: password) { authResult , error in
                       if let e = error {
                           self.performSegue(withIdentifier: "goToBirthday", sender: self)
@@ -189,11 +188,19 @@ var Mercury = "open"
                 }
         }
 }// func
+    
+    @IBAction func birthdayy(_ sender: Any) {
+        bithdayTextField.isUserInteractionEnabled = true
+        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+    }
+    
+    
     @objc func dateSelected() {
           if let datePicker = self.bithdayTextField.inputView as? UIDatePicker {
               let dateFormatter = DateFormatter()
               dateFormatter.dateStyle = .full
               dateFormatter.dateFormat = "dd-MM-yyyy"
+              dateFormatter.locale = NSLocale(localeIdentifier: "ar") as Locale
               self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
               bithdayTextField.textColor = .black
               
@@ -226,10 +233,11 @@ var Mercury = "open"
     }
     
     
-    @IBAction func birthdayy(_ sender: UITextField) {
-        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
-    }
-    
+//    @IBAction func birthdayy(_ sender: UITextField) {
+//        bithdayTextField.isUserInteractionEnabled = true
+//        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+//    }
+//
 
 //    @IBAction func birthdayy(_ sender: UITextField) {
 //        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
