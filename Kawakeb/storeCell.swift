@@ -24,6 +24,7 @@ class storeCell: UITableViewCell {
     @IBOutlet weak var rocketBtn: UIButton!
     
    // func storeCell;.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 20, right: 0)
+    @IBOutlet weak var cantBuy: UIButton!
     
     
     

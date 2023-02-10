@@ -195,8 +195,10 @@ print("a",a)
         }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         print("enter??")
         let mycell = tableView.dequeueReusableCell (withIdentifier: "rocketCell", for: indexPath) as! storeCell
+       
 //
 //    mycell.layer.borderWidth = 2
 //      mycell.layer.borderColor = #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
@@ -224,13 +226,22 @@ print("a",a)
                 mycell.rocketImage.alpha = 1
                 mycell.backgroundColor = #colorLiteral(red: 0.9981690049, green: 0.8108515739, blue: 0.3431697786, alpha: 0.4195256517)
                 
+                mycell.cantBuy.isHidden = true
+                mycell.check.layer.borderColor =  #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
+                mycell.check.clipsToBounds = true
+                  
+                    mycell.check.layer.borderWidth = 2
+                mycell.check.layer.cornerRadius = mycell.check.frame.width/2
+                
 
             }
             else{
                 print("you have it ")
                 mycell.rocketBtn.isHidden=true
             mycell.check.isHidden=true
+                mycell.cantBuy.isHidden=true
                 mycell.updatebtn.isHidden=false
+                //mycell.updatebtn.backgroundColor =  #colorLiteral(red: 0.8229247928, green: 0.2910839319, blue: 0.2907123864, alpha: 1)
                 //mycell.updatebtn.setTitle("استبدل", for: .normal)
              //   mycell.updatebtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             //    mycell.updatebtn.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
@@ -249,8 +260,8 @@ print("a",a)
             mycell.updatebtn.isHidden=true
          mycell.check.isHidden=true
             mycell.rocketBtn.isHidden=false
-            
-    
+            mycell.cantBuy.isHidden = true
+           // mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8229247928, green: 0.2910839319, blue: 0.2907123864, alpha: 1)
            // mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
             mycell.rocketImage.alpha = 1
            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -262,16 +273,22 @@ print("a",a)
         }
         else {//can not buy
             mycell.updatebtn.isHidden=true
-            mycell.rocketBtn.isHidden=false
-        mycell.check.isHidden=true
-         //   mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8993717432, green: 0.3597564697, blue: 0.2627948225, alpha: 1)
+            mycell.rocketBtn.isHidden=true
+            mycell.cantBuy.isHidden = false
+        mycell.check.isHidden=true //cantBuy
+        
            // mycell.rocketBtn.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
          //   mycell.rocketBtn.setTitleColor( #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
-            mycell.rocketImage.alpha = 0.5
+            mycell.rocketImage.alpha = 0.3
             mycell.lockIMG.isHidden = false
+            mycell.cantBuy.layer.borderColor =  #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
+            mycell.cantBuy.clipsToBounds = true
+              
+                mycell.cantBuy.layer.borderWidth = 2
+            mycell.cantBuy.layer.cornerRadius = mycell.cantBuy.frame.width/2
          //   mycell.rocketBtn.layer.cornerRadius = 20
-            mycell.rocketBtn.isUserInteractionEnabled = false
+            mycell.cantBuy.isUserInteractionEnabled = true
         }
         let storageRef = Storage.storage().reference()
         let photoRef = storageRef.child(photo[indexPath.row])
@@ -285,8 +302,9 @@ print("a",a)
         mycell.updatebtn.tag = indexPath.row
         mycell.rocketBtn.addTarget(self, action: #selector(buyRocket (sender:)), for: .touchUpInside)
       
-            mycell.updatebtn.addTarget(self, action: #selector(updateRocket  (sender:)), for: .touchUpInside)
-            
+            mycell.cantBuy.addTarget(self, action: #selector(alert  (sender:)), for: .touchUpInside)
+        
+        mycell.updatebtn.addTarget(self, action: #selector(updateRocket  (sender:)), for: .touchUpInside)
         mycell.updatebtn.layer.cornerRadius = mycell.updatebtn.frame.width/2
 
         mycell.updatebtn.clipsToBounds = true
@@ -299,6 +317,7 @@ print("a",a)
         mycell.rocketBtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
         mycell.updatebtn.layer.borderWidth = 2
         mycell.updatebtn.layer.borderColor =   #colorLiteral(red: 0.002977883909, green: 0.2110899389, blue: 0.3604307771, alpha: 1)
+       // mycell.rocketBtn.backgroundColor =  #colorLiteral(red: 0.8229247928, green: 0.2910839319, blue: 0.2907123864, alpha: 1)
             return mycell
             
         }
@@ -321,6 +340,15 @@ print("a",a)
         let roc2 = self.storyboard?.instantiateViewController(withIdentifier: "updateRocketViewController") as! updateRocketViewController
         self.navigationController?.pushViewController(roc2, animated: true)
         update()
+    }
+    @objc func alert(sender: UIButton) {
+        let ind = IndexPath(row: sender.tag, section: 0)
+        Uname = names[ind.row]
+        Uimage.image = UIImage(named: photo[ind.row])
+        IMGname = photo[ind.row]
+        let roc2 = self.storyboard?.instantiateViewController(withIdentifier: "cant") as! cant
+        self.navigationController?.pushViewController(roc2, animated: true)
+       
     }
    func update() {
          
