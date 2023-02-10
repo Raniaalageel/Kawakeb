@@ -22,31 +22,31 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Passwordvalidation: UILabel!
     @IBOutlet weak var FirstButton: UIButton!
     
-    
-    @IBOutlet weak var bithdayTextField: UITextField!
-    @IBOutlet weak var SecondButton: UIButton!
-    @IBOutlet weak var Birthdayvalidation: UILabel!
-    
-    
-    
-    @IBOutlet weak var girl: UIButton!
-    @IBOutlet weak var boy: UIButton!
-    @IBOutlet weak var Charactervalidation: UILabel!
-    @IBOutlet weak var ThirdButton: UIButton!
+//
+//    @IBOutlet weak var bithdayTextField: UITextField!
+//    @IBOutlet weak var SecondButton: UIButton!
+//    @IBOutlet weak var Birthdayvalidation: UILabel!
+//
     
     
+//    @IBOutlet weak var girl: UIButton!
+//    @IBOutlet weak var boy: UIButton!
+//    @IBOutlet weak var Charactervalidation: UILabel!
+//    @IBOutlet weak var ThirdButton: UIButton!
+//    
     
-    @IBOutlet weak var selectedImage: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var CharacterNamevalidation: UILabel!
-    @IBOutlet weak var CreateAccountButton: UIButton!
+    
+//    @IBOutlet weak var selectedImage: UIImageView!
+//    @IBOutlet weak var nameTextField: UITextField!
+//    @IBOutlet weak var CharacterNamevalidation: UILabel!
+//    @IBOutlet weak var CreateAccountButton: UIButton!
     
     
     
     var Lemail = ""
     var Lpassword = ""
-    var bod = ""
-    var Character = ""
+//    var bod = ""
+//    var Character = ""
     var CharacterName = ""
     var points = 0
     var currentRocket = "الصاروخ الأبيض"
@@ -68,6 +68,9 @@ var Mercury = "open"
         self.tabBarController?.tabBar.isHidden = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
    
+        emailTextField.text = Global.shared.useremailshare
+        passwordTextField.text = Global.shared.userpasswordshare
+        
     }
     
 //    @objc func dateSelected() {
@@ -189,48 +192,48 @@ var Mercury = "open"
         }
 }// func
     
-    @IBAction func birthdayy(_ sender: Any) {
-        bithdayTextField.isUserInteractionEnabled = true
-        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
-    }
-    
-    
-    @objc func dateSelected() {
-          if let datePicker = self.bithdayTextField.inputView as? UIDatePicker {
-              let dateFormatter = DateFormatter()
-              dateFormatter.dateStyle = .full
-              dateFormatter.dateFormat = "dd-MM-yyyy"
-              dateFormatter.locale = NSLocale(localeIdentifier: "ar") as Locale
-              self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
-              bithdayTextField.textColor = .black
-              
-          }
-        
-          self.bithdayTextField.resignFirstResponder()
-      }
+//    @IBAction func birthdayy(_ sender: Any) {
+//        bithdayTextField.isUserInteractionEnabled = true
+//        self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+//    }
+//
+//
+//    @objc func dateSelected() {
+//          if let datePicker = self.bithdayTextField.inputView as? UIDatePicker {
+//              let dateFormatter = DateFormatter()
+//              dateFormatter.dateStyle = .full
+//              dateFormatter.dateFormat = "dd-MM-yyyy"
+//              dateFormatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+//              self.bithdayTextField.text = dateFormatter.string(from: datePicker.date)
+//              bithdayTextField.textColor = .black
+//
+//          }
+//
+//          self.bithdayTextField.resignFirstResponder()
+//      }
 
-    @IBAction func SecondButton(_ sender: UIButton) {
-        //self.tabBarController?.tabBar.isHidden = true
-      //  Birthdayvalidation.isHidden = true
-        
-      //  self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
-        
-        let validationResult = isValidbod()
-        if validationResult.0 == false {
-
-            return
-
-        }
-        
-        let Birthday = validationResult.1
-
-        Global.shared.userbirthday = Birthday
-
-        bod = Birthday
-        print("bod : " , Birthday)
-       self.performSegue(withIdentifier: "goToCharacter", sender: self)
-
-    }
+//    @IBAction func SecondButton(_ sender: UIButton) {
+//        //self.tabBarController?.tabBar.isHidden = true
+//      //  Birthdayvalidation.isHidden = true
+//
+//      //  self.bithdayTextField.setDatePickerAsInputViewFor(target: self, selector: #selector(dateSelected))
+//
+//        let validationResult = isValidbod()
+//        if validationResult.0 == false {
+//
+//            return
+//
+//        }
+//
+//        let Birthday = validationResult.1
+//
+//        Global.shared.userbirthday = Birthday
+//
+//        bod = Birthday
+//        print("bod : " , Birthday)
+//       self.performSegue(withIdentifier: "goToCharacter", sender: self)
+//
+//    }
     
     
 //    @IBAction func birthdayy(_ sender: UITextField) {
@@ -244,185 +247,185 @@ var Mercury = "open"
 //
 //    }
     
-    var whatCharacterPressed = ""
-    
-    @IBAction func ThirdButton(_ sender: UIButton) {
-        self.tabBarController?.tabBar.isHidden = true
-        Charactervalidation.isHidden = true
-        Charactervalidation.text = "* الرجاء اختيار الشخصية"
-        Character = whatCharacterPressed
-        Global.shared.usercharacter = Character
-        print(" Character : " , Character)
-
-        if isPressed {
-        
-//            if (whatCharacterPressed == "girl"){
-//                selectedImage.image = UIImage(named:"girl.png")
-//            }else{
-//                selectedImage.image = UIImage(named:"boy.png")
-//            }
-            
-        self.performSegue(withIdentifier: "goToCharacterName", sender: self)
-//            if (Character == "girl"){
-//            let imageName = "girl.png"
-//            let image = UIImage(named: imageName)
-//            let imageView = UIImageView(image: image!)
-//            imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
-//            view.addSubview(imageView)
-//            }else if (Character == "boy"){
-//                let imageName = "boy.png"
-//                let image = UIImage(named: imageName)
-//                let imageView = UIImageView(image: image!)
-//                imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
-//                view.addSubview(imageView)
-//            }
-        }else{
-        Charactervalidation.isHidden = false
-        }
-
-    }
-    
-    
-    var isPressed = false
-    @IBAction func GirlPressed(_ sender: UIButton) {
-        
-    Charactervalidation.isHidden = true
-    isPressed = true
-//    girl.isHidden = true
-    girl.backgroundColor = UIColor.lightGray
-    boy.backgroundColor = UIColor.white
-    print("Girl pressed")
-    whatCharacterPressed = "girl"
-    }
-    
-    @IBAction func BoyPressed(_ sender: UIButton) {
-    
-      Charactervalidation.isHidden = true
-      isPressed = true
-        girl.backgroundColor = UIColor.white
-        boy.backgroundColor = UIColor.lightGray
-//      boy.isHidden = true
-      print("Boy pressed")
-      whatCharacterPressed = "boy"
-    }
-    
-    
-    @IBAction func CreateAccountButton(_ sender: UIButton) {
-        self.tabBarController?.tabBar.isHidden = true
-        CharacterNamevalidation.isHidden = true
-        
-//        if (Character == "girl"){
-//         selectedImage.image = UIImage(named:"girl.png")
-//         }else if (Character == "boy"){
-//         selectedImage.image = UIImage(named:"boy.png")
-//         }else{
-//             selectedImage.image = UIImage(named:"LOGO")
-//         }
-//        ___________________________________________________________________
-//        if (Global.shared.usercharacter == "girl"){
-//        let imageName = "girl.png"
-//        let image = UIImage(named: imageName)
-//        let imageView = UIImageView(image: image!)
-//        imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
-//        view.addSubview(imageView)
-//        }else if (Global.shared.usercharacter == "boy"){
-//            let imageName = "boy.png"
-//            let image = UIImage(named: imageName)
-//            let imageView = UIImageView(image: image!)
-//            imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
-//            view.addSubview(imageView)
+//    var whatCharacterPressed = ""
+//    
+//    @IBAction func ThirdButton(_ sender: UIButton) {
+//        self.tabBarController?.tabBar.isHidden = true
+//        Charactervalidation.isHidden = true
+//        Charactervalidation.text = "* الرجاء اختيار الشخصية"
+//        Character = whatCharacterPressed
+//        Global.shared.usercharacter = Character
+//        print(" Character : " , Character)
+//
+//        if isPressed {
+//        
+////            if (whatCharacterPressed == "girl"){
+////                selectedImage.image = UIImage(named:"girl.png")
+////            }else{
+////                selectedImage.image = UIImage(named:"boy.png")
+////            }
+//            
+//        self.performSegue(withIdentifier: "goToCharacterName", sender: self)
+////            if (Character == "girl"){
+////            let imageName = "girl.png"
+////            let image = UIImage(named: imageName)
+////            let imageView = UIImageView(image: image!)
+////            imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
+////            view.addSubview(imageView)
+////            }else if (Character == "boy"){
+////                let imageName = "boy.png"
+////                let image = UIImage(named: imageName)
+////                let imageView = UIImageView(image: image!)
+////                imageView.frame = CGRect(x: 293, y: 611, width: 246, height: 210)
+////                view.addSubview(imageView)
+////            }
+//        }else{
+//        Charactervalidation.isHidden = false
 //        }
-//        ___________________________________________________________________
-
-               let validationResult = isValidName()
-               if validationResult.0 == false {return}
-       
-               let name = validationResult.1
-       
-               CharacterName = name
-               Global.shared.usercharacterName = name
-               print("CharacterName : " , CharacterName)
-        
-        
-               
-               print("Global email : " , Global.shared.useremailshare )
-               print("Global password : ", Global.shared.userpasswordshare )
-               print("Global birthday : ", Global.shared.userbirthday )
-               print(" Global character : " , Global.shared.usercharacter)
-               print("Global character name : " , Global.shared.usercharacterName)
-         
-        
-        
-
-
-         
-        Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
-            guard let userId  = authResult?.user.uid else {return}
-            self.storeUserInformation(id: userId)
-        if let e = error {
-        print(e.localizedDescription)
-        }else {
-        // Go to our home screen
-        self.performSegue(withIdentifier: "goToHomePage", sender: self)
-           }
-        }
-        
-    }
+//
+//    }
+//    
+//    
+//    var isPressed = false
+//    @IBAction func GirlPressed(_ sender: UIButton) {
+//        
+//    Charactervalidation.isHidden = true
+//    isPressed = true
+////    girl.isHidden = true
+//    girl.backgroundColor = UIColor.lightGray
+//    boy.backgroundColor = UIColor.white
+//    print("Girl pressed")
+//    whatCharacterPressed = "girl"
+//    }
+//    
+//    @IBAction func BoyPressed(_ sender: UIButton) {
+//    
+//      Charactervalidation.isHidden = true
+//      isPressed = true
+//        girl.backgroundColor = UIColor.white
+//        boy.backgroundColor = UIColor.lightGray
+////      boy.isHidden = true
+//      print("Boy pressed")
+//      whatCharacterPressed = "boy"
+//    }
+    
+    
+//    @IBAction func CreateAccountButton(_ sender: UIButton) {
+//        self.tabBarController?.tabBar.isHidden = true
+//        CharacterNamevalidation.isHidden = true
+//
+////        if (Character == "girl"){
+////         selectedImage.image = UIImage(named:"girl.png")
+////         }else if (Character == "boy"){
+////         selectedImage.image = UIImage(named:"boy.png")
+////         }else{
+////             selectedImage.image = UIImage(named:"LOGO")
+////         }
+////        ___________________________________________________________________
+////        if (Global.shared.usercharacter == "girl"){
+////        let imageName = "girl.png"
+////        let image = UIImage(named: imageName)
+////        let imageView = UIImageView(image: image!)
+////        imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+////        view.addSubview(imageView)
+////        }else if (Global.shared.usercharacter == "boy"){
+////            let imageName = "boy.png"
+////            let image = UIImage(named: imageName)
+////            let imageView = UIImageView(image: image!)
+////            imageView.frame = CGRect(x: 293, y: 700, width: 246, height: 210)
+////            view.addSubview(imageView)
+////        }
+////        ___________________________________________________________________
+//
+//               let validationResult = isValidName()
+//               if validationResult.0 == false {return}
+//
+//               let name = validationResult.1
+//
+//               CharacterName = name
+//               Global.shared.usercharacterName = name
+//               print("CharacterName : " , CharacterName)
+//
+//
+//
+//               print("Global email : " , Global.shared.useremailshare )
+//               print("Global password : ", Global.shared.userpasswordshare )
+//               print("Global birthday : ", Global.shared.userbirthday )
+//               print(" Global character : " , Global.shared.usercharacter)
+//               print("Global character name : " , Global.shared.usercharacterName)
+//
+//
+//
+//
+//
+//
+//        Auth.auth().createUser(withEmail: Global.shared.useremailshare, password: Global.shared.userpasswordshare) { authResult , error in
+//            guard let userId  = authResult?.user.uid else {return}
+//            self.storeUserInformation(id: userId)
+//        if let e = error {
+//        print(e.localizedDescription)
+//        }else {
+//        // Go to our home screen
+//        self.performSegue(withIdentifier: "goToHomePage", sender: self)
+//           }
+//        }
+//
+//    }
+//
     
     
     
-    
-    
-    func isValidName() -> (Bool, String, String) {
-        
-        guard let Name = nameTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
-        else {
-            CharacterNamevalidation.isHidden = false
-            CharacterNamevalidation.text = "* الرجاء إدخال اسم الشخصية"
-            return (false, "", "")
-           }
-        if !isValidCharacterName(nameText: Name) {
-            CharacterNamevalidation.isHidden = false
-            CharacterNamevalidation.text = "* الرجاء إدخال اسم شخصية صحيح"
-            return (false, "", "")
-        }
-        return (true, Name , "")
-    }
-    
-    
-    func isValidCharacterName(nameText:String) -> Bool {
-        
-        let NameRegEx = "\\w{2,12}"
-        let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
-        return NameTest.evaluate(with: nameText)
-    }
-    
-    
-    
-    
-    func isValidbod() -> (Bool, String, String) {
-        
-        guard let birthday = bithdayTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
-        else {
-            Birthdayvalidation.isHidden = false
-            Birthdayvalidation.text = "* الرجاء إدخال تاريخ الميلاد"
-            return (false, "", "")
-           }
-//        if !isValidBirthday(BirthdayText: birthday) {
-//            Birthdayvalidation.isHidden = false
-//            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
+//    
+//    func isValidName() -> (Bool, String, String) {
+//        
+//        guard let Name = nameTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !Name.isEmpty
+//        else {
+//            CharacterNamevalidation.isHidden = false
+//            CharacterNamevalidation.text = "* الرجاء إدخال اسم الشخصية"
+//            return (false, "", "")
+//           }
+//        if !isValidCharacterName(nameText: Name) {
+//            CharacterNamevalidation.isHidden = false
+//            CharacterNamevalidation.text = "* الرجاء إدخال اسم شخصية صحيح"
 //            return (false, "", "")
 //        }
-        return (true, birthday , "")
-    }
+//        return (true, Name , "")
+//    }
+//    
+//    
+//    func isValidCharacterName(nameText:String) -> Bool {
+//        
+//        let NameRegEx = "\\w{2,12}"
+//        let NameTest = NSPredicate(format:"SELF MATCHES %@", NameRegEx)
+//        return NameTest.evaluate(with: nameText)
+//    }
+//    
     
     
-    func isValidBirthday(BirthdayText:String) -> Bool {
-        
-        let BoDRegEx = "^(0[1-9]|[12][0-9]|3[01])[- \\.](0[1-9]|1[012])[- \\.](19|20)\\d\\d$"
-        let BoDTest = NSPredicate(format:"SELF MATCHES %@", BoDRegEx)
-        return BoDTest.evaluate(with: BirthdayText)
-    }
+//    
+//    func isValidbod() -> (Bool, String, String) {
+//        
+//        guard let birthday = bithdayTextField.text?.trimmingCharacters(in: .whitespaces).lowercased() , !birthday.isEmpty
+//        else {
+//            Birthdayvalidation.isHidden = false
+//            Birthdayvalidation.text = "* الرجاء إدخال تاريخ الميلاد"
+//            return (false, "", "")
+//           }
+////        if !isValidBirthday(BirthdayText: birthday) {
+////            Birthdayvalidation.isHidden = false
+////            Birthdayvalidation.text = "الرجاء إدخال تاريخ الميلاد بالشكل الصحيح"
+////            return (false, "", "")
+////        }
+//        return (true, birthday , "")
+//    }
+//    
+//    
+//    func isValidBirthday(BirthdayText:String) -> Bool {
+//        
+//        let BoDRegEx = "^(0[1-9]|[12][0-9]|3[01])[- \\.](0[1-9]|1[012])[- \\.](19|20)\\d\\d$"
+//        let BoDTest = NSPredicate(format:"SELF MATCHES %@", BoDRegEx)
+//        return BoDTest.evaluate(with: BirthdayText)
+//    }
     
     
     func isValidEmailR(emailID:String) -> Bool {
@@ -468,37 +471,37 @@ var Mercury = "open"
 //        }
 //    }
     
-    func storeUserInformation(id: String)  {
-            
-            let post = ["email": Global.shared.useremailshare,
-                        "password": Global.shared.userpasswordshare,
-                        "dob": Global.shared.userbirthday,
-                        "character": Global.shared.usercharacter,
-                        "name": Global.shared.usercharacterName,
-                        "points" : points ,
-                        "currentRocket": currentRocket ,
-                        "currentRockIMG": currentRockIMG ,
-                        "Mercury" : Mercury ,
-                        "Flower" : Flower ,
-                        "Earth" : Earth ,
-                        "Mars" : Mars ,
-                        "MercuryPoints" : MercuryPoints ,
-                        "FlowerPoints" : FlowerPoints ,
-                        "EarthPoints" : FlowerPoints ,
-                        "MarsPoints" : MarsPoints ,
-                        "rockets" : rockets ,
-                        "FirstGameHintIsUsed" : false ,
-                        "SecondGameHintIsUsed" : false ,
-                        "ThirdGameHintIsUsed" : false
-            ] as [String : Any]
-            let db = Firestore.firestore()
-                   do {
-                    try db.collection("Child").document(id).setData(post)
-                   } catch {
-                       print(error.localizedDescription)
-                   }
-        print("add the user into the firebafe firestore")
-        }
+//    func storeUserInformation(id: String)  {
+//            
+//            let post = ["email": Global.shared.useremailshare,
+//                        "password": Global.shared.userpasswordshare,
+//                        "dob": Global.shared.userbirthday,
+//                        "character": Global.shared.usercharacter,
+//                        "name": Global.shared.usercharacterName,
+//                        "points" : points ,
+//                        "currentRocket": currentRocket ,
+//                        "currentRockIMG": currentRockIMG ,
+//                        "Mercury" : Mercury ,
+//                        "Flower" : Flower ,
+//                        "Earth" : Earth ,
+//                        "Mars" : Mars ,
+//                        "MercuryPoints" : MercuryPoints ,
+//                        "FlowerPoints" : FlowerPoints ,
+//                        "EarthPoints" : FlowerPoints ,
+//                        "MarsPoints" : MarsPoints ,
+//                        "rockets" : rockets ,
+//                        "FirstGameHintIsUsed" : false ,
+//                        "SecondGameHintIsUsed" : false ,
+//                        "ThirdGameHintIsUsed" : false
+//            ] as [String : Any]
+//            let db = Firestore.firestore()
+//                   do {
+//                    try db.collection("Child").document(id).setData(post)
+//                   } catch {
+//                       print(error.localizedDescription)
+//                   }
+//        print("add the user into the firebafe firestore")
+//        }
     
     
     

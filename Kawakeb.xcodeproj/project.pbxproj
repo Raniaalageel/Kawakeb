@@ -75,6 +75,9 @@
 		A2A1C765294DE43600E0D45E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C764294DE43600E0D45E /* Validation.swift */; };
 		A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1C766294F1FD500E0D45E /* resetpw.swift */; };
 		F003B697298D40AF0074FF82 /* ArabicGif9.gif in Resources */ = {isa = PBXBuildFile; fileRef = F003B696298D40AF0074FF82 /* ArabicGif9.gif */; };
+		F016461D29966B5500CD630F /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016461C29966B5500CD630F /* Register2ViewController.swift */; };
+		F016461F299674C500CD630F /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016461E299674C500CD630F /* Register3ViewController.swift */; };
+		F016462129967DEF00CD630F /* Register4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016462029967DEF00CD630F /* Register4ViewController.swift */; };
 		F01B054929843ADC003C45AA /* gifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B054829843ADB003C45AA /* gifLoad.swift */; };
 		F02AC895294A111300152C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC894294A111300152C07 /* AppDelegate.swift */; };
 		F02AC897294A111300152C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02AC896294A111300152C07 /* SceneDelegate.swift */; };
@@ -238,6 +241,9 @@
 		A2A1C764294DE43600E0D45E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		A2A1C766294F1FD500E0D45E /* resetpw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpw.swift; sourceTree = "<group>"; };
 		F003B696298D40AF0074FF82 /* ArabicGif9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ArabicGif9.gif; sourceTree = "<group>"; };
+		F016461C29966B5500CD630F /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
+		F016461E299674C500CD630F /* Register3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
+		F016462029967DEF00CD630F /* Register4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register4ViewController.swift; sourceTree = "<group>"; };
 		F01B054829843ADB003C45AA /* gifLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoad.swift; sourceTree = "<group>"; };
 		F02AC891294A111300152C07 /* Kawakeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kawakeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02AC894294A111300152C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -350,6 +356,9 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				F016462029967DEF00CD630F /* Register4ViewController.swift */,
+				F016461E299674C500CD630F /* Register3ViewController.swift */,
+				F016461C29966B5500CD630F /* Register2ViewController.swift */,
 				5330F8572993783700DAFA60 /* my.sks */,
 				5330F853299373DB00DAFA60 /* loopViewController.swift */,
 				5377DF78298EE75200A339B3 /* dire3.swift */,
@@ -731,6 +740,7 @@
 				F02AC895294A111300152C07 /* AppDelegate.swift in Sources */,
 				538DDF81296423B900562581 /* AlertScs.swift in Sources */,
 				530B202F2984138C00115BE6 /* ThirdSKScene.swift in Sources */,
+				F016461F299674C500CD630F /* Register3ViewController.swift in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				530B203F29896B3B00115BE6 /* longerInPage.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
@@ -744,6 +754,7 @@
 				F0F920B3295330FE0045A75C /* RegisterViewController.swift in Sources */,
 				56D1974D298EED8800AF6B6E /* ViewHint3.swift in Sources */,
 				5675477C2953C55100065DB7 /* Pv.swift in Sources */,
+				F016461D29966B5500CD630F /* Register2ViewController.swift in Sources */,
 				A2A1C765294DE43600E0D45E /* Validation.swift in Sources */,
 				530B202D2984136D00115BE6 /* ThirdGame.swift in Sources */,
 				A2451FE92976B2C900121B5C /* i5ViewController.swift in Sources */,
@@ -756,6 +767,7 @@
 				530B202B297E57D900115BE6 /* secondSKScene.swift in Sources */,
 				A2A1C767294F1FD600E0D45E /* resetpw.swift in Sources */,
 				536CE5C8295B7DE80092962F /* FirstGame.swift in Sources */,
+				F016462129967DEF00CD630F /* Register4ViewController.swift in Sources */,
 				5330F854299373DB00DAFA60 /* loopViewController.swift in Sources */,
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,

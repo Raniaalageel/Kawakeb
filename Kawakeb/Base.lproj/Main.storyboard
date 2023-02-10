@@ -1631,10 +1631,10 @@
             </objects>
             <point key="canvasLocation" x="1478.4172661870505" y="-675.37688442211061"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register2 View Controller-->
         <scene sceneID="cxq-Ut-jvG">
             <objects>
-                <viewController id="WNy-jx-kxw" customClass="RegisterViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WNy-jx-kxw" customClass="Register2ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pj-zo-qH5">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1661,7 +1661,7 @@
                                     <color key="baseBackgroundColor" red="0.76470589639999997" green="0.32549020649999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="SecondButton:" destination="WNy-jx-kxw" eventType="touchUpInside" id="gtv-4p-UTq"/>
+                                    <action selector="SecondButton:" destination="WNy-jx-kxw" eventType="touchUpInside" id="B4W-OV-lna"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPT-94-cR6">
@@ -1703,9 +1703,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="birthdayy:" destination="WNy-jx-kxw" eventType="editingDidEnd" id="Vcz-kC-BKr"/>
-                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="nJ6-zk-Kks">
                                 <rect key="frame" x="7" y="0.0" width="827" height="187"/>
@@ -1730,9 +1727,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="0qI-NR-NL4"/>
                     <connections>
-                        <outlet property="Birthdayvalidation" destination="IfR-d8-2c1" id="467-T5-uvS"/>
-                        <outlet property="SecondButton" destination="n7b-O7-jvi" id="RMG-Sb-aIE"/>
-                        <outlet property="bithdayTextField" destination="bOO-TW-CR0" id="nd6-qF-u1C"/>
+                        <outlet property="Birthdayvalidation" destination="IfR-d8-2c1" id="lVT-lS-Jb6"/>
+                        <outlet property="SecondButton" destination="n7b-O7-jvi" id="ijH-l0-j01"/>
+                        <outlet property="bithdayTextField" destination="bOO-TW-CR0" id="BFR-0h-uDu"/>
                         <segue destination="dNe-Ao-u3C" kind="presentation" identifier="goToCharacter" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="unw-hY-3Nj"/>
                     </connections>
                 </viewController>
@@ -1740,10 +1737,10 @@
             </objects>
             <point key="canvasLocation" x="2158.9928057553957" y="-675.37688442211061"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register3 View Controller-->
         <scene sceneID="3ZM-jv-b05">
             <objects>
-                <viewController id="dNe-Ao-u3C" customClass="RegisterViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dNe-Ao-u3C" customClass="Register3ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cl4-N6-dus">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1770,7 +1767,7 @@
                                     <color key="baseBackgroundColor" red="0.76470589639999997" green="0.32549020649999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ThirdButton:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="qFz-Nd-LUJ"/>
+                                    <action selector="ThirdButton:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="yM9-29-LXd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXf-BK-hu3">
@@ -1821,7 +1818,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="GirlPressed:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="Rxa-BV-St3"/>
+                                    <action selector="GirlPressed:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="3f8-b9-hqj"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-dz-ADw">
@@ -1834,7 +1831,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="BoyPressed:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="om2-BK-PW2"/>
+                                    <action selector="BoyPressed:" destination="dNe-Ao-u3C" eventType="touchUpInside" id="UZm-hu-3i0"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boy" translatesAutoresizingMaskIntoConstraints="NO" id="ON2-fs-dCN">
@@ -1871,10 +1868,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="LBK-ak-ic8"/>
                     <connections>
-                        <outlet property="Charactervalidation" destination="fqy-Vt-ZfF" id="b25-Df-Flq"/>
-                        <outlet property="ThirdButton" destination="VoJ-vE-Zyj" id="l1Y-8D-GlD"/>
-                        <outlet property="boy" destination="bwq-oy-ve0" id="sIY-vB-z87"/>
-                        <outlet property="girl" destination="P9Z-MX-liw" id="geS-mv-SrY"/>
+                        <outlet property="Charactervalidation" destination="fqy-Vt-ZfF" id="8BO-8b-9ii"/>
+                        <outlet property="ThirdButton" destination="VoJ-vE-Zyj" id="ucc-ww-3p5"/>
+                        <outlet property="boy" destination="bwq-oy-ve0" id="UWS-sw-lby"/>
+                        <outlet property="girl" destination="P9Z-MX-liw" id="mHR-19-TLq"/>
                         <segue destination="50Z-GJ-BP0" kind="presentation" identifier="goToCharacterName" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="yYT-sT-7A6"/>
                     </connections>
                 </viewController>
@@ -1882,10 +1879,10 @@
             </objects>
             <point key="canvasLocation" x="2853.9568345323742" y="-675.37688442211061"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register4 View Controller-->
         <scene sceneID="YzZ-d9-lnk">
             <objects>
-                <viewController id="50Z-GJ-BP0" customClass="RegisterViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="50Z-GJ-BP0" customClass="Register4ViewController" customModule="Kawakeb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3D-bj-CI5">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5617,11 +5614,11 @@
         <segue reference="KyA-kp-3OD"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="ITc-Pv-rak"/>
-        <segue reference="unw-hY-3Nj"/>
-        <segue reference="yaD-Se-fJp"/>
+        <segue reference="bVx-b7-Wzx"/>
+        <segue reference="a8r-w4-AzI"/>
         <segue reference="aNn-mm-eS3"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="blo-67-XaK"/>
+        <segue reference="Tf2-zg-CPc"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="JnV-K5-cRI"/>
     </inferredMetricsTieBreakers>
