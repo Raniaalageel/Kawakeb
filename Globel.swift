@@ -39,6 +39,9 @@ class Global{
     var audioi5VC : AVPlayer!
     var audioTimer : AVPlayer!
     
+    var audiochoose : AVPlayer!
+    var choose = true
+    
 //    var longerTime =  true
 
 }

@@ -247,33 +247,43 @@ class Profile: UIViewController, EditprofileDelegate {
         
                 print("pressed")
                 
-                      let alert = UIAlertController(title: "تنبيه", message: "هل انت متأكد من تسجيل الخروج؟", preferredStyle: .alert)
-
-                       alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: { action in
-                      do{
-                    
-                          let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-                          let vcc = storyboardd.instantiateViewController(withIdentifier: "logout") as! ViewController
-                          vcc.view.frame = (self.view?.frame)!
-                          vcc.view.layoutIfNeeded()
-                          UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
-                          self.view?.window?.rootViewController = vcc
-                          }, completion: { completed in
-
-                          })
-
-                          } //do
-                       catch let signOutError as NSError{
-
-                           print("error",signOutError)
-
-                        }
-
-                       }))
-
-                          alert.addAction(UIAlertAction(title: "لا", style: .default, handler:nil))
-
-                               self.present(alert, animated: true, completion: nil)
+//                      let alert = UIAlertController(title: "تنبيه", message: "هل انت متأكد من تسجيل الخروج؟", preferredStyle: .alert)
+//
+//                       alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: { action in
+//                      do{
+//
+//                          let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+//                          let vcc = storyboardd.instantiateViewController(withIdentifier: "logout") as! ViewController
+//                          vcc.view.frame = (self.view?.frame)!
+//                          vcc.view.layoutIfNeeded()
+//                          UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations:{
+//                          self.view?.window?.rootViewController = vcc
+//                          }, completion: { completed in
+//
+//                          })
+//
+//                          } //do
+//                       catch let signOutError as NSError{
+//
+//                           print("error",signOutError)
+//
+//                        }
+//
+//                       }))
+//
+//                          alert.addAction(UIAlertAction(title: "لا", style: .default, handler:nil))
+//
+//                               self.present(alert, animated: true, completion: nil)
+        
+        
+        print("logout")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                let alertVC = storyboard.instantiateViewController(withIdentifier: "logoutPorfile") as! logoutPorfile
+        
+        present(alertVC, animated: true)
+        
+        
             }
         
         

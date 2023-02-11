@@ -95,6 +95,11 @@ class Gamespage: UIViewController, EditprofileDelegate {
         
         storeBTN.clipsToBounds = true
         playAlarm()
+        if (Global.shared.choose == true){
+            playAlarmchoose()
+        }
+        Global.shared.choose = false
+        
         checkOpenClose()
        
         print("origiin",self.rocketimage.frame.origin.y)
@@ -425,6 +430,16 @@ class Gamespage: UIViewController, EditprofileDelegate {
             self.rocketimage.transform =  self.rocketimage.transform.rotated(by: CGFloat(Double.pi / -4.03))
         },completion: nil)
         
+    }
+    
+    func playAlarmchoose() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "choose", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audiochoose = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audiochoose .play()
     }
     
     func playAlarm() {

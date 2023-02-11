@@ -35,6 +35,8 @@
 		5330F854299373DB00DAFA60 /* loopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F853299373DB00DAFA60 /* loopViewController.swift */; };
 		5330F8562993775300DAFA60 /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5330F8552993775300DAFA60 /* timer.mp3 */; };
 		5330F8582993783700DAFA60 /* my.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5330F8572993783700DAFA60 /* my.sks */; };
+		5330F85A2998342600DAFA60 /* logoutPorfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F8592998342600DAFA60 /* logoutPorfile.swift */; };
+		5330F85C29983D0F00DAFA60 /* choose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5330F85B29983D0E00DAFA60 /* choose.mp3 */; };
 		5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */; };
 		536CE5C4295B7C040092962F /* CameraOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C3295B7C040092962F /* CameraOpen.swift */; };
 		536CE5C6295B7D990092962F /* MyObjectDetector20dec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */; };
@@ -204,6 +206,8 @@
 		5330F853299373DB00DAFA60 /* loopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loopViewController.swift; sourceTree = "<group>"; };
 		5330F8552993775300DAFA60 /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
 		5330F8572993783700DAFA60 /* my.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = my.sks; sourceTree = "<group>"; };
+		5330F8592998342600DAFA60 /* logoutPorfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoutPorfile.swift; sourceTree = "<group>"; };
+		5330F85B29983D0E00DAFA60 /* choose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = choose.mp3; sourceTree = "<group>"; };
 		5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector2023.mlmodel; sourceTree = "<group>"; };
 		536CE5C3295B7C040092962F /* CameraOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOpen.swift; sourceTree = "<group>"; };
 		536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyObjectDetector20dec.mlmodel; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
+				5330F8592998342600DAFA60 /* logoutPorfile.swift */,
 				F016462029967DEF00CD630F /* Register4ViewController.swift */,
 				F016461E299674C500CD630F /* Register3ViewController.swift */,
 				F016461C29966B5500CD630F /* Register2ViewController.swift */,
@@ -390,6 +395,7 @@
 				5324879E2991D95300AF8E8C /* suc.mp3 */,
 				F036CCDE29897C9D00376EBE /* i3VC.mp3 */,
 				F036CCE029897D4900376EBE /* i4VC.mp3 */,
+				5330F85B29983D0E00DAFA60 /* choose.mp3 */,
 				532487A42991DD7500AF8E8C /* TryagainSound.mp3 */,
 				F036CCE229897D6400376EBE /* i5VC.mp3 */,
 				532487A22991DD6800AF8E8C /* emptySound.mp3 */,
@@ -659,6 +665,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5330F85C29983D0F00DAFA60 /* choose.mp3 in Resources */,
 				34CDA8B2297703AF00C2ADF3 /* LOGO.png in Resources */,
 				F036CCE529899AE500376EBE /* i1VC.mp3 in Resources */,
 				F02AC8A1294A111600152C07 /* LaunchScreen.storyboard in Resources */,
@@ -778,6 +785,7 @@
 				5610D8EB2953B0DF00E046FC /* CodableFirebaseSupport.swift in Sources */,
 				34CBF0E42996E72B00007D54 /* cant.swift in Sources */,
 				A2451FEB2976B40800121B5C /* i6ViewController.swift in Sources */,
+				5330F85A2998342600DAFA60 /* logoutPorfile.swift in Sources */,
 				5377DF77298EE74800A339B3 /* dire2.swift in Sources */,
 				538DDF83296423D500562581 /* AlertFail.swift in Sources */,
 				568278D32976DDB80075C75F /* ViewHint.swift in Sources */,
