@@ -26,11 +26,11 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     
     var  EarthPoints:Int!
     var Earthcpoints:Int!
-    
+    var successLabelPoint:SKLabelNode!
     var   buttonnext :SKSpriteNode!
     var   hombutton :SKSpriteNode!
     var buttongo: SKNode! = nil
-    
+    var starfiled2:SKEmitterNode!
     var   buttotryagain :SKSpriteNode!
     var   tryHomebutton :SKSpriteNode!
     
@@ -74,10 +74,11 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
           
            starfiled = SKEmitterNode(fileNamed: "Fiwin")
-           starfiled.position = CGPoint(x: 500, y: 1500)
+           starfiled.position = CGPoint(x: -50, y: 1500)
            //starfiled.advanceSimulationTime(10)
           // starfiled.zPosition = -1
-                   
+           starfiled2 = SKEmitterNode(fileNamed: "my")
+           starfiled2.position = CGPoint(x: 400, y: 1500)
           
                player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
            //Global.shared.rocketImage
@@ -143,7 +144,15 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            successLabel.fontSize = 38.0
            successLabel.horizontalAlignmentMode = .right
            successLabel.verticalAlignmentMode = .center
-           successLabel.position = CGPoint(x: 660, y: 760)
+           successLabel.position = CGPoint(x: 630, y: 760)
+           
+           successLabelPoint = SKLabelNode(fontNamed: "System")
+           successLabelPoint.text = String(" ربحت ٣٠ نقطة")
+           successLabelPoint.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           successLabelPoint.fontSize = 38.0
+           successLabelPoint.horizontalAlignmentMode = .right
+           successLabelPoint.verticalAlignmentMode = .center
+           successLabelPoint.position = CGPoint(x: 660, y: 200)
            
            
            ///// Fail alert
@@ -474,15 +483,16 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    self.addChild(hombutton)
                    self.addChild(successLabel)
                    self.addChild(starfiled)
+                   self.addChild(starfiled2)
                 
                  //  self.addChild(buttongo)
                    
                 playSound1(sound: SuccsusSound)
                 playSound2(sound: SuccsusSound2)
-             self.addChild(add)
-                let action = SKAction.sequence([.move(by: .init(dx: -520, dy: 950), duration: 1), .rotate(byAngle: 10, duration: 1)]);
+                self.addChild(successLabelPoint)
+                let action = SKAction.sequence([.move(by: .init(dx:30, dy: 400), duration: 1)])
                              
-                             add.run(action)
+                         successLabelPoint.run(action)
                    
                    
                    calculatePoint()
