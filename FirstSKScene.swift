@@ -330,7 +330,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        }
        
     func OutOfrange(){
-        failLabel.text = String("خارج منطقة الحل!هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("خارج منطقة اللعب!هل تريد المحاولة مرة اخرى؟")
         print("win on another path")
         self.addChild(faialert)
         self.addChild(failLabel)

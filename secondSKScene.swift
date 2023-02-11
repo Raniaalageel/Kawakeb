@@ -37,14 +37,14 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
     
     var   buttotryagain :SKSpriteNode!
     var   tryHomebutton :SKSpriteNode!
-    
+    var starfiled2:SKEmitterNode!
     var failLabel:SKLabelNode!
     var successLabel:SKLabelNode!
     var starfiled:SKEmitterNode!
     var emptyArray:SKSpriteNode!
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
-    
+    var successLabelPoint:SKLabelNode!
     var arrayWithLabel = [String]()
     var add:SKSpriteNode!
     
@@ -70,10 +70,11 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         
         
         starfiled = SKEmitterNode(fileNamed: "Fiwin")
-        starfiled.position = CGPoint(x: 500, y: 1500)
+        starfiled.position = CGPoint(x: -50, y: 1500)
         //starfiled.advanceSimulationTime(10)
         // starfiled.zPosition = -1
-        
+        starfiled2 = SKEmitterNode(fileNamed: "my")
+        starfiled2.position = CGPoint(x: 400, y: 1500)
         
         player = SKSpriteNode(imageNamed: Global.shared.rocketImage)
         //Global.shared.rocketImage
@@ -139,8 +140,17 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         successLabel.fontSize = 38.0
         successLabel.horizontalAlignmentMode = .right
         successLabel.verticalAlignmentMode = .center
-        successLabel.position = CGPoint(x: 660, y: 760)
+        successLabel.position = CGPoint(x: 630, y: 760)
 
+        
+        
+        successLabelPoint = SKLabelNode(fontNamed: "System")
+        successLabelPoint.text = String(" ربحت ٢٠ نقطة")
+        successLabelPoint.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+        successLabelPoint.fontSize = 38.0
+        successLabelPoint.horizontalAlignmentMode = .right
+        successLabelPoint.verticalAlignmentMode = .center
+        successLabelPoint.position = CGPoint(x: 660, y: 200)
         
         
         ///// Fail alert
@@ -323,7 +333,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
     
     
     func OutOfrange(){
-        failLabel.text = String("خارج !هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("خارج منطقة اللعب!هل تريد المحاولة مرة اخرى؟")
         print("win on another path")
         self.addChild(faialert)
         self.addChild(failLabel)
@@ -346,12 +356,14 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(hombutton)
                 self.addChild(successLabel)
                 self.addChild(starfiled)
+                self.addChild(starfiled2)
                 playSound1(sound: SuccsusSound)
                 playSound2(sound: SuccsusSound2)
-             self.addChild(add)
-                let action = SKAction.sequence([.move(by: .init(dx: -520, dy: 950), duration: 1), .rotate(byAngle: 10, duration: 1)]);
+             self.addChild(successLabelPoint)
+               // let action = SKAction.sequence([.move(by: .init(dx: -520, dy: 950), duration: 1), .rotate(byAngle: 10, duration: 1)]);
+                let action = SKAction.sequence([.move(by: .init(dx:30, dy: 400), duration: 1)])
                              
-                             add.run(action)
+                         successLabelPoint.run(action)
                 
                 //  self.addChild(buttongo)
                 
