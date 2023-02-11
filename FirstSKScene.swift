@@ -36,6 +36,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     
     var failLabel:SKLabelNode!
     var successLabel:SKLabelNode!
+    var successLabelPoint:SKLabelNode!
     var starfiled:SKEmitterNode!
     var starfiled2:SKEmitterNode!
     var emptyArray:SKSpriteNode!
@@ -142,8 +143,18 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                       successLabel.fontSize = 38.0
                       successLabel.horizontalAlignmentMode = .right
                       successLabel.verticalAlignmentMode = .center
-                      successLabel.position = CGPoint(x: 660, y: 760)
+                      successLabel.position = CGPoint(x: 630, y: 760)
            
+           successLabelPoint = SKLabelNode(fontNamed: "System")
+           successLabelPoint.text = String(" ربحت ١٠ نقاط")
+           successLabelPoint.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           successLabelPoint.fontSize = 38.0
+           successLabelPoint.horizontalAlignmentMode = .right
+           successLabelPoint.verticalAlignmentMode = .center
+           successLabelPoint.position = CGPoint(x: 660, y: 200)
+           
+           
+       
            
            ///// Fail alert
            faialert = SKSpriteNode(imageNamed: "fail")
@@ -319,7 +330,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        }
        
     func OutOfrange(){
-        failLabel.text = String("خارج !هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("خارج منطقة الحل!هل تريد المحاولة مرة اخرى؟")
         print("win on another path")
         self.addChild(faialert)
         self.addChild(failLabel)
@@ -347,11 +358,12 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                self.addChild(starfiled2)
                    playSound1(sound: SuccsusSound)
                    playSound2(sound: SuccsusSound2)
-                self.addChild(add)
-                let action = SKAction.sequence([.move(by: .init(dx: -100, dy: 490), duration: 1)]) //,
+              // self.addChild(add)
+                self.addChild(successLabelPoint)
+                let action = SKAction.sequence([.move(by: .init(dx:30, dy: 400), duration: 1)]) //,
                                     //.rotate(byAngle: 4, duration: 1)]);
                                                 
-                            add.run(action)
+                       successLabelPoint.run(action)
 
 
                  //  self.addChild(buttongo)
