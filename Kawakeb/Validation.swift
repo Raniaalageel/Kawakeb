@@ -36,6 +36,24 @@ class Validation: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        textField.resignFirstResponder()
+        return(true)
+    }
+    //touch out
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    //return key
+    
+    
     func eq() -> Int{
         x1 = Int(exactly: arc4random_uniform(10) + 1)!
         x2 =  Int(exactly: arc4random_uniform(10) + 1)!
