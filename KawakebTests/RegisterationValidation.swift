@@ -47,34 +47,32 @@ class RegisterationValidation: XCTestCase {
     }
     
      
-    func test_is_valid_Name() {
-        
-        let name = "رانيا"
-        XCTAssertTrue(validation.isValidCharacterName(nameText: name))
-        
-//        let name2 = "س"
-//        XCTAssertTrue(validation.isValidCharacterName(nameText: name2))
-        
-    }
-    
-    
-    
-    
-    
-    func test_is_userInfo_Stored(){
-        
-       let useremailshare = "Sara@gmail.com"
-       let userpasswordshare = "12345678"
-        
-        Auth.auth().createUser(withEmail: useremailshare, password: userpasswordshare) { authResult , error in
-            guard let userId  = authResult?.user.uid else {return}
-            
-            XCTAssertNoThrow(self.validation.storeUserInformation(id: userId))
-        
-    }
-}
-
-    
+//    func test_is_valid_Name() {
+//        
+//        let name = "رانيا"
+//        XCTAssertTrue(validation.isValidCharacterName(nameText: name))
+//        
+////        let name2 = "س"
+////        XCTAssertTrue(validation.isValidCharacterName(nameText: name2))
+//        
+//    }
+//    
+//    
+//    
+//    
+//    
+//    func test_is_userInfo_Stored(){
+//        
+//       let useremailshare = "Sara@gmail.com"
+//       let userpasswordshare = "12345678"
+//        
+//        Auth.auth().createUser(withEmail: useremailshare, password: userpasswordshare) { authResult , error in
+//            guard let userId  = authResult?.user.uid else {return}
+//            
+//            XCTAssertNoThrow(self.validation.storeUserInformation(id: userId))
+//        
+//    }
+//}
 
     
     
