@@ -110,6 +110,16 @@ class SecondGame: UIViewController {
 //        // displayTimer.invalidate()
 //    }
     
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "timer", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioTimer = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioTimer .play()
+    }
+    
     func openis(){
         CameraOpen().viewDidLoad()
         
@@ -133,6 +143,7 @@ class SecondGame: UIViewController {
         
         let numGif = UIImage.gifImageWithName("ArabicGif9")
         imageView.image = numGif
+        playAlarm()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             print("after 10 sec")

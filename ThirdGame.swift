@@ -143,6 +143,16 @@ class ThirdGame: UIViewController {
         //        v.text = "Hello"
         //        self.view.addSubview(v)
             }
+    
+    func playAlarm() {
+            // need to declare local path as url
+            let url = Bundle.main.url(forResource: "timer", withExtension: "mp3")
+            // now use declared path 'url' to initialize the player
+            Global.shared.audioTimer = AVPlayer.init(url: url!)
+            // after initialization play audio its just like click on play button
+          //  Global.shared.audio.numberOfLoops = -1
+        Global.shared.audioTimer .play()
+    }
         func openis(){
             CameraOpen().viewDidLoad()
             
@@ -177,6 +187,7 @@ class ThirdGame: UIViewController {
 //                Global.shared.longerTime = false
                 let numGif = UIImage.gifImageWithName("ArabicGif9")
                 imageView.image = numGif
+                playAlarm()
               // pressgobutton.isEnabled = false
                 
                
