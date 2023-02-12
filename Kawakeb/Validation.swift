@@ -77,7 +77,7 @@ class Validation: UIViewController {
 //            equation.text = "\(x1!) / \(x2!)"
 //            return x1 / x2
             case 2:
-            equation.text = "\(a) * \(b)"
+            equation.text = "\(a) x \(b)"
             return x1 * x2
         default:
             equation.text =  "  "
