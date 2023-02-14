@@ -177,7 +177,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
         }
         
         func setupVision() {
-            guard let model = try? VNCoreMLModel(for: KawakebModel_1_Iteration_30000().model) else { return }
+            guard let model = try? VNCoreMLModel(for: ModelKa().model) else { return }
             let request = VNCoreMLRequest(model: model) { [self] (request , err) in
                 //print("request")
                 if let results = request.results {

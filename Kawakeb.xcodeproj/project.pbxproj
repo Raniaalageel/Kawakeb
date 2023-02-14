@@ -47,6 +47,7 @@
 		5377DF75298EE73C00A339B3 /* dire1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF74298EE73C00A339B3 /* dire1.swift */; };
 		5377DF77298EE74800A339B3 /* dire2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF76298EE74800A339B3 /* dire2.swift */; };
 		5377DF79298EE75200A339B3 /* dire3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377DF78298EE75200A339B3 /* dire3.swift */; };
+		537C225E299BA2E800B44B3D /* ModelKa.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 537C225D299BA2E800B44B3D /* ModelKa.mlmodel */; };
 		537D0119299AA7A900F2F889 /* KawakebModel .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 537D0118299AA7A900F2F889 /* KawakebModel .mlmodel */; };
 		538DDF7F29641B7400562581 /* FirstSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF7E29641B7400562581 /* FirstSKScene.swift */; };
 		538DDF81296423B900562581 /* AlertScs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF80296423B900562581 /* AlertScs.swift */; };
@@ -221,6 +222,7 @@
 		5377DF74298EE73C00A339B3 /* dire1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire1.swift; sourceTree = "<group>"; };
 		5377DF76298EE74800A339B3 /* dire2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire2.swift; sourceTree = "<group>"; };
 		5377DF78298EE75200A339B3 /* dire3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dire3.swift; sourceTree = "<group>"; };
+		537C225D299BA2E800B44B3D /* ModelKa.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ModelKa.mlmodel; sourceTree = "<group>"; };
 		537D0118299AA7A900F2F889 /* KawakebModel .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "KawakebModel .mlmodel"; sourceTree = "<group>"; };
 		538DDF7E29641B7400562581 /* FirstSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSKScene.swift; sourceTree = "<group>"; };
 		538DDF80296423B900562581 /* AlertScs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertScs.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				F0F920CF29538AD60045A75C /* RegValidation.swift */,
 				F0F920B0295330F20045A75C /* Globel.swift */,
 				5330F8552993775300DAFA60 /* timer.mp3 */,
+				537C225D299BA2E800B44B3D /* ModelKa.mlmodel */,
 				537D0118299AA7A900F2F889 /* KawakebModel .mlmodel */,
 				5356502C297728F50043257D /* MyObjectDetector2023.mlmodel */,
 				536CE5C5295B7D990092962F /* MyObjectDetector20dec.mlmodel */,
@@ -763,6 +766,7 @@
 				538DDF81296423B900562581 /* AlertScs.swift in Sources */,
 				530B202F2984138C00115BE6 /* ThirdSKScene.swift in Sources */,
 				F016461F299674C500CD630F /* Register3ViewController.swift in Sources */,
+				537C225E299BA2E800B44B3D /* ModelKa.mlmodel in Sources */,
 				F0F920D029538AD60045A75C /* RegValidation.swift in Sources */,
 				530B203F29896B3B00115BE6 /* longerInPage.swift in Sources */,
 				5610D8E52953B0A400E046FC /* Editprofile.swift in Sources */,
