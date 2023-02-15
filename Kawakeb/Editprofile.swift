@@ -100,6 +100,7 @@ class Editprofile: UIViewController , UITextFieldDelegate {
               let dateFormatter = DateFormatter()
               dateFormatter.dateStyle = .full
               dateFormatter.dateFormat = "dd-MM-yyyy"
+              dateFormatter.locale = NSLocale(localeIdentifier: "ar") as Locale
               self.Udob.text = dateFormatter.string(from: datePicker.date)
               Udob.textColor = .black
               

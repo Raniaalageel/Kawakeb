@@ -65,18 +65,18 @@ class Validation: UIViewController {
                let b = formatter.string(from: a2)!
 
         
-        let op = Int.random(in: 0..<3)
+        let op = Int.random(in: 0..<2)
         switch op {
             case 0:
             equation.text = "\(a) + \(b)"
             return x1 + x2
-            case 1:
-            equation.text = "\(a) - \(b)"
-            return x1 - x2
+           // case 1:
+//            equation.text = "\(a) - \(b)"
+//            return x1 - x2
 //            case 2:
 //            equation.text = "\(x1!) / \(x2!)"
 //            return x1 / x2
-            case 2:
+            case 1:
             equation.text = "\(a) x \(b)"
             return x1 * x2
         default:

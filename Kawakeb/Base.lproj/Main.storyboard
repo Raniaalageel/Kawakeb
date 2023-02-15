@@ -225,13 +225,6 @@
                                 <color key="textColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ليس لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-mL-XiE">
-                                <rect key="frame" x="420" y="782" width="261" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  أدخل البريد الالكتروني" textAlignment="right" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="MCz-3L-u7N">
                                 <rect key="frame" x="143" y="471" width="546" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -313,10 +306,28 @@
                                 </state>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="انشئ حساب ">
+                                        <fragment content="انشئ">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
                                             <attributes>
                                                 <font key="NSFont" metaFont="system" size="36"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="حساب">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name=".SFArabic-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -325,6 +336,13 @@
                                     <segue destination="h1Y-Ds-ch3" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hQp-zA-1t1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ليس لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-mL-XiE">
+                                <rect key="frame" x="415" y="782" width="261" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E5t-pX-3Sw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -437,7 +455,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-0I-TBU">
                                 <rect key="frame" x="540" y="43" width="166" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -516,7 +534,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axb-dv-h8o">
                                 <rect key="frame" x="164" y="40" width="84" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <color key="textColor" red="0.12549020350000001" green="0.2117646933" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2268,20 +2286,6 @@
                                 <color key="textColor" red="0.0086509948600000004" green="0.21174463630000001" blue="0.35865825410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98i-eI-ZgH">
-                                <rect key="frame" x="211" y="885" width="413" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="تسجيل الخروج" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="baseBackgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logoutButton:" destination="VOB-7c-ywd" eventType="touchUpInside" id="mc7-Wb-Mac"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-dk-yo3">
                                 <rect key="frame" x="605" y="208" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2292,13 +2296,28 @@
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="pencil" catalog="system" symbolScale="large"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="pencil" catalog="system" symbolScale="medium"/>
                                     <backgroundConfiguration key="background"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="41"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logouut:" destination="VOB-7c-ywd" eventType="touchUpInside" id="xLx-ku-NET"/>
                                     <segue destination="ZZO-TQ-KpD" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mt8-dk-OjQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98i-eI-ZgH">
+                                <rect key="frame" x="211" y="851" width="413" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="تسجيل الخروج" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                    <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.82352941180000006" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButton:" destination="VOB-7c-ywd" eventType="touchUpInside" id="mc7-Wb-Mac"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -6110,6 +6129,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="T3J-OQ-uzZ"/>
         <segue reference="ur7-Gg-KHQ"/>
         <segue reference="0Iz-LO-L6a"/>
         <segue reference="aoE-lQ-NZG"/>
@@ -6120,7 +6140,7 @@
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="blo-67-XaK"/>
+        <segue reference="mdC-1h-dYE"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
