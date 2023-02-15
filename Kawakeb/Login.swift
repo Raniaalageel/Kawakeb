@@ -27,7 +27,14 @@ class Login: UIViewController, UITextFieldDelegate {
     
     //
 
-
+    @IBOutlet weak var regbtn: UIButton!
+    
+    let yourAttributes: [NSAttributedString.Key: Any] = [
+          .font: UIFont.systemFont(ofSize: 34),
+          .foregroundColor: UIColor.gray,
+          .underlineStyle: NSUnderlineStyle.single.rawValue
+      ] // .double.rawValue, .thick.rawValue
+             
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.layer.cornerRadius =    backButton.frame.width/2
@@ -45,6 +52,12 @@ class Login: UIViewController, UITextFieldDelegate {
         backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 
         backButton.clipsToBounds = true
+        
+        let attributeString = NSMutableAttributedString(
+           string: "انشئ حساب",
+           attributes: yourAttributes
+        )
+         regbtn.setAttributedTitle(attributeString, for: .normal)
         // Do any additional setup after loading the view.
         
     //    self.emailTextfiled.text = " 1232@lecture.ksu.edu.sa"

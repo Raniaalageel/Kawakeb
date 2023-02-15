@@ -297,7 +297,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xf4-Sv-44l">
-                                <rect key="frame" x="131" y="810" width="380" height="38"/>
+                                <rect key="frame" x="143" y="807" width="380" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -311,8 +311,15 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <buttonConfiguration key="configuration" style="plain" title="أنشئ حساب">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="انشئ حساب ">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="36"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="h1Y-Ds-ch3" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hQp-zA-1t1"/>
@@ -328,6 +335,7 @@
                         <outlet property="buttonlogin1" destination="0ut-ML-Wwl" id="EKB-g2-hb0"/>
                         <outlet property="emailTextfiled1" destination="MCz-3L-u7N" id="hE8-Rd-XuQ"/>
                         <outlet property="passwordTextfiled1" destination="Lj6-7j-RIR" id="e2F-AH-HUE"/>
+                        <outlet property="regbtn" destination="Xf4-Sv-44l" id="QGu-lL-faZ"/>
                         <outlet property="validationMessegepass1" destination="RQR-qA-Cxs" id="Lkh-qD-JIy"/>
                         <segue destination="9rX-g3-OdF" kind="modal" identifier="go" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="blo-67-XaK"/>
                     </connections>
@@ -6110,9 +6118,9 @@
         <segue reference="ITc-Pv-rak"/>
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
-        <segue reference="aNn-mm-eS3"/>
+        <segue reference="hQp-zA-1t1"/>
         <segue reference="UOL-8Z-xrM"/>
-        <segue reference="mdC-1h-dYE"/>
+        <segue reference="blo-67-XaK"/>
         <segue reference="Z5o-PD-IXw"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
