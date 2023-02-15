@@ -186,7 +186,7 @@ var Mercury = "open"
                          }else {
                              print("email exists")
                              self.Emailvalidation.isHidden = false
-                             self.Emailvalidation.text = "* الرجاء تغيير البريد الاكتروني"
+                             self.Emailvalidation.text = "*هذا البريد الالكتروني موجود"
                             
                 }
         }
