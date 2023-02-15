@@ -84,7 +84,7 @@ class SecondGame: UIViewController {
         // trytocall()
         
         
-        openis()
+     //   openis()
         
 //        if(Global.shared.longerTime == true ){
 //

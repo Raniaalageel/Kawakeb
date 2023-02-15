@@ -60,8 +60,8 @@ class ViewHint : UIViewController {
         
         sethint()
         hintIsVieww()
+        
     }
-    
     
     
     func sethint()

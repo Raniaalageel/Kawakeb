@@ -91,7 +91,7 @@ class ThirdGame: UIViewController {
          //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
                 
            //!!
-                openis()
+             //   openis()
                 
                // trytocall()
 //                if(Global.shared.longerTime == true ){
