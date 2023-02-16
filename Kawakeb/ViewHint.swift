@@ -144,34 +144,35 @@ class ViewHint : UIViewController {
       }
     }
     
-//    @IBAction func firsth(_ sender: Any) {
-//        let db = Firestore.firestore()
-//        Task {
-//            let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
-//                hintIsView = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! Bool
-//            if hintIsView == true  {
-//                hint1.isUserInteractionEnabled = true
-//                hint2.isUserInteractionEnabled = true
-//                hint3.isUserInteractionEnabled = true
-//                hint4.isUserInteractionEnabled = true
-//                UIView.animate(withDuration: 0.2, animations: {
-//                    self.hint1FrontImage.frame.origin.y -= -50
-//                },completion: nil)
-//
-//                UIView.animate(withDuration: 0.3, animations: {
-//                    self.hint1FrontImage.frame.origin.y -= 50
-//                },completion: nil)
-//
-//                UIView.animate(withDuration: 0.4, animations: {
-//                    self.hint1FrontImage.frame.origin.x -= -30
-//                },completion: nil)
-//
-//                UIView.animate(withDuration: 0.5, animations: {
-//                    self.hint1FrontImage.frame.origin.x -= 30
-//                },completion: nil)
-//            }
-//        }
-//    }
+    @IBAction func firsth(_ sender: Any) {
+        print("firsth")
+        let db = Firestore.firestore()
+        Task {
+            let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
+                hintIsView = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! Bool
+            if hintIsView == true  {
+                hint1.isUserInteractionEnabled = true
+                hint2.isUserInteractionEnabled = true
+                hint3.isUserInteractionEnabled = true
+                hint4.isUserInteractionEnabled = true
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.hint1FrontImage.frame.origin.y -= -50
+                },completion: nil)
+
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.hint1FrontImage.frame.origin.y -= 50
+                },completion: nil)
+
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.hint1FrontImage.frame.origin.x -= -30
+                },completion: nil)
+
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.hint1FrontImage.frame.origin.x -= 30
+                },completion: nil)
+            }
+        }
+    }
     
     @objc func hint1Flip() {
         if isSelected == false {

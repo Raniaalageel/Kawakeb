@@ -224,7 +224,8 @@ class ThirdGame: UIViewController {
                     self.trytocallSCene()  //GO TOSKSCENE
                 
                 
-                //!!!!!!!!!!!!!!!Global.shared.allLablels = []
+                //!!!!!!!!!!!!!!!
+                    Global.shared.allLablels = []
                 print("again open camera ")
                 Global.shared.stopis = false  //OPEN CAMERA
                 Global.shared.enabled = false //not appned array

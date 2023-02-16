@@ -126,7 +126,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            emptyLabel = SKLabelNode(fontNamed: "System")
            emptyLabel.text = String("تأكد من وضع القطع امام الكاميرا ")
-           emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           emptyLabel.fontColor =  #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
            emptyLabel.verticalAlignmentMode = .center
@@ -141,7 +141,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            successLabel = SKLabelNode(fontNamed: "System")
            successLabel.text = String(" نجحت بالوصول إلى كوكب المريخ!")
-           successLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           successLabel.fontColor =  #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            successLabel.fontSize = 38.0
            successLabel.horizontalAlignmentMode = .right
            successLabel.verticalAlignmentMode = .center
@@ -149,7 +149,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            successLabelPoint = SKLabelNode(fontNamed: "System")
            successLabelPoint.text = String(" ربحت ٣٠ نقطة")
-           successLabelPoint.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+           successLabelPoint.fontColor =  #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            successLabelPoint.fontSize = 38.0
            successLabelPoint.horizontalAlignmentMode = .right
            successLabelPoint.verticalAlignmentMode = .center
@@ -180,7 +180,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            failLabel = SKLabelNode(fontNamed: "System")
         failLabel.text = String("لم تتمكن من الوصول! هل تريد المحاولة مرة اخرى؟")
-        failLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
+        failLabel.fontColor =  #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            failLabel.fontSize = 33.0
         failLabel.horizontalAlignmentMode = .right
         failLabel.verticalAlignmentMode = .center
@@ -529,7 +529,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             self.addChild(buttotryagain)
             
             }
-      else if (arrayWithLabel.contains("loop") && !(arrayWithLabel.contains("loop2")) || !(arrayWithLabel.contains("loop3")) ) { //|| !(arrayWithLabel.contains("loop3"))      !(arrayWithLabel.contains("loop2"))
+      else if (!(arrayWithLabel.contains("loop2")) || !(arrayWithLabel.contains("loop3")) && arrayWithLabel.contains("loop")) { //|| !(arrayWithLabel.contains("loop3"))      !(arrayWithLabel.contains("loop2"))
                       //|| !(arrayWithLabel.contains("loop3") ) && arrayWithLabel.contains("loop") ){
                 print("put starter loop please")
                 cnodtionArray = false
@@ -541,7 +541,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(buttotryagain)
                 
             }
-            else if(!(arrayWithLabel.isEmpty)) {  //normal array
+            else  {  //normal array  //if(!(arrayWithLabel.isEmpty))
                 print("normal array")
                 NormalSnario = false
             }
@@ -806,7 +806,3 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 }
 
     
-    
-    
-    
-
