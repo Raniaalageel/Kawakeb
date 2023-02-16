@@ -326,7 +326,7 @@ class CameraOpen: UIViewController,AVCaptureVideoDataOutputSampleBufferDelegate 
             
             labels = labels + ":" + numberofx2 + ":" + numberofy2
             
-                if (numberofx >= 239 && numberofx <= 460 && numberofy >= 180 && numberofy <= 299 ){
+                if (numberofx >= 239 && numberofx <= 466 && numberofy >= 180 && numberofy <= 299 ){
             print("labels",labels)
             
                 Global.shared.allLablels.append(labels)
