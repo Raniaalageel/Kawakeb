@@ -40,7 +40,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     var emptyArray:SKSpriteNode!
     var emptyLabel:SKLabelNode!
     var OkButton:SKSpriteNode!
-    
+    var boolLoop2 = true
+    var boolLoop3 = true
     var arrayWithLabel = [String]()
     var indexLoop:Int!
         var indexcloseLoop:Int!
@@ -237,7 +238,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 
                           
                       }
-                      if(!(arrayLoop.isEmpty) ){
+                      if(!(arrayLoop.isEmpty) && boolLoop2 == false ){
                            print("charcter move2")
                            var alliteration = 0
                           
@@ -287,6 +288,84 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
 
                        
                        }
+           
+           
+           if(!(arrayLoop.isEmpty) && boolLoop3 == false ) {
+                print("charcter move2")
+                var alliteration = 0
+               
+               var alliteration2 = 0
+               var alliteration3 = 0              //  var actions: [SKAction] = []
+                for label in arrayLoop {
+                    switch label {
+                    case "right":
+                  print(" move right")
+              actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                  case "left":
+                  print(" move left")
+              actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                  case "up":
+                  print(" move up")
+                  actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                 case "down":
+                  print(" move down")
+                  actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                  default: print("")
+                    
+                    }
+                    alliteration += 1
+                }
+               
+               ///second itartion:
+               for label in arrayLoop {
+                   switch label {
+                   case "right":
+                 print(" move right")
+             actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                 case "left":
+                 print(" move left")
+             actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                 case "up":
+                 print(" move up")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                case "down":
+                 print(" move down")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                 default: print("")
+                   
+                   }
+                   alliteration2 += 1
+               }
+               
+               for label in arrayLoop {
+                   switch label {
+                   case "right":
+                 print(" move right")
+             actions.append(SKAction.move(by: .init(dx: 180, dy: 0), duration: 2))
+                 case "left":
+                 print(" move left")
+             actions.append(SKAction.move(by: .init(dx: -180, dy: 0), duration: 2))
+                 case "up":
+                 print(" move up")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: 190), duration: 2))
+                case "down":
+                 print(" move down")
+                 actions.append(SKAction.move(by: .init(dx: 0, dy: -190), duration: 2))
+                 default: print("")
+                   
+                   }
+                 alliteration3 += 1
+               }
+              
+
+            
+            }
+           
+           
+           
+           
+           
+           
                       if(!(arrayAfterLoop.isEmpty) ){
                            print("charcter move3")
                            var alliteration = 0
@@ -382,7 +461,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
         func  checkArray(){
             var local = 0
        // if(arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3") && (arrayWithLabel.contains("loop")) ){
-            if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3")){
+            if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop2") ){
+                boolLoop2 = false
         print("loop end close are exist")
                 print("loop2 exist")
                 indexLoop = arrayWithLabel.firstIndex(of: "loop2")!
@@ -407,6 +487,37 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(buttotryagain)
             }
             }
+            else if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop3")){
+              boolLoop3 = false
+                print("loop end close are exist")
+                        print("loop3 exist")
+                        indexLoop = arrayWithLabel.firstIndex(of: "loop3")!
+                         local = indexLoop!
+                        print("locawl",local)
+                        print("close loop3 exist")
+                        indexcloseLoop = arrayWithLabel.firstIndex(of: "loop")!
+                    print("index close loop3",indexcloseLoop! )
+                        ///
+                    if(indexLoop! <= indexcloseLoop!){
+                        print("indexLoop! <= indexcloseLoop!")
+                    appneArrayLoop(local: local)   //3 array
+                        appendArraybefore(before: indexcloseLoop)}
+                    
+                    else if(indexLoop! >= indexcloseLoop!) {
+                        print("indexLoop! >= indexcloseLoop!")
+                        cnodtionArray = false
+                        failLabel.text = String("قم بوضع تكرار اولاً !هل تريد المحاولة مرة اخرى؟")
+                        self.addChild(faialert)
+                        self.addChild(failLabel)
+                        self.addChild(tryHomebutton)
+                        self.addChild(buttotryagain)
+                    }
+                    }
+                
+                
+                
+                
+                //
         else if(arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3") && !(arrayWithLabel.contains("loop")) ) {
                 print("close loop please")
             cnodtionArray = false
@@ -418,7 +529,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             self.addChild(buttotryagain)
             
             }
-            else if ( !(arrayWithLabel.contains("loop2")) && arrayWithLabel.contains("loop") ) {
+      else if (arrayWithLabel.contains("loop") && !(arrayWithLabel.contains("loop2")) || !(arrayWithLabel.contains("loop3")) ) { //|| !(arrayWithLabel.contains("loop3"))      !(arrayWithLabel.contains("loop2"))
                       //|| !(arrayWithLabel.contains("loop3") ) && arrayWithLabel.contains("loop") ){
                 print("put starter loop please")
                 cnodtionArray = false
