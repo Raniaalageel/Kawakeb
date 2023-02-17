@@ -1488,11 +1488,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ours.png" translatesAutoresizingMaskIntoConstraints="NO" id="WAC-lR-fvA">
-                                <rect key="frame" x="-29" y="516" width="462" height="415"/>
+                                <rect key="frame" x="-31" y="516" width="462" height="415"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="استمتع باللعب!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOK-4e-suT">
-                                <rect key="frame" x="245" y="405" width="346" height="261"/>
+                                <rect key="frame" x="245" y="273" width="346" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.41145217420000002" green="0.38817411660000001" blue="0.3880822062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1505,6 +1505,16 @@
                                 <color key="textColor" red="0.094117647060000004" green="0.2157264948" blue="0.31398677829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZx-Tq-xru">
+                                <rect key="frame" x="247" y="516" width="362" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.40784314269999999" green="0.38823530080000002" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="vidoPress:" destination="Y6p-bU-ruO" eventType="touchUpInside" id="w4Z-ke-gjX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uD2-UE-E90"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1512,6 +1522,7 @@
                     <navigationItem key="navigationItem" id="2Kr-Tu-KQm"/>
                     <connections>
                         <outlet property="Stars6" destination="uJC-Kp-dv3" id="f56-ML-1yJ"/>
+                        <outlet property="info" destination="yZx-Tq-xru" id="Klu-SG-T3j"/>
                         <outlet property="instruction" destination="3sB-bg-7ki" id="Ykd-nL-iVa"/>
                         <outlet property="n6" destination="bZB-hw-Qyt" id="F4C-eD-oaL"/>
                         <outlet property="storeButton" destination="2cw-mX-EmL" id="tRM-SF-jbo"/>
@@ -1519,7 +1530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQC-fY-MVV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4070.5035971223024" y="752.7638190954774"/>
+            <point key="canvasLocation" x="4095.6834532374105" y="752.7638190954774"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="kvo-Ba-OeT">
@@ -6122,9 +6133,9 @@
         <segue reference="unw-hY-3Nj"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="UOL-8Z-xrM"/>
-        <segue reference="blo-67-XaK"/>
-        <segue reference="Z5o-PD-IXw"/>
+        <segue reference="0Ve-yy-L1s"/>
+        <segue reference="8br-0v-xWi"/>
+        <segue reference="u2J-iR-xDB"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
     <resources>

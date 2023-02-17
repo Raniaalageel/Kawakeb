@@ -53,7 +53,6 @@
 		538DDF81296423B900562581 /* AlertScs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF80296423B900562581 /* AlertScs.swift */; };
 		538DDF83296423D500562581 /* AlertFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DDF82296423D500562581 /* AlertFail.swift */; };
 		538E1A92299DA8A0000EED60 /* justLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E1A91299DA8A0000EED60 /* justLook.swift */; };
-		538E1A9429A0161B000EED60 /* viedodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E1A9329A0161B000EED60 /* viedodo.swift */; };
 		538E1A9629A019C4000EED60 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1A9529A016AA000EED60 /* video.mp4 */; };
 		539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC0292968AA9100A56BB8 /* SecondGame.swift */; };
 		539AC02C2968B1BE00A56BB8 /* AlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */; };
@@ -231,7 +230,6 @@
 		538DDF80296423B900562581 /* AlertScs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertScs.swift; sourceTree = "<group>"; };
 		538DDF82296423D500562581 /* AlertFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFail.swift; sourceTree = "<group>"; };
 		538E1A91299DA8A0000EED60 /* justLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = justLook.swift; sourceTree = "<group>"; };
-		538E1A9329A0161B000EED60 /* viedodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viedodo.swift; sourceTree = "<group>"; };
 		538E1A9529A016AA000EED60 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		539AC0292968AA9100A56BB8 /* SecondGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGame.swift; sourceTree = "<group>"; };
 		539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogout.swift; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 		F02AC888294A111300152C07 = {
 			isa = PBXGroup;
 			children = (
-				538E1A9329A0161B000EED60 /* viedodo.swift */,
 				538E1A91299DA8A0000EED60 /* justLook.swift */,
 				5330F85D29983FDB00DAFA60 /* PointsViewController.swift */,
 				5330F8592998342600DAFA60 /* logoutPorfile.swift */,
@@ -831,7 +828,6 @@
 				5356502D297728F50043257D /* MyObjectDetector2023.mlmodel in Sources */,
 				34CDA8AA2977017800C2ADF3 /* updateRocketViewController.swift in Sources */,
 				A2451FE12976A94900121B5C /* i1ViewController.swift in Sources */,
-				538E1A9429A0161B000EED60 /* viedodo.swift in Sources */,
 				56D4B868295DC50B0081A691 /* Gamespage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

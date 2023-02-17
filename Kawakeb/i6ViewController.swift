@@ -8,11 +8,19 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AVKit
+import MediaPlayer
+
+import AVFoundation
+
 class i6ViewController: UIViewController {
 
+    @IBOutlet weak var info: UIButton!
+    
     @IBOutlet weak var Stars6: UILabel!
     @IBOutlet weak var n6: UILabel!
-    
+    let  avPlayerviewContooler = AVPlayerViewController()
+    var avPlayer:AVPlayer?
     @IBOutlet weak var instruction: UIButton!
     @IBOutlet weak var storeButton: UIButton!
     var userId = ""
@@ -21,8 +29,21 @@ class i6ViewController: UIViewController {
     var pointsall : Int!
     let db = Firestore.firestore()
     
+    let yourAttributes: [NSAttributedString.Key: Any] = [
+        .font: UIFont.systemFont(ofSize: 38),
+        .foregroundColor: #colorLiteral(red: 0.4120975137, green: 0.3873831034, blue: 0.387838304, alpha: 1),
+        .underlineStyle: NSUnderlineStyle.single.rawValue
+      ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let attributeString = NSMutableAttributedString(
+           string: "لمشاهدة التعليمات",
+           attributes: yourAttributes
+        )
+       info.setAttributedTitle(attributeString, for: .normal)
         
         instruction.layer.cornerRadius =      instruction.frame.width/2
         instruction.layer.borderWidth = 6
@@ -78,18 +99,34 @@ class i6ViewController: UIViewController {
                     imageView.frame = CGRect(x: 673, y: 18, width: 123, height: 107)
                     view.addSubview(imageView)
                 }
+      
         // Do any additional setup after loading the view.
+        
+        let urlPathString:String? = Bundle.main.path(forResource: "video", ofType: ".mp4")
+                if let urlPath = urlPathString{
+                    let movieUrl = NSURL(fileURLWithPath: urlPath)
+                    self.avPlayer = AVPlayer(url: movieUrl as URL)
+                    self.avPlayerviewContooler.player = self.avPlayer
+                }
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    @IBAction func vidoPress(_ sender: UIButton) {
+        self.present(self.avPlayerviewContooler, animated: true)
+        //player?.play()
+            self.avPlayerviewContooler.player?.play()
     }
-    */
+    
+    
+    
+   
+        
+    }
+    
 
-}
+    
+
