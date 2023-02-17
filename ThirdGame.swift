@@ -72,7 +72,7 @@ class ThirdGame: UIViewController {
 
               //  pressgobutton.isEnabled = true
                 
-                db.collection("Child").whereField("email", isEqualTo: "shamma@gmail.com" ).getDocuments{
+                db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments{
                                    (snapshot, error) in
                                    if let error = error {
                                        print("FAIL") }
