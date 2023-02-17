@@ -91,10 +91,10 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
                       winalert .position = CGPoint(x: self.size.width/2.1, y: self.size.height/2)
                    winalert .zPosition = 0
                                   
-                   buttonnext = SKSpriteNode(imageNamed: "nextButto")
+                   buttonnext = SKSpriteNode(imageNamed: "nextButton2")
                    buttonnext.name = "pressNext"
-                      buttonnext.size = .init(width: 280, height: 180)
-                   buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.30)
+                      buttonnext.size = .init(width: 305, height: 170)
+                   buttonnext.position = CGPoint(x: frame.width * 0.68, y: frame.height * 0.33)
                     
            add = SKSpriteNode(imageNamed: "add100")
                                  add.size = .init(width: 250, height: 180)
@@ -123,17 +123,17 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("تأكد من وضع القطع امام الكاميرا ")
+           emptyLabel.text = String("تأكد من وضع القطع أمام الكاميرا ")
            emptyLabel.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
            emptyLabel.verticalAlignmentMode = .center
            emptyLabel.position = CGPoint(x: 680, y: 723)
            
-           OkButton = SKSpriteNode(imageNamed: "OKButton")
+           OkButton = SKSpriteNode(imageNamed: "OKButton2")
            OkButton.name = "OkButton"
-           OkButton.size = .init(width: 140, height: 50)
-           OkButton.position = CGPoint(x: frame.width * 0.53, y: frame.height * 0.31)
+           OkButton.size = .init(width: 280, height: 170)
+           OkButton.position = CGPoint(x: frame.width * 0.54, y: frame.height * 0.32)
            
            
            

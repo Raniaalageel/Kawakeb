@@ -22,6 +22,11 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     
     var winalert :SKSpriteNode!
     var faialert :SKSpriteNode!
+    
+    var loopOpen:SKSpriteNode!
+    var loopClose:SKSpriteNode!
+
+    
     var points:Int!
     
     var  EarthPoints:Int!
@@ -60,7 +65,9 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     
     var cnodtionArray = true
     var NormalSnario = true
-       override func didMove(to view: SKView) {
+      
+    
+    override func didMove(to view: SKView) {
            Global.shared.endgame = false
            super.didMove(to: view)
            print("didMove", frame)
@@ -95,10 +102,10 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                       winalert .position = CGPoint(x: self.size.width/2.1, y: self.size.height/2)
                    winalert .zPosition = 0
                                   
-                   buttonnext = SKSpriteNode(imageNamed: "nextButto")
+                   buttonnext = SKSpriteNode(imageNamed: "nextButton2")
                    buttonnext.name = "pressNext"
-                      buttonnext.size = .init(width: 280, height: 180)
-                   buttonnext.position = CGPoint(x: frame.width * 0.66, y: frame.height * 0.30)
+                      buttonnext.size = .init(width: 305, height: 170)
+                   buttonnext.position = CGPoint(x: frame.width * 0.68, y: frame.height * 0.33)
                     
                       add = SKSpriteNode(imageNamed: "add6")
                       add.size = .init(width: 350, height: 180)
@@ -125,17 +132,17 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
            
            emptyLabel = SKLabelNode(fontNamed: "System")
-           emptyLabel.text = String("تأكد من وضع القطع امام الكاميرا ")
+           emptyLabel.text = String("تأكد من وضع القطع أمام الكاميرا ")
            emptyLabel.fontColor =  #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
            emptyLabel.fontSize = 40.0
            emptyLabel.horizontalAlignmentMode = .right
            emptyLabel.verticalAlignmentMode = .center
            emptyLabel.position = CGPoint(x: 680, y: 723)
            
-           OkButton = SKSpriteNode(imageNamed: "OKButton")
+           OkButton = SKSpriteNode(imageNamed: "OKButton2")
            OkButton.name = "OkButton"
-           OkButton.size = .init(width: 140, height: 50)
-           OkButton.position = CGPoint(x: frame.width * 0.53, y: frame.height * 0.31)
+           OkButton.size = .init(width: 280, height: 170)
+           OkButton.position = CGPoint(x: frame.width * 0.54, y: frame.height * 0.32)
            
            
            
@@ -161,6 +168,20 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             faialert.size = .init(width: 850, height: 800)
            faialert .position = CGPoint(x: self.size.width/2, y: self.size.height/2.47)
             faialert .zPosition = 0
+        
+        loopOpen = SKSpriteNode(imageNamed: "loopOpen3")
+        loopOpen.size = .init(width: 850, height: 700)
+        loopOpen .position = CGPoint(x: self.size.width/1.93, y: self.size.height/1.97)
+        loopOpen.zPosition = 0
+        
+       loopClose = SKSpriteNode(imageNamed: "loopClose3")
+        loopClose.size = .init(width: 850, height: 700)
+        loopClose .position = CGPoint(x: self.size.width/1.91, y: self.size.height/2)
+        loopClose.zPosition = 0
+        
+     //loopClose = SKSpriteNode(imageNamed: "loopClose2")
+       // loopClose.size = .init(width: 850, height: 800)
+      //  loopClose .position = CGPoint(x: self.size.width/1.95, y: self.size.height/2.10)
            
           buttotryagain = SKSpriteNode(imageNamed: "yes")
            buttotryagain.name = "buttotryagain"
@@ -208,8 +229,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                playSound1(sound: FailSound)
 //               CameraOpen().stopTheCamera()
 //               EmptyArrayFunc()
-    
            }
+        else{
            var actions: [SKAction] = []
            arraywithlabel()
            checkArray()
@@ -421,7 +442,9 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            
                       actions.append(.run(    {
                           if(self.cnodtionArray == true && Global.shared.EmptyStopArray == true ){
-                             self.winCondition() }
+                             self.winCondition()
+                              
+                          }
                           }))
            print(actions,"actions")
         
@@ -432,6 +455,10 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            print(player.position,"player.position")
            print("arrawithLabel:",arrayWithLabel)
                   }
+}
+    
+    
+
            
         
            
@@ -480,11 +507,13 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             else if(indexLoop! >= indexcloseLoop!) {
                 print("indexLoop! >= indexcloseLoop!")
                 cnodtionArray = false
-                failLabel.text = String("قم بوضع تكرار اولاً !هل تريد المحاولة مرة اخرى؟")
-                self.addChild(faialert)
+                failLabel.text = String("قم بوضع التكرار اولاً !هل تريد المحاولة مرة اخرى؟")
+              //  self.addChild(faialert)
+                self.addChild(loopOpen)
                 self.addChild(failLabel)
                 self.addChild(tryHomebutton)
                 self.addChild(buttotryagain)
+                playSound3(sound: FailSound)
             }
             }
             else if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop3")){
@@ -506,11 +535,12 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                     else if(indexLoop! >= indexcloseLoop!) {
                         print("indexLoop! >= indexcloseLoop!")
                         cnodtionArray = false
-                        failLabel.text = String("قم بوضع تكرار اولاً !هل تريد المحاولة مرة اخرى؟")
-                        self.addChild(faialert)
+                        failLabel.text = String("قم بوضع التكرار اولاً !هل تريد المحاولة مرة اخرى؟")
+                        self.addChild(loopOpen)
                         self.addChild(failLabel)
                         self.addChild(tryHomebutton)
                         self.addChild(buttotryagain)
+                        playSound3(sound: FailSound)
                     }
                     }
                 
@@ -521,12 +551,13 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
         else if(arrayWithLabel.contains("loop2") || arrayWithLabel.contains("loop3") && !(arrayWithLabel.contains("loop")) ) {
                 print("close loop please")
             cnodtionArray = false
-            failLabel.text = String("قم ب انهاء التكرار !هل تريد المحاولة مرة اخرى؟")
+            failLabel.text = String("قم بإنهاء التكرار !هل تريد المحاولة مرة اخرى؟")
             print("win on another path")
-            self.addChild(faialert)
+            self.addChild(loopClose)
             self.addChild(failLabel)
             self.addChild(tryHomebutton)
             self.addChild(buttotryagain)
+            playSound3(sound: FailSound)
             
             }
       else if (!(arrayWithLabel.contains("loop2")) || !(arrayWithLabel.contains("loop3")) && arrayWithLabel.contains("loop")) { //|| !(arrayWithLabel.contains("loop3"))      !(arrayWithLabel.contains("loop2"))
@@ -535,10 +566,11 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 cnodtionArray = false
                 failLabel.text = String("قم بوضع بداية التكرار !هل تريد المحاولة مرة اخرى؟")
                 print("win on another path")
-                self.addChild(faialert)
+               self.addChild(loopOpen)
                 self.addChild(failLabel)
                 self.addChild(tryHomebutton)
                 self.addChild(buttotryagain)
+               playSound3(sound: FailSound)
                 
             }
             else  {  //normal array  //if(!(arrayWithLabel.isEmpty))
