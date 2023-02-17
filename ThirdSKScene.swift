@@ -63,6 +63,12 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
     var emptySound = SKAction.playSoundFileNamed("emptySound.mp3", waitForCompletion: false)
     var FailTryagainSound = SKAction.playSoundFileNamed("TryagainSound.mp3", waitForCompletion: false)
     
+    var notallPath = SKAction.playSoundFileNamed("notallPath.mp3", waitForCompletion: false)
+  
+    var firstopenloop = SKAction.playSoundFileNamed("firstopenloop.mp3", waitForCompletion: false)
+    var thecloseloop = SKAction.playSoundFileNamed("thecloseloop.mp3", waitForCompletion: false)
+    var theopenloop = SKAction.playSoundFileNamed("thecloseloop.mp3", waitForCompletion: false)
+    
     var cnodtionArray = true
     var NormalSnario = true
       
@@ -205,7 +211,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
            failLabel.fontSize = 33.0
         failLabel.horizontalAlignmentMode = .right
         failLabel.verticalAlignmentMode = .center
-        failLabel.position = CGPoint(x: 691, y: 730)  //more be in right
+        failLabel.position = CGPoint(x: 715, y: 730)  //more be in right
            ///
         
            buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
@@ -514,6 +520,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(tryHomebutton)
                 self.addChild(buttotryagain)
                 playSound3(sound: FailSound)
+                playSound1(sound: firstopenloop)
             }
             }
             else if(arrayWithLabel.contains("loop") && arrayWithLabel.contains("loop3")){
@@ -541,6 +548,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                         self.addChild(tryHomebutton)
                         self.addChild(buttotryagain)
                         playSound3(sound: FailSound)
+                        playSound1(sound: firstopenloop)
                     }
                     }
                 
@@ -558,6 +566,8 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             self.addChild(tryHomebutton)
             self.addChild(buttotryagain)
             playSound3(sound: FailSound)
+            playSound1(sound: thecloseloop)
+            
             
             }
       else if (!(arrayWithLabel.contains("loop2")) || !(arrayWithLabel.contains("loop3")) && arrayWithLabel.contains("loop")) { //|| !(arrayWithLabel.contains("loop3"))      !(arrayWithLabel.contains("loop2"))
@@ -571,6 +581,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(tryHomebutton)
                 self.addChild(buttotryagain)
                playSound3(sound: FailSound)
+          playSound1(sound: theopenloop)
                 
             }
             else  {  //normal array  //if(!(arrayWithLabel.isEmpty))

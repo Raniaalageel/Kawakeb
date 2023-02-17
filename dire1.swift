@@ -19,7 +19,8 @@ class dire1: UIViewController {
     @IBOutlet weak var hint: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Global.shared.instruction = true
+        
         backButton.layer.cornerRadius =       backButton.frame.width/2
          backButton.layer.borderWidth = 6
          backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)

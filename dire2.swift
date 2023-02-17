@@ -19,6 +19,7 @@ class dire2: UIViewController {
     var up : AVPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Global.shared.instruction = true
 
         backButton.layer.cornerRadius =       backButton.frame.width/2
          backButton.layer.borderWidth = 6
