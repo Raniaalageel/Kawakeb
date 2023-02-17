@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class dire2: UIViewController {
 
     @IBOutlet weak var hin: UIButton!
@@ -16,7 +16,7 @@ class dire2: UIViewController {
     @IBOutlet weak var arrow: UIImageView!
     
     @IBOutlet weak var instr: UIButton!
-    
+    var up : AVPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,35 +39,69 @@ class dire2: UIViewController {
         instr.clipsToBounds = true
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        playAlarm()
+        if(Global.shared.instruction == true){
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
       print("2.5")
             UIView.animate(withDuration: 0.2, animations: {
                 self.arrow.frame.origin.y -= -110
             },completion: nil)
+            if(Global.shared.instruction == true){
+                self.playAlarm2()}
             
     }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
+        }
+        if(Global.shared.instruction == true){
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
             print("4.5")
             UIView.animate(withDuration: 0.2, animations: {
                 self.arrow.frame.origin.y -= -110
             },completion: nil)
-            
+            if(Global.shared.instruction == true){
+                self.playAlarm3()}
     }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+        }
+        if(Global.shared.instruction == true){
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
       
             print("6.5")
             UIView.animate(withDuration: 0.2, animations: {
                 self.arrow.frame.origin.y -= -120
             },completion: nil)
+            if(Global.shared.instruction == true){
+                self.playAlarm4() }
     }
-        
-        
-        
-        
-        
+        }
+
     }
+    
+    func  playAlarm(){
+                let url = Bundle.main.url(forResource: "up", withExtension: "mp3")
+               up = AVPlayer.init(url: url!)
+           up .play()
+        }
+        
+    func  playAlarm2(){
+                let url = Bundle.main.url(forResource: "down", withExtension: "mp3")
+               up = AVPlayer.init(url: url!)
+           up .play()
+        }
+    
+    func  playAlarm3(){
+                let url = Bundle.main.url(forResource: "right", withExtension: "mp3")
+               up = AVPlayer.init(url: url!)
+           up .play()
+        }
+    func  playAlarm4(){
+                let url = Bundle.main.url(forResource: "left", withExtension: "mp3")
+               up = AVPlayer.init(url: url!)
+           up .play()
+        }
     
 
 }
+
+

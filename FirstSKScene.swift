@@ -55,6 +55,11 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
     var emptySound = SKAction.playSoundFileNamed("emptySound.mp3", waitForCompletion: false)
     var FailTryagainSound = SKAction.playSoundFileNamed("TryagainSound.mp3", waitForCompletion: false)
     var Suucc3 = SKAction.playSoundFileNamed("SuccsecSound6.mp3", waitForCompletion: false)
+    
+    
+    var outofgame = SKAction.playSoundFileNamed("outofgame.mp3", waitForCompletion: false)
+    
+    var notallPath = SKAction.playSoundFileNamed("notallPath.mp3", waitForCompletion: false)
 
     var arrayWithLabel = [String]()
        override func didMove(to view: SKView) {
@@ -184,7 +189,7 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
            failLabel.fontSize = 33.0
         failLabel.horizontalAlignmentMode = .right
         failLabel.verticalAlignmentMode = .center
-        failLabel.position = CGPoint(x: 691, y: 730)  //more be in right
+        failLabel.position = CGPoint(x: 715, y: 730)  //more be in right
            ///
         
            buttongo = SKSpriteNode(color: .red, size: CGSize(width: 100, height: 44))
@@ -330,12 +335,14 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        }
        
     func OutOfrange(){
-        failLabel.text = String("خارج منطقة اللعب!هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String(" خرجت من منطقة اللعب!هل تريد المحاولة مرة اخرى؟")
         print("win on another path")
         self.addChild(faialert)
         self.addChild(failLabel)
         self.addChild(tryHomebutton)
         self.addChild(buttotryagain)
+        playSound2(sound: FailSound)
+        playSound1(sound:outofgame )
          let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1000), duration: 1)
          player.run(actionplayer)
         
@@ -376,14 +383,14 @@ class FirstSKScene: SKScene,SKPhysicsContactDelegate {
        //            self.addChild(winfailalert)
        //            self.addChild(OkButton)
        //            self.addChild(failLabelelse)
-                   failLabel.text = String("لم تعبر جميع الطريق!هل تريد المحاولة مرة اخرى؟")
+        failLabel.text = String("لم تعبر من المسار الصحيح!هل تريدالمحاولة مرة اخرى")
                    print("win on another path")
                    self.addChild(faialert)
                    self.addChild(failLabel)
                    self.addChild(tryHomebutton)
                    self.addChild(buttotryagain)
-                   playSound3(sound: FailSound2)
-                   playSound4(sound: FailSound)
+                 playSound2(sound: FailSound)
+                 playSound1(sound:notallPath )
                     let actionplayer = SKAction.move(by: .init(dx: 0, dy: -1000), duration: 1)
                     player.run(actionplayer)
                }

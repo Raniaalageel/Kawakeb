@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWN-Jg-Hb7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bIs-Zj-oYX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -3556,10 +3556,6 @@
                                     <segue destination="bIs-Zj-oYX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="wLB-3K-fjO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-dJ-uBQ">
-                                <rect key="frame" x="-17" y="533" width="400" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-oq-IU5">
                                 <rect key="frame" x="312" y="319" width="250" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3571,11 +3567,17 @@
                                 <rect key="frame" x="288" y="381" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pointdd.png" translatesAutoresizingMaskIntoConstraints="NO" id="0aj-fA-7jD">
+                                <rect key="frame" x="232" y="302" width="129" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qpA-2q-s1w"/>
                     <connections>
+                        <outlet property="arrow" destination="0aj-fA-7jD" id="d4u-1O-Icz"/>
                         <outlet property="backButton" destination="wuM-gv-M17" id="cTf-Vq-NBt"/>
                         <outlet property="hintButton" destination="1Sz-iI-1uk" id="1Sv-wj-yej"/>
                         <outlet property="viewInstruction" destination="0tr-yP-yyZ" id="2L6-jX-Ez0"/>
@@ -4975,10 +4977,6 @@
                                     <segue destination="N4T-Ob-1DC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Jyi-6Y-zs0"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="gCd-Re-Qvb">
-                                <rect key="frame" x="-19" y="533" width="400" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-D8-773">
                                 <rect key="frame" x="312" y="319" width="250" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4990,11 +4988,17 @@
                                 <rect key="frame" x="286" y="382" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pointdd.png" translatesAutoresizingMaskIntoConstraints="NO" id="qcX-ZM-wXu">
+                                <rect key="frame" x="230" y="299" width="129" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="aVW-GN-xob"/>
                     <connections>
+                        <outlet property="arrow" destination="qcX-ZM-wXu" id="WWA-Hh-jCX"/>
                         <outlet property="backButton" destination="J9a-Dy-Qrp" id="mjj-pu-cVR"/>
                         <outlet property="hint" destination="Qw7-xx-mbs" id="eRW-cG-iyN"/>
                         <outlet property="instr" destination="Em6-u0-bpN" id="ITs-NN-t6F"/>
@@ -5091,10 +5095,6 @@
                                     <segue destination="U7m-rb-EUf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="wx3-60-l1b"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astro.png" translatesAutoresizingMaskIntoConstraints="NO" id="aiL-Vj-Rn1">
-                                <rect key="frame" x="-22" y="533" width="400" height="362"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تعلم الاتجاهات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhM-Ae-1qV">
                                 <rect key="frame" x="312" y="319" width="250" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -5106,8 +5106,8 @@
                                 <rect key="frame" x="284" y="382" width="288" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowshape.turn.up.left.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-HX-PTx">
-                                <rect key="frame" x="530" y="393" width="129" height="60"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pointdd.png" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-HX-PTx">
+                                <rect key="frame" x="204" y="297" width="189" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -6124,16 +6124,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ur7-Gg-KHQ"/>
+        <segue reference="wx3-60-l1b"/>
         <segue reference="0Iz-LO-L6a"/>
-        <segue reference="aoE-lQ-NZG"/>
+        <segue reference="Jyi-6Y-zs0"/>
         <segue reference="pnt-ca-DET"/>
         <segue reference="OGu-ep-2YN"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="unw-hY-3Nj"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="0Ve-yy-L1s"/>
+        <segue reference="VUe-B9-O9t"/>
         <segue reference="8br-0v-xWi"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="a9Y-ql-EV8"/>
@@ -6150,7 +6150,6 @@
         <image name="LOGO.PNG" width="375" height="375"/>
         <image name="alertBack" width="740" height="544"/>
         <image name="arrow-small-left_48pt_3x" width="48" height="48"/>
-        <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="86"/>
         <image name="astro.png" width="443" height="563"/>
         <image name="boy" width="416" height="416"/>
         <image name="bulb_48pt_1x" width="48" height="48"/>

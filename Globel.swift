@@ -42,6 +42,8 @@ class Global{
     var audiochoose : AVPlayer!
     var choose = true
     
+    var instruction = true
+    
 //    var longerTime =  true
 
 }
