@@ -99,7 +99,7 @@ self.rocketImage.image = UIImage(named: self.currentRockIMG!)
      //!!!!!!!!!!!!!CameraOpen().viewDidLoad()
             
       //
-         //   openis()
+            openis()
             
            // trytocall()
             
