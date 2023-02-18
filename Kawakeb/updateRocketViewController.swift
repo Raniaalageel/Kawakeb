@@ -31,7 +31,12 @@ class updateRocketViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
   
-  
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action:nil)
+        
+    }
+            
+        
     @IBAction func changeRocket(_ sender: Any) {
         let db = Firestore.firestore()
         

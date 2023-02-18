@@ -3364,9 +3364,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="njU-3O-2ba" eventType="touchUpInside" id="nAq-lL-bxh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuG-UM-A2B">
                                 <rect key="frame" x="714" y="51" width="85" height="85"/>
@@ -3497,9 +3494,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="jaO-xL-xoF" eventType="touchUpInside" id="FJA-Xr-YCT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tr-yP-yyZ">
                                 <rect key="frame" x="719" y="192" width="85" height="85"/>
@@ -3613,9 +3607,6 @@
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.76470589639999997" green="0.32549020649999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="gfz-sg-aEG" eventType="touchUpInside" id="tUt-gL-Jys"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONG-cr-p48">
                                 <rect key="frame" x="724" y="44" width="85" height="85"/>
@@ -3986,7 +3977,7 @@
                                                         <color key="baseBackgroundColor" red="0.52087849318379109" green="0.52087849318379109" blue="0.52087849318379109" alpha="0.97108287684964822" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <segue destination="agn-Xo-Z1N" kind="presentation" modalPresentationStyle="fullScreen" id="Qz7-Ld-UU2"/>
+                                                        <segue destination="agn-Xo-Z1N" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Qz7-Ld-UU2"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -4161,7 +4152,7 @@
         <!--Navigation Controller-->
         <scene sceneID="IzP-ak-r5a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbK-oi-roB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="hbK-oi-roB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9EG-LO-EJj">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="50"/>
@@ -4305,7 +4296,7 @@
                                     <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="9rX-g3-OdF" kind="presentation" id="kZ9-8Z-Ods"/>
+                                    <segue destination="9rX-g3-OdF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kZ9-8Z-Ods"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="تم استبدال مركبتك بنجاح!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW0-DW-Jsr">
@@ -4336,7 +4327,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstbg" translatesAutoresizingMaskIntoConstraints="NO" id="OFd-BL-CP8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstbg" translatesAutoresizingMaskIntoConstraints="NO" id="OFd-BL-CP8">
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -4918,9 +4909,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="pu6-S0-3gD" eventType="touchUpInside" id="mgf-Cx-OG2"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-u0-bpN">
                                 <rect key="frame" x="714" y="182" width="85" height="85"/>
@@ -5036,9 +5024,6 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="QtI-P1-92H" eventType="touchUpInside" id="wGK-Dh-KpV"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjd-Tv-mXo">
                                 <rect key="frame" x="718" y="182" width="85" height="85"/>
@@ -5152,9 +5137,6 @@
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.76470589639999997" green="0.32549020649999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="tkB-Sy-LWO" eventType="touchUpInside" id="qnO-Oj-qq8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtX-um-5la">
                                 <rect key="frame" x="727" y="167" width="85" height="85"/>
@@ -5361,9 +5343,6 @@
                                     <color key="baseForegroundColor" red="0.12549020350000001" green="0.21568629149999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.76470589639999997" green="0.32549020649999999" blue="0.30980393290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="gobutton:" destination="Dh8-Kz-TZo" eventType="touchUpInside" id="2n9-vU-N7F"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFy-7K-bIU">
                                 <rect key="frame" x="729" y="167" width="85" height="85"/>
@@ -5723,7 +5702,7 @@
                                     <color key="baseBackgroundColor" red="0.82292479279999997" green="0.29108393189999998" blue="0.29071238640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hbK-oi-roB" kind="presentation" modalPresentationStyle="fullScreen" id="An5-Yw-A4N"/>
+                                    <segue destination="hbK-oi-roB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="An5-Yw-A4N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -6126,16 +6105,16 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="D4H-af-jRY"/>
-        <segue reference="0Iz-LO-L6a"/>
+        <segue reference="YoG-nm-7nZ"/>
         <segue reference="Jyi-6Y-zs0"/>
         <segue reference="KyA-kp-3OD"/>
-        <segue reference="OGu-ep-2YN"/>
+        <segue reference="mpE-0t-APs"/>
         <segue reference="ITc-Pv-rak"/>
         <segue reference="unw-hY-3Nj"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
         <segue reference="VUe-B9-O9t"/>
-        <segue reference="8br-0v-xWi"/>
+        <segue reference="kZ9-8Z-Ods"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>

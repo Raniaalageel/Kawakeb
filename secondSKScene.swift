@@ -91,15 +91,15 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         
         
         //////////////////sucsses alert
-        winalert = SKSpriteNode(imageNamed: "sucsses2")
-                   winalert.size = .init(width: 830, height: 770)
+        winalert = SKSpriteNode(imageNamed: "sucsses3")
+                   winalert.size = .init(width: 830, height: 715)
                    winalert .position = CGPoint(x: self.size.width/2.1, y: self.size.height/2)
                 winalert .zPosition = 0
                                
                 buttonnext = SKSpriteNode(imageNamed: "nextButton2")
                 buttonnext.name = "pressNext"
-                   buttonnext.size = .init(width: 305, height: 170)
-                buttonnext.position = CGPoint(x: frame.width * 0.68, y: frame.height * 0.33)
+                   buttonnext.size = .init(width: 305, height: 150)
+                buttonnext.position = CGPoint(x: frame.width * 0.68, y: frame.height * 0.341)
                  
                    add = SKSpriteNode(imageNamed: "add6")
                    add.size = .init(width: 350, height: 180)
@@ -110,7 +110,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
                 hombutton.name = "pressHome"
                 hombutton.size = .init(width: 280, height: 180)
-                hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.335)
+                hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.35)
         
         
         //           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -135,7 +135,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         
         OkButton = SKSpriteNode(imageNamed: "OKButton2")
         OkButton.name = "OkButton"
-        OkButton.size = .init(width: 280, height: 170)
+        OkButton.size = .init(width: 280, height: 130)
         OkButton.position = CGPoint(x: frame.width * 0.54, y: frame.height * 0.32)
         
         
@@ -151,12 +151,12 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
         
         
         successLabelPoint = SKLabelNode(fontNamed: "System")
-        successLabelPoint.text = String(" ربحت ٢٠ نقطة")
+        successLabelPoint.text = String(" ربحت ١٠ نقاط")
         successLabelPoint.fontColor = #colorLiteral(red: 0.4073491693, green: 0.3875578046, blue: 0.3836058378, alpha: 1)
         successLabelPoint.fontSize = 38.0
         successLabelPoint.horizontalAlignmentMode = .right
         successLabelPoint.verticalAlignmentMode = .center
-        successLabelPoint.position = CGPoint(x: 660, y: 200)
+        successLabelPoint.position = CGPoint(x: 500, y: 90)
         
         
         ///// Fail alert
@@ -363,7 +363,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
                 self.addChild(buttonnext)
                 self.addChild(hombutton)
                 self.addChild(successLabel)
-                self.addChild(starfiled)
+//                self.addChild(starfiled)
                 self.addChild(starfiled2)
                 playSound1(sound: SuccsusSound)
                 playSound2(sound: SuccsusSound2)
@@ -525,7 +525,7 @@ class secondSKScene: SKScene,SKPhysicsContactDelegate {
             
             if(self.Flowcpoints! == 0 ){
                 self.db.collection("Child").document(student_docID).setData([
-                    "points": self.points + 20 ,
+                    "points": self.points + 10 ,
                     "Earth" : "open" ,
                     "FlowerPoints": 1
                 ],merge:true) { err in
