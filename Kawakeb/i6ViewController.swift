@@ -39,6 +39,39 @@ class i6ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        if(Global.shared.audioi1VC == nil)
+        {
+            print("Global.shared.audioi1VC = nil ")
+        }else{
+            Global.shared.audioi1VC.pause()
+        }
+        
+        if(Global.shared.audioi2VC == nil)
+        {
+            print("Global.shared.audioi2VC = nil ")
+        }else{
+            Global.shared.audioi2VC.pause()
+        }
+        if(Global.shared.audioi3VC == nil)
+        {
+            print("Global.shared.audioi1VC = nil ")
+        }else{
+            Global.shared.audioi3VC.pause()
+        }
+        if(Global.shared.audioi4VC == nil)
+        {
+            print("Global.shared.audioi1VC = nil ")
+        }else{
+            Global.shared.audioi4VC.pause()
+        }
+        if(Global.shared.audioi5VC == nil)
+        {
+            print("Global.shared.audioi1VC = nil ")
+        }else{
+            Global.shared.audioi5VC.pause()
+        }
+        
+        
         let attributeString = NSMutableAttributedString(
            string: "لمشاهدة التعليمات",
            attributes: yourAttributes

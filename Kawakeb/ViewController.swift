@@ -11,6 +11,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Global.shared.useremailshare = ""
+        Global.shared.userpasswordshare = ""
+        Global.shared.usercharacterName = ""
+        Global.shared.userbirthday = ""
+        Global.shared.usercharacter = ""
     }
     
 }

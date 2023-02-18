@@ -37,10 +37,15 @@ class i1ViewController: UIViewController {
         storebutton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         storebutton.clipsToBounds = true
         
+        if(Global.shared.audioHomePage == nil)
+        {
+            print("Global.shared.audioHomePage = nil ")
+        }else{
+            Global.shared.audioHomePage.pause()
+        }
         
         
-        
-        Global.shared.audioHomePage.pause()
+  
         playAlarm()
         db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare ).getDocuments{
                            (snapshot, error) in

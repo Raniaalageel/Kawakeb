@@ -2010,7 +2010,7 @@
                         <outlet property="CreateAccountButton" destination="1wb-An-AK5" id="6bR-VC-FM8"/>
                         <outlet property="nameTextField" destination="tTS-kR-QXc" id="BCl-C4-DYH"/>
                         <outlet property="selectedImage" destination="60p-ee-LyY" id="ggg-pQ-bdj"/>
-                        <segue destination="9rX-g3-OdF" kind="presentation" identifier="goToHomePage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Tf2-zg-CPc"/>
+                        <segue destination="y5d-tq-VYh" kind="presentation" identifier="goToHomePage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FOv-BR-HJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkB-7b-PkR" sceneMemberID="firstResponder"/>
@@ -6110,11 +6110,12 @@
         <segue reference="KyA-kp-3OD"/>
         <segue reference="mpE-0t-APs"/>
         <segue reference="ITc-Pv-rak"/>
-        <segue reference="unw-hY-3Nj"/>
+        <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="VUe-B9-O9t"/>
-        <segue reference="kZ9-8Z-Ods"/>
+        <segue reference="hqg-X7-rr5"/>
+        <segue reference="FOv-BR-HJm"/>
+        <segue reference="8br-0v-xWi"/>
         <segue reference="u2J-iR-xDB"/>
         <segue reference="a9Y-ql-EV8"/>
     </inferredMetricsTieBreakers>
