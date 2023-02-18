@@ -27,7 +27,7 @@ class FirstGame: UIViewController {
     var scene: FirstSKScene?
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            Global.shared.instruction = false
             
             Dbtn.layer.cornerRadius = Dbtn.frame.width/2
             Dbtn.layer.borderWidth = 6
@@ -60,12 +60,19 @@ class FirstGame: UIViewController {
             
             
             
-            
-            
+          
             
   // present(G1alert(), animated: true)
             Global.shared.audioHomePage.pause()
-           Global.shared.audiomsgP1.pause()
+            
+            if(Global.shared.audiomsgP1 == nil)
+            {
+                print("Global.shared.audiomsgP2 = ", Global.shared.audiomsgP1)
+            }else{
+                Global.shared.audiomsgP1.pause()
+            }
+            
+            
             print("nn")
 //            Global.shared.GoBackHomeStopCamera = true
 //            Global.shared.longerTime = true

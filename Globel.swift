@@ -40,10 +40,17 @@ class Global{
     var audioTimer : AVPlayer!
     
     var audiochoose : AVPlayer!
+    
     var choose = true
     
     var instruction = true
+    var loopif =  true
+    
     
 //    var longerTime =  true
-
+    var audioloopviewCont : AVPlayer!
+    var audiorpeat2 : AVPlayer!
+    var audiorpeat3: AVPlayer!
+    
+   
 }

@@ -63,6 +63,9 @@
 		538E1AA429A03FC9000EED60 /* theopenloop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AA329A03FC9000EED60 /* theopenloop.mp3 */; };
 		538E1AA629A03FD8000EED60 /* thecloseloop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AA529A03FD8000EED60 /* thecloseloop.mp3 */; };
 		538E1AA829A03FE3000EED60 /* firstopenloop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AA729A03FE3000EED60 /* firstopenloop.mp3 */; };
+		538E1AAA29A044BC000EED60 /* rpeat3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AA929A044BC000EED60 /* rpeat3.mp3 */; };
+		538E1AAE29A044D0000EED60 /* rpeat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AAD29A044D0000EED60 /* rpeat2.mp3 */; };
+		538E1AB029A045E7000EED60 /* loopviewcon2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AAF29A045E7000EED60 /* loopviewcon2.mp3 */; };
 		539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC0292968AA9100A56BB8 /* SecondGame.swift */; };
 		539AC02C2968B1BE00A56BB8 /* AlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */; };
 		539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */ = {isa = PBXBuildFile; fileRef = 539AC02F2969EE1F00A56BB8 /* alertsuc.png */; };
@@ -249,6 +252,9 @@
 		538E1AA329A03FC9000EED60 /* theopenloop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theopenloop.mp3; sourceTree = "<group>"; };
 		538E1AA529A03FD8000EED60 /* thecloseloop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thecloseloop.mp3; sourceTree = "<group>"; };
 		538E1AA729A03FE3000EED60 /* firstopenloop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firstopenloop.mp3; sourceTree = "<group>"; };
+		538E1AA929A044BC000EED60 /* rpeat3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rpeat3.mp3; sourceTree = "<group>"; };
+		538E1AAD29A044D0000EED60 /* rpeat2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rpeat2.mp3; sourceTree = "<group>"; };
+		538E1AAF29A045E7000EED60 /* loopviewcon2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loopviewcon2.mp3; sourceTree = "<group>"; };
 		539AC0292968AA9100A56BB8 /* SecondGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGame.swift; sourceTree = "<group>"; };
 		539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogout.swift; sourceTree = "<group>"; };
 		539AC02F2969EE1F00A56BB8 /* alertsuc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alertsuc.png; sourceTree = "<group>"; };
@@ -421,6 +427,9 @@
 				F04C9E742989384200CE150B /* HomeSound.mp3 */,
 				F036CCD82989740C00376EBE /* msgP1.mp3 */,
 				F07B13E4298EB25700C88628 /* msgP2.mp3 */,
+				538E1AAF29A045E7000EED60 /* loopviewcon2.mp3 */,
+				538E1AA929A044BC000EED60 /* rpeat3.mp3 */,
+				538E1AAD29A044D0000EED60 /* rpeat2.mp3 */,
 				F07B13E6298EB26700C88628 /* msgP3.mp3 */,
 				538E1AA729A03FE3000EED60 /* firstopenloop.mp3 */,
 				538E1AA529A03FD8000EED60 /* thecloseloop.mp3 */,
@@ -733,11 +742,14 @@
 				F07B13EB298EC66800C88628 /* SuccsecSound.mp3 in Resources */,
 				3481A9E129544BAF002431C7 /* white.png in Resources */,
 				3481A9DF29544B8F002431C7 /* mainBG.png in Resources */,
+				538E1AAA29A044BC000EED60 /* rpeat3.mp3 in Resources */,
+				538E1AB029A045E7000EED60 /* loopviewcon2.mp3 in Resources */,
 				F0F920BF295333AF0045A75C /* store.png in Resources */,
 				532487A52991DD7500AF8E8C /* TryagainSound.mp3 in Resources */,
 				F02AC89E294A111600152C07 /* Assets.xcassets in Resources */,
 				538E1A9E29A035BB000EED60 /* down.mp3 in Resources */,
 				F0AE53F6297844CE00B8E3C0 /* fail.png in Resources */,
+				538E1AAE29A044D0000EED60 /* rpeat2.mp3 in Resources */,
 				539AC03B296A216600A56BB8 /* Fiwin.sks in Resources */,
 				F036CCE329897D6400376EBE /* i5VC.mp3 in Resources */,
 				F0F920B52953335D0045A75C /* backk.png in Resources */,

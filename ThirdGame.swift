@@ -35,7 +35,8 @@ class ThirdGame: UIViewController {
             override func viewDidLoad() {
                 super.viewDidLoad()
                 Global.shared.audioHomePage.pause()
-
+                Global.shared.instruction = false
+                Global.shared.loopif = false
                 backButton.layer.cornerRadius =       backButton.frame.width/2
                  backButton.layer.borderWidth = 6
                  backButton.layer.borderColor =   #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
@@ -58,6 +59,25 @@ class ThirdGame: UIViewController {
                     print("Global.shared.audiomsgP3 = ", Global.shared.audiomsgP3)
                 }else{
                     Global.shared.audiomsgP3.pause()
+                }    ///
+                
+                if(Global.shared.audioloopviewCont == nil)
+                {
+                    print("Global.shared.audioloopviewCont = ", Global.shared.audioloopviewCont)
+                }else{
+                    Global.shared.audioloopviewCont.pause()
+                }   ////
+                if(Global.shared.audiorpeat2 == nil)
+                {
+                    print("Global.shared.audiorpeat2  = ", Global.shared.audiorpeat2 )
+                }else{
+                    Global.shared.audiorpeat2 .pause()
+                } ////
+                if(Global.shared.audiorpeat3 == nil)
+                {
+                    print("Global.shared.audiomsgP3 = ", Global.shared.audiorpeat3)
+                }else{
+                    Global.shared.audiorpeat3.pause()
                 }
 
 //                Global.shared.longerTime = true

@@ -29,7 +29,7 @@ class SecondGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 Global.shared.audioHomePage.pause()
-        
+        Global.shared.instruction = false
         
         backButton.layer.cornerRadius =       backButton.frame.width/2
          backButton.layer.borderWidth = 6
