@@ -63,6 +63,9 @@ class ViewHint : UIViewController {
         
     }
     
+
+    
+    
     
     func sethint()
     {
@@ -144,17 +147,15 @@ class ViewHint : UIViewController {
       }
     }
     
-    @IBAction func firsth(_ sender: Any) {
+    @IBAction func press(_ sender: UIButton) {
+        
         print("firsth")
         let db = Firestore.firestore()
-        Task {
-            let snapshot = try await db.collection("Child").whereField("email", isEqualTo: Global.shared.useremailshare).getDocuments()
-                hintIsView = snapshot.documents.first?.data()["FirstGameHintIsUsed"] as! Bool
-            if hintIsView == true  {
-                hint1.isUserInteractionEnabled = true
-                hint2.isUserInteractionEnabled = true
-                hint3.isUserInteractionEnabled = true
-                hint4.isUserInteractionEnabled = true
+        print(" hintIsView inside",hintIsView)
+            if hintIsView == true {
+                
+                print(" hintIsView inside",hintIsView)
+
                 UIView.animate(withDuration: 0.2, animations: {
                     self.hint1FrontImage.frame.origin.y -= -50
                 },completion: nil)
@@ -171,8 +172,11 @@ class ViewHint : UIViewController {
                     self.hint1FrontImage.frame.origin.x -= 30
                 },completion: nil)
             }
-        }
+        
+        
+        
     }
+    
     
     @objc func hint1Flip() {
         if isSelected == false {
@@ -182,10 +186,11 @@ class ViewHint : UIViewController {
        // FirstGame.isUsed = true
         hintIsView = true
         ViewHint.selectedHint = 1
-        hint1.isUserInteractionEnabled = false
-        hint2.isUserInteractionEnabled = false
-        hint3.isUserInteractionEnabled = false
-        hint4.isUserInteractionEnabled = false
+//        hint1.isUserInteractionEnabled = false
+//        hint2.isUserInteractionEnabled = false
+//        hint3.isUserInteractionEnabled = false
+//        hint4.isUserInteractionEnabled = false
+    
     }
     
     @objc func hint2Flip() {
@@ -196,10 +201,10 @@ class ViewHint : UIViewController {
        // FirstGame.isUsed = true
         hintIsView = true
         ViewHint.selectedHint = 2
-        hint1.isUserInteractionEnabled = false
-        hint2.isUserInteractionEnabled = false
-        hint3.isUserInteractionEnabled = false
-        hint4.isUserInteractionEnabled = false
+//        hint1.isUserInteractionEnabled = false
+//        hint2.isUserInteractionEnabled = false
+//        hint3.isUserInteractionEnabled = false
+//        hint4.isUserInteractionEnabled = false
     }
     
     @objc func hint3Flip() {
@@ -210,10 +215,10 @@ class ViewHint : UIViewController {
       //  FirstGame.isUsed = true
         hintIsView = true
         ViewHint.selectedHint = 3
-        hint1.isUserInteractionEnabled = false
-        hint2.isUserInteractionEnabled = false
-        hint3.isUserInteractionEnabled = false
-        hint4.isUserInteractionEnabled = false
+//        hint1.isUserInteractionEnabled = false
+//        hint2.isUserInteractionEnabled = false
+//        hint3.isUserInteractionEnabled = false
+//        hint4.isUserInteractionEnabled = false
     }
     
     @objc func hint4Flip() {
@@ -224,9 +229,9 @@ class ViewHint : UIViewController {
       //  FirstGame.isUsed = true
         hintIsView = true
         ViewHint.selectedHint = 4
-        hint1.isUserInteractionEnabled = false
-        hint2.isUserInteractionEnabled = false
-        hint3.isUserInteractionEnabled = false
-        hint4.isUserInteractionEnabled = false
+//        hint1.isUserInteractionEnabled = false
+//        hint2.isUserInteractionEnabled = false
+//        hint3.isUserInteractionEnabled = false
+//        hint4.isUserInteractionEnabled = false
     }
 }
