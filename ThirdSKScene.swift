@@ -122,7 +122,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
                    hombutton = SKSpriteNode(imageNamed: "HomebuttonSu")
                    hombutton.name = "pressHome"
                    hombutton.size = .init(width: 280, height: 180)
-                   hombutton.position = CGPoint(x: frame.width * 0.35, y: frame.height * 0.35)
+                   hombutton.position = CGPoint(x: frame.width * 0.52, y: frame.height * 0.35)
            
            
 //           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
