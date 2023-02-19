@@ -66,6 +66,7 @@
 		538E1AAA29A044BC000EED60 /* rpeat3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AA929A044BC000EED60 /* rpeat3.mp3 */; };
 		538E1AAE29A044D0000EED60 /* rpeat2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AAD29A044D0000EED60 /* rpeat2.mp3 */; };
 		538E1AB029A045E7000EED60 /* loopviewcon2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AAF29A045E7000EED60 /* loopviewcon2.mp3 */; };
+		538E1AB229A2516E000EED60 /* viedoKaw.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 538E1AB129A2514F000EED60 /* viedoKaw.mp4 */; };
 		539AC02A2968AA9100A56BB8 /* SecondGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC0292968AA9100A56BB8 /* SecondGame.swift */; };
 		539AC02C2968B1BE00A56BB8 /* AlertLogout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */; };
 		539AC0302969EE1F00A56BB8 /* alertsuc.png in Resources */ = {isa = PBXBuildFile; fileRef = 539AC02F2969EE1F00A56BB8 /* alertsuc.png */; };
@@ -255,6 +256,7 @@
 		538E1AA929A044BC000EED60 /* rpeat3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rpeat3.mp3; sourceTree = "<group>"; };
 		538E1AAD29A044D0000EED60 /* rpeat2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rpeat2.mp3; sourceTree = "<group>"; };
 		538E1AAF29A045E7000EED60 /* loopviewcon2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loopviewcon2.mp3; sourceTree = "<group>"; };
+		538E1AB129A2514F000EED60 /* viedoKaw.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = viedoKaw.mp4; sourceTree = "<group>"; };
 		539AC0292968AA9100A56BB8 /* SecondGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGame.swift; sourceTree = "<group>"; };
 		539AC02B2968B1BE00A56BB8 /* AlertLogout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLogout.swift; sourceTree = "<group>"; };
 		539AC02F2969EE1F00A56BB8 /* alertsuc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alertsuc.png; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				539BD06A29789AA500F6AFCF /* AlertLogout2.swift */,
 				539AC04B2971C7DA00A56BB8 /* EmptyArray.swift */,
 				539AC039296A216600A56BB8 /* Fiwin.sks */,
+				538E1AB129A2514F000EED60 /* viedoKaw.mp4 */,
 				538E1A9529A016AA000EED60 /* video.mp4 */,
 				F04C9E5C29887C6D00CE150B /* fear_bg.mp3 */,
 				F04C9E742989384200CE150B /* HomeSound.mp3 */,
@@ -719,6 +722,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538E1AB229A2516E000EED60 /* viedoKaw.mp4 in Resources */,
 				538E1A9629A019C4000EED60 /* video.mp4 in Resources */,
 				5330F85C29983D0F00DAFA60 /* choose.mp3 in Resources */,
 				34CDA8B2297703AF00C2ADF3 /* LOGO.png in Resources */,

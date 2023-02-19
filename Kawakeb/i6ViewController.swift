@@ -30,7 +30,7 @@ class i6ViewController: UIViewController {
     let db = Firestore.firestore()
     
     let yourAttributes: [NSAttributedString.Key: Any] = [
-        .font: UIFont.systemFont(ofSize: 38),
+        .font: UIFont.systemFont(ofSize: 31),
         .foregroundColor: #colorLiteral(red: 0.4120975137, green: 0.3873831034, blue: 0.387838304, alpha: 1),
         .underlineStyle: NSUnderlineStyle.single.rawValue
       ]
@@ -73,7 +73,7 @@ class i6ViewController: UIViewController {
         
         
         let attributeString = NSMutableAttributedString(
-           string: "لمشاهدة التعليمات",
+           string: "لمشاهدة المزيد من التعليمات",
            attributes: yourAttributes
         )
        info.setAttributedTitle(attributeString, for: .normal)
@@ -123,19 +123,25 @@ class i6ViewController: UIViewController {
                 let imageName = "girl.png"
                 let image = UIImage(named: imageName)
                 let imageView = UIImageView(image: image!)
+            imageView.alpha = 0.2
+           // imageView.layer.zPosition = -4
+            imageView.tintColor = .gray
                 imageView.frame = CGRect(x: 670, y: 18, width: 120, height: 105)
                 view.addSubview(imageView)
                 }else if (Global.shared.usercharacter == "boy"){
                     let imageName = "boy.png"
                     let image = UIImage(named: imageName)
                     let imageView = UIImageView(image: image!)
+                    imageView.alpha = 0.2
+                   // imageView.layer.zPosition = -4
+                    imageView.tintColor = .gray
                     imageView.frame = CGRect(x: 673, y: 18, width: 123, height: 107)
                     view.addSubview(imageView)
                 }
       
         // Do any additional setup after loading the view.
         
-        let urlPathString:String? = Bundle.main.path(forResource: "video", ofType: ".mp4")
+        let urlPathString:String? = Bundle.main.path(forResource: "viedoKaw", ofType: ".mp4")
                 if let urlPath = urlPathString{
                     let movieUrl = NSURL(fileURLWithPath: urlPath)
                     self.avPlayer = AVPlayer(url: movieUrl as URL)

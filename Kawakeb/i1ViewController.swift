@@ -82,12 +82,18 @@ class i1ViewController: UIViewController {
                 let imageName = "girl.png"
                 let image = UIImage(named: imageName)
                 let imageView = UIImageView(image: image!)
+            imageView.alpha = 0.2
+           // imageView.layer.zPosition = -4
+            imageView.tintColor = .gray
                 imageView.frame = CGRect(x: 670, y: 18, width: 120, height: 105)
                 view.addSubview(imageView)
                 }else if (Global.shared.usercharacter == "boy"){
                     let imageName = "boy.png"
                     let image = UIImage(named: imageName)
                     let imageView = UIImageView(image: image!)
+                    imageView.alpha = 0.2
+                   // imageView.layer.zPosition = -4
+                    imageView.tintColor = .gray
                     imageView.frame = CGRect(x: 673, y: 18, width: 123, height: 107)
                     view.addSubview(imageView)
                 }

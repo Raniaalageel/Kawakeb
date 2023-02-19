@@ -1506,7 +1506,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZx-Tq-xru">
-                                <rect key="frame" x="247" y="516" width="362" height="97"/>
+                                <rect key="frame" x="135" y="466" width="565" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.40784314269999999" green="0.38823530080000002" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -6104,7 +6104,7 @@
         <segue reference="bVx-b7-Wzx"/>
         <segue reference="a8r-w4-AzI"/>
         <segue reference="hQp-zA-1t1"/>
-        <segue reference="hqg-X7-rr5"/>
+        <segue reference="Y5R-q1-wPb"/>
         <segue reference="FOv-BR-HJm"/>
         <segue reference="8br-0v-xWi"/>
         <segue reference="u2J-iR-xDB"/>
