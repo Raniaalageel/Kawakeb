@@ -633,7 +633,7 @@ class ThirdSKScene: SKScene,SKPhysicsContactDelegate {
             if(player.position.x >= 480.0 && player.position.x <= 670.0   && player.position.y >= 900.5 && player.position.y <= 980.5){
                    print("is win")
                    self.addChild(winalert )
-                   self.addChild(buttonnext)
+                  // self.addChild(buttonnext)
                    self.addChild(hombutton)
                    self.addChild(successLabel)
 //                   self.addChild(starfiled)
